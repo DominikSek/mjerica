@@ -1,0 +1,2544 @@
+{
+  "schema_version": 1,
+  "category": "preworkout",
+  "checked_at": "2026-09-25T09:41:56.886843+00:00",
+  "products": [
+    {
+      "id": "catalog:fd81af8fee4cf28e",
+      "name": "A-AKG (arginin alfa ketoglutarat)",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/11/ostrovit-arginin-aakg-200g-new-proteini-outlet-1-600x600.jpg",
+      "packages": [
+        "kg:0.2"
+      ],
+      "offers": [
+        {
+          "id": "catalog:4e3a01161fb86bb1",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/a-akg-arginin-alfa-ketoglutarat/?attribute_pa_okus=bez-okusa",
+          "package_key": "kg:0.2",
+          "flavour": "Bez okusa",
+          "price_eur": 14.5,
+          "unit_price": 72.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:0a88454fb1b9678b",
+      "name": "ABE Pump, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/abe-pump-stim-free-pre-workout-500g---blue-razz.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:79bb333ba519f598",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/abe-pump-500-g-blue-raspberry",
+          "package_key": "kg:0.5",
+          "flavour": "Blue Raspberry",
+          "price_eur": 49.99,
+          "unit_price": 99.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:a9a644d114d04b2e",
+      "name": "ABE Ultimate Pre-Workout, 375 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/abe-ultimate-pre-workout-375g---sour-gummy-bear-v1.jpg?size=225",
+      "packages": [
+        "kg:0.375"
+      ],
+      "offers": [
+        {
+          "id": "catalog:f34570655f2a9b4d",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/abe-ultimate-pre-workout-375-g-bubblegum",
+          "package_key": "kg:0.375",
+          "flavour": "Bubblegum",
+          "price_eur": 39.99,
+          "unit_price": 106.64,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:b107df6ccfc052d7",
+      "name": "Alpha Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13757999-1955180472592347.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.02"
+      ],
+      "offers": [
+        {
+          "id": "catalog:c76a375b5e6ccb5a",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/alpha-pre-workout/13757999/?variation=13758002",
+          "package_key": "kg:0.02",
+          "flavour": "Orange & Mango",
+          "price_eur": 3.99,
+          "unit_price": 199.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
+        },
+        {
+          "id": "catalog:1f593f21e0a4e083",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/alpha-pre-workout/13757999/?variation=13758000",
+          "package_key": "kg:0.02",
+          "flavour": "Plava malina",
+          "price_eur": 3.99,
+          "unit_price": 199.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
+        },
+        {
+          "id": "catalog:3d1a83dccfec5732",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/alpha-pre-workout/13757999/?variation=13758003",
+          "package_key": "kg:0.02",
+          "flavour": "Strawberry Laces",
+          "price_eur": 3.99,
+          "unit_price": 199.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
+        }
+      ]
+    },
+    {
+      "id": "catalog:cad2e05493ae6087",
+      "name": "Amino X, 1015g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn/aminox.jpg?size=225",
+      "packages": [
+        "kg:1.015"
+      ],
+      "offers": [
+        {
+          "id": "catalog:36cd87b9822c119b",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/amino-x-1015g-green-apple",
+          "package_key": "kg:1.015",
+          "flavour": "Green Apple",
+          "price_eur": 49.99,
+          "unit_price": 49.25,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:53af55dba6521272",
+      "name": "AminoRage, 250 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/aminorage_250.jpg?size=225",
+      "packages": [
+        "kg:0.25"
+      ],
+      "offers": [
+        {
+          "id": "catalog:443996c4a67a2c32",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/aminorage-250-g-orange",
+          "package_key": "kg:0.25",
+          "flavour": "Orange",
+          "price_eur": 24.99,
+          "unit_price": 99.96,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4c7e2f8d8b3cc41b",
+      "name": "AminoRage, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/aminorage_500.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:db93be04f21d0260",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/aminorage-500-g-orange",
+          "package_key": "kg:0.5",
+          "flavour": "Orange",
+          "price_eur": 39.99,
+          "unit_price": 79.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:3d379d3669f698ff",
+      "name": "Animal Fury - Universal Nutrition, 0.328 kg",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/f/u/fury_watermelon_20serv_1.png",
+      "packages": [
+        "kg:0.328",
+        "kg:0.495"
+      ],
+      "offers": [
+        {
+          "id": "catalog:9163c61585ccc4f8",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-animal-fury-universal-nutrition.html",
+          "package_key": "kg:0.328",
+          "flavour": "lubenica",
+          "price_eur": 43.95,
+          "unit_price": 133.99,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:e3b59257b7a7d402",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-animal-fury-universal-nutrition.html",
+          "package_key": "kg:0.495",
+          "flavour": "plava malina",
+          "price_eur": 55.95,
+          "unit_price": 113.03,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:75b22cb1f9d3121c",
+      "name": "Animal Pump - Universal Nutrition",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/p/u/pump_30_eu_1.png",
+      "packages": [
+        "kg:0.22"
+      ],
+      "offers": [
+        {
+          "id": "catalog:df9b9b527feae590",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/animal-pump-universal-nutrition.html",
+          "package_key": "kg:0.22",
+          "flavour": null,
+          "price_eur": 81.95,
+          "unit_price": 372.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:f84c0ddcc4bb2dd4",
+      "name": "ARGININE AKG",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2020/11/prolabs-akg-arginine-pure-busta-500g-proteini-outlet-600x600.jpg",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:28f5008f8dd122eb",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/arginine-akg/?attribute_pa_okus=bez-okusa",
+          "package_key": "kg:0.5",
+          "flavour": "Bez okusa",
+          "price_eur": 30.4,
+          "unit_price": 60.8,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:2b4e1fbe3efce165",
+      "name": "ASAP Pre-Workout - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/a/s/asap_preworkout_mango-maracuja_425_g_gymbeam_1_.png",
+      "packages": [
+        "kg:0.42"
+      ],
+      "offers": [
+        {
+          "id": "catalog:94012d8d9d8d2dbc",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/asap-pre-workout-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": null,
+          "price_eur": 16.75,
+          "unit_price": 39.41,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:ff56b1f16c610c93",
+      "name": "C4 Original - Cellucor",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/4/c4_original_30_serve_ga.jpg",
+      "packages": [
+        "kg:0.4"
+      ],
+      "offers": [
+        {
+          "id": "catalog:4fe010388e501550",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/stimulans-prije-treninga-c4-original-cellucor.html",
+          "package_key": "kg:0.4",
+          "flavour": null,
+          "price_eur": 33.95,
+          "unit_price": 85.73,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:315191e6c9664288",
+      "name": "C4 Ripped - Cellucor",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/4/c4-ripped-30-serve-tp_1.jpg",
+      "packages": [
+        "kg:0.17"
+      ],
+      "offers": [
+        {
+          "id": "catalog:906548c0b579eea4",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/c4-ripped-180-g-cellucor.html",
+          "package_key": "kg:0.17",
+          "flavour": null,
+          "price_eur": 26.95,
+          "unit_price": 163.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:bbfa20ddb76649dc",
+      "name": "Citrulin - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/i/citrulline_caps.png",
+      "packages": [
+        "kg:0.08"
+      ],
+      "offers": [
+        {
+          "id": "catalog:fbde74b925aaeb4e",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/citrulin-caps-gymbeam.html",
+          "package_key": "kg:0.08",
+          "flavour": null,
+          "price_eur": 12.95,
+          "unit_price": 161.88,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:2ff9f853223eff78",
+      "name": "Citrulin Malat - GymBeam, 0.25 kg",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/i/citrulinemalate_500_1.jpg",
+      "packages": [
+        "kg:0.25",
+        "kg:0.5",
+        "kg:1"
+      ],
+      "offers": [
+        {
+          "id": "catalog:932baa8cdb522efb",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/citrulin-malat-gymbeam.html",
+          "package_key": "kg:0.25",
+          "flavour": "bez okusa",
+          "price_eur": 6.9,
+          "unit_price": 27.6,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:559cf15adc3aa8de",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/citrulin-malat-gymbeam.html",
+          "package_key": "kg:0.5",
+          "flavour": "bez okusa",
+          "price_eur": 12.3,
+          "unit_price": 24.6,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:a9ee2f2ec9d05a32",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/citrulin-malat-gymbeam.html",
+          "package_key": "kg:0.5",
+          "flavour": "limun - limeta",
+          "price_eur": 12.3,
+          "unit_price": 24.6,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:bb4ed68b980e7ca8",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/citrulin-malat-gymbeam.html",
+          "package_key": "kg:1",
+          "flavour": "bez okusa",
+          "price_eur": 22.6,
+          "unit_price": 22.6,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:1497bcb1b657a6cf",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/citrulin-malat-gymbeam.html",
+          "package_key": "kg:1",
+          "flavour": "zelena jabuka",
+          "price_eur": 22.6,
+          "unit_price": 22.6,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:13c0de22a344a461",
+      "name": "Cre-Amino, 300 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleosport_creamino_300_cola.jpg?size=225",
+      "packages": [
+        "kg:0.3"
+      ],
+      "offers": [
+        {
+          "id": "catalog:a3df9ca309a813ae",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/cre-amino-300-g-lemon-cola",
+          "package_key": "kg:0.3",
+          "flavour": "Lemon Cola",
+          "price_eur": 34.99,
+          "unit_price": 116.63,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:af7a9c1ee4d40d9a",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/cre-amino-300-g-naranca",
+          "package_key": "kg:0.3",
+          "flavour": "Naranča",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:7c21441c694c3e7e",
+      "name": "Defender, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/scm04329-scimuscle-defender-500-front.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:b4bac29a8e437443",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/defender-500-g",
+          "package_key": "kg:0.5",
+          "flavour": null,
+          "price_eur": 29.99,
+          "unit_price": 59.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:c1a35e2c9bb5e101",
+      "name": "Ecdysterone - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/e/c/ecdysterone_90_vegan_caps_gymbeam.png",
+      "packages": [
+        "kg:0.04"
+      ],
+      "offers": [
+        {
+          "id": "catalog:8fa4614019a9ef9b",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/ecdysterone-gymbeam.html",
+          "package_key": "kg:0.04",
+          "flavour": null,
+          "price_eur": 16.5,
+          "unit_price": 412.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:ffa4574b0aee8438",
+      "name": "Focus Blend Pre-workout - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/f/o/focusblend_wildcherry_mockup.jpg",
+      "packages": [
+        "kg:0.3"
+      ],
+      "offers": [
+        {
+          "id": "catalog:404fef6a92e42666",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/focus-blend-pre-workout-gymbeam.html",
+          "package_key": "kg:0.3",
+          "flavour": "jagoda - kivi",
+          "price_eur": 21.95,
+          "unit_price": 73.17,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:8ddc3789c89e391e",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/focus-blend-pre-workout-gymbeam.html",
+          "package_key": "kg:0.3",
+          "flavour": "mango - marakuja",
+          "price_eur": 21.95,
+          "unit_price": 73.17,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:4b2c96b2b0574869",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/focus-blend-pre-workout-gymbeam.html",
+          "package_key": "kg:0.3",
+          "flavour": "plava malina",
+          "price_eur": 21.95,
+          "unit_price": 73.17,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:ff5a9a02f0fbce6c",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/focus-blend-pre-workout-gymbeam.html",
+          "package_key": "kg:0.3",
+          "flavour": "wild cherry",
+          "price_eur": 21.95,
+          "unit_price": 73.17,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:c80eee8a96211f71",
+      "name": "Gold Pre-Workout Advanced, 420 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_gspw_adv_30srvtrop_6063799_on00538_1.jpg?size=225",
+      "packages": [
+        "kg:0.42"
+      ],
+      "offers": [
+        {
+          "id": "catalog:501c9b40510731a9",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/gold-pre-workout-advanced-420-g-fruit-punch",
+          "package_key": "kg:0.42",
+          "flavour": "Fruit Punch",
+          "price_eur": 49.99,
+          "unit_price": 119.02,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:a380ed5ed78e3e36",
+      "name": "Gold Standard Pre Workout, 330 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_gspwo_30srv_blurazz_6058720_on00537_1.jpg?size=225",
+      "packages": [
+        "kg:0.33"
+      ],
+      "offers": [
+        {
+          "id": "catalog:08bc151f2acf823d",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/gold-standard-pre-workout-330-g-blue-raspberry",
+          "package_key": "kg:0.33",
+          "flavour": "Blue Raspberry",
+          "price_eur": 39.99,
+          "unit_price": 121.18,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:606a84b0a4bf5da3",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/gold-standard-pre-workout-330-g-fruit-punch",
+          "package_key": "kg:0.33",
+          "flavour": "Fruit Punch",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:0f314736808043e0",
+      "name": "Gold Standard Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/04/optimum-nutrition-gold-preworkout-kiwi-proteini-outlet-600x600.jpg",
+      "packages": [
+        "kg:0.33"
+      ],
+      "offers": [
+        {
+          "id": "catalog:6dc56260e89b30cc",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/gold-standard-pre-workout/?attribute_pa_okus=vocni-punc",
+          "package_key": "kg:0.33",
+          "flavour": "Voćni punč",
+          "price_eur": 31.0,
+          "unit_price": 93.94,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:2459c7009247376a",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/gold-standard-pre-workout/?attribute_pa_okus=zelena-jabuka",
+          "package_key": "kg:0.33",
+          "flavour": "Zelena jabuka",
+          "price_eur": 31.0,
+          "unit_price": 93.94,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:ff6544d6b3033062",
+      "name": "GRIZLI PUMP&POWER PACK",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/Grizli-Pump-and-Power-Packv2.0-12-600x600.jpg",
+      "packages": [
+        "kg:0.341"
+      ],
+      "offers": [
+        {
+          "id": "catalog:1b12895c5c16a2cd",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/grizli-pumppower-pack/",
+          "package_key": "kg:0.341",
+          "flavour": null,
+          "price_eur": 76.5,
+          "unit_price": 224.4,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:2b04b61b61d8476b",
+      "name": "Gumeni bomboni Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12899623-1105170402605819.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "default"
+      ],
+      "offers": [
+        {
+          "id": "catalog:a4548fe500ee8c7a",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/gumeni-bomboni-pre-workout/12899623/",
+          "package_key": "default",
+          "flavour": null,
+          "price_eur": 20.09,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:dadc187962afabeb",
+      "name": "Hemopump, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_hemopump_lemon_500.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:fb5580d4269e653a",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/hemopump-500-g-lemon",
+          "package_key": "kg:0.5",
+          "flavour": "Lemon",
+          "price_eur": 29.99,
+          "unit_price": 59.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:449a0c2a18dfb165",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/hemopump-500-g-orange",
+          "package_key": "kg:0.5",
+          "flavour": "Orange",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:db82a756d72be3fd",
+      "name": "Impact Pre-Workout – Deadpool",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771600-6885192173004019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.44"
+      ],
+      "offers": [
+        {
+          "id": "catalog:28ded20a66848783",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-pre-workout-deadpool/15771600/",
+          "package_key": "kg:0.44",
+          "flavour": null,
+          "price_eur": 45.99,
+          "unit_price": 104.52,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4f058291fc603a24",
+      "name": "Impact Pre-Workout – Wolverine",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771601-1075192172761400.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.48"
+      ],
+      "offers": [
+        {
+          "id": "catalog:79b0b3a912cbe0c9",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-pre-workout-wolverine/15771601/",
+          "package_key": "kg:0.48",
+          "flavour": null,
+          "price_eur": 30.81,
+          "unit_price": 64.19,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:baa9c23fdb34cf99",
+      "name": "MassRage, 250 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_massrage-250.jpg?size=225",
+      "packages": [
+        "kg:0.25"
+      ],
+      "offers": [
+        {
+          "id": "catalog:320312ca71b57b05",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/massrage-250-g",
+          "package_key": "kg:0.25",
+          "flavour": null,
+          "price_eur": 24.99,
+          "unit_price": 99.96,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:47138b63767e521a",
+      "name": "MassRage, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_massrage-500.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:9c41fb7164513f63",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/massrage-500-g",
+          "package_key": "kg:0.5",
+          "flavour": null,
+          "price_eur": 39.99,
+          "unit_price": 79.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:371c3b57acb10236",
+      "name": "Men‘s Force Pre-Workout - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/m/e/men_s_essential_pre-workout_mango-maracuja_420_g_gymbeam_1_.png",
+      "packages": [
+        "kg:0.42"
+      ],
+      "offers": [
+        {
+          "id": "catalog:cdbcca6805bcbaec",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/men-s-force-pre-workout-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "mango - marakuja",
+          "price_eur": 18.95,
+          "unit_price": 45.12,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:28b1514094c112b4",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/men-s-force-pre-workout-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "šumsko voće",
+          "price_eur": 18.95,
+          "unit_price": 45.12,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:2841073430ca2b77",
+      "name": "MOONSTRUCK® II, 510 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoo1012_8436551611549_moonstruck_ii_devil_cherry_1[1].png?size=225",
+      "packages": [
+        "kg:0.51"
+      ],
+      "offers": [
+        {
+          "id": "catalog:46453264e523bcc4",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/moonstruck-ii-510-g-cherry",
+          "package_key": "kg:0.51",
+          "flavour": "Cherry",
+          "price_eur": 44.99,
+          "unit_price": 88.22,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:77cf09fa4179468d",
+      "name": "Myprotein Impact Pre-Workout, Marvel Venom (ALT)",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17585477-5605288565058632.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.44"
+      ],
+      "offers": [
+        {
+          "id": "catalog:5c13b375fef78aaf",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/myprotein-impact-pre-workout-marvel-venom-alt/17585477/",
+          "package_key": "kg:0.44",
+          "flavour": null,
+          "price_eur": 30.81,
+          "unit_price": 70.03,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:4f3697df8b1b54f5",
+      "name": "Myprotein THE Pre Workout (CEE)",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15238939-2975247320737851.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "default"
+      ],
+      "offers": [
+        {
+          "id": "catalog:98cf3bdcc94cd5cf",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/myprotein-the-pre-workout-cee/12457594/",
+          "package_key": "default",
+          "flavour": null,
+          "price_eur": 44.99,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:21bf76636f6a9317",
+      "name": "N.O. Xplode 3.0",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/bsn-no-explode-650g-proteini-outlet-333-600x600.jpg",
+      "packages": [
+        "kg:0.65"
+      ],
+      "offers": [
+        {
+          "id": "catalog:c6c8e84d67e85185",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/n-o-xplode-3-0-2/?attribute_pa_okus=jagoda-kivi",
+          "package_key": "kg:0.65",
+          "flavour": "Jagoda-kivi",
+          "price_eur": 45.0,
+          "unit_price": 69.23,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:77fd6ab366bb39cc",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/n-o-xplode-3-0-2/?attribute_pa_okus=visnja",
+          "package_key": "kg:0.65",
+          "flavour": "Višnja",
+          "price_eur": 45.0,
+          "unit_price": 69.23,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4e160261c0712f78",
+      "name": "N.O. Xplode 3.0",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2022/03/bsn-no-explode-390g-proteini-outlet-222-600x600.jpg",
+      "packages": [
+        "kg:0.39"
+      ],
+      "offers": [
+        {
+          "id": "catalog:980ab13521da6aac",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/n-o-xplode-3-0/",
+          "package_key": "kg:0.39",
+          "flavour": null,
+          "price_eur": 31.0,
+          "unit_price": 79.49,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:9c38344d3fcf9bf6",
+      "name": "N.O.KO Pre-Workout, 400 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleosport_noko_400_cola.jpg?size=225",
+      "packages": [
+        "kg:0.4"
+      ],
+      "offers": [
+        {
+          "id": "catalog:3210e916d1fcc270",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/n-o-ko-pre-workout-400-g-breskva",
+          "package_key": "kg:0.4",
+          "flavour": "Breskva",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:e3b213199f8928e1",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/n-o-ko-pre-workout-400-g-lemon-cola",
+          "package_key": "kg:0.4",
+          "flavour": "Lemon Cola",
+          "price_eur": 31.99,
+          "unit_price": 79.97,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:33adf6e3e3a1f410",
+      "name": "N.O.KO PUMP Pre-Workout, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/n.o.ko%20pump%20500g%20cola.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:65f848aba67acf31",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/n-o-ko-pump-pre-workout-500-g-cola",
+          "package_key": "kg:0.5",
+          "flavour": "Cola",
+          "price_eur": 49.99,
+          "unit_price": 99.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:b50512f722ea63e9",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/n-o-ko-pump-pre-workout-500-g-peach-iced-tea",
+          "package_key": "kg:0.5",
+          "flavour": "Peach Iced Tea",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:f0071dede1c20422",
+      "name": "N1 Pre-Workout - Nutrend, 0.17 kg",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png",
+      "packages": [
+        "kg:0.17",
+        "kg:0.51"
+      ],
+      "offers": [
+        {
+          "id": "catalog:54169cb153396ff6",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.17",
+          "flavour": "crni ribiz",
+          "price_eur": 13.95,
+          "unit_price": 82.06,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:d276a194a3490bbf",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.17",
+          "flavour": "crvena naranča",
+          "price_eur": 13.95,
+          "unit_price": 82.06,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:3ad00db5d2ee7110",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.17",
+          "flavour": "grejp",
+          "price_eur": 13.95,
+          "unit_price": 82.06,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:246f7281c6fdf567",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.17",
+          "flavour": "plava malina",
+          "price_eur": 13.95,
+          "unit_price": 82.06,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:f98abc0cad8051d3",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.51",
+          "flavour": "crni ribiz",
+          "price_eur": 35.95,
+          "unit_price": 70.49,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:f17a5ac06e68a840",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.51",
+          "flavour": "crvena naranča",
+          "price_eur": 35.95,
+          "unit_price": 70.49,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:66a25d87ee9b204b",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.51",
+          "flavour": "grejp",
+          "price_eur": 35.95,
+          "unit_price": 70.49,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:a6d44fa6dae417b3",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
+          "package_key": "kg:0.51",
+          "flavour": "plava malina",
+          "price_eur": 35.95,
+          "unit_price": 70.49,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:739344b128e1f022",
+      "name": "NO Citrulline Plus - GymBeam, 0.42 kg",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/n/o/no_citrulline_plus_mango-maracuja_420_g_gymbeam.png",
+      "packages": [
+        "kg:0.42"
+      ],
+      "offers": [
+        {
+          "id": "catalog:70da8a571c28f220",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/no-citrulline-plus-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "limun - limeta",
+          "price_eur": 24.95,
+          "unit_price": 59.4,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:72317ae58815702e",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/no-citrulline-plus-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "mango - marakuja",
+          "price_eur": 24.95,
+          "unit_price": 59.4,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:a650f4c6bfa6ef86",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/no-citrulline-plus-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "zelena jabuka",
+          "price_eur": 24.95,
+          "unit_price": 59.4,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:23bb1b085cf3709e",
+      "name": "NO Xplode Legendary Pre-Workout, 650g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn-no-xplode-650g-purple-power-jpg.jpg?size=225",
+      "packages": [
+        "kg:0.65"
+      ],
+      "offers": [
+        {
+          "id": "catalog:c80d5dc4c8253bd6",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/no-xplode-legendary-pre-workout-650g-green-burst",
+          "package_key": "kg:0.65",
+          "flavour": "Green burst",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:71ff6aeecd9e3e40",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/no-xplode-legendary-pre-workout-650g-purple-power",
+          "package_key": "kg:0.65",
+          "flavour": "Purple power",
+          "price_eur": 49.99,
+          "unit_price": 76.91,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:29adcefabadf9528",
+      "name": "ONE RAW® AAKG, 300 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoo1021_8436551611662_one_raw_aakg_cherry_bomb[1].png?size=225",
+      "packages": [
+        "kg:0.3"
+      ],
+      "offers": [
+        {
+          "id": "catalog:305089cccf5137fe",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/one-raw-aakg-300-g-cherry",
+          "package_key": "kg:0.3",
+          "flavour": "Cherry",
+          "price_eur": 34.99,
+          "unit_price": 116.63,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4f56d99d2b018ef8",
+      "name": "ONE RAW® Beta Alanine, 300 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoo1019_8436551611648_one_raw_beta_alanine_cherry_bomb[1].png?size=225",
+      "packages": [
+        "kg:0.3"
+      ],
+      "offers": [
+        {
+          "id": "catalog:52dde4867549baec",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/one-raw-beta-alanine-300-g-cherry",
+          "package_key": "kg:0.3",
+          "flavour": "Cherry",
+          "price_eur": 29.99,
+          "unit_price": 99.97,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:e2ad847c6ca9bfe7",
+      "name": "Origin Jacked Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17879939-9775332623822897.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.75"
+      ],
+      "offers": [
+        {
+          "id": "catalog:a08923298633dd09",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-jacked-pre-workout/17627020/",
+          "package_key": "kg:0.75",
+          "flavour": null,
+          "price_eur": 37.51,
+          "unit_price": 50.01,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:e05c657ca745668b",
+      "name": "Origin Jacked Pump",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17627019-1945332900280970.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.625"
+      ],
+      "offers": [
+        {
+          "id": "catalog:3a1ef156554c88ab",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-jacked-pump/17627019/?variation=17691775",
+          "package_key": "kg:0.625",
+          "flavour": "Cherry Drops",
+          "price_eur": 38.39,
+          "unit_price": 61.42,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
+        }
+      ]
+    },
+    {
+      "id": "catalog:a9a166216cb630d0",
+      "name": "Origin Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12941037-2015132581334232.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.6"
+      ],
+      "offers": [
+        {
+          "id": "catalog:cd3612ae8454b725",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-pre-workout/12941037/",
+          "package_key": "kg:0.6",
+          "flavour": null,
+          "price_eur": 26.12,
+          "unit_price": 43.54,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:731dd916f097f5e6",
+      "name": "Origin Pre-Workout Dry Scoop",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14024015-2135132278255974.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "default"
+      ],
+      "offers": [
+        {
+          "id": "catalog:8dd2c46bf59f379a",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-pre-workout-dry-scoop/14024015/",
+          "package_key": "default",
+          "flavour": null,
+          "price_eur": 14.79,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:ecb0c0c18d17a0f0",
+      "name": "Origin Shred pre-workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16547402-1705287072504314.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.66"
+      ],
+      "offers": [
+        {
+          "id": "catalog:42990df546b9d732",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/?variation=16547403",
+          "package_key": "kg:0.66",
+          "flavour": "Blue Raspberry Fizz",
+          "price_eur": 37.11,
+          "unit_price": 56.23,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
+        },
+        {
+          "id": "catalog:008ad97719f2befb",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/?variation=16547404",
+          "package_key": "kg:0.66",
+          "flavour": "Strawberry Laces",
+          "price_eur": 37.11,
+          "unit_price": 56.23,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
+        }
+      ]
+    },
+    {
+      "id": "catalog:7c878eff3c6215f9",
+      "name": "Origin Stim-Free Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14269805-1675129203306464.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.6"
+      ],
+      "offers": [
+        {
+          "id": "catalog:6c6d9eddeadc8d64",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-stim-free-pre-workout/14269805/",
+          "package_key": "kg:0.6",
+          "flavour": null,
+          "price_eur": 19.42,
+          "unit_price": 32.37,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:4e587bc203e4c2ef",
+      "name": "Pink Drive - BeastPink",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink_drive_strawberry_lemonade_300_g_beastpink_1_.png",
+      "packages": [
+        "kg:0.3"
+      ],
+      "offers": [
+        {
+          "id": "catalog:9016a6b380375edb",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pink-drive-beastpink.html",
+          "package_key": "kg:0.3",
+          "flavour": null,
+          "price_eur": 18.95,
+          "unit_price": 63.17,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:1b013a4c60044e90",
+      "name": "PLATINUM Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2025/05/optimum-nutrition-gold-preworkout-platinum-fruit-punch-proteini-outlet-sp-600x600.jpg",
+      "packages": [
+        "kg:0.42"
+      ],
+      "offers": [
+        {
+          "id": "catalog:88aa68392c6db0f2",
+          "store": "Proteini Outlet",
+          "source_url": "https://www.proteini-outlet.com/proizvod/platinum-pre-workout/",
+          "package_key": "kg:0.42",
+          "flavour": null,
+          "price_eur": 43.0,
+          "unit_price": 102.38,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:1f8cc4f4d39a154c",
+      "name": "Platinum Pump Pre-Workout, 380 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/_platinum_pump_pre-workout_-_380g_-_lemon-lime_1_(1).png?size=225",
+      "packages": [
+        "kg:0.38"
+      ],
+      "offers": [
+        {
+          "id": "catalog:594acaa6056308d5",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/platinum-pump-pre-workout-380-g-blue-raspberry",
+          "package_key": "kg:0.38",
+          "flavour": "Blue Raspberry",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:b1c71854ef34041f",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/platinum-pump-pre-workout-380-g-lemon-lime",
+          "package_key": "kg:0.38",
+          "flavour": "Lemon Lime",
+          "price_eur": 49.99,
+          "unit_price": 131.55,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:7c754dc66501523c",
+      "name": "Pre-Workout Mješavina",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12457711-5315245804881378.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:0.25"
+      ],
+      "offers": [
+        {
+          "id": "catalog:9d985f8e8d4ba428",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/pre-workout-mjesavina/12457711/",
+          "package_key": "kg:0.25",
+          "flavour": null,
+          "price_eur": 14.73,
+          "unit_price": 58.93,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:ea35a900a56cdadf",
+      "name": "Pre-workout stimulans Gold Standard Pre-Workout - Optimum Nutrition",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/g/s/gs_pwo_grn_apple_fr_6058191_seal_web.png",
+      "packages": [
+        "kg:0.33"
+      ],
+      "offers": [
+        {
+          "id": "catalog:9f8843c39a287716",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/stimulans-prije-treninga-gold-standard-pre-workout-optimum-nutrition.html",
+          "package_key": "kg:0.33",
+          "flavour": null,
+          "price_eur": 29.95,
+          "unit_price": 90.76,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:52863f6ffa775925",
+      "name": "Pre-workout stimulans N.O.-Xplode Legendary – BSN",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/b/s/bsn.no.xplode.red.rush1_600x.png",
+      "packages": [
+        "kg:0.39"
+      ],
+      "offers": [
+        {
+          "id": "catalog:0203660c8086f9ac",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-no-xplode-legendary-bsn.html",
+          "package_key": "kg:0.39",
+          "flavour": "purple power",
+          "price_eur": 29.95,
+          "unit_price": 76.79,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:0f507b8254c68181",
+      "name": "PUMP - Nutrend",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/6/3/63da4cf24c412_.png",
+      "packages": [
+        "kg:0.23"
+      ],
+      "offers": [
+        {
+          "id": "catalog:c1e916cad3690775",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pump-nutrend.html",
+          "package_key": "kg:0.23",
+          "flavour": null,
+          "price_eur": 21.95,
+          "unit_price": 97.56,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:e218b47e94fe3902",
+      "name": "Revive, 1000 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/mefirst_revive_orange_1000-1500.jpg?size=225",
+      "packages": [
+        "kg:1"
+      ],
+      "offers": [
+        {
+          "id": "catalog:7c22b490cb01c6d6",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/revive-1000-g-grape",
+          "package_key": "kg:1",
+          "flavour": "Grape",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:4cfe2921b002d303",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/revive-1000-g-orange",
+          "package_key": "kg:1",
+          "flavour": "Orange",
+          "price_eur": 29.99,
+          "unit_price": 29.99,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:92286ad6ead8d013",
+      "name": "Revive, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/xoauv8wq.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:ffe208e88108569b",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/revive-500-g-grape",
+          "package_key": "kg:0.5",
+          "flavour": "Grape",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:c202ccf79e5714aa",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/revive-500-g-lemon-lime",
+          "package_key": "kg:0.5",
+          "flavour": "Lemon Lime",
+          "price_eur": 39.99,
+          "unit_price": 79.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:e0860daafe05e153",
+      "name": "Storm, 20 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/me-first/me_first_storm_20g_lemon_lime.png?size=225",
+      "packages": [
+        "kg:0.02"
+      ],
+      "offers": [
+        {
+          "id": "catalog:e3b6c2f7c203d680",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/storm-20-g",
+          "package_key": "kg:0.02",
+          "flavour": null,
+          "price_eur": 1.99,
+          "unit_price": 99.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4301bafd49b5c577",
+      "name": "StormX Pre-Workout, 150 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/stormx_150g_juicy_burst.jpg?size=225",
+      "packages": [
+        "kg:0.15"
+      ],
+      "offers": [
+        {
+          "id": "catalog:d1c99e49015a36d0",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/stormx-pre-workout-150-g-juicy-burst",
+          "package_key": "kg:0.15",
+          "flavour": "Juicy Burst",
+          "price_eur": 19.99,
+          "unit_price": 133.27,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:73fd7d1a7f0ea9aa",
+      "name": "StormX Pre-Workout, 400 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/stormx_400g_sour_gummy (1).jpg?size=225",
+      "packages": [
+        "kg:0.4"
+      ],
+      "offers": [
+        {
+          "id": "catalog:52de9561d1c23933",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/stormx-pre-workout-400-g-fruit-burst",
+          "package_key": "kg:0.4",
+          "flavour": "Fruit Burst",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:5c870f2757fd4409",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/stormx-pre-workout-400-g-lemon",
+          "package_key": "kg:0.4",
+          "flavour": "Lemon",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:3cf25779b5b6c966",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/polleo-stormx-pre-workout-400-g-sour-gummy-bear",
+          "package_key": "kg:0.4",
+          "flavour": "Sour Gummy Bear",
+          "price_eur": 44.99,
+          "unit_price": 112.47,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:0dd8ba6ddc0cb186",
+      "name": "StormX PUMP Pre-Workout, 500 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/stormx_pump_500g_fruit_punch.jpg?size=225",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:d90c314953a052c8",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/stormx-pump-pre-workout-500-g-fruit-punch",
+          "package_key": "kg:0.5",
+          "flavour": "Fruit Punch",
+          "price_eur": 49.99,
+          "unit_price": 99.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:faaeda3a1e9d52f7",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/stormx-pump-pre-workout-500-g-raspberry",
+          "package_key": "kg:0.5",
+          "flavour": "Raspberry",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:95dc07cac14f8c4f",
+      "name": "Taurin - GymBeam, 0.25 kg",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/a/taurine_500_1.jpg",
+      "packages": [
+        "kg:0.25",
+        "kg:0.5",
+        "kg:1"
+      ],
+      "offers": [
+        {
+          "id": "catalog:3ace150d7f0dd229",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/taurin-gymbeam.html",
+          "package_key": "kg:0.25",
+          "flavour": null,
+          "price_eur": 6.95,
+          "unit_price": 27.8,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        },
+        {
+          "id": "catalog:4d8e7b4b38b508f0",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/taurin-gymbeam.html",
+          "package_key": "kg:0.5",
+          "flavour": null,
+          "price_eur": 12.95,
+          "unit_price": 25.9,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        },
+        {
+          "id": "catalog:2b2cc9205e29ab35",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/taurin-gymbeam.html",
+          "package_key": "kg:1",
+          "flavour": null,
+          "price_eur": 23.95,
+          "unit_price": 23.95,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:ff29e133a8f27324",
+      "name": "The Curse - JNX Sports",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_curse_pre-workout_lemon_rush_50_serve_bottle_front.png",
+      "packages": [
+        "kg:0.25"
+      ],
+      "offers": [
+        {
+          "id": "catalog:07c6ef81a9759bf7",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/the-curse-250-g-cobra-labs.html",
+          "package_key": "kg:0.25",
+          "flavour": null,
+          "price_eur": 27.95,
+          "unit_price": 111.8,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4b5b2877b684c938",
+      "name": "THE Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11351672-1525253813176115.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "default"
+      ],
+      "offers": [
+        {
+          "id": "catalog:ca5555620f5902b1",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/the-pre-workout/11351672/",
+          "package_key": "default",
+          "flavour": null,
+          "price_eur": 26.79,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+        }
+      ]
+    },
+    {
+      "id": "catalog:5c30ab3bc38aef12",
+      "name": "The Shadow - JNX Sports",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_shadow_fruit_punch_30_serve_bottle_front.png",
+      "packages": [
+        "kg:0.27"
+      ],
+      "offers": [
+        {
+          "id": "catalog:eec18a95a3243474",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/stimulans-prije-treninga-shadow-x-270-g-cobra-labs.html",
+          "package_key": "kg:0.27",
+          "flavour": null,
+          "price_eur": 34.95,
+          "unit_price": 129.44,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:1fbeecbde7aac44a",
+      "name": "Thor - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png",
+      "packages": [
+        "kg:0.21"
+      ],
+      "offers": [
+        {
+          "id": "catalog:2e50dfda36e93bc1",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html",
+          "package_key": "kg:0.21",
+          "flavour": "green-apple",
+          "price_eur": 10.15,
+          "unit_price": 48.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:319c501a3d27881d",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html",
+          "package_key": "kg:0.21",
+          "flavour": "lemon-lime",
+          "price_eur": 10.15,
+          "unit_price": 48.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:ca07fbca5c377d01",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html",
+          "package_key": "kg:0.21",
+          "flavour": "mango - marakuja",
+          "price_eur": 10.15,
+          "unit_price": 48.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:63274ec0b7f769cb",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html",
+          "package_key": "kg:0.21",
+          "flavour": "strawberry-kiwi",
+          "price_eur": 10.15,
+          "unit_price": 48.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:32e7628e8ee59dd0",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html",
+          "package_key": "kg:0.21",
+          "flavour": "water-melon",
+          "price_eur": 10.15,
+          "unit_price": 48.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:4a0b265cf565502a",
+      "name": "Thor Shot - GymBeam, 0.06 kg",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_shot_lemon-lime_20x60ml_gymbeam_1.png",
+      "packages": [
+        "kg:0.06",
+        "kg:1.2"
+      ],
+      "offers": [
+        {
+          "id": "catalog:ce0661bafa017177",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/thor-shot-gymbeam.html",
+          "package_key": "kg:0.06",
+          "flavour": null,
+          "price_eur": 1.3,
+          "unit_price": 21.67,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        },
+        {
+          "id": "catalog:ff7de4076618f04c",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/thor-shot-gymbeam.html",
+          "package_key": "kg:1.2",
+          "flavour": null,
+          "price_eur": 24.7,
+          "unit_price": 20.58,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:334325b5fd52b38f",
+      "name": "Thor Stim-Free - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png",
+      "packages": [
+        "kg:0.42"
+      ],
+      "offers": [
+        {
+          "id": "catalog:d54fca8d95d9b612",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "jagoda - kivi",
+          "price_eur": 19.95,
+          "unit_price": 47.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:6416d25b483b5e64",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
+          "package_key": "kg:0.42",
+          "flavour": "lemon-lime",
+          "price_eur": 19.95,
+          "unit_price": 47.5,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:062e89d9b4812d5e",
+      "name": "Total Rush 2.0 - Weider",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_31782_total_rush_2.0_375g_cranberry_glutapep_1_.jpg",
+      "packages": [
+        "kg:0.38"
+      ],
+      "offers": [
+        {
+          "id": "catalog:99eed805f3f69a18",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/total-rush-2-0-weider.html",
+          "package_key": "kg:0.38",
+          "flavour": null,
+          "price_eur": 35.95,
+          "unit_price": 95.87,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:30648cfad7917c8b",
+      "name": "Veinz Pre-workout - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/v/e/veinz_wildcherry_mockup.jpg",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:bfffdfbbbab4df7f",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/veinz-pre-workout-gymbeam.html",
+          "package_key": "kg:0.5",
+          "flavour": "plava malina",
+          "price_eur": 15.55,
+          "unit_price": 31.1,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:dec8d0a84108bd1c",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/veinz-pre-workout-gymbeam.html",
+          "package_key": "kg:0.5",
+          "flavour": "wild cherry",
+          "price_eur": 15.55,
+          "unit_price": 31.1,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:ca145402eb6b2bf7",
+      "name": "Weider Intense Pre-Workout",
+      "category": "preworkout",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2025/10/gaz-nutrition-proizvod-weider-intense-preworkout-v011g.jpg",
+      "packages": [
+        "kg:0.375"
+      ],
+      "offers": [
+        {
+          "id": "catalog:c686bace93d59fbb",
+          "store": "GAZ Nutrition",
+          "source_url": "https://gaz-nutrition.com/proizvod/weider-intense-pre-workout/",
+          "package_key": "kg:0.375",
+          "flavour": null,
+          "price_eur": 26.95,
+          "unit_price": 71.87,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:76a2cd9fb0a0f40b",
+      "name": "Weider Intense Pre-Workout 375g",
+      "category": "preworkout",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fintense%5Fpre%2Dworkout%5F375g%5F193456%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "packages": [
+        "kg:0.375"
+      ],
+      "offers": [
+        {
+          "id": "catalog:84ac034c39a6c3e8",
+          "store": "Proteka",
+          "source_url": "https://www.proteka.hr/product/weider-intense-pre-workout-375g-5082",
+          "package_key": "kg:0.375",
+          "flavour": "Fruit punch",
+          "price_eur": 29.95,
+          "unit_price": 79.87,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:2abf224e79324cb4",
+      "name": "Weider Maximum Krea-Genic® Powder",
+      "category": "preworkout",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-maximum-krea-genic-powder-v01g.jpg",
+      "packages": [
+        "kg:0.554"
+      ],
+      "offers": [
+        {
+          "id": "catalog:7325fa1a8d79b3e3",
+          "store": "GAZ Nutrition",
+          "source_url": "https://gaz-nutrition.com/proizvod/weider-maximum-krea-genic-powder/",
+          "package_key": "kg:0.554",
+          "flavour": null,
+          "price_eur": 40.45,
+          "unit_price": 73.01,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:ee7689d59c0517c3",
+      "name": "Weider Mega Mass Pump",
+      "category": "preworkout",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/05/gaz-nutrition-proizvod-weider-mega-mass-pump-v01-1.jpg",
+      "packages": [
+        "kg:0.27"
+      ],
+      "offers": [
+        {
+          "id": "catalog:b242141e8fe5f9dd",
+          "store": "GAZ Nutrition",
+          "source_url": "https://gaz-nutrition.com/proizvod/weider-mega-mass-pump/",
+          "package_key": "kg:0.27",
+          "flavour": null,
+          "price_eur": 35.05,
+          "unit_price": 129.81,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:7f45607e03d46248",
+      "name": "Weider Mega Mass Pump 270g",
+      "category": "preworkout",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmega%5Fmass%5Fpump%5F185250%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "packages": [
+        "kg:0.27"
+      ],
+      "offers": [
+        {
+          "id": "catalog:61325175451b447f",
+          "store": "Proteka",
+          "source_url": "https://www.proteka.hr/product/weider-mega-mass-pump-270g-5058",
+          "package_key": "kg:0.27",
+          "flavour": "Black Currant",
+          "price_eur": 38.95,
+          "unit_price": 144.26,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:6285e2a1c9fae67c",
+      "name": "Weider Premium L-Citrulline Malate",
+      "category": "preworkout",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2025/05/gaz-nutrition-proizvod-weider-premium-l-citrulline-malate-v02g.jpg",
+      "packages": [
+        "kg:0.31"
+      ],
+      "offers": [
+        {
+          "id": "catalog:6e3c7381879de132",
+          "store": "GAZ Nutrition",
+          "source_url": "https://gaz-nutrition.com/proizvod/weider-premium-l-citrulline-malate/",
+          "package_key": "kg:0.31",
+          "flavour": null,
+          "price_eur": 23.36,
+          "unit_price": 75.35,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:d5751ffa9aba1b3a",
+      "name": "Weider Total Rush 2.0",
+      "category": "preworkout",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-total-rush-20-v02-1.jpg",
+      "packages": [
+        "kg:0.375"
+      ],
+      "offers": [
+        {
+          "id": "catalog:fcec823acb0cc90e",
+          "store": "GAZ Nutrition",
+          "source_url": "https://gaz-nutrition.com/proizvod/weider-total-rush-2-0/",
+          "package_key": "kg:0.375",
+          "flavour": null,
+          "price_eur": 40.45,
+          "unit_price": 107.87,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:07011029260cd4a8",
+      "name": "Weider Total Rush 2.0 375 g",
+      "category": "preworkout",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Ftotal%5Frush%5F2%2E0%5F221440%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "packages": [
+        "kg:0.375"
+      ],
+      "offers": [
+        {
+          "id": "catalog:7d9abc91600bf059",
+          "store": "Proteka",
+          "source_url": "https://www.proteka.hr/product/total-rush-20-375-g-4464",
+          "package_key": "kg:0.375",
+          "flavour": "Naranča",
+          "price_eur": 46.0,
+          "unit_price": 122.67,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:f8faf378a9e0101d",
+      "name": "Z-Konzept Energy Booster",
+      "category": "preworkout",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-zkonzept-energy-booster-v01-1.jpg",
+      "packages": [
+        "kg:0.525"
+      ],
+      "offers": [
+        {
+          "id": "catalog:62cff2e128e53bb7",
+          "store": "GAZ Nutrition",
+          "source_url": "https://gaz-nutrition.com/proizvod/z-konzept-energy-booster/",
+          "package_key": "kg:0.525",
+          "flavour": null,
+          "price_eur": 29.0,
+          "unit_price": 55.24,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:9526b23b2f52d04e",
+      "name": "Z-Konzept Energy Booster 525 g",
+      "category": "preworkout",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/z%2Dkonzept%5Fenergy%5Fbooster%5F14471%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "packages": [
+        "kg:0.525"
+      ],
+      "offers": [
+        {
+          "id": "catalog:766dadc5e0fc6b3e",
+          "store": "Proteka",
+          "source_url": "https://www.proteka.hr/product/energy-booster-525-g-4568",
+          "package_key": "kg:0.525",
+          "flavour": "525 g Fruit Punch",
+          "price_eur": 32.9,
+          "unit_price": 62.67,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:2fcfac52dece3bb7",
+      "name": "zoe Furiosa Pre-Workout, 300 g",
+      "category": "preworkout",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_furiosa_pre_workout_tropical_300g.jpg?size=225",
+      "packages": [
+        "kg:0.3"
+      ],
+      "offers": [
+        {
+          "id": "catalog:b886fd758110b4ec",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/zoe-furiosa-pre-workout-300-g-fruit-punch",
+          "package_key": "kg:0.3",
+          "flavour": "Fruit Punch",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:52645a0eb3672ed7",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/zoe-furiosa-pre-workout-300-g-tropical",
+          "package_key": "kg:0.3",
+          "flavour": "Tropical",
+          "price_eur": 37.99,
+          "unit_price": 126.63,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "redirects": {}
+}

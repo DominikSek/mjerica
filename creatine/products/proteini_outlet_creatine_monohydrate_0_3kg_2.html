@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{const t=localStorage.getItem("mjerica:theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
+<script>if(window.self!==window.top&&location.pathname.startsWith("/report/"))document.documentElement.classList.add("embedded-report");</script>
+<title>CREATINE MONOHYDRATE &middot; Mjerica</title>
+<style>
+  :root { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --secondary: #245e68; --secondary-soft: #e0eff0; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --secondary: #8fb9e8; --secondary-soft: #1c3048; } }
+  :root[data-theme="dark"] { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --secondary: #8fb9e8; --secondary-soft: #1c3048; }
+  :root[data-theme="light"] { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --secondary: #245e68; --secondary-soft: #e0eff0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
+  .site-header { border-bottom: 1px solid var(--border); background: var(--surface); }
+  .header-inner { max-width: 1120px; margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; gap: 22px; }
+  .site-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -.04em; }
+  .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; color: var(--surface); background: var(--accent); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); }
+  .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .header-context { margin-left: auto; color: var(--muted); font-size: 13px; }
+  .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; flex: none; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
+  .theme-toggle:hover { border-color: var(--accent); background: var(--accent); color: var(--surface); filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 15px color-mix(in srgb, var(--accent) 32%, transparent); }
+  .theme-toggle:active { transform: translateY(0); filter: brightness(.98); }
+  .theme-toggle:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .theme-toggle svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .theme-toggle .moon-icon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun-icon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .sun-icon { display: none; } :root:not([data-theme="light"]) .theme-toggle .moon-icon { display: block; } }
+  :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .page { max-width: 1120px; margin: 0 auto; padding: 28px 28px 72px; }
+  .breadcrumb { display: flex; align-items: center; gap: 9px; margin-bottom: 28px; color: var(--muted); font-size: 13px; }
+  .back { color: var(--secondary); text-decoration: none; font-weight: 650; }
+  .back:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .breadcrumb-separator { color: var(--border); }
+  .product-shell { display: grid; gap: 34px; }
+  .product-hero { display: grid; grid-template-columns: minmax(280px, 42%) minmax(0, 1fr); gap: clamp(30px, 6vw, 76px); align-items: center; }
+  .hero-media { min-height: 360px; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--border); padding: 28px; }
+  .hero-img { width: min(100%, 380px); height: 360px; object-fit: contain; }
+  .hero-empty { width: 100%; height: 300px; background: linear-gradient(135deg, var(--panel), var(--surface)); }
+  .hero-body { min-width: 0; }
+  .eyebrow { margin: 0 0 9px; color: var(--secondary); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+  h1 { margin: 0 0 10px; font: 800 clamp(30px, 4vw, 52px)/1.03 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; letter-spacing: -.045em; }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  .price-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+  .price { font: 850 clamp(30px, 4vw, 42px)/1 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; letter-spacing: -.04em; }
+  .price-flavour { color: var(--muted); font-size: 14px; }
+  .buy-link { display: inline-flex; align-items: center; justify-content: center; min-height: 45px; padding: 10px 18px; background: var(--accent); color: var(--surface); text-decoration: none; font-weight: 750; border-radius: 5px; }
+  .buy-link:hover { background: var(--text); }
+  .buy-link:focus-visible, .back:focus-visible, .flavour-chip:focus-visible, .package-chip:focus-visible, .store-link:focus-visible, .see-also-link:focus-visible { outline: 3px solid var(--secondary); outline-offset: 3px; }
+  .card { background: var(--surface); border: 1px solid var(--border); padding: clamp(20px, 3vw, 30px); }
+  .card h2 { margin: 0 0 16px; font: 750 18px/1.2 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -.02em; }
+  .description { line-height: 1.7; max-width: 75ch; }
+  .description p, .description ul, .description ol { margin: 0 0 1em; }
+  .description h2, .description h3, .description h4 { line-height: 1.3; margin: 1.3em 0 .6em; }
+  .description table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+  .description td, .description th { padding: 6px; border: 1px solid var(--border); }
+  .flavours, .package-options { display: flex; flex-wrap: wrap; gap: 9px; }
+  .flavour-chip, .package-chip { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 8px 13px; border: 1px solid var(--border); color: var(--text); background: var(--surface); text-decoration: none; font-size: 14px; font-weight: 650; border-radius: 4px; }
+  .flavour-chip:hover, .package-chip:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .flavour-chip.current, .package-chip.current { border-color: var(--accent); background: var(--accent-soft); }
+  .chip-price { color: var(--muted); font-weight: 700; }
+  .store-list, .see-also-list { display: grid; gap: 1px; background: var(--border); }
+  .store-row, .see-also-link { display: flex; align-items: center; gap: 14px; padding: 14px; background: var(--surface); text-decoration: none; color: var(--text); }
+  .store-row > span:first-child, .see-also-link { min-width: 0; flex: 1; }
+  .store-row small, .see-also-link small { display: block; color: var(--muted); font-size: 12px; }
+  .store-price { font-weight: 800; white-space: nowrap; }
+  .store-link { color: var(--secondary); font-weight: 750; white-space: nowrap; }
+  .see-also-link:hover { background: var(--secondary-soft); }
+  .site-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; padding: 15px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  @media (max-width: 720px) { .header-inner, .page { padding-left: 18px; padding-right: 18px; } .header-context { display: none; } .product-hero { grid-template-columns: 1fr; gap: 24px; } .hero-media { min-height: 260px; } .hero-img { height: 250px; } .hero-empty { height: 210px; } }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } .theme-toggle:hover, .theme-toggle:active { transform: none; } }
+
+  /* Product pages use the richer navy direction from the Mjerica concept. */
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #10263a; --surface: #122b40; --panel: #19364b; --border: #304b60; --text: #eaf2f4; --muted: #a1b3c2; --accent: #35b8aa; --accent-soft: #183f49; --accent-text: #8ce0d4; --secondary: #9ab0c1; --secondary-soft: #1a3448; }
+  }
+  :root[data-theme="dark"] { --bg: #10263a; --surface: #122b40; --panel: #19364b; --border: #304b60; --text: #eaf2f4; --muted: #a1b3c2; --accent: #35b8aa; --accent-soft: #183f49; --accent-text: #8ce0d4; --secondary: #9ab0c1; --secondary-soft: #1a3448; }
+  .site-header { background: var(--surface); }
+  html.embedded-report .site-header { display: none; }
+  .header-inner { max-width: 1480px; min-height: 72px; padding: 14px 34px; gap: 28px; }
+  .site-brand { color: var(--text); text-decoration: none; font-size: 23px; }
+  .header-context { display: none; }
+  .site-nav { display: flex; align-items: center; justify-content: center; gap: clamp(22px, 4vw, 52px); margin: 0 auto; }
+  .site-nav a, .saved-link { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 600; white-space: nowrap; }
+  .site-nav a:hover, .site-nav a.active, .saved-link:hover { color: var(--accent-text); }
+  .saved-link { display: inline-flex; align-items: center; gap: 9px; color: var(--text); }
+  .saved-link svg { width: 21px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .saved-count { color: var(--muted); font-weight: 500; }
+  .page { max-width: 1480px; padding: 25px 34px 48px; }
+  .product-shell { gap: 24px; }
+  .breadcrumb { gap: 12px; margin-bottom: 20px; font-size: 14px; }
+  .breadcrumb-separator { color: var(--muted); }
+  .product-hero { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(30px, 4vw, 56px); align-items: stretch; }
+  .hero-media { min-height: 460px; padding: 26px; border: 0; border-radius: 3px; background: var(--panel); }
+  .hero-img { width: 100%; height: 420px; object-fit: contain; }
+  .hero-empty { height: 420px; background: var(--panel); }
+  .hero-body { display: flex; flex-direction: column; justify-content: center; padding: 10px 0; }
+  .eyebrow { margin-bottom: 8px; color: var(--muted); font-size: 15px; font-weight: 500; letter-spacing: 0; }
+  .product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 22px; }
+  h1 { margin: 0 0 12px; font-size: clamp(30px, 3vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
+  .save-product { display: inline-flex; flex: none; align-items: center; gap: 9px; min-height: 44px; margin-top: 2px; padding: 9px 14px; border: 1px solid var(--accent); border-radius: 6px; background: transparent; color: var(--text); font: inherit; font-weight: 600; cursor: pointer; transition: background 140ms ease, border-color 140ms ease, color 140ms ease; }
+  .save-product svg { width: 19px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .save-product:hover, .save-product[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
+  .review-summary { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 9px; width: fit-content; margin: 0 0 20px; color: var(--muted); text-decoration: none; }
+  .review-summary:hover { color: var(--text); }
+  .review-stars { color: var(--accent); letter-spacing: 1px; font-size: 18px; line-height: 1; }
+  .review-score { color: var(--text); font-weight: 650; }
+  .review-source { padding-left: 10px; border-left: 1px solid var(--border); font-size: 13px; }
+  .meta { margin: 0 0 18px; color: var(--text); font-size: 14px; font-weight: 550; opacity: .88; }
+  .price-row { gap: 14px; margin: 0 0 26px; }
+  .price { font-size: clamp(34px, 4vw, 48px); }
+  .price-flavour { font-size: 17px; }
+  .price-unit { color: var(--muted); font-size: 18px; white-space: nowrap; }
+  .buy-link { display: none; }
+  .hero-options { display: grid; gap: 22px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .option-group h2 { margin: 0 0 9px; font-size: 15px; font-weight: 650; }
+  .flavours, .package-options { display: flex; flex-wrap: wrap; gap: 9px; }
+  .flavour-chip, .package-chip { min-height: 43px; padding: 9px 15px; border-radius: 5px; color: var(--text); background: transparent; font-size: 14px; font-weight: 550; }
+  .flavour-chip:hover, .package-chip:hover, .flavour-chip.current, .package-chip.current { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text); }
+  .chip-price { color: var(--muted); }
+  .store-comparison { padding-top: 20px; border-top: 1px solid var(--border); }
+  .compare-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 9px; }
+  .compare-heading h2 { margin: 0; font-size: 24px; letter-spacing: -.025em; }
+  .offer-count { color: var(--muted); font-size: 14px; }
+  .table-scroll { overflow-x: auto; }
+  .offer-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .offer-table th { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .offer-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .offer-table tbody tr.lowest-price { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+  .offer-table tbody tr.lowest-price td:first-child { box-shadow: inset 3px 0 var(--accent); }
+  .store-name { font-weight: 750; white-space: nowrap; }
+  .store-detail { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
+  .store-price { font-size: 17px; font-weight: 750; white-space: nowrap; }
+  .store-per-unit { white-space: nowrap; }
+  .lowest-label { display: block; margin-top: 2px; color: var(--accent-text); font-size: 12px; }
+  .store-link { display: inline-flex; justify-content: center; min-width: 130px; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 5px; color: var(--accent-text); text-decoration: none; font-weight: 600; }
+  .store-link:hover { background: var(--accent); color: var(--surface); }
+  .offer-footnote { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+  .related-products { padding-top: 18px; border-top: 1px solid var(--border); }
+  .related-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 12px; }
+  .related-heading h2 { margin: 0; font-size: 23px; letter-spacing: -.025em; }
+  .related-heading > span { color: var(--text); font-size: 13px; font-weight: 650; }
+  .section-kicker { margin: 0 0 3px; color: var(--accent-text); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+  .related-product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 12px; }
+  .related-product-card { position: relative; display: grid; grid-template-columns: 82px minmax(0, 1fr) 18px; align-items: center; gap: 14px; min-width: 0; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 140ms ease, background 140ms ease, transform 140ms ease; }
+  .related-product-card:hover { border-color: var(--accent); background: var(--panel); transform: translateY(-2px); }
+  .related-product-image { display: block; width: 82px; height: 88px; object-fit: contain; border-radius: 5px; background: var(--panel); }
+  .related-image-empty { background: linear-gradient(145deg, var(--panel), var(--surface)); }
+  .related-product-copy { display: grid; gap: 2px; min-width: 0; }
+  .related-product-copy strong { display: -webkit-box; overflow: hidden; color: var(--text); font-size: 14px; font-weight: 750; line-height: 1.3; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .related-store, .related-unit-price { color: var(--text); font-size: 12px; font-weight: 600; opacity: .82; }
+  .related-product-price { margin-top: 3px; color: var(--accent-text); font-size: 17px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .related-card-arrow { align-self: start; color: var(--accent-text); font-size: 16px; }
+  .meta, .review-source, .offer-count, .offer-footnote, .store-detail { color: var(--text); opacity: .82; }
+  .offer-footnote, .related-unit-price { font-size: 13px; }
+  .site-footer { margin-top: 6px; padding-top: 12px; }
+  @media (max-width: 850px) { .header-inner { flex-wrap: wrap; gap: 16px; padding: 14px 22px; } .site-nav { order: 3; justify-content: flex-start; width: 100%; margin: 0; } .saved-link { margin-left: auto; } .page { padding: 20px 22px 40px; } .product-hero { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 26px; } .hero-media { min-height: 340px; } .hero-img, .hero-empty { height: 320px; } .product-title-row { flex-direction: column-reverse; gap: 10px; } .save-product { min-height: 40px; } }
+  @media (max-width: 620px) { .header-inner { padding: 12px 16px; } .site-brand { font-size: 20px; } .site-nav { gap: 20px; overflow-x: auto; } .site-nav a { font-size: 14px; } .saved-link { font-size: 0; gap: 0; } .saved-count { margin-left: 3px; font-size: 12px; } .page { padding: 17px 16px 32px; } .breadcrumb { margin-bottom: 14px; } .product-hero { grid-template-columns: 1fr; gap: 22px; } .hero-media { min-height: 270px; padding: 18px; } .hero-img, .hero-empty { height: 250px; } .hero-body { padding: 0; } .product-title-row { flex-direction: row; align-items: flex-start; } h1 { font-size: 31px; } .save-product { width: 44px; min-width: 44px; padding: 0; justify-content: center; font-size: 0; } .save-product svg { width: 20px; } .review-summary { margin-bottom: 15px; } .price-row { margin-bottom: 20px; } .hero-options { gap: 18px; } .compare-heading { align-items: flex-start; flex-direction: column; gap: 3px; } .related-heading h2 { font-size: 21px; } .related-product-grid { grid-template-columns: 1fr; } .related-product-card { grid-template-columns: 72px minmax(0, 1fr) 16px; gap: 12px; } .related-product-image { width: 72px; height: 78px; } .offer-table { min-width: 0; } .offer-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .offer-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 8px 10px; border-bottom: 1px solid var(--border); } .offer-table tbody td { padding: 4px 2px; border: 0; } .offer-table tbody td:first-child { grid-column: 1; grid-row: 1; } .offer-table tbody td:nth-child(2) { grid-column: 1; grid-row: 2; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; } .offer-table tbody td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(5) { grid-column: 1 / -1; justify-content: flex-end; padding-top: 8px; } .store-link { min-width: 0; } }
+  @media (prefers-reduced-motion: reduce) { .save-product { transition: none; } }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a class="site-brand" href="../"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav class="site-nav" aria-label="Categories"><a href="../../whey/">Whey</a><a class="active" aria-current="page" href="../../creatine/">Creatine</a><a href="../../preworkout/">Pre-workout</a><a href="../../creatine_capsules/">Creatine capsules</a><a href="../../creatine_gummies/">Creatine gummies</a></nav><a class="saved-link" href="../../saved.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved <span class="saved-count" id="saved-count"></span></span></a><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
+<main class="page product-shell">
+  <div class="breadcrumb"><a class="back" href="../">&larr; Back to Creatine (Powder)</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">CREATINE MONOHYDRATE</span></div>
+  <section class="product-hero" aria-labelledby="product-title">
+    <div class="hero-media"><img class="hero-img" src="https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg" alt="CREATINE MONOHYDRATE" loading="eager" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div>
+    <div class="hero-body"><p class="eyebrow">Proteini Outlet</p><div class="product-title-row"><h1 id="product-title">CREATINE MONOHYDRATE</h1><button class="save-product" type="button" aria-pressed="false" data-save-keys="[&quot;Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/&quot;, &quot;Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=bez-okusa&quot;, &quot;Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=mango&quot;, &quot;Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=naranca&quot;]" title="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save product</span></button></div><a class="review-summary" href="https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=bez-okusa" target="_blank" rel="noopener" aria-label="5.0 out of 5 from 1 reviews at Proteini Outlet"><span class="review-stars" aria-hidden="true">★★★★★</span><span class="review-score">5.0</span><span class="review-source">1 reviews at Proteini Outlet</span></a><p class="meta">Proteini Outlet &middot; 300 g</p><div class="price-row"><span class="price">21.25 &euro;</span><span class="price-flavour"></span><span class="price-unit">70.83 &euro; / per kg</span></div><div class="hero-options"><div class="option-group package-selector"><h2>Package size</h2><div class="package-options"><span class="package-chip current">300 g</span></div></div><div class="option-group"><h2>Flavor</h2><div class="flavours"><a class="flavour-chip" href="https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=bez-okusa" target="_blank" rel="noopener">Bez okusa <span class="chip-price">21.25 &euro;</span></a><a class="flavour-chip" href="https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=mango" target="_blank" rel="noopener">Mango <span class="chip-price">21.25 &euro;</span></a><a class="flavour-chip" href="https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/?attribute_pa_okus=naranca" target="_blank" rel="noopener">Naranča <span class="chip-price">21.25 &euro;</span></a></div><p class="meta">Available flavors at this store.</p></div></div></div>
+  </section>
+  <section class="store-comparison" aria-labelledby="compare-title"><div class="compare-heading"><h2 id="compare-title">Store offer</h2><span class="offer-count">1 offers</span></div><div class="table-scroll"><table class="offer-table"><thead><tr><th>Store</th><th>Flavor</th><th>Price</th><th>Per kg</th><th><span class="visually-hidden">Offer</span></th></tr></thead><tbody><tr class="lowest-price"><td><span class="store-name">Proteini Outlet</span><small class=lowest-label>Lowest price</small></td><td>Bez okusa</td><td class="store-price">21.25 &euro;</td><td class="store-per-unit">70.83 &euro;</td><td><a class="store-link" href="https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/" target="_blank" rel="noopener">View offer</a></td></tr></tbody></table></div><p class="offer-footnote">Product prices only. Delivery costs may differ.</p></section>
+  <section class="related-products" aria-labelledby="related-title"><div class="related-heading"><div><p class="section-kicker">MORE TO COMPARE</p><h2 id="related-title">You might also like</h2></div><span>4 products</span></div><div class="related-product-grid"><a class="related-product-card" href="gymbeam_hr_kreatin_dekstroza_gymbeam_1_0kg.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Kreatin + Dekstroza - GymBeam</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">14.50 &euro;</span><span class=related-unit-price>14.50 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="proteka_verviavita_kreatin_monohidrat_900g_2_1_gratis_2_7kg.html"><img class="related-product-image" src="https://www.proteka.hr/upload/proizvodi/verviavita%5Fkreatin%5Fakcija%5F%282%29%5F135725%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Verviavita Kreatin Monohidrat 900g (2+1 GRATIS)</strong><span class="related-store">Best listed at Proteka</span><span class="related-product-price">40.00 &euro;</span><span class=related-unit-price>14.81 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>100% Kreatin Monohidrat - GymBeam, 1.5 kg</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">29.05 &euro;</span><span class=related-unit-price>19.37 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="the_nutrition_the_creatine_fuel_1500_g_1_5kg.html"><img class="related-product-image" src="https://hr.the-nutrition.com/store/images/products/2047_cat_473079.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>THE Creatine Fuel (1500 g)</strong><span class="related-store">Best listed at THE Nutrition</span><span class="related-product-price">38.56 &euro;</span><span class=related-unit-price>25.71 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a></div></section>
+</main>
+<footer class="page site-footer"><span>Offers and prices may change. Check the retailer for the final price and availability.</span><span>Mjerica · Supplement price comparison</span></footer>
+<script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
+<script>(function(){const storageKey="mjerica:saved-products",button=document.querySelector(".save-product"),count=document.getElementById("saved-count");if(!button)return;let keys=[];try{keys=JSON.parse(button.dataset.saveKeys||"[]");}catch(_){}const read=()=>{try{return new Set(JSON.parse(localStorage.getItem(storageKey)||"[]"));}catch(_){return new Set();}};const sync=()=>{const saved=read(),active=keys.length>0&&keys.every(key=>saved.has(key));button.setAttribute("aria-pressed",active?"true":"false");button.title=active?"Remove from saved":"Save product";button.querySelector("span").textContent=active?"Saved":"Save product";if(count)count.textContent=saved.size?"("+saved.size+")":"";};button.addEventListener("click",()=>{const saved=read(),active=keys.length>0&&keys.every(key=>saved.has(key));keys.forEach(key=>active?saved.delete(key):saved.add(key));localStorage.setItem(storageKey,JSON.stringify(Array.from(saved)));sync();});window.addEventListener("storage",sync);sync();})();</script>
+</body>
+</html>

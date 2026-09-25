@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{const t=localStorage.getItem("mjerica:theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
+<title>Saved products &middot; Mjerica</title>
+<style>
+  :root { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de;
+    --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb;
+    --accent-text: #0d5e59; --secondary: #245e68; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0b1220; --surface: #111c2d; --panel: #17263a;
+    --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6;
+    --accent-soft: #173f42; --accent-text: #8ae0d1; --secondary: #8fb9e8; } }
+  :root[data-theme="dark"] { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --accent-text: #8ae0d1; --secondary: #8fb9e8; }
+  :root[data-theme="light"] { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --accent-text: #0d5e59; --secondary: #245e68; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
+  .page { max-width: 980px; margin: 0 auto; padding: 36px 24px 64px; }
+  .site-header { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; border-bottom: 1px solid var(--border); padding-bottom: 18px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -.04em; color: var(--text); text-decoration: none; }
+  .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; color: var(--surface); background: var(--accent); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); flex: none; }
+  .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; flex: none; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
+  .theme-toggle:hover { border-color: var(--accent); background: var(--accent); color: var(--surface); filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 15px color-mix(in srgb, var(--accent) 32%, transparent); }
+  .theme-toggle:active { transform: translateY(0); filter: brightness(.98); }
+  .theme-toggle:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .theme-toggle svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .theme-toggle .moon-icon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun-icon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .sun-icon { display: none; } :root:not([data-theme="light"]) .theme-toggle .moon-icon { display: block; } }
+  .site-nav { display: flex; gap: 16px; margin-left: auto; }
+  .site-nav a { color: var(--muted); font-weight: 600; text-decoration: none; }
+  .site-nav a:hover, .site-nav a.active { color: var(--text); }
+  h1 { font-size: 28px; margin: 28px 0 4px; }
+  .intro { color: var(--muted); margin: 0 0 20px; }
+  .actions { display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
+  button { border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: 7px 11px; cursor: pointer; font: inherit; }
+  button:hover { border-color: var(--accent); }
+  .count { color: var(--muted); font-size: 13px; }
+  .cards { display: grid; gap: 10px; }
+  .card { background: var(--surface); border: 1px solid var(--border); padding: 14px 16px; }
+  .name { font-size: 17px; font-weight: 700; }
+  .category { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .offers { display: grid; gap: 6px; margin-top: 11px; }
+  .offer { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; background: var(--panel); padding: 8px 10px; }
+  .store { font-weight: 700; }
+  .detail { color: var(--muted); font-size: 12px; }
+  .price { margin-left: auto; font-weight: 700; }
+  .offer a { color: var(--secondary); font-weight: 700; }
+  .remove { margin-left: 4px; padding: 2px 7px; font-size: 12px; }
+  .empty { border: 1px dashed var(--border); color: var(--muted); padding: 24px; text-align: center; }
+  .stale { color: var(--muted); font-size: 13px; margin-top: 12px; }
+  .site-footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } .theme-toggle:hover, .theme-toggle:active { transform: none; } }
+  @media (max-width: 600px) { .page { padding: 18px 14px 40px; } .site-nav { margin-left: 0; width: 100%; } .price { margin-left: 0; } }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav class="site-nav"><a href="index.html">Categories</a><a class="active" href="saved.html">Saved</a></nav><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></header>
+  <h1>Saved products</h1>
+  <p class="intro">Your saved products from every category, kept in this browser.</p>
+  <div class="actions"><span class="count" id="count">Loading saved products&hellip;</span><button id="clear" type="button" hidden>Clear stale saves</button></div>
+  <section class="cards" id="saved-list" aria-live="polite"></section>
+  <footer class="site-footer">Your saved list stays in this browser. Prices and availability may change at the retailer.</footer>
+</main>
+<script>
+(function () {
+  const categories = [{"key": "whey", "label": "Whey Protein", "catalog_url": "./whey/catalog.json"}, {"key": "creatine", "label": "Creatine (Powder)", "catalog_url": "./creatine/catalog.json"}, {"key": "creatine_capsules", "label": "Creatine Capsules", "catalog_url": "./creatine_capsules/catalog.json"}, {"key": "creatine_gummies", "label": "Creatine Gummies", "catalog_url": "./creatine_gummies/catalog.json"}, {"key": "preworkout", "label": "Pre-Workout", "catalog_url": "./preworkout/catalog.json"}];
+  const catalogBase = "./";
+  const storageKey = "mjerica:saved-products";
+  const list = document.getElementById("saved-list");
+  const count = document.getElementById("count");
+  const clear = document.getElementById("clear");
+  let saved;
+  try { saved = new Set(JSON.parse(localStorage.getItem(storageKey) || "[]")); } catch (_) { saved = new Set(); }
+
+  function text(value) { return value == null ? "" : String(value); }
+  function formatPrice(offer) {
+    if (offer.price_eur == null) return "Price unavailable";
+    return (offer.price_kind === "range" ? "from " : "") + Number(offer.price_eur).toFixed(2) + " EUR";
+  }
+  function offerKey(offer) { return text(offer.store) + "|" + text(offer.source_url); }
+  function remove(key) {
+    saved.delete(key);
+    localStorage.setItem(storageKey, JSON.stringify(Array.from(saved)));
+    render();
+  }
+  function render() {
+    const matches = window.savedOffers || [];
+    list.replaceChildren();
+    if (!matches.length) {
+      list.innerHTML = '<div class="empty">No saved products yet. Save a product from a category page to see it here.</div>';
+    } else {
+      matches.forEach((item) => {
+        const card = document.createElement("article"); card.className = "card";
+        const title = document.createElement("div"); title.className = "name"; title.textContent = item.product.name; card.appendChild(title);
+        const category = document.createElement("div"); category.className = "category"; category.textContent = item.category.label; card.appendChild(category);
+        const offers = document.createElement("div"); offers.className = "offers";
+        item.offers.forEach((offer) => {
+          const row = document.createElement("div"); row.className = "offer";
+          const store = document.createElement("span"); store.className = "store"; store.textContent = offer.store; row.appendChild(store);
+          const detail = document.createElement("span"); detail.className = "detail"; detail.textContent = [offer.flavour, offer.package_key === "default" ? "" : offer.package_key].filter(Boolean).join(" · "); row.appendChild(detail);
+          const price = document.createElement("span"); price.className = "price"; price.textContent = formatPrice(offer); row.appendChild(price);
+          if (offer.source_url) { const link = document.createElement("a"); link.href = offer.source_url; link.target = "_blank"; link.rel = "noopener"; link.textContent = "View store"; row.appendChild(link); }
+          const button = document.createElement("button"); button.className = "remove"; button.type = "button"; button.textContent = "Remove"; button.addEventListener("click", () => remove(offerKey(offer))); row.appendChild(button);
+          offers.appendChild(row);
+        });
+        card.appendChild(offers); list.appendChild(card);
+      });
+    }
+    const stale = saved.size - matches.reduce((total, item) => total + item.offers.length, 0);
+    count.textContent = matches.length + (matches.length === 1 ? " product" : " products") + (stale > 0 ? " · " + stale + " stale save" : "");
+    clear.hidden = stale <= 0;
+    clear.textContent = stale === 1 ? "Clear stale save" : "Clear stale saves";
+  }
+  clear.addEventListener("click", () => {
+    const current = new Set((window.savedOffers || []).flatMap((item) => item.offers.map(offerKey)));
+    saved = new Set(Array.from(saved).filter((key) => current.has(key)));
+    localStorage.setItem(storageKey, JSON.stringify(Array.from(saved))); render();
+  });
+  function catalogUrl(category) { return category.catalog_url || (catalogBase + category.key + (catalogBase === "./" ? "/catalog.json" : "")); }
+  Promise.all(categories.map((category) => fetch(catalogUrl(category)).then((response) => response.ok ? response.json() : null).catch(() => null)))
+    .then((catalogs) => {
+      const matches = [];
+      catalogs.forEach((data, index) => {
+        if (!data) return;
+        const category = categories[index];
+        (data.products || []).forEach((product) => {
+          const offers = (product.offers || []).filter((offer) => saved.has(offerKey(offer)));
+          if (offers.length) matches.push({ product, offers, category });
+        });
+      });
+      window.savedOffers = matches; render();
+    });
+})();
+</script>
+<script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
+</body>
+</html>
