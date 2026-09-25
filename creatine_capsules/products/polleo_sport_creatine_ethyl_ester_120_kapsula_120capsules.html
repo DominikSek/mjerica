@@ -87,6 +87,7 @@
   .site-nav a:hover, .site-nav a.active, .saved-link:hover { color: var(--accent-text); }
   .saved-link { display: inline-flex; align-items: center; gap: 9px; color: var(--text); }
   .saved-link svg { width: 21px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .save-toast { position: fixed; right: 20px; bottom: 20px; z-index: 20; padding: 11px 16px; border: 1px solid var(--accent); border-radius: 9px; color: var(--surface); background: var(--accent); box-shadow: 0 8px 24px #0003; font-weight: 700; }
   .saved-count { color: var(--muted); font-weight: 500; }
   .page { max-width: 1480px; padding: 25px 34px 48px; }
   .product-shell { gap: 24px; }
@@ -100,9 +101,11 @@
   .eyebrow { margin-bottom: 8px; color: var(--muted); font-size: 15px; font-weight: 500; letter-spacing: 0; }
   .product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 22px; }
   h1 { margin: 0 0 12px; font-size: clamp(30px, 3vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
-  .save-product { display: inline-flex; flex: none; align-items: center; gap: 9px; min-height: 44px; margin-top: 2px; padding: 9px 14px; border: 1px solid var(--accent); border-radius: 6px; background: transparent; color: var(--text); font: inherit; font-weight: 600; cursor: pointer; transition: background 140ms ease, border-color 140ms ease, color 140ms ease; }
+  .save-product { display: inline-flex; flex: none; align-items: center; gap: 9px; min-height: 44px; margin-top: 2px; padding: 9px 15px; border: 1px solid var(--border); border-radius: 10px 10px 10px 3px; background: var(--surface); color: var(--text); font: inherit; font-weight: 650; cursor: pointer; transition: background 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease; }
   .save-product svg { width: 19px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .save-product:hover, .save-product[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
+  .save-product:hover { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); transform: translateY(-1px); }
+  .save-product[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
+  .save-product[aria-pressed="true"] svg { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .review-summary { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 9px; width: fit-content; margin: 0 0 20px; color: var(--muted); text-decoration: none; }
   .review-summary:hover { color: var(--text); }
   .review-stars { color: var(--accent); letter-spacing: 1px; font-size: 18px; line-height: 1; }
@@ -139,6 +142,7 @@
   .store-link { display: inline-flex; justify-content: center; min-width: 130px; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 5px; color: var(--accent-text); text-decoration: none; font-weight: 600; }
   .store-link:hover { background: var(--accent); color: var(--surface); }
   .offer-footnote { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+  .offer-action-cell { text-align: right; }
   .related-products { padding-top: 18px; border-top: 1px solid var(--border); }
   .related-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 12px; }
   .related-heading h2 { margin: 0; font-size: 23px; letter-spacing: -.025em; }
@@ -158,8 +162,8 @@
   .offer-footnote, .related-unit-price { font-size: 13px; }
   .site-footer { margin-top: 6px; padding-top: 12px; }
   @media (max-width: 850px) { .header-inner { flex-wrap: wrap; gap: 16px; padding: 14px 22px; } .site-nav { order: 3; justify-content: flex-start; width: 100%; margin: 0; } .saved-link { margin-left: auto; } .page { padding: 20px 22px 40px; } .product-hero { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 26px; } .hero-media { min-height: 340px; } .hero-img, .hero-empty { height: 320px; } .product-title-row { flex-direction: column-reverse; gap: 10px; } .save-product { min-height: 40px; } }
-  @media (max-width: 620px) { .header-inner { padding: 12px 16px; } .site-brand { font-size: 20px; } .site-nav { gap: 20px; overflow-x: auto; } .site-nav a { font-size: 14px; } .saved-link { font-size: 0; gap: 0; } .saved-count { margin-left: 3px; font-size: 12px; } .page { padding: 17px 16px 32px; } .breadcrumb { margin-bottom: 14px; } .product-hero { grid-template-columns: 1fr; gap: 22px; } .hero-media { min-height: 270px; padding: 18px; } .hero-img, .hero-empty { height: 250px; } .hero-body { padding: 0; } .product-title-row { flex-direction: row; align-items: flex-start; } h1 { font-size: 31px; } .save-product { width: 44px; min-width: 44px; padding: 0; justify-content: center; font-size: 0; } .save-product svg { width: 20px; } .review-summary { margin-bottom: 15px; } .price-row { margin-bottom: 20px; } .hero-options { gap: 18px; } .compare-heading { align-items: flex-start; flex-direction: column; gap: 3px; } .related-heading h2 { font-size: 21px; } .related-product-grid { grid-template-columns: 1fr; } .related-product-card { grid-template-columns: 72px minmax(0, 1fr) 16px; gap: 12px; } .related-product-image { width: 72px; height: 78px; } .offer-table { min-width: 0; } .offer-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .offer-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 8px 10px; border-bottom: 1px solid var(--border); } .offer-table tbody td { padding: 4px 2px; border: 0; } .offer-table tbody td:first-child { grid-column: 1; grid-row: 1; } .offer-table tbody td:nth-child(2) { grid-column: 1; grid-row: 2; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; } .offer-table tbody td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(5) { grid-column: 1 / -1; justify-content: flex-end; padding-top: 8px; } .store-link { min-width: 0; } }
-  @media (prefers-reduced-motion: reduce) { .save-product { transition: none; } }
+  @media (max-width: 620px) { .header-inner { padding: 12px 16px; } .site-brand { font-size: 20px; } .site-nav { gap: 20px; overflow-x: auto; } .site-nav a { font-size: 14px; } .saved-link { font-size: 0; gap: 0; } .saved-count { margin-left: 3px; font-size: 12px; } .page { padding: 17px 16px 32px; } .breadcrumb { margin-bottom: 14px; } .product-hero { grid-template-columns: 1fr; gap: 22px; } .hero-media { min-height: 270px; padding: 18px; } .hero-img, .hero-empty { height: 250px; } .hero-body { padding: 0; } .product-title-row { flex-direction: row; align-items: flex-start; } h1 { font-size: 31px; } .save-product { width: 44px; min-width: 44px; padding: 0; justify-content: center; font-size: 0; } .save-product svg { width: 20px; } .review-summary { margin-bottom: 15px; } .price-row { margin-bottom: 20px; } .hero-options { gap: 18px; } .compare-heading { align-items: flex-start; flex-direction: column; gap: 3px; } .related-heading h2 { font-size: 21px; } .related-product-grid { grid-template-columns: 1fr; } .related-product-card { grid-template-columns: 72px minmax(0, 1fr) 16px; gap: 12px; } .related-product-image { width: 72px; height: 78px; } .offer-table { min-width: 0; } .offer-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .offer-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 8px 10px; border-bottom: 1px solid var(--border); } .offer-table tbody td { padding: 4px 2px; border: 0; } .offer-table tbody td:first-child { grid-column: 1; grid-row: 1; } .offer-table tbody td:nth-child(2) { grid-column: 1; grid-row: 2; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; } .offer-table tbody td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(5) { grid-column: 1 / -1; justify-content: flex-end; padding-top: 8px; } .offer-action-cell { text-align: right; } .store-link { min-width: 0; } }
+  @media (prefers-reduced-motion: reduce) { .save-product { transition: none; } .save-product:hover { transform: none; } }
 </style>
 </head>
 <body>
@@ -168,13 +172,277 @@
   <div class="breadcrumb"><a class="back" href="../">&larr; Back to Creatine Capsules</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">Creatine Ethyl Ester, 120 kapsula</span></div>
   <section class="product-hero" aria-labelledby="product-title">
     <div class="hero-media"><img class="hero-img" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225" alt="Creatine Ethyl Ester, 120 kapsula" loading="eager" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div>
-    <div class="hero-body"><p class="eyebrow">Polleo Sport</p><div class="product-title-row"><h1 id="product-title">Creatine Ethyl Ester, 120 kapsula</h1><button class="save-product" type="button" aria-pressed="false" data-save-keys="[&quot;Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first&quot;]" title="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save product</span></button></div><a class="review-summary" href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first" target="_blank" rel="noopener" aria-label="5.0 out of 5 from 5 reviews at Polleo Sport"><span class="review-stars" aria-hidden="true">★★★★★</span><span class="review-score">5.0</span><span class="review-source">5 reviews at Polleo Sport</span></a><p class="meta">Polleo Sport &middot; 120 capsules</p><div class="price-row"><span class="price">26.99 &euro;</span><span class="price-flavour"></span><span class="price-unit">0.225 &euro; / per unit</span></div><div class="hero-options"><div class="option-group package-selector"><h2>Package size</h2><div class="package-options"><span class="package-chip current">120 capsules</span></div></div><div class="option-group"><h2>Flavor</h2><p class="meta flavor-unverified">Flavor information not verified. Check the store for available options.</p><p class="meta">Available flavors at this store.</p></div></div></div>
+    <div class="hero-body"><p class="eyebrow">Polleo Sport</p><div class="product-title-row"><h1 id="product-title">Creatine Ethyl Ester, 120 kapsula</h1><button class="save-product" type="button" aria-pressed="false" data-save-offer="{&quot;id&quot;: &quot;catalog:6173c81ad1708b37&quot;, &quot;offer_id&quot;: &quot;catalog:6173c81ad1708b37&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first&quot;, &quot;detail_slug&quot;: &quot;&quot;, &quot;package_key&quot;: &quot;count:120&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 26.99, &quot;unit_price&quot;: 0.225, &quot;unit_label&quot;: &quot;capsule&quot;, &quot;price_kind&quot;: &quot;exact&quot;, &quot;price_scope&quot;: &quot;listing&quot;, &quot;note&quot;: &quot;&quot;, &quot;name&quot;: &quot;Creatine Ethyl Ester, 120 kapsula&quot;, &quot;category&quot;: &quot;creatine_capsules&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;polleo_sport_creatine_ethyl_ester_120_kapsula_120capsules.html&quot;}" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save product</span></button></div><a class="review-summary" href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first" target="_blank" rel="noopener" aria-label="5.0 out of 5 from 5 reviews at Polleo Sport"><span class="review-stars" aria-hidden="true">★★★★★</span><span class="review-score">5.0</span><span class="review-source">5 reviews at Polleo Sport</span></a><p class="meta">Polleo Sport &middot; 120 capsules</p><div class="price-row"><span class="price">26.99 &euro;</span><span class="price-flavour"></span><span class="price-unit">0.225 &euro; / per unit</span></div><div class="hero-options"><div class="option-group package-selector"><h2>Package size</h2><div class="package-options"><span class="package-chip current">120 capsules</span></div></div><div class="option-group"><h2>Flavor</h2><p class="meta flavor-unverified">Flavor information not verified. Check the store for available options.</p><p class="meta">Available flavors at this store.</p></div></div></div>
   </section>
-  <section class="store-comparison" aria-labelledby="compare-title"><div class="compare-heading"><h2 id="compare-title">Store offer</h2><span class="offer-count">1 offers</span></div><div class="table-scroll"><table class="offer-table"><thead><tr><th>Store</th><th>Flavor</th><th>Price</th><th>Per unit</th><th><span class="visually-hidden">Offer</span></th></tr></thead><tbody><tr class="lowest-price"><td><span class="store-name">Polleo Sport</span><small class=lowest-label>Lowest price</small></td><td>Any flavor</td><td class="store-price">26.99 &euro;</td><td class="store-per-unit">0.225 &euro;</td><td><a class="store-link" href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first" target="_blank" rel="noopener">View offer</a></td></tr></tbody></table></div><p class="offer-footnote">Product prices only. Delivery costs may differ.</p></section>
-  <section class="related-products" aria-labelledby="related-title"><div class="related-heading"><div><p class="section-kicker">MORE TO COMPARE</p><h2 id="related-title">You might also like</h2></div><span>4 products</span></div><div class="related-product-grid"><a class="related-product-card" href="gymbeam_hr_kreatin_tabs_1000_mg_gymbeam_300_tab_300capsules.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Kreatin TABS 1000 mg - GymBeam, 300 tab.</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">18.50 &euro;</span><span class=related-unit-price>0.062 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="proteini_outlet_creatine_monohydrate_kapsule_220capsules.html"><img class="related-product-image" src="https://www.proteini-outlet.com/wp-content/uploads/2021/09/amix-nutrition-creatine-kapsule-proteini-outlet-600x600.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Creatine Monohydrate kapsule</strong><span class="related-store">Best listed at Proteini Outlet</span><span class="related-product-price">18.36 &euro;</span><span class=related-unit-price>0.083 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gymbeam_hr_kreatin_hcl_120_kaps_gymbeam_120capsules.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Kreatin HCl 120 kaps – GymBeam</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">12.95 &euro;</span><span class=related-unit-price>0.108 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="polleo_sport_creatine_monohydrate_160_kapsula_160capsules.html"><img class="related-product-image" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-creatine-monohydrate-160-capsules.jpg?size=225" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Creatine Monohydrate, 160 kapsula</strong><span class="related-store">Best listed at Polleo Sport</span><span class="related-product-price">19.99 &euro;</span><span class=related-unit-price>0.125 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a></div></section>
+  <section class="store-comparison" aria-labelledby="compare-title"><div class="compare-heading"><h2 id="compare-title">Store offer</h2><span class="offer-count">1 offers</span></div><div class="table-scroll"><table class="offer-table"><thead><tr><th>Store</th><th>Flavor</th><th>Price</th><th>Per unit</th><th><span class="visually-hidden">Offer</span></th></tr></thead><tbody><tr class="lowest-price"><td><span class="store-name">Polleo Sport</span><small class=lowest-label>Lowest price</small></td><td>Any flavor</td><td class="store-price">26.99 &euro;</td><td class="store-per-unit">0.225 &euro;</td><td class="offer-action-cell"><a class="store-link" href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first" target="_blank" rel="noopener">Go to page</a></td></tr></tbody></table></div><p class="offer-footnote">Product prices only. Delivery costs may differ.</p></section>
+  <section class="related-products" aria-labelledby="related-title"><div class="related-heading"><div><p class="section-kicker">MORE TO COMPARE</p><h2 id="related-title">You might also like</h2></div></div><div class="related-product-grid"><a class="related-product-card" href="proteini_si_vast_creatine_ultra_pure_caps_300_kapsula_300capsules.html"><img class="related-product-image" src="https://www.proteini.si/images/e18f528712a3fc5b825a4a1ad4b1a147/vast-creatine-ultra-pure-caps-300-kapsula.jpg?v26" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>VAST CREATINE ULTRA PURE CAPS, 300 kapsula</strong><span class="related-store">Best listed at Proteini.si</span><span class="related-product-price">39.94 &euro;</span><span class=related-unit-price>0.133 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="proteka_weider_pure_creatine_200_kapsula_200capsules.html"><img class="related-product-image" src="https://www.proteka.hr/upload/proizvodi/weider%5Fpure%5Fcreatine%5F225333%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Weider Pure Creatine 200 kapsula</strong><span class="related-store">Best listed at Proteka</span><span class="related-product-price">47.95 &euro;</span><span class=related-unit-price>0.240 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gymbeam_hr_creatine_tabs_100_creapure_gymbeam_120_tab_120capsules.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Creatine TABS 100% Creapure® - GymBeam, 120 tab.</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">17.95 &euro;</span><span class=related-unit-price>0.150 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gymbeam_hr_kreatin_hcl_120_kaps_gymbeam_120capsules.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Kreatin HCl 120 kaps – GymBeam</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">12.95 &euro;</span><span class=related-unit-price>0.108 &euro; per unit</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a></div></section>
 </main>
 <footer class="page site-footer"><span>Offers and prices may change. Check the retailer for the final price and availability.</span><span>Mjerica · Supplement price comparison</span></footer>
+<div id="save-toast" class="save-toast" role="status" aria-live="polite" hidden></div>
 <script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
-<script>(function(){const storageKey="mjerica:saved-products",button=document.querySelector(".save-product"),count=document.getElementById("saved-count");if(!button)return;let keys=[];try{keys=JSON.parse(button.dataset.saveKeys||"[]");}catch(_){}const read=()=>{try{return new Set(JSON.parse(localStorage.getItem(storageKey)||"[]"));}catch(_){return new Set();}};const sync=()=>{const saved=read(),active=keys.length>0&&keys.every(key=>saved.has(key));button.setAttribute("aria-pressed",active?"true":"false");button.title=active?"Remove from saved":"Save product";button.querySelector("span").textContent=active?"Saved":"Save product";if(count)count.textContent=saved.size?"("+saved.size+")":"";};button.addEventListener("click",()=>{const saved=read(),active=keys.length>0&&keys.every(key=>saved.has(key));keys.forEach(key=>active?saved.delete(key):saved.add(key));localStorage.setItem(storageKey,JSON.stringify(Array.from(saved)));sync();});window.addEventListener("storage",sync);sync();})();</script>
+
+<style>
+  header .header-list-link, header .saved-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; min-height: 44px; padding: 10px 13px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 13px; line-height: 1; font-weight: 650; text-decoration: none; white-space: nowrap; transition: background 140ms ease, border-color 140ms ease; }
+  header .header-list-link::before { content: ""; flex: none; width: 18px; height: 20px; background: currentColor; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 3.5h12v17l-6-4-6 4z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+  header .saved-link > svg { flex: none; width: 18px; height: 20px; }
+  header .header-list-link:hover, header .saved-link:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text, var(--text)); }
+  header .header-list-link:focus-visible, header .saved-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
+  header #savedCount, header #saved-count { display: inline-flex; align-items: center; justify-content: center; min-width: 21px; height: 21px; padding: 0 5px; box-sizing: border-box; border-radius: 6px; background: var(--accent-soft); color: var(--accent-text, var(--text)); font-size: 11px; font-weight: 750; font-variant-numeric: tabular-nums; }
+  header #savedCount:empty, header #saved-count:empty { display: none; }
+  @media (max-width: 700px) {
+    header .top-actions { grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) 38px; gap: 8px; }
+    header .top-actions .status-text { grid-column: 1 / -1; grid-row: 1; }
+    header .top-actions .status-text:empty { display: none; }
+    header .top-actions .header-list-link { grid-column: 1; grid-row: 2; padding: 8px; gap: 6px; }
+    header .top-actions #runBtn { grid-column: 2; grid-row: 2; }
+    header .top-actions #runAllBtn { grid-column: 3; grid-row: 2; }
+    header .top-actions .theme-toggle { grid-column: 4; grid-row: 2; }
+    header .top-actions #runBtn, header .top-actions #runAllBtn { min-width: 0; padding: 8px 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) { header .header-list-link, header .saved-link { transition: none; } }
+  .saved-dialog { width: min(560px, calc(100% - 28px)); max-height: min(760px, calc(100dvh - 40px)); padding: 0; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 24px 80px #0005; }
+  .saved-dialog::backdrop { background: #07131cb3; backdrop-filter: blur(3px); }
+  .saved-dialog .saved-dialog-head { display: flex; align-items: center; gap: 12px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
+  .saved-dialog h2 { font: 750 20px/1.3 -apple-system,"Segoe UI",sans-serif; margin: 0; letter-spacing: -.025em; }
+  .saved-dialog-mark { width: 24px; height: 24px; color: var(--accent); fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 -apple-system,"Segoe UI",sans-serif; background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
+  .saved-dialog button:hover, .saved-item-link:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text, var(--text)); }
+  .saved-dialog button:focus-visible, .saved-item-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
+  .saved-dialog .saved-dialog-close { margin-left: auto; padding: 0; width: 36px; font-size: 25px; border-color: transparent; }
+  .saved-dialog-count { background: var(--accent-soft); color: var(--accent-text, var(--text)); padding: 3px 8px; border-radius: 6px; font-size: 12px; font-weight: 750; }
+  .saved-dialog-body { padding: 0 22px; overflow-y: auto; max-height: calc(100dvh - 260px); }
+  .saved-item { display: grid; grid-template-columns: 66px minmax(0,1fr); column-gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--border); text-align: left; }
+  .saved-item:last-child { border-bottom: 0; }
+  .saved-item-image { width: 66px; height: 78px; object-fit: contain; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 6px; grid-row: span 4; }
+  .saved-item-placeholder { display: grid; place-items: center; color: var(--muted); font-size: 25px; }
+  .saved-item h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.4; font-weight: 750; overflow-wrap: anywhere; }
+  .saved-item-meta { color: var(--muted); font-size: 12px; margin-bottom: 9px; }
+  .saved-item-price { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .saved-item-change { font-size: 12px; color: var(--muted); margin: 4px 0 12px; line-height: 1.5; }
+  .saved-item-change[data-direction="down"] { color: var(--good, var(--accent-text, var(--text))); font-weight: 650; }
+  .saved-item-actions { display: flex; flex-wrap: wrap; gap: 7px; grid-column: 2; }
+  .saved-item-actions .saved-item-link { border-color: var(--accent); color: var(--accent-text, var(--text)); }
+  .saved-dialog-foot { padding: 14px 22px 18px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
+  .saved-dialog-note { font-size: 12px; line-height: 1.5; color: var(--muted); flex: 1; }
+  .saved-dialog-message { color: var(--muted); font-size: 14px; padding: 20px 0; margin: 0; }
+  .saved-page-list .saved-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 12px; }
+  .saved-page-list button { min-height: 36px; }
+  @media(max-width: 480px) { .saved-dialog .saved-dialog-head { padding: 16px; } .saved-dialog-body { padding: 0 16px; } .saved-dialog-foot { padding: 12px 16px; } .saved-item { grid-template-columns: 54px minmax(0,1fr); column-gap: 10px; } .saved-item-image { width: 54px; height: 66px; } }
+</style>
+<dialog class="saved-dialog" id="savedDialog" aria-labelledby="savedDialogTitle">
+  <div class="saved-dialog-head"><svg class="saved-dialog-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><h2 id="savedDialogTitle">Saved products</h2><span class="saved-dialog-count" id="savedDialogCount">0</span><button class="saved-dialog-close" type="button" aria-label="Close saved products" autofocus>×</button></div>
+  <div class="saved-dialog-body" id="savedDialogList"></div>
+  <div class="saved-dialog-foot"><span class="saved-dialog-note">Kept in this browser. Price changes appear after prices are refreshed.</span><button type="button" id="savedClearAll">Clear all</button></div>
+</dialog>
+<div id="savedAnnouncement" role="status" aria-live="polite" class="saved-dialog-note"></div>
+<script>
+(function (root) {
+  "use strict";
+  function createSavedStore(storage) {
+    const key = "mjerica:saved-offers:v2";
+    const legacyKey = "mjerica:saved-products", trackedKey = "mjerica:tracked-offers:v1";
+    const valid = entry => entry && typeof entry === "object" && typeof entry.offer_id === "string" && entry.offer_id.length;
+    const sourceKey = entry => entry.store + "|" + entry.source_url;
+    function parse(name) {
+      try { const value = JSON.parse(storage.getItem(name) || "[]"); return Array.isArray(value) ? value : []; }
+      catch (_) { return []; }
+    }
+    function read() {
+      try { if (storage.getItem(key) !== null) return parse(key).filter(valid); } catch (_) { return []; }
+      const entries = parse(trackedKey).filter(valid).map(entry => ({...entry,
+        baseline_price: typeof entry.baseline_price === "number" && Number.isFinite(entry.baseline_price) ? entry.baseline_price : null}));
+      parse(legacyKey).filter(item => typeof item === "string" && item.includes("|")).forEach(item => {
+        if (entries.some(entry => sourceKey(entry) === item)) return;
+        const separator = item.indexOf("|");
+        entries.push({offer_id:"legacy:" + item, legacy_key:item, store:item.slice(0,separator),
+          source_url:item.slice(separator+1), name:"Saved product", baseline_price:null});
+      });
+      return entries;
+    }
+    function write(entries) {
+      storage.setItem(key, JSON.stringify(entries));
+      // Older generated pages can still use the same saves without resurrecting removals.
+      try {
+        storage.setItem(legacyKey, JSON.stringify([...new Set(entries.map(sourceKey))]));
+        storage.setItem(trackedKey, JSON.stringify(entries.filter(entry => entry.baseline_price !== null)));
+      } catch (_) { /* The v2 record is authoritative once written. */ }
+      return entries;
+    }
+    function save(offer) {
+      if (!valid(offer)) throw new Error("This offer cannot be saved yet.");
+      const entries = read();
+      if (entries.some(entry => entry.offer_id === offer.offer_id)) return entries;
+      const exact = offer.price_kind === "exact" && typeof offer.price_eur === "number" && Number.isFinite(offer.price_eur);
+      entries.push({...offer, baseline_price:exact ? offer.price_eur : null, captured_at:new Date().toISOString()});
+      return write(entries);
+    }
+    function migrate(offers) {
+      const entries = read().map(entry => {
+        const current = offers.find(offer => offer.offer_id === entry.offer_id)
+          || (entry.legacy_key ? offers.find(offer => sourceKey(offer) === entry.legacy_key) : null);
+        if (!current) return entry;
+        const resolved = {...entry, ...current, baseline_price:entry.baseline_price ?? null, captured_at:entry.captured_at};
+        delete resolved.legacy_key;
+        return resolved;
+      });
+      const unique = new Map();
+      entries.forEach(entry => {
+        const previous = unique.get(entry.offer_id);
+        if (!previous || (previous.baseline_price == null && entry.baseline_price != null)) unique.set(entry.offer_id,entry);
+      });
+      if (entries.length) return write([...unique.values()]);
+      return entries;
+    }
+    return {read, save, migrate, remove:id => write(read().filter(entry => entry.offer_id !== id)), clear:() => write([])};
+  }
+  if (typeof module !== "undefined" && module.exports) module.exports = createSavedStore;
+  else root.createSavedStore = createSavedStore;
+})(typeof window !== "undefined" ? window : this);
+
+</script>
+<script>
+(function () {
+  "use strict";
+  const categories = [{"key": "whey"}, {"key": "creatine"}, {"key": "creatine_capsules"}, {"key": "creatine_gummies"}, {"key": "preworkout"}];
+  const dialog = document.getElementById("savedDialog"), list = document.getElementById("savedDialogList");
+  const pageList = document.getElementById("saved-list");
+  const announcement = document.getElementById("savedAnnouncement");
+  announcement.style.cssText = "position:fixed;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)";
+  let storage;
+  try { storage = window.localStorage; } catch (_) { storage = {getItem:()=>null,setItem:()=>{throw Error("Storage unavailable");}}; }
+  const state = window.createSavedStore(storage);
+  const savedLink = Array.from(document.querySelectorAll("a[href]")).find(a => /\/(?:saved|saved.html)(?:[?#]|$)/.test(a.href));
+  const savedUrl = savedLink ? new URL(savedLink.href) : new URL("/saved", location.href);
+  const local = !savedUrl.pathname.endsWith(".html");
+  const siteRoot = new URL("./", savedUrl);
+  let current = new Map(), loaded = false, loading = null, returnFocus = null;
+  const money = n => Number(n).toFixed(2) + " €";
+  const exact = offer => offer && offer.price_kind === "exact" && typeof offer.price_eur === "number" && Number.isFinite(offer.price_eur);
+  const packageLabel = value => !value || value === "default" ? "" : value.startsWith("kg:") ? value.slice(3) + " kg" : value.startsWith("count:") ? value.slice(6) + " units" : value.replace(/:/g, " ");
+  const element = (tag, cls, text) => { const node = document.createElement(tag); node.className = cls; if(text != null) node.textContent = text; return node; };
+  function safeUrl(value, image) {
+    if (!value) return "";
+    try { const url = new URL(value, location.href); return ["http:","https:"].includes(url.protocol) || (image && /^data:image\/(png|jpeg|webp);base64,/.test(value)) ? url.href : ""; } catch (_) { return ""; }
+  }
+  function detailUrl(offer, category) {
+    if (!offer.detail_slug) return "";
+    const path = category + "/products/" + encodeURIComponent(offer.detail_slug) + ".html";
+    return local ? "/report/" + path + "?local=1" : new URL(path,siteRoot).href;
+  }
+  async function loadCurrent() {
+    if (loading) return loading;
+    loading = Promise.all(categories.map(async category => {
+      try {
+        const url = local ? "/catalog/" + category.key : new URL(category.key + "/catalog.json", siteRoot).href;
+        const response = await fetch(url);
+        if (!response.ok) return [];
+        const data = await response.json();
+        const listings = (data.listing_offers || []).map(offer => ({...offer, category:category.key, detail_url:detailUrl(offer,category.key)}));
+        return listings.concat((data.products || []).flatMap(product => (product.offers || []).map(offer => ({
+          ...offer, offer_id:offer.offer_id || offer.id, name:product.name, category:category.key,
+          image_url:product.image_url, detail_url:detailUrl(offer,category.key)
+        }))));
+      } catch (_) { return []; }
+    })).then(results => {
+      const offers = results.flat(); current = new Map(offers.map(offer => [offer.offer_id,offer])); loaded = true;
+      try { state.migrate(offers); } catch (_) { announcement.textContent = "Browser storage is unavailable. Changes cannot be saved."; }
+      sync();
+    }).finally(() => { loading = null; });
+    return loading;
+  }
+  function changed() {
+    sync();
+    window.dispatchEvent(new CustomEvent("mjerica-saved-change"));
+  }
+  function mutate(fn) {
+    try { fn(); changed(); return true; }
+    catch (_) { announcement.textContent = "Could not save this change. Check that browser storage is enabled."; return false; }
+  }
+  function render(target, entries) {
+    target.replaceChildren();
+    if (!entries.length) { target.append(element("p","saved-dialog-message","Your list is empty. Save a product to keep its price here.")); return; }
+    entries.forEach(entry => {
+      const now = current.get(entry.offer_id), info = {...entry,...now};
+      const card = element("article","saved-item");
+      const src = safeUrl(info.image_url,true);
+      const image = src ? element("img","saved-item-image") : element("span","saved-item-image saved-item-placeholder","—");
+      if (src) { image.src=src; image.alt=info.name || "Product"; image.loading="lazy"; image.addEventListener("error",()=>image.replaceWith(element("span","saved-item-image saved-item-placeholder","—"))); }
+      card.append(image,element("h3","",info.name || "Saved product"),
+        element("div","saved-item-meta",[info.store,packageLabel(info.package_key || info.package),info.flavour].filter(Boolean).join(" · ")));
+      const price = exact(now) ? money(now.price_eur) : now && now.price_eur != null ? "From " + money(now.price_eur)
+        : entry.baseline_price != null ? money(entry.baseline_price) + " when saved" : "Price unavailable";
+      card.append(element("div","saved-item-price",price));
+      const delta = element("div","saved-item-change");
+      if (!now) delta.textContent = loaded ? "Latest price unavailable. Your saved price is kept." : "Checking the latest price…";
+      else if (entry.baseline_price == null) delta.textContent = "No starting price recorded.";
+      else if (!exact(now)) delta.textContent = "Price varies; an exact comparison is unavailable.";
+      else {
+        const difference = Math.round((now.price_eur-entry.baseline_price)*100)/100;
+        delta.textContent = difference === 0 ? "Unchanged since saving" : (difference < 0 ? "Down " : "Up ") + money(Math.abs(difference))
+          + " (" + (entry.baseline_price > 0 ? (Math.abs(difference)/entry.baseline_price*100).toFixed(1)+"%" : "from zero") + ") · saved at " + money(entry.baseline_price);
+        delta.dataset.direction = difference < 0 ? "down" : "up";
+      }
+      card.append(delta);
+      const actions = element("div","saved-item-actions");
+      const detail = safeUrl(info.detail_url);
+      if (detail) { const link=element("a","saved-item-link","View details"); link.href=detail; actions.append(link); }
+      const source = safeUrl(info.source_url);
+      if (source) { const link=element("a","saved-item-link","Go to store"); link.href=source; link.target="_blank"; link.rel="noopener noreferrer"; actions.append(link); }
+      const remove=element("button","","Remove"); remove.type="button"; remove.setAttribute("aria-label","Remove " + (info.name || "product"));
+      remove.addEventListener("click",()=>{ if(mutate(()=>state.remove(entry.offer_id))) { announcement.textContent="Removed from saved"; dialog.querySelector(".saved-dialog-close").focus(); } });
+      actions.append(remove); card.append(actions); target.append(card);
+    });
+  }
+  function sync() {
+    const entries = state.read();
+    ["savedDialogCount","savedCount","saved-count"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=entries.length ? String(entries.length) : id==="savedDialogCount" ? "0" : ""; });
+    document.querySelectorAll("[data-save-offer]").forEach(button => {
+      let offer; try { offer=JSON.parse(button.dataset.saveOffer); } catch (_) { return; }
+      const active=entries.some(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
+      button.setAttribute("aria-pressed",String(active)); button.title=active?"Remove from saved":"Save product";
+      button.setAttribute("aria-label",button.title);
+      const label=button.querySelector("span"); if(label) label.textContent=active?"Saved":"Save product";
+      const row=button.closest("tr"); if(row) row.classList.toggle("saved",active);
+    });
+    if (dialog.open) render(list,entries);
+    if (pageList) { pageList.classList.add("saved-page-list"); render(pageList,entries); const count=document.getElementById("count"); if(count) count.textContent=entries.length+" saved"; }
+    document.getElementById("savedClearAll").disabled=!entries.length;
+  }
+  function open() {
+    if (window.parent!==window && location.pathname.startsWith("/report/")) {
+      window.parent.postMessage({type:"mjerica-open-saved"},location.origin); return;
+    }
+    returnFocus=document.activeElement; if(!dialog.open) dialog.showModal(); sync(); loadCurrent();
+  }
+  document.addEventListener("click",event=>{
+    const button=event.target.closest("[data-save-offer]");
+    if(button) {
+      event.preventDefault(); let offer;
+      try { offer=JSON.parse(button.dataset.saveOffer); if(offer.detail_url) offer.detail_url=new URL(offer.detail_url,location.href).href; } catch (_) { return; }
+      const existing=state.read().find(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
+      if(mutate(()=>existing?state.remove(existing.offer_id):state.save(offer))) {
+        announcement.textContent=existing?"Removed from saved":"Product saved";
+        if(!existing) open();
+      }
+      return;
+    }
+    const link=event.target.closest("a[href]");
+    if(link && /\/(?:saved|saved.html)(?:[?#]|$)/.test(link.href) && !event.ctrlKey && !event.metaKey && !event.shiftKey) {event.preventDefault();open();}
+  });
+  dialog.querySelector(".saved-dialog-close").addEventListener("click",()=>dialog.close());
+  dialog.addEventListener("click",event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+  dialog.addEventListener("close",()=>{ if(returnFocus && returnFocus.isConnected) returnFocus.focus(); });
+  document.getElementById("savedClearAll").addEventListener("click",()=>{if(window.confirm("Remove all saved products and their starting prices?"))mutate(()=>state.clear());});
+  window.addEventListener("storage",()=>{sync();window.dispatchEvent(new CustomEvent("mjerica-saved-change"));});
+  window.addEventListener("pageshow",sync);
+  window.addEventListener("message",event=>{
+    const frame=document.getElementById("frame");
+    if(event.origin===location.origin && frame && event.source===frame.contentWindow && event.data?.type==="mjerica-open-saved")open();
+  });
+  window.MjericaSaved={open,sync};
+  sync(); if(pageList)loadCurrent();
+})();
+</script>
+
 </body>
 </html>

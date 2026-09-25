@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>try{const t=localStorage.getItem("mjerica:theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
+<script>try{const t=localStorage.getItem("mjerica:theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}if(window.self!==window.top&&location.pathname.startsWith("/report/"))document.documentElement.classList.add("embedded-report");</script>
 <title>Creatine Gummies Price Comparison &middot; Mjerica</title>
 <style>
   :root {
@@ -30,6 +30,7 @@
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 14px/1.45 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
   .page { max-width: 1200px; margin: 0 auto; padding: 28px 24px 64px; }
+  html.embedded-report .site-header { display: none; }
   .num, h1, .brand, .site-nav, .stat .value, .rank { font-variant-numeric: tabular-nums; }
 
   /* --- top bar: brand + title + stats + filters, all above the table --- */
@@ -57,48 +58,53 @@
   .gen-meta { margin: 0 0 18px; color: var(--muted); font-size: 12.5px; }
 
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-           gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 18px; }
+           gap: 10px; background: transparent; border: 0; margin-bottom: 18px; }
   /* min-width: 0 lets a grid item shrink below its content; without it the nowrap .sub
      below pins the tracks at the longest product name and widens the whole page on phones */
-  .stat { background: var(--surface); padding: 11px 14px; min-width: 0; }
-  .stat .label { font-size: 12px; color: var(--muted); }
-  .stat .value { font: 700 19px/1.2 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 1px; }
+  .stat { background: var(--surface); padding: 13px 16px; min-width: 0; border: 1px solid var(--border); border-radius: 10px; }
+  .stat .label { font-size: 11px; color: var(--muted); font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
+  .stat .value { font: 750 20px/1.2 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 3px; }
   .stat .sub { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; }
-  .search { flex: 1 1 200px; padding: 8px 10px; border: 1px solid var(--border);
-            background: var(--surface); color: var(--text); font: inherit; }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px;
+              padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+  .search { flex: 1 1 240px; min-width: 180px; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px;
+            background: var(--bg); color: var(--text); font: inherit; }
   .search:focus { outline: 2px solid var(--accent-text); outline-offset: -1px; }
   .range-row { display: flex; align-items: center; gap: 5px; flex: none; }
-  .range-row input { width: 68px; padding: 7px 8px; border: 1px solid var(--border);
-                      background: var(--surface); color: var(--text); font: inherit; font-variant-numeric: tabular-nums; }
+  .range-row input { width: 78px; padding: 8px; border: 1px solid var(--border); border-radius: 7px;
+                      background: var(--bg); color: var(--text); font: inherit; font-variant-numeric: tabular-nums; }
   .range-row input:focus { outline: 2px solid var(--accent-text); outline-offset: -1px; }
   .range-row span { color: var(--muted); font-size: 12px; }
   .chip-group { display: flex; flex-wrap: wrap; gap: 6px; }
   .chip { all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
-          padding: 6px 10px 6px 8px; border: 1px solid var(--border);
-          background: var(--surface); color: var(--text); font-size: 12.5px; }
+          padding: 7px 11px 7px 9px; border: 1px solid var(--border); border-radius: 999px;
+          background: var(--bg); color: var(--text); font-size: 12.5px; transition: background 140ms ease, border-color 140ms ease; }
+  .chip:hover { border-color: var(--accent); background: var(--accent-soft); }
   .chip[aria-pressed="false"] { opacity: .7; }
   .chip .store-dot { margin-right: -1px; }
-  .reset-btn { padding: 7px 12px; border: 1px solid var(--border);
-               background: var(--surface); color: var(--text); font: inherit; font-size: 12.5px; cursor: pointer; }
+  .saved-chip-icon { width: 15px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .saved-chip[aria-pressed="true"] { opacity: 1; color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
+  .saved-chip[aria-pressed="true"] .saved-chip-icon { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
+  .reset-btn { padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
+               background: transparent; color: var(--text); font: inherit; font-size: 12.5px; cursor: pointer; }
   .reset-btn:hover { border-color: var(--accent); color: var(--accent-text); }
   .count { color: var(--muted); font-size: 12.5px; margin-left: auto; white-space: nowrap; }
 
   /* --- table --- */
   /* overflow-x: clip, not auto: auto also makes overflow-y auto, which turns this
      box into the scroll container and stops the sticky header from ever sticking. */
-  .table-wrap { background: var(--surface); border: 1px solid var(--border); overflow-x: clip; }
+  .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow-x: clip; }
   table { border-collapse: collapse; width: 100%; min-width: 680px; }
-  th, td { padding: 11px 13px; text-align: left; border-bottom: 1px solid var(--border); }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
   tbody tr:last-child td { border-bottom: 0; }
-  th { position: sticky; top: 0; background: var(--panel); font-size: 12px; font-weight: 700;
-       color: var(--muted); white-space: nowrap; border-bottom: 2px solid var(--text); }
-  th button { all: unset; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+  th { position: sticky; top: 0; background: var(--panel); font-size: 11px; font-weight: 700;
+       color: var(--muted); white-space: nowrap; border-bottom: 1px solid var(--border); letter-spacing: .035em; text-transform: uppercase; }
+  th button { all: unset; cursor: pointer; display: inline-flex; gap: 7px; align-items: center; }
   th button:focus-visible { outline: 2px solid var(--accent-text); }
-  th .arrow { opacity: .35; font-size: 10px; }
-  th[aria-sort="ascending"] .arrow, th[aria-sort="descending"] .arrow { opacity: 1; color: var(--accent); }
-  th[aria-sort] { color: var(--text); }
+  th .arrow { opacity: .22; font-size: 9px; }
+  th[aria-sort="ascending"] .arrow, th[aria-sort="descending"] .arrow { opacity: 1; color: var(--accent-text); }
+  th[aria-sort] { color: var(--text); background: color-mix(in srgb, var(--panel) 76%, var(--accent-soft)); }
   .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   th.num button { flex-direction: row-reverse; }
   tbody tr:hover { background: var(--panel); }
@@ -135,17 +141,15 @@
   .track-product { margin-left: 8px; padding: 4px 9px; border: 1px solid var(--accent); border-radius: 999px;
                    background: transparent; color: var(--accent-text); font: inherit; font-size: 12px; font-weight: 650; cursor: pointer; }
   .track-product:hover, .track-product[aria-pressed="true"] { background: var(--tracked-bg); }
-  .track-product:focus-visible, #trackThreshold:focus-visible, #clearTracker:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .track-product:focus-visible, .tracked-page-link:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   .private-tracker { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: -4px 0 16px;
                      padding: 12px 14px; border: 1px solid var(--border); border-left: 3px solid var(--accent);
                      background: var(--surface); }
   .tracker-copy { display: grid; gap: 2px; flex: 1 1 230px; min-width: 0; }
   .tracker-copy strong { font-size: 13px; }
   .tracker-copy span { color: var(--muted); font-size: 12.5px; }
-  .tracker-alert { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12.5px; }
-  #trackThreshold { width: 76px; padding: 6px 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font: inherit; font-variant-numeric: tabular-nums; }
-  #clearTracker { padding: 6px 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
-  #clearTracker:disabled { opacity: .5; cursor: default; }
+  .tracked-page-link { padding: 7px 11px; border: 1px solid var(--border); border-radius: 6px; color: var(--accent-text); text-decoration: none; font-weight: 700; }
+  .save-toast { position: fixed; right: 20px; bottom: 20px; z-index: 20; padding: 11px 16px; border: 1px solid var(--accent); border-radius: 9px; color: var(--surface); background: var(--accent); box-shadow: 0 8px 24px #0003; font-weight: 700; }
   .pill { display: inline-block; min-width: 62px; text-align: right; padding: 2px 7px;
           font-weight: 700; font-variant-numeric: tabular-nums; }
   .pill.good { background: var(--good-bg); color: var(--good); }
@@ -174,7 +178,8 @@
     .page { padding: 18px 14px 40px; }
     .site-header { margin: -18px -14px 18px; }
     h1 { font-size: 22px; }
-    .stats { grid-template-columns: 1fr 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .controls { padding: 10px; border-radius: 10px; }
     .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .chip-group { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
     .chip { flex: none; }
@@ -211,7 +216,7 @@
   </div></header>
 
   <div class="listing-heading"><h1>Creatine Gummies Price Comparison</h1>
-  <p class="gen-meta">Generated 25.09.2026 11:41 CEST &middot; 5 stores</p></div>
+  <p class="gen-meta">Generated 25.09.2026 12:36 CEST &middot; 5 stores</p></div>
 
   <section class="stats"><div class="stat"><div class="label">Cheapest per gummy</div><div class="value">0.182 &euro;</div><div class="sub" title="Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps. &middot; GymBeam HR">Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps. &middot; GymBeam HR</div></div></section>
 
@@ -225,11 +230,12 @@
       <input type="number" id="maxPrice" placeholder="0.400" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / gummy">
     </div>
     <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>MyProtein <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>GAZ Nutrition <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteka <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>Polleo Sport <span class="fcount">1</span></button></div>
-    <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false">&#9734; Saved</button>
+    <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
   </div>
   
+  <div id="saveToast" class="save-toast" role="status" aria-live="polite" hidden></div>
 
   <div class="table-wrap">
     <table id="prices">
@@ -248,104 +254,112 @@
         </tr>
       </thead>
       <tbody>
-        <tr data-store="GymBeam HR" data-track-key=""
+        <tr data-store="GymBeam HR" data-track-key="catalog:ed50b7c3f9b91487"
+            data-offer-id="catalog:8cb47872cf0bceab" data-price-eur="10.95"
             data-search="gymbeam hr ružičasti žele bomboni s kreatinom - gymbeam, 60 kaps.">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
           <td class="product-cell" data-v="Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps."><a href="https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html" target="_blank" rel="noopener">Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.</a><a class="details-link" href="products/gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:8cb47872cf0bceab&quot;, &quot;name&quot;: &quot;Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 10.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="10.95">10.95 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.182"><span class="pill good">0.182</span></td>
           
           
         </tr>
-        <tr data-store="MyProtein" data-track-key=""
+        <tr data-store="MyProtein" data-track-key="catalog:aaa011411bb10443"
+            data-offer-id="catalog:5d65ce266b5904e3" data-price-eur="6.69"
             data-search="myprotein kremaste žvakaće bombone s kreatinom bez šećera">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#93692a"></span>MyProtein</span></td>
           <td class="product-cell" data-v="Kremaste žvakaće bombone s kreatinom bez šećera"><a href="https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" target="_blank" rel="noopener">Kremaste žvakaće bombone s kreatinom bez šećera</a><a class="details-link" href="products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies.html">View details</a><span class="badge promo" title="Includes site&#x27;s 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:5d65ce266b5904e3&quot;, &quot;name&quot;: &quot;Kremaste žvakaće bombone s kreatinom bez šećera&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:30&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 6.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="6.69">6.69 &euro;</td>
           <td class="num weight-cell" data-v="30">30 gummies</td>
           <td class="num metric-cell" data-v="0.223"><span class="pill good">0.223</span></td>
           
           
         </tr>
-        <tr data-store="MyProtein" data-track-key=""
+        <tr data-store="MyProtein" data-track-key="catalog:4508e7998dd1fb7e"
+            data-offer-id="catalog:0c6cbc96d45d3420" data-price-eur="6.69"
             data-search="myprotein kremaste gumene bombone s kreatinom">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#93692a"></span>MyProtein</span></td>
           <td class="product-cell" data-v="Kremaste gumene bombone s kreatinom"><a href="https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" target="_blank" rel="noopener">Kremaste gumene bombone s kreatinom</a><a class="details-link" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html">View details</a><span class="badge promo" title="Includes site&#x27;s 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:0c6cbc96d45d3420&quot;, &quot;name&quot;: &quot;Kremaste gumene bombone s kreatinom&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:30&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 6.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="6.69">6.69 &euro;</td>
           <td class="num weight-cell" data-v="30">30 gummies</td>
           <td class="num metric-cell" data-v="0.223"><span class="pill good">0.223</span></td>
           
           
         </tr>
-        <tr data-store="GAZ Nutrition" data-track-key=""
+        <tr data-store="GAZ Nutrition" data-track-key="catalog:6ded38df3c6c3cbf"
+            data-offer-id="catalog:8b3d0499aa13dff2" data-price-eur="14.04"
             data-search="gaz nutrition weider micronized creatine gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GAZ Nutrition"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GAZ Nutrition</span></td>
           <td class="product-cell" data-v="Weider Micronized Creatine Gummies"><a href="https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/" target="_blank" rel="noopener">Weider Micronized Creatine Gummies</a><a class="details-link" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:8b3d0499aa13dff2&quot;, &quot;name&quot;: &quot;Weider Micronized Creatine Gummies&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 14.04, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="14.04">14.04 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.234"><span class="pill mid">0.234</span></td>
           
           
         </tr>
-        <tr data-store="GAZ Nutrition" data-track-key=""
+        <tr data-store="GAZ Nutrition" data-track-key="catalog:83121494807e25ff"
+            data-offer-id="catalog:7f1151d35054df58" data-price-eur="14.91"
             data-search="gaz nutrition weider premium creatine gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GAZ Nutrition"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GAZ Nutrition</span></td>
           <td class="product-cell" data-v="Weider Premium Creatine Gummies"><a href="https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/" target="_blank" rel="noopener">Weider Premium Creatine Gummies</a><a class="details-link" href="products/gaz_nutrition_weider_premium_creatine_gummies_60gummies.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:7f1151d35054df58&quot;, &quot;name&quot;: &quot;Weider Premium Creatine Gummies&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 14.91, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_premium_creatine_gummies_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="14.91">14.91 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.248"><span class="pill mid">0.248</span></td>
           
           
         </tr>
-        <tr data-store="Proteka" data-track-key=""
+        <tr data-store="Proteka" data-track-key="catalog:7ef1c4b13713112f"
+            data-offer-id="catalog:2656952d9abe3da2" data-price-eur="15.95"
             data-search="proteka weider mikronizirani kreatin gumeni bomboni 60 bombona">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="Proteka"><span class="store"><span class="store-dot" style="background:#2e6b78"></span>Proteka</span></td>
           <td class="product-cell" data-v="Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona"><a href="https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081" target="_blank" rel="noopener">Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona</a><a class="details-link" href="products/proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2656952d9abe3da2&quot;, &quot;name&quot;: &quot;Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="15.95">15.95 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.266"><span class="pill mid">0.266</span></td>
           
           
         </tr>
-        <tr data-store="Proteka" data-track-key=""
+        <tr data-store="Proteka" data-track-key="catalog:b70c58ac5962c64c"
+            data-offer-id="catalog:ecc5f1ca4a68b341" data-price-eur="16.95"
             data-search="proteka weider premium kreatin gumeni bomboni 60 bombona">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="Proteka"><span class="store"><span class="store-dot" style="background:#2e6b78"></span>Proteka</span></td>
           <td class="product-cell" data-v="Weider Premium Kreatin Gumeni Bomboni 60 bombona"><a href="https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979" target="_blank" rel="noopener">Weider Premium Kreatin Gumeni Bomboni 60 bombona</a><a class="details-link" href="products/proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ecc5f1ca4a68b341&quot;, &quot;name&quot;: &quot;Weider Premium Kreatin Gumeni Bomboni 60 bombona&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 16.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="16.95">16.95 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.282"><span class="pill high">0.282</span></td>
           
           
         </tr>
-        <tr data-store="Polleo Sport" data-track-key=""
+        <tr data-store="Polleo Sport" data-track-key="catalog:fe4994801e8c6f5a"
+            data-offer-id="catalog:a1fea203b7778631" data-price-eur="23.99"
             data-search="polleo sport creatine gummies, 60 gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="Polleo Sport"><span class="store"><span class="store-dot" style="background:#3c5a8a"></span>Polleo Sport</span></td>
           <td class="product-cell" data-v="Creatine Gummies, 60 gummies"><a href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon" target="_blank" rel="noopener">Creatine Gummies, 60 gummies</a><a class="details-link" href="products/polleo_sport_creatine_gummies_60_gummies_60gummies.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a1fea203b7778631&quot;, &quot;name&quot;: &quot;Creatine Gummies, 60 gummies&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 23.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_gummies_60_gummies_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="23.99">23.99 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.4"><span class="pill high">0.400</span></td>
@@ -372,115 +386,7 @@
   const maxPrice = document.getElementById("maxPrice");
   const count = document.getElementById("count");
   const metricIndex = headers.findIndex((h) => h.dataset.metric);
-  const savedStorageKey = "mjerica:saved-products";
-  let saved = new Set();
-  try { saved = new Set(JSON.parse(localStorage.getItem(savedStorageKey) || "[]")); } catch (_) {}
-
-  function updateSaveButton(button) {
-    const active = saved.has(button.dataset.saveKey);
-    button.setAttribute("aria-pressed", active ? "true" : "false");
-    button.title = active ? "Remove from saved" : "Save product";
-    button.setAttribute("aria-label", active ? "Remove saved product" : "Save product");
-    button.closest("tr").classList.toggle("saved", active);
-  }
-  saveButtons.forEach((button) => {
-    updateSaveButton(button);
-    button.addEventListener("click", () => {
-      const key = button.dataset.saveKey;
-      if (saved.has(key)) saved.delete(key); else saved.add(key);
-      localStorage.setItem(savedStorageKey, JSON.stringify(Array.from(saved)));
-      updateSaveButton(button);
-      applyFilters();
-    });
-  });
-
-  const privateTracker = document.getElementById("privateTracker");
-  const trackingButtons = Array.from(document.querySelectorAll(".track-product"));
-  const trackingStatus = document.getElementById("trackingStatus");
-  const trackThreshold = document.getElementById("trackThreshold");
-  const clearTracker = document.getElementById("clearTracker");
-  const localTrackerMode = Boolean(privateTracker)
-    && new URLSearchParams(location.search).get("local") === "1";
-  const trackingStorageKey = "mjerica:private-tracked-product";
-  const thresholdStorageKey = "mjerica:private-price-alert-eur-kg";
-  let trackedProduct = null;
-  let alertThreshold = 48;
-  try {
-    const storedProduct = JSON.parse(localStorage.getItem(trackingStorageKey) || "null");
-    if (storedProduct && typeof storedProduct.key === "string"
-        && typeof storedProduct.name === "string") trackedProduct = storedProduct;
-    const storedValue = localStorage.getItem(thresholdStorageKey);
-    const storedThreshold = Number(storedValue);
-    if (storedValue !== null && Number.isFinite(storedThreshold) && storedThreshold >= 0) {
-      alertThreshold = storedThreshold;
-    }
-  } catch (_) {}
-
-  function refreshTracker() {
-    if (!privateTracker) return;
-    privateTracker.hidden = !localTrackerMode;
-    if (!localTrackerMode) return;
-    trackingButtons.forEach((button) => { button.hidden = false; });
-    if (trackThreshold) trackThreshold.value = String(alertThreshold);
-    const matchingRows = trackedProduct
-      ? rows.filter((row) => row.dataset.trackKey === trackedProduct.key) : [];
-    rows.forEach((row) => row.classList.toggle("tracked", matchingRows.includes(row)));
-    trackingButtons.forEach((button) => {
-      const active = Boolean(trackedProduct && button.dataset.trackKey === trackedProduct.key);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-      button.textContent = active ? "Tracking" : "Track price";
-      button.setAttribute("aria-label", active ? "Stop tracking this product" : "Track this product's price");
-    });
-    if (clearTracker) clearTracker.disabled = !trackedProduct;
-    if (!trackedProduct) {
-      trackingStatus.textContent = "Choose a product below to keep its offers and price alert here.";
-      return;
-    }
-    const prices = matchingRows.map((row) => row.cells[metricIndex].dataset.v)
-      .filter((value) => value !== "").map(Number).filter(Number.isFinite);
-    if (!matchingRows.length) {
-      trackingStatus.textContent = trackedProduct.name + " has no offer in this run.";
-      return;
-    }
-    if (!prices.length) {
-      trackingStatus.textContent = trackedProduct.name + " is tracked; no comparable price is available.";
-      return;
-    }
-    const best = Math.min(...prices);
-    trackingStatus.textContent = trackedProduct.name + " · lowest " + best.toFixed(2) + " €/kg"
-      + (best <= alertThreshold ? " · at or below your alert" : " · alert below " + alertThreshold.toFixed(2) + " €/kg");
-  }
-
-  trackingButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (!localTrackerMode) return;
-      trackedProduct = trackedProduct && trackedProduct.key === button.dataset.trackKey
-        ? null : { key: button.dataset.trackKey, name: button.dataset.trackName };
-      try {
-        if (trackedProduct) localStorage.setItem(trackingStorageKey, JSON.stringify(trackedProduct));
-        else localStorage.removeItem(trackingStorageKey);
-      } catch (_) {}
-      refreshTracker();
-    });
-  });
-  if (trackThreshold) {
-    trackThreshold.addEventListener("input", () => {
-      if (trackThreshold.value === "") return;
-      const value = Number(trackThreshold.value);
-      if (!Number.isFinite(value) || value < 0) return;
-      alertThreshold = value;
-      try { localStorage.setItem(thresholdStorageKey, String(value)); } catch (_) {}
-      refreshTracker();
-    });
-  }
-  if (clearTracker) {
-    clearTracker.addEventListener("click", () => {
-      trackedProduct = null;
-      try { localStorage.removeItem(trackingStorageKey); } catch (_) {}
-      refreshTracker();
-    });
-  }
-  refreshTracker();
+  window.addEventListener("mjerica-saved-change", () => { applyFilters(); });
 
   // Rank reflects the current sort/filter view, not a fixed "cheapest ever"
   // number -- re-numbers 1..N over whatever rows are visible, in DOM order.
@@ -618,5 +524,268 @@
 })();
 </script>
 <script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
+<style>
+  header .header-list-link, header .saved-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; min-height: 44px; padding: 10px 13px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 13px; line-height: 1; font-weight: 650; text-decoration: none; white-space: nowrap; transition: background 140ms ease, border-color 140ms ease; }
+  header .header-list-link::before { content: ""; flex: none; width: 18px; height: 20px; background: currentColor; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 3.5h12v17l-6-4-6 4z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+  header .saved-link > svg { flex: none; width: 18px; height: 20px; }
+  header .header-list-link:hover, header .saved-link:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text, var(--text)); }
+  header .header-list-link:focus-visible, header .saved-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
+  header #savedCount, header #saved-count { display: inline-flex; align-items: center; justify-content: center; min-width: 21px; height: 21px; padding: 0 5px; box-sizing: border-box; border-radius: 6px; background: var(--accent-soft); color: var(--accent-text, var(--text)); font-size: 11px; font-weight: 750; font-variant-numeric: tabular-nums; }
+  header #savedCount:empty, header #saved-count:empty { display: none; }
+  @media (max-width: 700px) {
+    header .top-actions { grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) 38px; gap: 8px; }
+    header .top-actions .status-text { grid-column: 1 / -1; grid-row: 1; }
+    header .top-actions .status-text:empty { display: none; }
+    header .top-actions .header-list-link { grid-column: 1; grid-row: 2; padding: 8px; gap: 6px; }
+    header .top-actions #runBtn { grid-column: 2; grid-row: 2; }
+    header .top-actions #runAllBtn { grid-column: 3; grid-row: 2; }
+    header .top-actions .theme-toggle { grid-column: 4; grid-row: 2; }
+    header .top-actions #runBtn, header .top-actions #runAllBtn { min-width: 0; padding: 8px 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) { header .header-list-link, header .saved-link { transition: none; } }
+  .saved-dialog { width: min(560px, calc(100% - 28px)); max-height: min(760px, calc(100dvh - 40px)); padding: 0; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 24px 80px #0005; }
+  .saved-dialog::backdrop { background: #07131cb3; backdrop-filter: blur(3px); }
+  .saved-dialog .saved-dialog-head { display: flex; align-items: center; gap: 12px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
+  .saved-dialog h2 { font: 750 20px/1.3 -apple-system,"Segoe UI",sans-serif; margin: 0; letter-spacing: -.025em; }
+  .saved-dialog-mark { width: 24px; height: 24px; color: var(--accent); fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 -apple-system,"Segoe UI",sans-serif; background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
+  .saved-dialog button:hover, .saved-item-link:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text, var(--text)); }
+  .saved-dialog button:focus-visible, .saved-item-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
+  .saved-dialog .saved-dialog-close { margin-left: auto; padding: 0; width: 36px; font-size: 25px; border-color: transparent; }
+  .saved-dialog-count { background: var(--accent-soft); color: var(--accent-text, var(--text)); padding: 3px 8px; border-radius: 6px; font-size: 12px; font-weight: 750; }
+  .saved-dialog-body { padding: 0 22px; overflow-y: auto; max-height: calc(100dvh - 260px); }
+  .saved-item { display: grid; grid-template-columns: 66px minmax(0,1fr); column-gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--border); text-align: left; }
+  .saved-item:last-child { border-bottom: 0; }
+  .saved-item-image { width: 66px; height: 78px; object-fit: contain; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 6px; grid-row: span 4; }
+  .saved-item-placeholder { display: grid; place-items: center; color: var(--muted); font-size: 25px; }
+  .saved-item h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.4; font-weight: 750; overflow-wrap: anywhere; }
+  .saved-item-meta { color: var(--muted); font-size: 12px; margin-bottom: 9px; }
+  .saved-item-price { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .saved-item-change { font-size: 12px; color: var(--muted); margin: 4px 0 12px; line-height: 1.5; }
+  .saved-item-change[data-direction="down"] { color: var(--good, var(--accent-text, var(--text))); font-weight: 650; }
+  .saved-item-actions { display: flex; flex-wrap: wrap; gap: 7px; grid-column: 2; }
+  .saved-item-actions .saved-item-link { border-color: var(--accent); color: var(--accent-text, var(--text)); }
+  .saved-dialog-foot { padding: 14px 22px 18px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
+  .saved-dialog-note { font-size: 12px; line-height: 1.5; color: var(--muted); flex: 1; }
+  .saved-dialog-message { color: var(--muted); font-size: 14px; padding: 20px 0; margin: 0; }
+  .saved-page-list .saved-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 12px; }
+  .saved-page-list button { min-height: 36px; }
+  @media(max-width: 480px) { .saved-dialog .saved-dialog-head { padding: 16px; } .saved-dialog-body { padding: 0 16px; } .saved-dialog-foot { padding: 12px 16px; } .saved-item { grid-template-columns: 54px minmax(0,1fr); column-gap: 10px; } .saved-item-image { width: 54px; height: 66px; } }
+</style>
+<dialog class="saved-dialog" id="savedDialog" aria-labelledby="savedDialogTitle">
+  <div class="saved-dialog-head"><svg class="saved-dialog-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><h2 id="savedDialogTitle">Saved products</h2><span class="saved-dialog-count" id="savedDialogCount">0</span><button class="saved-dialog-close" type="button" aria-label="Close saved products" autofocus>×</button></div>
+  <div class="saved-dialog-body" id="savedDialogList"></div>
+  <div class="saved-dialog-foot"><span class="saved-dialog-note">Kept in this browser. Price changes appear after prices are refreshed.</span><button type="button" id="savedClearAll">Clear all</button></div>
+</dialog>
+<div id="savedAnnouncement" role="status" aria-live="polite" class="saved-dialog-note"></div>
+<script>
+(function (root) {
+  "use strict";
+  function createSavedStore(storage) {
+    const key = "mjerica:saved-offers:v2";
+    const legacyKey = "mjerica:saved-products", trackedKey = "mjerica:tracked-offers:v1";
+    const valid = entry => entry && typeof entry === "object" && typeof entry.offer_id === "string" && entry.offer_id.length;
+    const sourceKey = entry => entry.store + "|" + entry.source_url;
+    function parse(name) {
+      try { const value = JSON.parse(storage.getItem(name) || "[]"); return Array.isArray(value) ? value : []; }
+      catch (_) { return []; }
+    }
+    function read() {
+      try { if (storage.getItem(key) !== null) return parse(key).filter(valid); } catch (_) { return []; }
+      const entries = parse(trackedKey).filter(valid).map(entry => ({...entry,
+        baseline_price: typeof entry.baseline_price === "number" && Number.isFinite(entry.baseline_price) ? entry.baseline_price : null}));
+      parse(legacyKey).filter(item => typeof item === "string" && item.includes("|")).forEach(item => {
+        if (entries.some(entry => sourceKey(entry) === item)) return;
+        const separator = item.indexOf("|");
+        entries.push({offer_id:"legacy:" + item, legacy_key:item, store:item.slice(0,separator),
+          source_url:item.slice(separator+1), name:"Saved product", baseline_price:null});
+      });
+      return entries;
+    }
+    function write(entries) {
+      storage.setItem(key, JSON.stringify(entries));
+      // Older generated pages can still use the same saves without resurrecting removals.
+      try {
+        storage.setItem(legacyKey, JSON.stringify([...new Set(entries.map(sourceKey))]));
+        storage.setItem(trackedKey, JSON.stringify(entries.filter(entry => entry.baseline_price !== null)));
+      } catch (_) { /* The v2 record is authoritative once written. */ }
+      return entries;
+    }
+    function save(offer) {
+      if (!valid(offer)) throw new Error("This offer cannot be saved yet.");
+      const entries = read();
+      if (entries.some(entry => entry.offer_id === offer.offer_id)) return entries;
+      const exact = offer.price_kind === "exact" && typeof offer.price_eur === "number" && Number.isFinite(offer.price_eur);
+      entries.push({...offer, baseline_price:exact ? offer.price_eur : null, captured_at:new Date().toISOString()});
+      return write(entries);
+    }
+    function migrate(offers) {
+      const entries = read().map(entry => {
+        const current = offers.find(offer => offer.offer_id === entry.offer_id)
+          || (entry.legacy_key ? offers.find(offer => sourceKey(offer) === entry.legacy_key) : null);
+        if (!current) return entry;
+        const resolved = {...entry, ...current, baseline_price:entry.baseline_price ?? null, captured_at:entry.captured_at};
+        delete resolved.legacy_key;
+        return resolved;
+      });
+      const unique = new Map();
+      entries.forEach(entry => {
+        const previous = unique.get(entry.offer_id);
+        if (!previous || (previous.baseline_price == null && entry.baseline_price != null)) unique.set(entry.offer_id,entry);
+      });
+      if (entries.length) return write([...unique.values()]);
+      return entries;
+    }
+    return {read, save, migrate, remove:id => write(read().filter(entry => entry.offer_id !== id)), clear:() => write([])};
+  }
+  if (typeof module !== "undefined" && module.exports) module.exports = createSavedStore;
+  else root.createSavedStore = createSavedStore;
+})(typeof window !== "undefined" ? window : this);
+
+</script>
+<script>
+(function () {
+  "use strict";
+  const categories = [{"key": "whey"}, {"key": "creatine"}, {"key": "creatine_capsules"}, {"key": "creatine_gummies"}, {"key": "preworkout"}];
+  const dialog = document.getElementById("savedDialog"), list = document.getElementById("savedDialogList");
+  const pageList = document.getElementById("saved-list");
+  const announcement = document.getElementById("savedAnnouncement");
+  announcement.style.cssText = "position:fixed;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)";
+  let storage;
+  try { storage = window.localStorage; } catch (_) { storage = {getItem:()=>null,setItem:()=>{throw Error("Storage unavailable");}}; }
+  const state = window.createSavedStore(storage);
+  const savedLink = Array.from(document.querySelectorAll("a[href]")).find(a => /\/(?:saved|saved.html)(?:[?#]|$)/.test(a.href));
+  const savedUrl = savedLink ? new URL(savedLink.href) : new URL("/saved", location.href);
+  const local = !savedUrl.pathname.endsWith(".html");
+  const siteRoot = new URL("./", savedUrl);
+  let current = new Map(), loaded = false, loading = null, returnFocus = null;
+  const money = n => Number(n).toFixed(2) + " €";
+  const exact = offer => offer && offer.price_kind === "exact" && typeof offer.price_eur === "number" && Number.isFinite(offer.price_eur);
+  const packageLabel = value => !value || value === "default" ? "" : value.startsWith("kg:") ? value.slice(3) + " kg" : value.startsWith("count:") ? value.slice(6) + " units" : value.replace(/:/g, " ");
+  const element = (tag, cls, text) => { const node = document.createElement(tag); node.className = cls; if(text != null) node.textContent = text; return node; };
+  function safeUrl(value, image) {
+    if (!value) return "";
+    try { const url = new URL(value, location.href); return ["http:","https:"].includes(url.protocol) || (image && /^data:image\/(png|jpeg|webp);base64,/.test(value)) ? url.href : ""; } catch (_) { return ""; }
+  }
+  function detailUrl(offer, category) {
+    if (!offer.detail_slug) return "";
+    const path = category + "/products/" + encodeURIComponent(offer.detail_slug) + ".html";
+    return local ? "/report/" + path + "?local=1" : new URL(path,siteRoot).href;
+  }
+  async function loadCurrent() {
+    if (loading) return loading;
+    loading = Promise.all(categories.map(async category => {
+      try {
+        const url = local ? "/catalog/" + category.key : new URL(category.key + "/catalog.json", siteRoot).href;
+        const response = await fetch(url);
+        if (!response.ok) return [];
+        const data = await response.json();
+        const listings = (data.listing_offers || []).map(offer => ({...offer, category:category.key, detail_url:detailUrl(offer,category.key)}));
+        return listings.concat((data.products || []).flatMap(product => (product.offers || []).map(offer => ({
+          ...offer, offer_id:offer.offer_id || offer.id, name:product.name, category:category.key,
+          image_url:product.image_url, detail_url:detailUrl(offer,category.key)
+        }))));
+      } catch (_) { return []; }
+    })).then(results => {
+      const offers = results.flat(); current = new Map(offers.map(offer => [offer.offer_id,offer])); loaded = true;
+      try { state.migrate(offers); } catch (_) { announcement.textContent = "Browser storage is unavailable. Changes cannot be saved."; }
+      sync();
+    }).finally(() => { loading = null; });
+    return loading;
+  }
+  function changed() {
+    sync();
+    window.dispatchEvent(new CustomEvent("mjerica-saved-change"));
+  }
+  function mutate(fn) {
+    try { fn(); changed(); return true; }
+    catch (_) { announcement.textContent = "Could not save this change. Check that browser storage is enabled."; return false; }
+  }
+  function render(target, entries) {
+    target.replaceChildren();
+    if (!entries.length) { target.append(element("p","saved-dialog-message","Your list is empty. Save a product to keep its price here.")); return; }
+    entries.forEach(entry => {
+      const now = current.get(entry.offer_id), info = {...entry,...now};
+      const card = element("article","saved-item");
+      const src = safeUrl(info.image_url,true);
+      const image = src ? element("img","saved-item-image") : element("span","saved-item-image saved-item-placeholder","—");
+      if (src) { image.src=src; image.alt=info.name || "Product"; image.loading="lazy"; image.addEventListener("error",()=>image.replaceWith(element("span","saved-item-image saved-item-placeholder","—"))); }
+      card.append(image,element("h3","",info.name || "Saved product"),
+        element("div","saved-item-meta",[info.store,packageLabel(info.package_key || info.package),info.flavour].filter(Boolean).join(" · ")));
+      const price = exact(now) ? money(now.price_eur) : now && now.price_eur != null ? "From " + money(now.price_eur)
+        : entry.baseline_price != null ? money(entry.baseline_price) + " when saved" : "Price unavailable";
+      card.append(element("div","saved-item-price",price));
+      const delta = element("div","saved-item-change");
+      if (!now) delta.textContent = loaded ? "Latest price unavailable. Your saved price is kept." : "Checking the latest price…";
+      else if (entry.baseline_price == null) delta.textContent = "No starting price recorded.";
+      else if (!exact(now)) delta.textContent = "Price varies; an exact comparison is unavailable.";
+      else {
+        const difference = Math.round((now.price_eur-entry.baseline_price)*100)/100;
+        delta.textContent = difference === 0 ? "Unchanged since saving" : (difference < 0 ? "Down " : "Up ") + money(Math.abs(difference))
+          + " (" + (entry.baseline_price > 0 ? (Math.abs(difference)/entry.baseline_price*100).toFixed(1)+"%" : "from zero") + ") · saved at " + money(entry.baseline_price);
+        delta.dataset.direction = difference < 0 ? "down" : "up";
+      }
+      card.append(delta);
+      const actions = element("div","saved-item-actions");
+      const detail = safeUrl(info.detail_url);
+      if (detail) { const link=element("a","saved-item-link","View details"); link.href=detail; actions.append(link); }
+      const source = safeUrl(info.source_url);
+      if (source) { const link=element("a","saved-item-link","Go to store"); link.href=source; link.target="_blank"; link.rel="noopener noreferrer"; actions.append(link); }
+      const remove=element("button","","Remove"); remove.type="button"; remove.setAttribute("aria-label","Remove " + (info.name || "product"));
+      remove.addEventListener("click",()=>{ if(mutate(()=>state.remove(entry.offer_id))) { announcement.textContent="Removed from saved"; dialog.querySelector(".saved-dialog-close").focus(); } });
+      actions.append(remove); card.append(actions); target.append(card);
+    });
+  }
+  function sync() {
+    const entries = state.read();
+    ["savedDialogCount","savedCount","saved-count"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=entries.length ? String(entries.length) : id==="savedDialogCount" ? "0" : ""; });
+    document.querySelectorAll("[data-save-offer]").forEach(button => {
+      let offer; try { offer=JSON.parse(button.dataset.saveOffer); } catch (_) { return; }
+      const active=entries.some(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
+      button.setAttribute("aria-pressed",String(active)); button.title=active?"Remove from saved":"Save product";
+      button.setAttribute("aria-label",button.title);
+      const label=button.querySelector("span"); if(label) label.textContent=active?"Saved":"Save product";
+      const row=button.closest("tr"); if(row) row.classList.toggle("saved",active);
+    });
+    if (dialog.open) render(list,entries);
+    if (pageList) { pageList.classList.add("saved-page-list"); render(pageList,entries); const count=document.getElementById("count"); if(count) count.textContent=entries.length+" saved"; }
+    document.getElementById("savedClearAll").disabled=!entries.length;
+  }
+  function open() {
+    if (window.parent!==window && location.pathname.startsWith("/report/")) {
+      window.parent.postMessage({type:"mjerica-open-saved"},location.origin); return;
+    }
+    returnFocus=document.activeElement; if(!dialog.open) dialog.showModal(); sync(); loadCurrent();
+  }
+  document.addEventListener("click",event=>{
+    const button=event.target.closest("[data-save-offer]");
+    if(button) {
+      event.preventDefault(); let offer;
+      try { offer=JSON.parse(button.dataset.saveOffer); if(offer.detail_url) offer.detail_url=new URL(offer.detail_url,location.href).href; } catch (_) { return; }
+      const existing=state.read().find(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
+      if(mutate(()=>existing?state.remove(existing.offer_id):state.save(offer))) {
+        announcement.textContent=existing?"Removed from saved":"Product saved";
+        if(!existing) open();
+      }
+      return;
+    }
+    const link=event.target.closest("a[href]");
+    if(link && /\/(?:saved|saved.html)(?:[?#]|$)/.test(link.href) && !event.ctrlKey && !event.metaKey && !event.shiftKey) {event.preventDefault();open();}
+  });
+  dialog.querySelector(".saved-dialog-close").addEventListener("click",()=>dialog.close());
+  dialog.addEventListener("click",event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+  dialog.addEventListener("close",()=>{ if(returnFocus && returnFocus.isConnected) returnFocus.focus(); });
+  document.getElementById("savedClearAll").addEventListener("click",()=>{if(window.confirm("Remove all saved products and their starting prices?"))mutate(()=>state.clear());});
+  window.addEventListener("storage",()=>{sync();window.dispatchEvent(new CustomEvent("mjerica-saved-change"));});
+  window.addEventListener("pageshow",sync);
+  window.addEventListener("message",event=>{
+    const frame=document.getElementById("frame");
+    if(event.origin===location.origin && frame && event.source===frame.contentWindow && event.data?.type==="mjerica-open-saved")open();
+  });
+  window.MjericaSaved={open,sync};
+  sync(); if(pageList)loadCurrent();
+})();
+</script>
+
 </body>
 </html>

@@ -1,10 +1,335 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "listing_offers": [
+    {
+      "id": "catalog:e41c0cc6d2dbdadb",
+      "offer_id": "catalog:e41c0cc6d2dbdadb",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/kreatin-caps-100-creapurer-gymbeam.html",
+      "detail_slug": "gymbeam_hr_creatine_100_creapure_gymbeam_120_kaps_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 15.5,
+      "unit_price": 0.129,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine (100% Creapure®) - GymBeam, 120 kaps.",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png"
+    },
+    {
+      "id": "catalog:e41c0cc6d2dbdadb",
+      "offer_id": "catalog:e41c0cc6d2dbdadb",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/kreatin-caps-100-creapurer-gymbeam.html",
+      "detail_slug": "gymbeam_hr_creatine_100_creapure_gymbeam_120_kaps_120capsules",
+      "package_key": "count:120",
+      "flavour": null,
+      "price_eur": 27.95,
+      "unit_price": 0.116,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine (100% Creapure®) - GymBeam, 240 kaps.",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png"
+    },
+    {
+      "id": "catalog:5d54a6309b63a84c",
+      "offer_id": "catalog:5d54a6309b63a84c",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/kreatin-tabs-1000-mg-gymbeam.html",
+      "detail_slug": "gymbeam_hr_kreatin_tabs_1000_mg_gymbeam_300_tab_300capsules",
+      "package_key": "count:300",
+      "flavour": "",
+      "price_eur": 18.5,
+      "unit_price": 0.062,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Kreatin TABS 1000 mg - GymBeam, 300 tab.",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png"
+    },
+    {
+      "id": "catalog:4f65c72e5ac10b2c",
+      "offer_id": "catalog:4f65c72e5ac10b2c",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/kreatin-hcl-120-kaps-gymbeam.html",
+      "detail_slug": "gymbeam_hr_kreatin_hcl_120_kaps_gymbeam_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 12.95,
+      "unit_price": 0.108,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Kreatin HCl 120 kaps – GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg"
+    },
+    {
+      "id": "catalog:c2ab8d7705b9f81c",
+      "offer_id": "catalog:c2ab8d7705b9f81c",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/creatine-tabs-100-creapurer-gymbeam.html",
+      "detail_slug": "gymbeam_hr_creatine_tabs_100_creapure_gymbeam_120_tab_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 17.95,
+      "unit_price": 0.15,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine TABS 100% Creapure® - GymBeam, 120 tab.",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg"
+    },
+    {
+      "id": "catalog:ffe789045a3fc876",
+      "offer_id": "catalog:ffe789045a3fc876",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-160-kapsula",
+      "detail_slug": "polleo_sport_creatine_monohydrate_160_kapsula_160capsules",
+      "package_key": "count:160",
+      "flavour": "",
+      "price_eur": 19.99,
+      "unit_price": 0.125,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine Monohydrate, 160 kapsula",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-creatine-monohydrate-160-capsules.jpg?size=225"
+    },
+    {
+      "id": "catalog:6173c81ad1708b37",
+      "offer_id": "catalog:6173c81ad1708b37",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first",
+      "detail_slug": "polleo_sport_creatine_ethyl_ester_120_kapsula_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 26.99,
+      "unit_price": 0.225,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine Ethyl Ester, 120 kapsula",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225"
+    },
+    {
+      "id": "catalog:6dadf4ac20c5d93f",
+      "offer_id": "catalog:6dadf4ac20c5d93f",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/creafast-120-tableta-4623",
+      "detail_slug": "proteka_creafast_120_tableta_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 33.95,
+      "unit_price": 0.283,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creafast 120 tableta",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/creafast%5F14219%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:06244e03309163f6",
+      "offer_id": "catalog:06244e03309163f6",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/creatine-hcl-150-kapsula-4621",
+      "detail_slug": "proteka_weider_creatine_hcl_150_kapsula_150capsules",
+      "package_key": "count:150",
+      "flavour": "",
+      "price_eur": 39.95,
+      "unit_price": 0.266,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Creatine HCL 150 kapsula",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fcreatine%5Fhidroklorid%5F22755%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:61620894beeec414",
+      "offer_id": "catalog:61620894beeec414",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/maximum-kreagenic-100-kapsula-4490",
+      "detail_slug": "proteka_weider_maximum_kreagenic_100_kapsula_100capsules",
+      "package_key": "count:100",
+      "flavour": "",
+      "price_eur": 37.95,
+      "unit_price": 0.38,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Maximum KreaGenic 100 kapsula",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmaximum%5Fkreagenic%5F01549%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:c30f0d38f4c178ff",
+      "offer_id": "catalog:c30f0d38f4c178ff",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/weider-creatine-capsules-200-kapsula-4690",
+      "detail_slug": "proteka_weider_pure_creatine_200_kapsula_200capsules",
+      "package_key": "count:200",
+      "flavour": "",
+      "price_eur": 47.95,
+      "unit_price": 0.24,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Pure Creatine 200 kapsula",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fpure%5Fcreatine%5F225333%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:4fb00dd7b5f405e5",
+      "offer_id": "catalog:4fb00dd7b5f405e5",
+      "store": "GAZ Nutrition",
+      "source_url": "https://gaz-nutrition.com/proizvod/weider-pure-creatine-capsules/",
+      "detail_slug": "gaz_nutrition_weider_pure_creatine_capsules_200capsules",
+      "package_key": "count:200",
+      "flavour": "",
+      "price_eur": 43.15,
+      "unit_price": 0.216,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Pure Creatine Capsules",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-caps-3000mg-creapure-v01g.jpg"
+    },
+    {
+      "id": "catalog:eba0d767cb4c27e0",
+      "offer_id": "catalog:eba0d767cb4c27e0",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/vast-creatine-ultra-pure-caps-300-kapsula",
+      "detail_slug": "proteini_si_vast_creatine_ultra_pure_caps_300_kapsula_300capsules",
+      "package_key": "count:300",
+      "flavour": "",
+      "price_eur": 39.94,
+      "unit_price": 0.133,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "VAST CREATINE ULTRA PURE CAPS, 300 kapsula",
+      "image_url": "https://www.proteini.si/images/e18f528712a3fc5b825a4a1ad4b1a147/vast-creatine-ultra-pure-caps-300-kapsula.jpg?v26"
+    },
+    {
+      "id": "catalog:09a865c2e04c3ca2",
+      "offer_id": "catalog:09a865c2e04c3ca2",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/vast-creatine-creapure-caps-90-kapsula",
+      "detail_slug": "proteini_si_vast_creatine_creapure_caps_90_kapsula_90capsules",
+      "package_key": "count:90",
+      "flavour": "",
+      "price_eur": 21.68,
+      "unit_price": 0.241,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "VAST CREATINE CREAPURE CAPS, 90 kapsula",
+      "image_url": "https://www.proteini.si/images/64ee5417e4d591ccd038f0dafa075632/vast-creatine-creapure-caps-90-kapsula.jpg?v26"
+    },
+    {
+      "id": "catalog:a067377e8a8a167a",
+      "offer_id": "catalog:a067377e8a8a167a",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/usn-creatine-ultra-1250-120-kapsula",
+      "detail_slug": "proteini_si_usn_creatine_ultra_1250_120_kapsula_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 20.54,
+      "unit_price": 0.171,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "USN CREATINE ULTRA 1250, 120 kapsula",
+      "image_url": "https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26"
+    },
+    {
+      "id": "catalog:730d6dbf710db55e",
+      "offer_id": "catalog:730d6dbf710db55e",
+      "store": "THE Nutrition",
+      "source_url": "https://hr.the-nutrition.com/proizvod/2175/X3M-Kick-Start/b/trgovina/cat/6/stype/2/ob/0",
+      "detail_slug": "the_nutrition_x3m_kick_start_120_caps_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 21.41,
+      "unit_price": 0.178,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "X3M Kick Start (120 caps.)",
+      "image_url": "https://hr.the-nutrition.com/store/images/products/2175_cat_744202.jpg"
+    },
+    {
+      "id": "catalog:fb4645f8dbd03967",
+      "offer_id": "catalog:fb4645f8dbd03967",
+      "store": "THE Nutrition",
+      "source_url": "https://hr.the-nutrition.com/proizvod/2046/THE-Creatine/b/trgovina/cat/6/stype/2/ob/0",
+      "detail_slug": "the_nutrition_the_creatine_100_caps_100capsules",
+      "package_key": "count:100",
+      "flavour": "",
+      "price_eur": 14.27,
+      "unit_price": 0.143,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "THE Creatine (100 caps.)",
+      "image_url": "https://hr.the-nutrition.com/store/images/products/2046_cat_302354.jpg"
+    },
+    {
+      "id": "catalog:978d7a40bfb362a4",
+      "offer_id": "catalog:978d7a40bfb362a4",
+      "store": "Proteini Outlet",
+      "source_url": "https://www.proteini-outlet.com/proizvod/creatine-monohydrate-kapsule/",
+      "detail_slug": "proteini_outlet_creatine_monohydrate_kapsule_220capsules",
+      "package_key": "count:220",
+      "flavour": "",
+      "price_eur": 18.36,
+      "unit_price": 0.083,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine Monohydrate kapsule",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/09/amix-nutrition-creatine-kapsule-proteini-outlet-600x600.jpg"
+    },
+    {
+      "id": "catalog:13f710e6ad1b27ae",
+      "offer_id": "catalog:13f710e6ad1b27ae",
+      "store": "Proteini Outlet",
+      "source_url": "https://www.proteini-outlet.com/proizvod/kreatin-monohidrat-kapsule/",
+      "detail_slug": "proteini_outlet_kreatin_monohidrat_kapsule_200capsules",
+      "package_key": "count:200",
+      "flavour": "",
+      "price_eur": 42.0,
+      "unit_price": 0.21,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Kreatin monohidrat kapsule",
+      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/optimum-nutrition-creatine-2500-200kapsule-proteini-outlet-600x600.jpg"
+    }
+  ],
   "category": "creatine_capsules",
-  "checked_at": "2026-09-25T09:40:56.932495+00:00",
+  "checked_at": "2026-09-25T10:35:58.282155+00:00",
   "products": [
     {
-      "id": "catalog:692a4155d55f3122",
+      "id": "catalog:c9ba6f77c7d20a81",
       "name": "Creafast 120 tableta",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/creafast%5F14219%2Ejpg.axd?maxwidth=130&maxheight=130",
@@ -13,9 +338,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:96a8b6f33e5fc519",
+          "id": "catalog:6dadf4ac20c5d93f",
+          "offer_id": "catalog:6dadf4ac20c5d93f",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/creafast-120-tableta-4623",
+          "detail_slug": "proteka_creafast_120_tableta_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 33.95,
@@ -28,7 +355,7 @@
       ]
     },
     {
-      "id": "catalog:4331c400a3f3a660",
+      "id": "catalog:3eea7a59cfea054c",
       "name": "Creatine (100% Creapure®) - GymBeam, 120 kaps.",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png",
@@ -37,9 +364,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:dd8c82d1a21bdfa7",
+          "id": "catalog:e41c0cc6d2dbdadb",
+          "offer_id": "catalog:e41c0cc6d2dbdadb",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/kreatin-caps-100-creapurer-gymbeam.html",
+          "detail_slug": "gymbeam_hr_creatine_100_creapure_gymbeam_120_kaps_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 15.5,
@@ -52,7 +381,7 @@
       ]
     },
     {
-      "id": "catalog:acbc09d0bcf35edf",
+      "id": "catalog:6637d7b44cf77366",
       "name": "Creatine Ethyl Ester, 120 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225",
@@ -61,9 +390,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:ab614f061e1115c0",
+          "id": "catalog:6173c81ad1708b37",
+          "offer_id": "catalog:6173c81ad1708b37",
           "store": "Polleo Sport",
           "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-ethyl-ester-120-kapsula-me-first",
+          "detail_slug": "polleo_sport_creatine_ethyl_ester_120_kapsula_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 26.99,
@@ -76,7 +407,7 @@
       ]
     },
     {
-      "id": "catalog:e03b89375ce28925",
+      "id": "catalog:621f926424315de6",
       "name": "Creatine Monohydrate kapsule",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/09/amix-nutrition-creatine-kapsule-proteini-outlet-600x600.jpg",
@@ -85,9 +416,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:a092a7f1f71c7264",
+          "id": "catalog:978d7a40bfb362a4",
+          "offer_id": "catalog:978d7a40bfb362a4",
           "store": "Proteini Outlet",
           "source_url": "https://www.proteini-outlet.com/proizvod/creatine-monohydrate-kapsule/",
+          "detail_slug": "proteini_outlet_creatine_monohydrate_kapsule_220capsules",
           "package_key": "count:220",
           "flavour": null,
           "price_eur": 18.36,
@@ -100,7 +433,7 @@
       ]
     },
     {
-      "id": "catalog:4deac8a757e8ec7e",
+      "id": "catalog:d6cfcc911319917c",
       "name": "Creatine Monohydrate, 160 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-creatine-monohydrate-160-capsules.jpg?size=225",
@@ -109,9 +442,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:8b6953462f22014e",
+          "id": "catalog:ffe789045a3fc876",
+          "offer_id": "catalog:ffe789045a3fc876",
           "store": "Polleo Sport",
           "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-160-kapsula",
+          "detail_slug": "polleo_sport_creatine_monohydrate_160_kapsula_160capsules",
           "package_key": "count:160",
           "flavour": null,
           "price_eur": 19.99,
@@ -124,7 +459,7 @@
       ]
     },
     {
-      "id": "catalog:7b2d5f12c562cf83",
+      "id": "catalog:2fa754d7338913d1",
       "name": "Creatine TABS 100% Creapure® - GymBeam, 120 tab.",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg",
@@ -133,9 +468,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:5490c1c7aea5d25e",
+          "id": "catalog:c2ab8d7705b9f81c",
+          "offer_id": "catalog:c2ab8d7705b9f81c",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/creatine-tabs-100-creapurer-gymbeam.html",
+          "detail_slug": "gymbeam_hr_creatine_tabs_100_creapure_gymbeam_120_tab_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 17.95,
@@ -148,7 +485,7 @@
       ]
     },
     {
-      "id": "catalog:723717de12757633",
+      "id": "catalog:ed01d29364fccc5a",
       "name": "Kreatin HCl 120 kaps – GymBeam",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg",
@@ -157,9 +494,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:5b278380976c2aa9",
+          "id": "catalog:4f65c72e5ac10b2c",
+          "offer_id": "catalog:4f65c72e5ac10b2c",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/kreatin-hcl-120-kaps-gymbeam.html",
+          "detail_slug": "gymbeam_hr_kreatin_hcl_120_kaps_gymbeam_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 12.95,
@@ -172,7 +511,7 @@
       ]
     },
     {
-      "id": "catalog:9f2f0356a95efba7",
+      "id": "catalog:ffae92ad5bfb7be4",
       "name": "Kreatin monohidrat kapsule",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/optimum-nutrition-creatine-2500-200kapsule-proteini-outlet-600x600.jpg",
@@ -181,9 +520,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:17e3414d8e4c61e8",
+          "id": "catalog:13f710e6ad1b27ae",
+          "offer_id": "catalog:13f710e6ad1b27ae",
           "store": "Proteini Outlet",
           "source_url": "https://www.proteini-outlet.com/proizvod/kreatin-monohidrat-kapsule/",
+          "detail_slug": "proteini_outlet_kreatin_monohidrat_kapsule_200capsules",
           "package_key": "count:200",
           "flavour": null,
           "price_eur": 42.0,
@@ -196,7 +537,7 @@
       ]
     },
     {
-      "id": "catalog:c5d53ae6d6692830",
+      "id": "catalog:4edcb10564193fea",
       "name": "Kreatin TABS 1000 mg - GymBeam, 300 tab.",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png",
@@ -205,9 +546,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:e2ec20febac3897d",
+          "id": "catalog:5d54a6309b63a84c",
+          "offer_id": "catalog:5d54a6309b63a84c",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/kreatin-tabs-1000-mg-gymbeam.html",
+          "detail_slug": "gymbeam_hr_kreatin_tabs_1000_mg_gymbeam_300_tab_300capsules",
           "package_key": "count:300",
           "flavour": null,
           "price_eur": 18.5,
@@ -220,7 +563,7 @@
       ]
     },
     {
-      "id": "catalog:cbb95e01bb7dbcaa",
+      "id": "catalog:042d3591acb8d7bf",
       "name": "THE Creatine (100 caps.)",
       "category": "creatine_capsules",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2046_cat_302354.jpg",
@@ -229,9 +572,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:f64250c0ed98da62",
+          "id": "catalog:fb4645f8dbd03967",
+          "offer_id": "catalog:fb4645f8dbd03967",
           "store": "THE Nutrition",
           "source_url": "https://hr.the-nutrition.com/proizvod/2046/THE-Creatine/b/trgovina/cat/6/stype/2/ob/0",
+          "detail_slug": "the_nutrition_the_creatine_100_caps_100capsules",
           "package_key": "count:100",
           "flavour": null,
           "price_eur": 14.27,
@@ -244,7 +589,7 @@
       ]
     },
     {
-      "id": "catalog:08ab91d09bb753a0",
+      "id": "catalog:93c751c19329fd11",
       "name": "USN CREATINE ULTRA 1250, 120 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26",
@@ -253,9 +598,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:aef67b6ac9309458",
+          "id": "catalog:a067377e8a8a167a",
+          "offer_id": "catalog:a067377e8a8a167a",
           "store": "Proteini.si",
           "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/usn-creatine-ultra-1250-120-kapsula",
+          "detail_slug": "proteini_si_usn_creatine_ultra_1250_120_kapsula_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 20.54,
@@ -268,7 +615,7 @@
       ]
     },
     {
-      "id": "catalog:8fd9081acaaace70",
+      "id": "catalog:9512c4034694e04f",
       "name": "VAST CREATINE CREAPURE CAPS, 90 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini.si/images/64ee5417e4d591ccd038f0dafa075632/vast-creatine-creapure-caps-90-kapsula.jpg?v26",
@@ -277,9 +624,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:fde216872878ca2e",
+          "id": "catalog:09a865c2e04c3ca2",
+          "offer_id": "catalog:09a865c2e04c3ca2",
           "store": "Proteini.si",
           "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/vast-creatine-creapure-caps-90-kapsula",
+          "detail_slug": "proteini_si_vast_creatine_creapure_caps_90_kapsula_90capsules",
           "package_key": "count:90",
           "flavour": null,
           "price_eur": 21.68,
@@ -292,7 +641,7 @@
       ]
     },
     {
-      "id": "catalog:f524e8dc885236bb",
+      "id": "catalog:dc56badc9c1c887c",
       "name": "VAST CREATINE ULTRA PURE CAPS, 300 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini.si/images/e18f528712a3fc5b825a4a1ad4b1a147/vast-creatine-ultra-pure-caps-300-kapsula.jpg?v26",
@@ -301,9 +650,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:ac555c376ca694c0",
+          "id": "catalog:eba0d767cb4c27e0",
+          "offer_id": "catalog:eba0d767cb4c27e0",
           "store": "Proteini.si",
           "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/vast-creatine-ultra-pure-caps-300-kapsula",
+          "detail_slug": "proteini_si_vast_creatine_ultra_pure_caps_300_kapsula_300capsules",
           "package_key": "count:300",
           "flavour": null,
           "price_eur": 39.94,
@@ -316,7 +667,7 @@
       ]
     },
     {
-      "id": "catalog:f52a1501d0e60137",
+      "id": "catalog:830c438467626e06",
       "name": "Weider Creatine HCL 150 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fcreatine%5Fhidroklorid%5F22755%2Ejpg.axd?maxwidth=130&maxheight=130",
@@ -325,9 +676,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:16856231aac2f10d",
+          "id": "catalog:06244e03309163f6",
+          "offer_id": "catalog:06244e03309163f6",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/creatine-hcl-150-kapsula-4621",
+          "detail_slug": "proteka_weider_creatine_hcl_150_kapsula_150capsules",
           "package_key": "count:150",
           "flavour": null,
           "price_eur": 39.95,
@@ -340,7 +693,7 @@
       ]
     },
     {
-      "id": "catalog:001474ae35efab1c",
+      "id": "catalog:be767ebc693c2292",
       "name": "Weider Maximum KreaGenic 100 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmaximum%5Fkreagenic%5F01549%2Ejpg.axd?maxwidth=130&maxheight=130",
@@ -349,9 +702,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:a885d51e6cc60f7e",
+          "id": "catalog:61620894beeec414",
+          "offer_id": "catalog:61620894beeec414",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/maximum-kreagenic-100-kapsula-4490",
+          "detail_slug": "proteka_weider_maximum_kreagenic_100_kapsula_100capsules",
           "package_key": "count:100",
           "flavour": null,
           "price_eur": 37.95,
@@ -364,7 +719,7 @@
       ]
     },
     {
-      "id": "catalog:5dafa96c14c30c6d",
+      "id": "catalog:4a40f36ea17b5d12",
       "name": "Weider Pure Creatine 200 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fpure%5Fcreatine%5F225333%2Ejpg.axd?maxwidth=130&maxheight=130",
@@ -373,9 +728,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:6963ad2c5552de60",
+          "id": "catalog:c30f0d38f4c178ff",
+          "offer_id": "catalog:c30f0d38f4c178ff",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/weider-creatine-capsules-200-kapsula-4690",
+          "detail_slug": "proteka_weider_pure_creatine_200_kapsula_200capsules",
           "package_key": "count:200",
           "flavour": null,
           "price_eur": 47.95,
@@ -388,7 +745,7 @@
       ]
     },
     {
-      "id": "catalog:21a0b57a7337da83",
+      "id": "catalog:2bb2478ca4f202e1",
       "name": "Weider Pure Creatine Capsules",
       "category": "creatine_capsules",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-caps-3000mg-creapure-v01g.jpg",
@@ -397,9 +754,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:47d7afdb90564391",
+          "id": "catalog:4fb00dd7b5f405e5",
+          "offer_id": "catalog:4fb00dd7b5f405e5",
           "store": "GAZ Nutrition",
           "source_url": "https://gaz-nutrition.com/proizvod/weider-pure-creatine-capsules/",
+          "detail_slug": "gaz_nutrition_weider_pure_creatine_capsules_200capsules",
           "package_key": "count:200",
           "flavour": null,
           "price_eur": 43.15,
@@ -412,7 +771,7 @@
       ]
     },
     {
-      "id": "catalog:7051334cb76b2845",
+      "id": "catalog:3c1829ad44a22d04",
       "name": "X3M Kick Start (120 caps.)",
       "category": "creatine_capsules",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2175_cat_744202.jpg",
@@ -421,9 +780,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:44f8a9f7b0fb33d7",
+          "id": "catalog:730d6dbf710db55e",
+          "offer_id": "catalog:730d6dbf710db55e",
           "store": "THE Nutrition",
           "source_url": "https://hr.the-nutrition.com/proizvod/2175/X3M-Kick-Start/b/trgovina/cat/6/stype/2/ob/0",
+          "detail_slug": "the_nutrition_x3m_kick_start_120_caps_120capsules",
           "package_key": "count:120",
           "flavour": null,
           "price_eur": 21.41,

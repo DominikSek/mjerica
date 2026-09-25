@@ -1,10 +1,148 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "listing_offers": [
+    {
+      "id": "catalog:8cb47872cf0bceab",
+      "offer_id": "catalog:8cb47872cf0bceab",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html",
+      "detail_slug": "gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies",
+      "package_key": "count:60",
+      "flavour": "",
+      "price_eur": 10.95,
+      "unit_price": 0.182,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.",
+      "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg"
+    },
+    {
+      "id": "catalog:a1fea203b7778631",
+      "offer_id": "catalog:a1fea203b7778631",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon",
+      "detail_slug": "polleo_sport_creatine_gummies_60_gummies_60gummies",
+      "package_key": "count:60",
+      "flavour": "",
+      "price_eur": 23.99,
+      "unit_price": 0.4,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine Gummies, 60 gummies",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225"
+    },
+    {
+      "id": "catalog:ecc5f1ca4a68b341",
+      "offer_id": "catalog:ecc5f1ca4a68b341",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979",
+      "detail_slug": "proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies",
+      "package_key": "count:60",
+      "flavour": "",
+      "price_eur": 16.95,
+      "unit_price": 0.282,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Premium Kreatin Gumeni Bomboni 60 bombona",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:2656952d9abe3da2",
+      "offer_id": "catalog:2656952d9abe3da2",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081",
+      "detail_slug": "proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies",
+      "package_key": "count:60",
+      "flavour": "",
+      "price_eur": 15.95,
+      "unit_price": 0.266,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:8b3d0499aa13dff2",
+      "offer_id": "catalog:8b3d0499aa13dff2",
+      "store": "GAZ Nutrition",
+      "source_url": "https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/",
+      "detail_slug": "gaz_nutrition_weider_micronized_creatine_gummies_60gummies",
+      "package_key": "count:60",
+      "flavour": "",
+      "price_eur": 14.04,
+      "unit_price": 0.234,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Micronized Creatine Gummies",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg"
+    },
+    {
+      "id": "catalog:7f1151d35054df58",
+      "offer_id": "catalog:7f1151d35054df58",
+      "store": "GAZ Nutrition",
+      "source_url": "https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/",
+      "detail_slug": "gaz_nutrition_weider_premium_creatine_gummies_60gummies",
+      "package_key": "count:60",
+      "flavour": "",
+      "price_eur": 14.91,
+      "unit_price": 0.248,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Weider Premium Creatine Gummies",
+      "image_url": "https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg"
+    },
+    {
+      "id": "catalog:5d65ce266b5904e3",
+      "offer_id": "catalog:5d65ce266b5904e3",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/",
+      "detail_slug": "myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies",
+      "package_key": "count:30",
+      "flavour": "",
+      "price_eur": 6.69,
+      "unit_price": 0.223,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Kremaste žvakaće bombone s kreatinom bez šećera",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:0c6cbc96d45d3420",
+      "offer_id": "catalog:0c6cbc96d45d3420",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/",
+      "detail_slug": "myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies",
+      "package_key": "count:30",
+      "flavour": "",
+      "price_eur": 6.69,
+      "unit_price": 0.223,
+      "unit_label": "gummy",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Kremaste gumene bombone s kreatinom",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    }
+  ],
   "category": "creatine_gummies",
-  "checked_at": "2026-09-25T09:41:00.303279+00:00",
+  "checked_at": "2026-09-25T10:36:02.105853+00:00",
   "products": [
     {
-      "id": "catalog:bbff52c7f35183a0",
+      "id": "catalog:773a8d805e3bc4f2",
       "name": "Creatine Gummies, 60 gummies",
       "category": "creatine_gummies",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225",
@@ -13,9 +151,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:4c048e007f370600",
+          "id": "catalog:a1fea203b7778631",
+          "offer_id": "catalog:a1fea203b7778631",
           "store": "Polleo Sport",
           "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon",
+          "detail_slug": "polleo_sport_creatine_gummies_60_gummies_60gummies",
           "package_key": "count:60",
           "flavour": null,
           "price_eur": 23.99,
@@ -28,7 +168,7 @@
       ]
     },
     {
-      "id": "catalog:8c59e765c4d76853",
+      "id": "catalog:058597c44037013d",
       "name": "Kremaste gumene bombone s kreatinom",
       "category": "creatine_gummies",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
@@ -37,9 +177,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:3285919517d6a056",
+          "id": "catalog:0c6cbc96d45d3420",
+          "offer_id": "catalog:0c6cbc96d45d3420",
           "store": "MyProtein",
           "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/",
+          "detail_slug": "myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies",
           "package_key": "count:30",
           "flavour": null,
           "price_eur": 6.69,
@@ -52,7 +194,7 @@
       ]
     },
     {
-      "id": "catalog:a95d85f646912992",
+      "id": "catalog:c175f9d3427a0e55",
       "name": "Kremaste žvakaće bombone s kreatinom bez šećera",
       "category": "creatine_gummies",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
@@ -61,9 +203,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:d054967645212463",
+          "id": "catalog:5d65ce266b5904e3",
+          "offer_id": "catalog:5d65ce266b5904e3",
           "store": "MyProtein",
           "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/",
+          "detail_slug": "myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies",
           "package_key": "count:30",
           "flavour": null,
           "price_eur": 6.69,
@@ -76,7 +220,7 @@
       ]
     },
     {
-      "id": "catalog:553f15345eabd524",
+      "id": "catalog:ccdff15ffe822598",
       "name": "Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.",
       "category": "creatine_gummies",
       "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg",
@@ -85,9 +229,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:3e236dbfeadc37e8",
+          "id": "catalog:8cb47872cf0bceab",
+          "offer_id": "catalog:8cb47872cf0bceab",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html",
+          "detail_slug": "gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies",
           "package_key": "count:60",
           "flavour": null,
           "price_eur": 10.95,
@@ -100,7 +246,7 @@
       ]
     },
     {
-      "id": "catalog:83bd0189cd658b78",
+      "id": "catalog:86a05e5ebc67850a",
       "name": "Weider Micronized Creatine Gummies",
       "category": "creatine_gummies",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg",
@@ -109,9 +255,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:84556ebd6e3175d9",
+          "id": "catalog:8b3d0499aa13dff2",
+          "offer_id": "catalog:8b3d0499aa13dff2",
           "store": "GAZ Nutrition",
           "source_url": "https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/",
+          "detail_slug": "gaz_nutrition_weider_micronized_creatine_gummies_60gummies",
           "package_key": "count:60",
           "flavour": null,
           "price_eur": 14.04,
@@ -124,7 +272,7 @@
       ]
     },
     {
-      "id": "catalog:57f43d9b3ec06465",
+      "id": "catalog:93be9df218c7dff8",
       "name": "Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona",
       "category": "creatine_gummies",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&maxheight=130",
@@ -133,9 +281,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:c13bd52ad1579e8d",
+          "id": "catalog:2656952d9abe3da2",
+          "offer_id": "catalog:2656952d9abe3da2",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081",
+          "detail_slug": "proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies",
           "package_key": "count:60",
           "flavour": null,
           "price_eur": 15.95,
@@ -148,7 +298,7 @@
       ]
     },
     {
-      "id": "catalog:07b7918db5b96b3c",
+      "id": "catalog:ab0b5c810ec81251",
       "name": "Weider Premium Creatine Gummies",
       "category": "creatine_gummies",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg",
@@ -157,9 +307,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:b13af83ca9bb5083",
+          "id": "catalog:7f1151d35054df58",
+          "offer_id": "catalog:7f1151d35054df58",
           "store": "GAZ Nutrition",
           "source_url": "https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/",
+          "detail_slug": "gaz_nutrition_weider_premium_creatine_gummies_60gummies",
           "package_key": "count:60",
           "flavour": null,
           "price_eur": 14.91,
@@ -172,7 +324,7 @@
       ]
     },
     {
-      "id": "catalog:15b8cdcc2b05751d",
+      "id": "catalog:c818847f66acedb2",
       "name": "Weider Premium Kreatin Gumeni Bomboni 60 bombona",
       "category": "creatine_gummies",
       "image_url": "https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&maxheight=130",
@@ -181,9 +333,11 @@
       ],
       "offers": [
         {
-          "id": "catalog:2ef5723b9491d126",
+          "id": "catalog:ecc5f1ca4a68b341",
+          "offer_id": "catalog:ecc5f1ca4a68b341",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979",
+          "detail_slug": "proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies",
           "package_key": "count:60",
           "flavour": null,
           "price_eur": 16.95,

@@ -15,12 +15,13 @@
   :root[data-theme="dark"] { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --accent-text: #8ae0d1; --secondary: #8fb9e8; }
   :root[data-theme="light"] { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --accent-text: #0d5e59; --secondary: #245e68; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
-  .page { max-width: 980px; margin: 0 auto; padding: 36px 24px 64px; }
-  .site-header { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; border-bottom: 1px solid var(--border); padding-bottom: 18px; }
-  .brand { display: inline-flex; align-items: center; gap: 10px; font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -.04em; color: var(--text); text-decoration: none; }
-  .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; color: var(--surface); background: var(--accent); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); flex: none; }
-  .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  html, body { min-height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); display: flex; flex-direction: column; font: 14px/1.5 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
+  .page { width: 100%; margin: 0; padding: 0; flex: 1 0 auto; display: flex; flex-direction: column; }
+  header { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 26px; padding: 18px 28px; flex: none; flex-wrap: wrap; }
+  .site-brand { display: flex; align-items: center; gap: 10px; font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em; color: var(--text); white-space: nowrap; }
+  .site-brand .mark { width: 30px; height: 30px; display: inline-grid; place-items: center; background: var(--accent); color: var(--surface); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); flex: none; }
+  .site-brand .mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; flex: none; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
   .theme-toggle:hover { border-color: var(--accent); background: var(--accent); color: var(--surface); filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 15px color-mix(in srgb, var(--accent) 32%, transparent); }
   .theme-toggle:active { transform: translateY(0); filter: brightness(.98); }
@@ -30,14 +31,25 @@
   :root[data-theme="dark"] .theme-toggle .sun-icon { display: none; }
   :root[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .sun-icon { display: none; } :root:not([data-theme="light"]) .theme-toggle .moon-icon { display: block; } }
-  .site-nav { display: flex; gap: 16px; margin-left: auto; }
-  .site-nav a { color: var(--muted); font-weight: 600; text-decoration: none; }
-  .site-nav a:hover, .site-nav a.active { color: var(--text); }
-  h1 { font-size: 28px; margin: 28px 0 4px; }
+  nav { display: flex; gap: 2px; flex-wrap: wrap; }
+  .tab { color: var(--muted); text-decoration: none; padding: 15px 12px 13px; font-size: 13.5px; border-bottom: 2px solid transparent; white-space: nowrap; }
+  .tab:hover { color: var(--text); }
+  .tab-select { display: none; }
+  .top-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+  .header-list-link { color: var(--text); text-decoration: none; font-size: 12.5px; font-weight: 650; white-space: nowrap; }
+  .header-list-link:hover { color: var(--accent-text); }
+  .status-text { font-size: 12.5px; color: var(--muted); max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  button.primary { border-radius: 4px; }
+  button.remove, #clear { border-color: var(--accent); color: var(--accent-text); font-weight: 650; }
+  button.remove:hover, #clear:hover { background: var(--accent-soft); }
+  .tracking-state { color: var(--accent-text); font-size: 12px; font-weight: 650; }
+  .content { width: min(100%, 1100px); margin: 0 auto; padding: 28px 24px 50px; flex: 1; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
   .intro { color: var(--muted); margin: 0 0 20px; }
   .actions { display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
-  button { border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: 7px 11px; cursor: pointer; font: inherit; }
-  button:hover { border-color: var(--accent); }
+  button { font: inherit; font-size: 13px; padding: 8px 14px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text); cursor: pointer; transition: border-color 140ms ease, background 140ms ease, transform 140ms ease; }
+  button:hover { border-color: var(--accent); transform: translateY(-1px); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 700; }
   .count { color: var(--muted); font-size: 13px; }
   .cards { display: grid; gap: 10px; }
   .card { background: var(--surface); border: 1px solid var(--border); padding: 14px 16px; }
@@ -52,92 +64,337 @@
   .remove { margin-left: 4px; padding: 2px 7px; font-size: 12px; }
   .empty { border: 1px dashed var(--border); color: var(--muted); padding: 24px; text-align: center; }
   .stale { color: var(--muted); font-size: 13px; margin-top: 12px; }
-  .site-footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  .app-footer { display: flex; justify-content: space-between; gap: 16px; padding: 9px 28px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11.5px; }
   :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
-  @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } .theme-toggle:hover, .theme-toggle:active { transform: none; } }
-  @media (max-width: 600px) { .page { padding: 18px 14px 40px; } .site-nav { margin-left: 0; width: 100%; } .price { margin-left: 0; } }
+  @media (prefers-reduced-motion: reduce) { .theme-toggle, button { transition: none; } .theme-toggle:hover, .theme-toggle:active, button:hover { transform: none; } }
+  @media (max-width: 700px) { header { padding: 10px 14px; gap: 8px; } nav { display: none; } .tab-select { display: block; flex: 1 1 100%; order: 2; padding: 8px 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; } .site-brand { order: 1; } .top-actions { order: 3; display: grid; grid-template-columns: auto auto 38px; justify-content: end; width: 100%; margin-left: 0; } .status-text { grid-column: 1 / -1; max-width: none; text-align: right; } .content { padding: 20px 14px 36px; } .app-footer { padding: 8px 14px; flex-direction: column; gap: 2px; } .price { margin-left: 0; } }
 </style>
 </head>
 <body>
 <main class="page">
-  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav class="site-nav"><a href="index.html">Categories</a><a class="active" href="saved.html">Saved</a></nav><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></header>
+  <header><div class="site-brand"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</div><nav aria-label="Categories"><a class="tab" href="../whey/">Whey Protein</a><a class="tab" href="../creatine/">Creatine (Powder)</a><a class="tab" href="../creatine_capsules/">Creatine Capsules</a><a class="tab" href="../creatine_gummies/">Creatine Gummies</a><a class="tab" href="../preworkout/">Pre-Workout</a></nav><select class="tab-select" id="categorySelect" aria-label="Category"><option value="">Choose a category</option></select><div class="top-actions"><a class="header-list-link" href="saved.html">Saved <span id="savedCount"></span></a><span class="status-text" id="statusText"></span><button id="runBtn" hidden>Run</button><button class="primary" id="runAllBtn" hidden>Run all</button><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
+  <div class="content">
   <h1>Saved products</h1>
-  <p class="intro">Your saved products from every category, kept in this browser.</p>
-  <div class="actions"><span class="count" id="count">Loading saved products&hellip;</span><button id="clear" type="button" hidden>Clear stale saves</button></div>
-  <section class="cards" id="saved-list" aria-live="polite"></section>
-  <footer class="site-footer">Your saved list stays in this browser. Prices and availability may change at the retailer.</footer>
+  <p class="intro">Saved products and price changes you’re watching, together in one list.</p>
+  <div class="actions"><span class="count" id="count">Loading saved products&hellip;</span></div>
+  <section class="cards" id="saved-list" data-tracked-list="true" aria-live="polite"></section>
+  </div>
 </main>
+<footer class="app-footer"><span>Compare listed offers across supplement stores.</span><span>Prices and availability are confirmed at the retailer.</span></footer>
 <script>
 (function () {
   const categories = [{"key": "whey", "label": "Whey Protein", "catalog_url": "./whey/catalog.json"}, {"key": "creatine", "label": "Creatine (Powder)", "catalog_url": "./creatine/catalog.json"}, {"key": "creatine_capsules", "label": "Creatine Capsules", "catalog_url": "./creatine_capsules/catalog.json"}, {"key": "creatine_gummies", "label": "Creatine Gummies", "catalog_url": "./creatine_gummies/catalog.json"}, {"key": "preworkout", "label": "Pre-Workout", "catalog_url": "./preworkout/catalog.json"}];
   const catalogBase = "./";
-  const storageKey = "mjerica:saved-products";
-  const list = document.getElementById("saved-list");
-  const count = document.getElementById("count");
-  const clear = document.getElementById("clear");
-  let saved;
-  try { saved = new Set(JSON.parse(localStorage.getItem(storageKey) || "[]")); } catch (_) { saved = new Set(); }
-
-  function text(value) { return value == null ? "" : String(value); }
-  function formatPrice(offer) {
-    if (offer.price_eur == null) return "Price unavailable";
-    return (offer.price_kind === "range" ? "from " : "") + Number(offer.price_eur).toFixed(2) + " EUR";
-  }
-  function offerKey(offer) { return text(offer.store) + "|" + text(offer.source_url); }
-  function remove(key) {
-    saved.delete(key);
-    localStorage.setItem(storageKey, JSON.stringify(Array.from(saved)));
-    render();
-  }
-  function render() {
-    const matches = window.savedOffers || [];
-    list.replaceChildren();
-    if (!matches.length) {
-      list.innerHTML = '<div class="empty">No saved products yet. Save a product from a category page to see it here.</div>';
-    } else {
-      matches.forEach((item) => {
-        const card = document.createElement("article"); card.className = "card";
-        const title = document.createElement("div"); title.className = "name"; title.textContent = item.product.name; card.appendChild(title);
-        const category = document.createElement("div"); category.className = "category"; category.textContent = item.category.label; card.appendChild(category);
-        const offers = document.createElement("div"); offers.className = "offers";
-        item.offers.forEach((offer) => {
-          const row = document.createElement("div"); row.className = "offer";
-          const store = document.createElement("span"); store.className = "store"; store.textContent = offer.store; row.appendChild(store);
-          const detail = document.createElement("span"); detail.className = "detail"; detail.textContent = [offer.flavour, offer.package_key === "default" ? "" : offer.package_key].filter(Boolean).join(" · "); row.appendChild(detail);
-          const price = document.createElement("span"); price.className = "price"; price.textContent = formatPrice(offer); row.appendChild(price);
-          if (offer.source_url) { const link = document.createElement("a"); link.href = offer.source_url; link.target = "_blank"; link.rel = "noopener"; link.textContent = "View store"; row.appendChild(link); }
-          const button = document.createElement("button"); button.className = "remove"; button.type = "button"; button.textContent = "Remove"; button.addEventListener("click", () => remove(offerKey(offer))); row.appendChild(button);
-          offers.appendChild(row);
-        });
-        card.appendChild(offers); list.appendChild(card);
-      });
-    }
-    const stale = saved.size - matches.reduce((total, item) => total + item.offers.length, 0);
-    count.textContent = matches.length + (matches.length === 1 ? " product" : " products") + (stale > 0 ? " · " + stale + " stale save" : "");
-    clear.hidden = stale <= 0;
-    clear.textContent = stale === 1 ? "Clear stale save" : "Clear stale saves";
-  }
-  clear.addEventListener("click", () => {
-    const current = new Set((window.savedOffers || []).flatMap((item) => item.offers.map(offerKey)));
-    saved = new Set(Array.from(saved).filter((key) => current.has(key)));
-    localStorage.setItem(storageKey, JSON.stringify(Array.from(saved))); render();
+  const statusText = document.getElementById("statusText");
+  const categoryKeys = categories.map((category) => category.key);
+  const activeCategory = new URLSearchParams(location.search).get("cat");
+  const categorySelect = document.getElementById("categorySelect");
+  categories.forEach((category) => {
+    const option = document.createElement("option"); option.value = category.key; option.textContent = category.label;
+    categorySelect.appendChild(option);
   });
-  function catalogUrl(category) { return category.catalog_url || (catalogBase + category.key + (catalogBase === "./" ? "/catalog.json" : "")); }
-  Promise.all(categories.map((category) => fetch(catalogUrl(category)).then((response) => response.ok ? response.json() : null).catch(() => null)))
-    .then((catalogs) => {
-      const matches = [];
-      catalogs.forEach((data, index) => {
-        if (!data) return;
-        const category = categories[index];
-        (data.products || []).forEach((product) => {
-          const offers = (product.offers || []).filter((offer) => saved.has(offerKey(offer)));
-          if (offers.length) matches.push({ product, offers, category });
-        });
-      });
-      window.savedOffers = matches; render();
-    });
+  categorySelect.addEventListener("change", () => {
+    if (categorySelect.value) location.href = catalogBase.startsWith("/")
+      ? "/?cat=" + encodeURIComponent(categorySelect.value) : "../" + categorySelect.value + "/";
+  });
+  const runButton = document.getElementById("runBtn");
+  const runAllButton = document.getElementById("runAllBtn");
+  async function run(endpoint, label) {
+    statusText.textContent = label;
+    try {
+      const response = await fetch(endpoint, { method: "POST" });
+      if (!response.ok) throw new Error("Run request failed");
+      statusText.textContent = "Refreshing prices…";
+    } catch (_) { statusText.textContent = "Could not start refresh"; }
+  }
+  if (runButton && !runButton.hidden) runButton.addEventListener("click", () => {
+    const key = categoryKeys.includes(activeCategory) ? activeCategory : categoryKeys[0];
+    run("/run/" + key, "Starting refresh…");
+  });
+  if (runAllButton && !runAllButton.hidden) runAllButton.addEventListener("click", () => run("/run-all", "Starting all refreshes…"));
+  async function pollStatus() {
+    if (!runButton || runButton.hidden) return;
+    try {
+      const response = await fetch("/api/status");
+      if (!response.ok) throw new Error("Status unavailable");
+      const states = await response.json();
+      const values = Object.values(states);
+      if (values.some((entry) => entry.state === "queued" || entry.state === "running")) {
+        statusText.textContent = "Refreshing prices…";
+      } else {
+        const active = states[activeCategory] || states[categoryKeys[0]] || {};
+        statusText.textContent = Number.isFinite(active.count) ? active.count + " products on the last run." : "";
+      }
+    } catch (_) { /* Keep the last visible status during a temporary connection issue. */ }
+    window.setTimeout(pollStatus, 2500);
+  }
+  if (runButton && !runButton.hidden) pollStatus();
+
 })();
 </script>
 <script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
+<style>
+  header .header-list-link, header .saved-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; min-height: 44px; padding: 10px 13px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 13px; line-height: 1; font-weight: 650; text-decoration: none; white-space: nowrap; transition: background 140ms ease, border-color 140ms ease; }
+  header .header-list-link::before { content: ""; flex: none; width: 18px; height: 20px; background: currentColor; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 3.5h12v17l-6-4-6 4z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+  header .saved-link > svg { flex: none; width: 18px; height: 20px; }
+  header .header-list-link:hover, header .saved-link:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text, var(--text)); }
+  header .header-list-link:focus-visible, header .saved-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
+  header #savedCount, header #saved-count { display: inline-flex; align-items: center; justify-content: center; min-width: 21px; height: 21px; padding: 0 5px; box-sizing: border-box; border-radius: 6px; background: var(--accent-soft); color: var(--accent-text, var(--text)); font-size: 11px; font-weight: 750; font-variant-numeric: tabular-nums; }
+  header #savedCount:empty, header #saved-count:empty { display: none; }
+  @media (max-width: 700px) {
+    header .top-actions { grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) 38px; gap: 8px; }
+    header .top-actions .status-text { grid-column: 1 / -1; grid-row: 1; }
+    header .top-actions .status-text:empty { display: none; }
+    header .top-actions .header-list-link { grid-column: 1; grid-row: 2; padding: 8px; gap: 6px; }
+    header .top-actions #runBtn { grid-column: 2; grid-row: 2; }
+    header .top-actions #runAllBtn { grid-column: 3; grid-row: 2; }
+    header .top-actions .theme-toggle { grid-column: 4; grid-row: 2; }
+    header .top-actions #runBtn, header .top-actions #runAllBtn { min-width: 0; padding: 8px 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) { header .header-list-link, header .saved-link { transition: none; } }
+  .saved-dialog { width: min(560px, calc(100% - 28px)); max-height: min(760px, calc(100dvh - 40px)); padding: 0; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 24px 80px #0005; }
+  .saved-dialog::backdrop { background: #07131cb3; backdrop-filter: blur(3px); }
+  .saved-dialog .saved-dialog-head { display: flex; align-items: center; gap: 12px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
+  .saved-dialog h2 { font: 750 20px/1.3 -apple-system,"Segoe UI",sans-serif; margin: 0; letter-spacing: -.025em; }
+  .saved-dialog-mark { width: 24px; height: 24px; color: var(--accent); fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 -apple-system,"Segoe UI",sans-serif; background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
+  .saved-dialog button:hover, .saved-item-link:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text, var(--text)); }
+  .saved-dialog button:focus-visible, .saved-item-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
+  .saved-dialog .saved-dialog-close { margin-left: auto; padding: 0; width: 36px; font-size: 25px; border-color: transparent; }
+  .saved-dialog-count { background: var(--accent-soft); color: var(--accent-text, var(--text)); padding: 3px 8px; border-radius: 6px; font-size: 12px; font-weight: 750; }
+  .saved-dialog-body { padding: 0 22px; overflow-y: auto; max-height: calc(100dvh - 260px); }
+  .saved-item { display: grid; grid-template-columns: 66px minmax(0,1fr); column-gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--border); text-align: left; }
+  .saved-item:last-child { border-bottom: 0; }
+  .saved-item-image { width: 66px; height: 78px; object-fit: contain; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 6px; grid-row: span 4; }
+  .saved-item-placeholder { display: grid; place-items: center; color: var(--muted); font-size: 25px; }
+  .saved-item h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.4; font-weight: 750; overflow-wrap: anywhere; }
+  .saved-item-meta { color: var(--muted); font-size: 12px; margin-bottom: 9px; }
+  .saved-item-price { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .saved-item-change { font-size: 12px; color: var(--muted); margin: 4px 0 12px; line-height: 1.5; }
+  .saved-item-change[data-direction="down"] { color: var(--good, var(--accent-text, var(--text))); font-weight: 650; }
+  .saved-item-actions { display: flex; flex-wrap: wrap; gap: 7px; grid-column: 2; }
+  .saved-item-actions .saved-item-link { border-color: var(--accent); color: var(--accent-text, var(--text)); }
+  .saved-dialog-foot { padding: 14px 22px 18px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
+  .saved-dialog-note { font-size: 12px; line-height: 1.5; color: var(--muted); flex: 1; }
+  .saved-dialog-message { color: var(--muted); font-size: 14px; padding: 20px 0; margin: 0; }
+  .saved-page-list .saved-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 12px; }
+  .saved-page-list button { min-height: 36px; }
+  @media(max-width: 480px) { .saved-dialog .saved-dialog-head { padding: 16px; } .saved-dialog-body { padding: 0 16px; } .saved-dialog-foot { padding: 12px 16px; } .saved-item { grid-template-columns: 54px minmax(0,1fr); column-gap: 10px; } .saved-item-image { width: 54px; height: 66px; } }
+</style>
+<dialog class="saved-dialog" id="savedDialog" aria-labelledby="savedDialogTitle">
+  <div class="saved-dialog-head"><svg class="saved-dialog-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><h2 id="savedDialogTitle">Saved products</h2><span class="saved-dialog-count" id="savedDialogCount">0</span><button class="saved-dialog-close" type="button" aria-label="Close saved products" autofocus>×</button></div>
+  <div class="saved-dialog-body" id="savedDialogList"></div>
+  <div class="saved-dialog-foot"><span class="saved-dialog-note">Kept in this browser. Price changes appear after prices are refreshed.</span><button type="button" id="savedClearAll">Clear all</button></div>
+</dialog>
+<div id="savedAnnouncement" role="status" aria-live="polite" class="saved-dialog-note"></div>
+<script>
+(function (root) {
+  "use strict";
+  function createSavedStore(storage) {
+    const key = "mjerica:saved-offers:v2";
+    const legacyKey = "mjerica:saved-products", trackedKey = "mjerica:tracked-offers:v1";
+    const valid = entry => entry && typeof entry === "object" && typeof entry.offer_id === "string" && entry.offer_id.length;
+    const sourceKey = entry => entry.store + "|" + entry.source_url;
+    function parse(name) {
+      try { const value = JSON.parse(storage.getItem(name) || "[]"); return Array.isArray(value) ? value : []; }
+      catch (_) { return []; }
+    }
+    function read() {
+      try { if (storage.getItem(key) !== null) return parse(key).filter(valid); } catch (_) { return []; }
+      const entries = parse(trackedKey).filter(valid).map(entry => ({...entry,
+        baseline_price: typeof entry.baseline_price === "number" && Number.isFinite(entry.baseline_price) ? entry.baseline_price : null}));
+      parse(legacyKey).filter(item => typeof item === "string" && item.includes("|")).forEach(item => {
+        if (entries.some(entry => sourceKey(entry) === item)) return;
+        const separator = item.indexOf("|");
+        entries.push({offer_id:"legacy:" + item, legacy_key:item, store:item.slice(0,separator),
+          source_url:item.slice(separator+1), name:"Saved product", baseline_price:null});
+      });
+      return entries;
+    }
+    function write(entries) {
+      storage.setItem(key, JSON.stringify(entries));
+      // Older generated pages can still use the same saves without resurrecting removals.
+      try {
+        storage.setItem(legacyKey, JSON.stringify([...new Set(entries.map(sourceKey))]));
+        storage.setItem(trackedKey, JSON.stringify(entries.filter(entry => entry.baseline_price !== null)));
+      } catch (_) { /* The v2 record is authoritative once written. */ }
+      return entries;
+    }
+    function save(offer) {
+      if (!valid(offer)) throw new Error("This offer cannot be saved yet.");
+      const entries = read();
+      if (entries.some(entry => entry.offer_id === offer.offer_id)) return entries;
+      const exact = offer.price_kind === "exact" && typeof offer.price_eur === "number" && Number.isFinite(offer.price_eur);
+      entries.push({...offer, baseline_price:exact ? offer.price_eur : null, captured_at:new Date().toISOString()});
+      return write(entries);
+    }
+    function migrate(offers) {
+      const entries = read().map(entry => {
+        const current = offers.find(offer => offer.offer_id === entry.offer_id)
+          || (entry.legacy_key ? offers.find(offer => sourceKey(offer) === entry.legacy_key) : null);
+        if (!current) return entry;
+        const resolved = {...entry, ...current, baseline_price:entry.baseline_price ?? null, captured_at:entry.captured_at};
+        delete resolved.legacy_key;
+        return resolved;
+      });
+      const unique = new Map();
+      entries.forEach(entry => {
+        const previous = unique.get(entry.offer_id);
+        if (!previous || (previous.baseline_price == null && entry.baseline_price != null)) unique.set(entry.offer_id,entry);
+      });
+      if (entries.length) return write([...unique.values()]);
+      return entries;
+    }
+    return {read, save, migrate, remove:id => write(read().filter(entry => entry.offer_id !== id)), clear:() => write([])};
+  }
+  if (typeof module !== "undefined" && module.exports) module.exports = createSavedStore;
+  else root.createSavedStore = createSavedStore;
+})(typeof window !== "undefined" ? window : this);
+
+</script>
+<script>
+(function () {
+  "use strict";
+  const categories = [{"key": "whey"}, {"key": "creatine"}, {"key": "creatine_capsules"}, {"key": "creatine_gummies"}, {"key": "preworkout"}];
+  const dialog = document.getElementById("savedDialog"), list = document.getElementById("savedDialogList");
+  const pageList = document.getElementById("saved-list");
+  const announcement = document.getElementById("savedAnnouncement");
+  announcement.style.cssText = "position:fixed;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)";
+  let storage;
+  try { storage = window.localStorage; } catch (_) { storage = {getItem:()=>null,setItem:()=>{throw Error("Storage unavailable");}}; }
+  const state = window.createSavedStore(storage);
+  const savedLink = Array.from(document.querySelectorAll("a[href]")).find(a => /\/(?:saved|saved.html)(?:[?#]|$)/.test(a.href));
+  const savedUrl = savedLink ? new URL(savedLink.href) : new URL("/saved", location.href);
+  const local = !savedUrl.pathname.endsWith(".html");
+  const siteRoot = new URL("./", savedUrl);
+  let current = new Map(), loaded = false, loading = null, returnFocus = null;
+  const money = n => Number(n).toFixed(2) + " €";
+  const exact = offer => offer && offer.price_kind === "exact" && typeof offer.price_eur === "number" && Number.isFinite(offer.price_eur);
+  const packageLabel = value => !value || value === "default" ? "" : value.startsWith("kg:") ? value.slice(3) + " kg" : value.startsWith("count:") ? value.slice(6) + " units" : value.replace(/:/g, " ");
+  const element = (tag, cls, text) => { const node = document.createElement(tag); node.className = cls; if(text != null) node.textContent = text; return node; };
+  function safeUrl(value, image) {
+    if (!value) return "";
+    try { const url = new URL(value, location.href); return ["http:","https:"].includes(url.protocol) || (image && /^data:image\/(png|jpeg|webp);base64,/.test(value)) ? url.href : ""; } catch (_) { return ""; }
+  }
+  function detailUrl(offer, category) {
+    if (!offer.detail_slug) return "";
+    const path = category + "/products/" + encodeURIComponent(offer.detail_slug) + ".html";
+    return local ? "/report/" + path + "?local=1" : new URL(path,siteRoot).href;
+  }
+  async function loadCurrent() {
+    if (loading) return loading;
+    loading = Promise.all(categories.map(async category => {
+      try {
+        const url = local ? "/catalog/" + category.key : new URL(category.key + "/catalog.json", siteRoot).href;
+        const response = await fetch(url);
+        if (!response.ok) return [];
+        const data = await response.json();
+        const listings = (data.listing_offers || []).map(offer => ({...offer, category:category.key, detail_url:detailUrl(offer,category.key)}));
+        return listings.concat((data.products || []).flatMap(product => (product.offers || []).map(offer => ({
+          ...offer, offer_id:offer.offer_id || offer.id, name:product.name, category:category.key,
+          image_url:product.image_url, detail_url:detailUrl(offer,category.key)
+        }))));
+      } catch (_) { return []; }
+    })).then(results => {
+      const offers = results.flat(); current = new Map(offers.map(offer => [offer.offer_id,offer])); loaded = true;
+      try { state.migrate(offers); } catch (_) { announcement.textContent = "Browser storage is unavailable. Changes cannot be saved."; }
+      sync();
+    }).finally(() => { loading = null; });
+    return loading;
+  }
+  function changed() {
+    sync();
+    window.dispatchEvent(new CustomEvent("mjerica-saved-change"));
+  }
+  function mutate(fn) {
+    try { fn(); changed(); return true; }
+    catch (_) { announcement.textContent = "Could not save this change. Check that browser storage is enabled."; return false; }
+  }
+  function render(target, entries) {
+    target.replaceChildren();
+    if (!entries.length) { target.append(element("p","saved-dialog-message","Your list is empty. Save a product to keep its price here.")); return; }
+    entries.forEach(entry => {
+      const now = current.get(entry.offer_id), info = {...entry,...now};
+      const card = element("article","saved-item");
+      const src = safeUrl(info.image_url,true);
+      const image = src ? element("img","saved-item-image") : element("span","saved-item-image saved-item-placeholder","—");
+      if (src) { image.src=src; image.alt=info.name || "Product"; image.loading="lazy"; image.addEventListener("error",()=>image.replaceWith(element("span","saved-item-image saved-item-placeholder","—"))); }
+      card.append(image,element("h3","",info.name || "Saved product"),
+        element("div","saved-item-meta",[info.store,packageLabel(info.package_key || info.package),info.flavour].filter(Boolean).join(" · ")));
+      const price = exact(now) ? money(now.price_eur) : now && now.price_eur != null ? "From " + money(now.price_eur)
+        : entry.baseline_price != null ? money(entry.baseline_price) + " when saved" : "Price unavailable";
+      card.append(element("div","saved-item-price",price));
+      const delta = element("div","saved-item-change");
+      if (!now) delta.textContent = loaded ? "Latest price unavailable. Your saved price is kept." : "Checking the latest price…";
+      else if (entry.baseline_price == null) delta.textContent = "No starting price recorded.";
+      else if (!exact(now)) delta.textContent = "Price varies; an exact comparison is unavailable.";
+      else {
+        const difference = Math.round((now.price_eur-entry.baseline_price)*100)/100;
+        delta.textContent = difference === 0 ? "Unchanged since saving" : (difference < 0 ? "Down " : "Up ") + money(Math.abs(difference))
+          + " (" + (entry.baseline_price > 0 ? (Math.abs(difference)/entry.baseline_price*100).toFixed(1)+"%" : "from zero") + ") · saved at " + money(entry.baseline_price);
+        delta.dataset.direction = difference < 0 ? "down" : "up";
+      }
+      card.append(delta);
+      const actions = element("div","saved-item-actions");
+      const detail = safeUrl(info.detail_url);
+      if (detail) { const link=element("a","saved-item-link","View details"); link.href=detail; actions.append(link); }
+      const source = safeUrl(info.source_url);
+      if (source) { const link=element("a","saved-item-link","Go to store"); link.href=source; link.target="_blank"; link.rel="noopener noreferrer"; actions.append(link); }
+      const remove=element("button","","Remove"); remove.type="button"; remove.setAttribute("aria-label","Remove " + (info.name || "product"));
+      remove.addEventListener("click",()=>{ if(mutate(()=>state.remove(entry.offer_id))) { announcement.textContent="Removed from saved"; dialog.querySelector(".saved-dialog-close").focus(); } });
+      actions.append(remove); card.append(actions); target.append(card);
+    });
+  }
+  function sync() {
+    const entries = state.read();
+    ["savedDialogCount","savedCount","saved-count"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=entries.length ? String(entries.length) : id==="savedDialogCount" ? "0" : ""; });
+    document.querySelectorAll("[data-save-offer]").forEach(button => {
+      let offer; try { offer=JSON.parse(button.dataset.saveOffer); } catch (_) { return; }
+      const active=entries.some(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
+      button.setAttribute("aria-pressed",String(active)); button.title=active?"Remove from saved":"Save product";
+      button.setAttribute("aria-label",button.title);
+      const label=button.querySelector("span"); if(label) label.textContent=active?"Saved":"Save product";
+      const row=button.closest("tr"); if(row) row.classList.toggle("saved",active);
+    });
+    if (dialog.open) render(list,entries);
+    if (pageList) { pageList.classList.add("saved-page-list"); render(pageList,entries); const count=document.getElementById("count"); if(count) count.textContent=entries.length+" saved"; }
+    document.getElementById("savedClearAll").disabled=!entries.length;
+  }
+  function open() {
+    if (window.parent!==window && location.pathname.startsWith("/report/")) {
+      window.parent.postMessage({type:"mjerica-open-saved"},location.origin); return;
+    }
+    returnFocus=document.activeElement; if(!dialog.open) dialog.showModal(); sync(); loadCurrent();
+  }
+  document.addEventListener("click",event=>{
+    const button=event.target.closest("[data-save-offer]");
+    if(button) {
+      event.preventDefault(); let offer;
+      try { offer=JSON.parse(button.dataset.saveOffer); if(offer.detail_url) offer.detail_url=new URL(offer.detail_url,location.href).href; } catch (_) { return; }
+      const existing=state.read().find(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
+      if(mutate(()=>existing?state.remove(existing.offer_id):state.save(offer))) {
+        announcement.textContent=existing?"Removed from saved":"Product saved";
+        if(!existing) open();
+      }
+      return;
+    }
+    const link=event.target.closest("a[href]");
+    if(link && /\/(?:saved|saved.html)(?:[?#]|$)/.test(link.href) && !event.ctrlKey && !event.metaKey && !event.shiftKey) {event.preventDefault();open();}
+  });
+  dialog.querySelector(".saved-dialog-close").addEventListener("click",()=>dialog.close());
+  dialog.addEventListener("click",event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+  dialog.addEventListener("close",()=>{ if(returnFocus && returnFocus.isConnected) returnFocus.focus(); });
+  document.getElementById("savedClearAll").addEventListener("click",()=>{if(window.confirm("Remove all saved products and their starting prices?"))mutate(()=>state.clear());});
+  window.addEventListener("storage",()=>{sync();window.dispatchEvent(new CustomEvent("mjerica-saved-change"));});
+  window.addEventListener("pageshow",sync);
+  window.addEventListener("message",event=>{
+    const frame=document.getElementById("frame");
+    if(event.origin===location.origin && frame && event.source===frame.contentWindow && event.data?.type==="mjerica-open-saved")open();
+  });
+  window.MjericaSaved={open,sync};
+  sync(); if(pageList)loadCurrent();
+})();
+</script>
+
 </body>
 </html>
