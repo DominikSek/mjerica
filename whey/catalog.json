@@ -784,23 +784,6 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_whey_protein_454_mozart.jpeg?size=225"
     },
     {
-      "id": "catalog:4896ffbfa22cb796",
-      "offer_id": "catalog:4896ffbfa22cb796",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/proteini/whey-protein/1st-whey-2270-g-milk-choco-buenissimo",
-      "detail_slug": "polleo_sport_1st_whey_2270_g_2_27kg",
-      "package_key": "kg:2.27",
-      "flavour": "Milk Choco Buenissimo",
-      "price_eur": 89.99,
-      "unit_price": 39.64,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "1st Whey, 2270 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_1stwhey_choco_jaffa_2270g.jpg?size=225"
-    },
-    {
       "id": "catalog:6047605c34f8cc77",
       "offer_id": "catalog:6047605c34f8cc77",
       "store": "Polleo Sport",
@@ -816,6 +799,23 @@
       "note": "",
       "name": "1st Whey, 908 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/cologne_1st_whey_vanilla_908g.png?size=225"
+    },
+    {
+      "id": "catalog:4896ffbfa22cb796",
+      "offer_id": "catalog:4896ffbfa22cb796",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/proteini/whey-protein/1st-whey-2270-g-milk-choco-buenissimo",
+      "detail_slug": "polleo_sport_1st_whey_2270_g_2_27kg",
+      "package_key": "kg:2.27",
+      "flavour": "Milk Choco Buenissimo",
+      "price_eur": 89.99,
+      "unit_price": 39.64,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "1st Whey, 2270 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_1stwhey_choco_jaffa_2270g.jpg?size=225"
     },
     {
       "id": "catalog:34e66fb94c4bd039",
@@ -3029,7 +3029,7 @@
     }
   ],
   "category": "whey",
-  "checked_at": "2026-09-25T10:34:40.275532+00:00",
+  "checked_at": "2026-09-25T11:16:52.344135+00:00",
   "products": [
     {
       "id": "catalog:cd184ec79598c449",
@@ -6529,21 +6529,6 @@
           "detail_slug": "",
           "package_key": "kg:2",
           "flavour": "jagoda",
-          "price_eur": 77.95,
-          "unit_price": 38.98,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:9326902483de2835",
-          "offer_id": "catalog:9326902483de2835",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/true-whey-prodigest-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:2",
-          "flavour": "slani karamel",
           "price_eur": 77.95,
           "unit_price": 38.98,
           "unit_label": "€/kg",
