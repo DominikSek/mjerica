@@ -38,20 +38,47 @@
   .hero-heading { max-width: 650px; }
   h1 { font: 800 clamp(38px, 7vw, 68px)/.98 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; letter-spacing: -.055em; margin: 0 0 14px; }
   p.sub { color: var(--muted); font-size: 17px; max-width: 46ch; margin: 0 0 30px; }
-  .board { display: flex; flex-direction: column; }
-  a.card { display: flex; justify-content: space-between; align-items: center; background: var(--surface);
-           padding: 19px 16px; color: var(--text); text-decoration: none; border: 1px solid var(--border); margin-top: 8px; border-radius: 4px; }
-  a.card:hover { background: var(--accent-soft); }
-  a.card .name { font: 700 16px/1.2 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  a.card .teaser { font-size: 12.5px; color: var(--accent-text); font-weight: 600; margin-top: 2px; }
-  a.card span.arrow { color: var(--muted); font-weight: 400; font-size: 18px; }
-  div.card.unavailable { display: flex; align-items: center; padding: 16px 4px;
-                         border-bottom: 1px solid var(--border); }
-  .board div.card:first-child { border-top: 2px solid var(--text); }
-  div.card.unavailable .name { font: 700 16px/1.2 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--muted); }
-  div.card.unavailable .teaser { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
   footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 12.5px; margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); }
   .saved-link { color: var(--accent-text); font-weight: 700; }
+</style>
+<style>
+  /* Category cards on both home pages (build_site.category_card_html). */
+  .category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .category-card { --cat: var(--accent); --cat-soft: var(--accent-soft); display: flex; align-items: center; justify-content: space-between; gap: 20px;
+                   min-height: 104px; margin: 0; padding: 20px; border: 1px solid var(--border); border-top: 4px solid var(--cat); border-radius: 10px 10px 10px 3px;
+                   background: var(--surface); color: var(--text); text-align: left; text-decoration: none;
+                   transition: border-color 140ms ease, background 140ms ease, transform 140ms ease; }
+  a.category-card:hover { border-color: var(--cat); background: var(--panel, var(--accent-soft)); transform: translateY(-2px); }
+  .category-card .name { display: block; font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .category-card .category-price { display: inline-block; margin-top: 10px; padding: 4px 10px; border-radius: 999px; background: var(--cat-soft); color: var(--cat); font-size: 14px; font-weight: 650; }
+  .category-card .category-price b { font-size: 16px; font-weight: 800; }
+  .category-card .category-price.none { background: transparent; padding-left: 0; color: var(--muted); font-weight: 600; }
+  .category-card .card-count { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+  .category-card .arrow { color: var(--muted); font-size: 22px; }
+  a.category-card:hover .arrow { color: var(--cat); }
+  .category-card.unavailable { border-top-color: var(--border); background: transparent; }
+  .category-card.unavailable .name, .category-card.unavailable .teaser { color: var(--muted); }
+  .category-card.unavailable .teaser { display: block; margin-top: 6px; font-size: 13px; }
+  /* Each category has its own colour: the top edge and its price pill. */
+  .category-card[data-cat="whey"] { --cat: #9a5b00; --cat-soft: #fff1d6; }
+  .category-card[data-cat="creatine"] { --cat: #1f5fa8; --cat-soft: #e2eefb; }
+  .category-card[data-cat="creatine_capsules"] { --cat: #6b3fa0; --cat-soft: #efe6f9; }
+  .category-card[data-cat="creatine_gummies"] { --cat: #a8326a; --cat-soft: #fbe4ef; }
+  .category-card[data-cat="preworkout"] { --cat: #b4441a; --cat-soft: #fde6dc; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .category-card[data-cat="whey"] { --cat: #f2b55c; --cat-soft: #3a2a12; }
+    :root:not([data-theme="light"]) .category-card[data-cat="creatine"] { --cat: #7fb2f0; --cat-soft: #16304d; }
+    :root:not([data-theme="light"]) .category-card[data-cat="creatine_capsules"] { --cat: #bb9af0; --cat-soft: #2c2046; }
+    :root:not([data-theme="light"]) .category-card[data-cat="creatine_gummies"] { --cat: #f08bbd; --cat-soft: #3e1a2d; }
+    :root:not([data-theme="light"]) .category-card[data-cat="preworkout"] { --cat: #ff9a6b; --cat-soft: #3f2015; }
+  }
+:root[data-theme="dark"] .category-card[data-cat="whey"] { --cat: #f2b55c; --cat-soft: #3a2a12; }
+:root[data-theme="dark"] .category-card[data-cat="creatine"] { --cat: #7fb2f0; --cat-soft: #16304d; }
+:root[data-theme="dark"] .category-card[data-cat="creatine_capsules"] { --cat: #bb9af0; --cat-soft: #2c2046; }
+:root[data-theme="dark"] .category-card[data-cat="creatine_gummies"] { --cat: #f08bbd; --cat-soft: #3e1a2d; }
+:root[data-theme="dark"] .category-card[data-cat="preworkout"] { --cat: #ff9a6b; --cat-soft: #3f2015; }
+  @media (max-width: 700px) { .category-grid { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .category-card { transition: none; } a.category-card:hover { transform: none; } }
 </style>
 </head>
 <body>
@@ -87,8 +114,8 @@
   <p class="sub">Weekly supplement price comparison across Croatian webshops.</p>
   <p><a class="saved-link" href="saved.html">View saved products</a></p>
   </div>
-  <div class="board"><a class="card" href="whey/"><div><div class="name">Whey Protein</div><div class="teaser">from 21.18 &euro;/kg</div></div><span class="arrow">&rarr;</span></a><a class="card" href="creatine/"><div><div class="name">Creatine (Powder)</div><div class="teaser">from 14.50 &euro;/kg</div></div><span class="arrow">&rarr;</span></a><a class="card" href="creatine_capsules/"><div><div class="name">Creatine Capsules</div><div class="teaser">from 0.062 &euro; / capsule</div></div><span class="arrow">&rarr;</span></a><a class="card" href="creatine_gummies/"><div><div class="name">Creatine Gummies</div><div class="teaser">from 0.182 &euro; / gummy</div></div><span class="arrow">&rarr;</span></a><a class="card" href="preworkout/"><div><div class="name">Pre-Workout</div><div class="teaser">from 29.99 &euro;/kg</div></div><span class="arrow">&rarr;</span></a></div>
-  <footer><span>Last built 27.09.2026 11:15 CEST · Updated weekly</span><span>Offers may change at the retailer.</span></footer>
+  <div class="board category-grid"><a class="card category-card" data-cat="whey" href="whey/"><span class="card-body"><span class="name">Whey Protein</span><span class="teaser category-price">From <b>21.18 €/kg</b></span><span class="card-count">178 products</span></span><span class="arrow" aria-hidden="true">↗</span></a><a class="card category-card" data-cat="creatine" href="creatine/"><span class="card-body"><span class="name">Creatine (Powder)</span><span class="teaser category-price">From <b>14.50 €/kg</b></span><span class="card-count">89 products</span></span><span class="arrow" aria-hidden="true">↗</span></a><a class="card category-card" data-cat="creatine_capsules" href="creatine_capsules/"><span class="card-body"><span class="name">Creatine Capsules</span><span class="teaser category-price">From <b>0.062 € / capsule</b></span><span class="card-count">19 products</span></span><span class="arrow" aria-hidden="true">↗</span></a><a class="card category-card" data-cat="creatine_gummies" href="creatine_gummies/"><span class="card-body"><span class="name">Creatine Gummies</span><span class="teaser category-price">From <b>0.182 € / gummy</b></span><span class="card-count">8 products</span></span><span class="arrow" aria-hidden="true">↗</span></a><a class="card category-card" data-cat="preworkout" href="preworkout/"><span class="card-body"><span class="name">Pre-Workout</span><span class="teaser category-price">From <b>29.99 €/kg</b></span><span class="card-count">73 products</span></span><span class="arrow" aria-hidden="true">↗</span></a></div>
+  <footer><span>Last built 27.09.2026 12:49 CEST · Updated weekly</span><span>Offers may change at the retailer.</span></footer>
 </div>
 <script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
 </body>

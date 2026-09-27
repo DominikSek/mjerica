@@ -87,23 +87,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/4/c4_original_30_serve_ga.jpg"
     },
     {
-      "id": "catalog:35252c039b0a68d6",
-      "offer_id": "catalog:35252c039b0a68d6",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
-      "detail_slug": "gymbeam_hr_thor_stim_free_gymbeam_0_42kg",
-      "package_key": "kg:0.42",
-      "flavour": null,
-      "price_eur": 19.95,
-      "unit_price": 47.5,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Thor Stim-Free - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png"
-    },
-    {
       "id": "catalog:b37e2ecb9fa7f60e",
       "offer_id": "catalog:b37e2ecb9fa7f60e",
       "store": "GymBeam HR",
@@ -119,6 +102,23 @@
       "note": "",
       "name": "Total Rush 2.0 - Weider",
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_31782_total_rush_2.0_375g_cranberry_glutapep_1_.jpg"
+    },
+    {
+      "id": "catalog:35252c039b0a68d6",
+      "offer_id": "catalog:35252c039b0a68d6",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
+      "detail_slug": "gymbeam_hr_thor_stim_free_gymbeam_0_42kg",
+      "package_key": "kg:0.42",
+      "flavour": null,
+      "price_eur": 19.95,
+      "unit_price": 47.5,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Thor Stim-Free - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png"
     },
     {
       "id": "catalog:4a8fe2599d6d0723",
@@ -206,23 +206,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/f/o/focusblend_wildcherry_mockup.jpg"
     },
     {
-      "id": "catalog:b46e1520fd454e79",
-      "offer_id": "catalog:b46e1520fd454e79",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/men-s-force-pre-workout-gymbeam.html",
-      "detail_slug": "gymbeam_hr_men_s_force_pre_workout_gymbeam_0_42kg",
-      "package_key": "kg:0.42",
-      "flavour": null,
-      "price_eur": 18.95,
-      "unit_price": 45.12,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Men‘s Force Pre-Workout - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/m/e/men_s_essential_pre-workout_mango-maracuja_420_g_gymbeam_1_.png"
-    },
-    {
       "id": "catalog:927afe99d19826c5",
       "offer_id": "catalog:927afe99d19826c5",
       "store": "GymBeam HR",
@@ -255,6 +238,23 @@
       "note": "",
       "name": "Animal Fury - Universal Nutrition, 0.495 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/f/u/fury_watermelon_20serv_1.png"
+    },
+    {
+      "id": "catalog:b46e1520fd454e79",
+      "offer_id": "catalog:b46e1520fd454e79",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/men-s-force-pre-workout-gymbeam.html",
+      "detail_slug": "gymbeam_hr_men_s_force_pre_workout_gymbeam_0_42kg",
+      "package_key": "kg:0.42",
+      "flavour": null,
+      "price_eur": 18.95,
+      "unit_price": 45.12,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Men‘s Force Pre-Workout - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/m/e/men_s_essential_pre-workout_mango-maracuja_420_g_gymbeam_1_.png"
     },
     {
       "id": "catalog:2790988ffddfa9d5",
@@ -1244,7 +1244,7 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-09-27T09:15:43.197911+00:00",
+  "checked_at": "2026-09-27T10:49:05.347059+00:00",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -3240,21 +3240,6 @@
         "kg:0.5"
       ],
       "offers": [
-        {
-          "id": "catalog:920446bc6e7bdd88",
-          "offer_id": "catalog:920446bc6e7bdd88",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/veinz-pre-workout-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.5",
-          "flavour": "jagoda - kivi",
-          "price_eur": 15.55,
-          "unit_price": 31.1,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
         {
           "id": "catalog:6110513840d5f7db",
           "offer_id": "catalog:6110513840d5f7db",
