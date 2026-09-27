@@ -24,11 +24,6 @@
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 14px/1.5 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
   .wrap { max-width: 820px; margin: 0 auto; padding: 72px 24px; }
-  .hero-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 58px; }
-  .site-brand { display: flex; align-items: center; gap: 10px; font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em;
-           color: var(--text); }
-  .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; color: var(--surface); background: var(--accent); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); flex: none; }
-  .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
   .theme-toggle:hover { border-color: var(--accent); background: var(--accent); color: var(--surface); filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 15px color-mix(in srgb, var(--accent) 32%, transparent); }
   .theme-toggle:active { transform: translateY(0); filter: brightness(.98); }
@@ -60,14 +55,40 @@
 </style>
 </head>
 <body>
+<style>
+  /* The one header every public page shares (see scraper.site_nav_html). */
+  .mj-header { border-bottom: 1px solid var(--border); background: var(--surface); }
+  .mj-header .mj-header-inner { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; }
+  .mj-header .site-brand { display: inline-flex; align-items: center; gap: 10px; margin-right: auto; color: var(--text); text-decoration: none;
+                           font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em; }
+  .mj-header .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; flex: none; color: var(--surface); background: var(--accent);
+                           border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); }
+  .mj-header .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .mj-header .site-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; }
+  .mj-header .site-nav a { padding: 6px 0; color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .mj-header .site-nav a:hover { color: var(--text); }
+  .mj-header .site-nav a.active { color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); }
+  .mj-header .saved-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px 10px 10px 3px;
+                           color: var(--text); font-size: 14px; font-weight: 700; text-decoration: none; }
+  .mj-header .saved-link:hover { border-color: var(--accent); }
+  .mj-header .saved-link svg { width: 16px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .mj-header .saved-count { min-width: 20px; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 12px; text-align: center; }
+  .mj-header .saved-count:empty { display: none; }
+  .mj-header .site-nav a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .mj-header .saved-link:focus-visible, .mj-header .site-brand:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  @media (max-width: 760px) {
+    .mj-header .mj-header-inner { padding: 12px 14px; }
+    .mj-header .site-nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; gap: 16px; }
+  }
+</style>
+<header class="site-header mj-header"><div class="mj-header-inner"><a class="site-brand" href="./"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav class="site-nav" aria-label="Categories"><a href="whey/">Whey Protein</a><a href="creatine/">Creatine (Powder)</a><a href="creatine_capsules/">Creatine Capsules</a><a href="creatine_gummies/">Creatine Gummies</a><a href="preworkout/">Pre-Workout</a></nav><a class="saved-link" href="saved.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span><span class="saved-count" id="saved-count"></span></a><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
 <div class="wrap">
-  <div class="hero-topbar"><div class="site-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</div><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div>
   <div class="hero-heading"><h1>Compare supplements with less guesswork.</h1>
   <p class="sub">Weekly supplement price comparison across Croatian webshops.</p>
   <p><a class="saved-link" href="saved.html">View saved products</a></p>
   </div>
   <div class="board"><a class="card" href="whey/"><div><div class="name">Whey Protein</div><div class="teaser">from 21.18 &euro;/kg</div></div><span class="arrow">&rarr;</span></a><a class="card" href="creatine/"><div><div class="name">Creatine (Powder)</div><div class="teaser">from 14.50 &euro;/kg</div></div><span class="arrow">&rarr;</span></a><a class="card" href="creatine_capsules/"><div><div class="name">Creatine Capsules</div><div class="teaser">from 0.062 &euro; / capsule</div></div><span class="arrow">&rarr;</span></a><a class="card" href="creatine_gummies/"><div><div class="name">Creatine Gummies</div><div class="teaser">from 0.182 &euro; / gummy</div></div><span class="arrow">&rarr;</span></a><a class="card" href="preworkout/"><div><div class="name">Pre-Workout</div><div class="teaser">from 29.99 &euro;/kg</div></div><span class="arrow">&rarr;</span></a></div>
-  <footer><span>Last built 25.09.2026 13:18 CEST · Updated weekly</span><span>Offers may change at the retailer.</span></footer>
+  <footer><span>Last built 27.09.2026 11:15 CEST · Updated weekly</span><span>Offers may change at the retailer.</span></footer>
 </div>
 <script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
 </body>

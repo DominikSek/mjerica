@@ -34,11 +34,6 @@
   .num, h1, .brand, .site-nav, .stat .value, .rank { font-variant-numeric: tabular-nums; }
 
   /* --- top bar: brand + title + stats + filters, all above the table --- */
-  .site-header { border-bottom: 1px solid var(--border); background: var(--surface); margin: -28px -24px 28px; }
-  .topbar { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
-  .site-brand { display: inline-flex; align-items: center; gap: 10px; font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -.04em; color: var(--text); }
-  .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; color: var(--surface); background: var(--accent); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); }
-  .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; flex: none; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
   .theme-toggle:hover { border-color: var(--accent); background: var(--accent); color: var(--surface); filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 15px color-mix(in srgb, var(--accent) 32%, transparent); }
   .theme-toggle:active { transform: translateY(0); filter: brightness(.98); }
@@ -49,10 +44,6 @@
   :root[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .sun-icon { display: none; } :root:not([data-theme="light"]) .theme-toggle .moon-icon { display: block; } }
   @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } .theme-toggle:hover, .theme-toggle:active { transform: none; } }
-  .site-nav { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-left: auto; }
-  .site-nav a { font-size: 13px; color: var(--muted); text-decoration: none; font-weight: 600; }
-  .site-nav a:hover { color: var(--text); }
-  .site-nav a.active { color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); padding-bottom: 2px; }
   .listing-heading { margin-bottom: 22px; }
   h1 { font: 800 clamp(28px, 4vw, 42px)/1.05 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em; margin: 0 0 7px; }
   .gen-meta { margin: 0 0 18px; color: var(--muted); font-size: 12.5px; }
@@ -161,7 +152,6 @@
   .details-link:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   td a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   .mobile-sort:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
-  .site-nav a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   .est { color: var(--muted); font-size: 12px; }
   [hidden] { display: none !important; }
   footer { color: var(--muted); font-size: 12px; margin-top: 24px; padding: 16px 0 8px; border-top: 1px solid var(--border); max-width: none; line-height: 1.7; }
@@ -176,7 +166,6 @@
   .mobile-sort { display: none; }
   @media (max-width: 720px) {
     .page { padding: 18px 14px 40px; }
-    .site-header { margin: -18px -14px 18px; }
     h1 { font-size: 22px; }
     .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
     .controls { padding: 10px; border-radius: 10px; }
@@ -208,15 +197,37 @@
 </style>
 </head>
 <body>
+<style>
+  /* The one header every public page shares (see scraper.site_nav_html). */
+  .mj-header { border-bottom: 1px solid var(--border); background: var(--surface); }
+  .mj-header .mj-header-inner { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; }
+  .mj-header .site-brand { display: inline-flex; align-items: center; gap: 10px; margin-right: auto; color: var(--text); text-decoration: none;
+                           font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em; }
+  .mj-header .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; flex: none; color: var(--surface); background: var(--accent);
+                           border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); }
+  .mj-header .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .mj-header .site-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; }
+  .mj-header .site-nav a { padding: 6px 0; color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .mj-header .site-nav a:hover { color: var(--text); }
+  .mj-header .site-nav a.active { color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); }
+  .mj-header .saved-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px 10px 10px 3px;
+                           color: var(--text); font-size: 14px; font-weight: 700; text-decoration: none; }
+  .mj-header .saved-link:hover { border-color: var(--accent); }
+  .mj-header .saved-link svg { width: 16px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .mj-header .saved-count { min-width: 20px; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 12px; text-align: center; }
+  .mj-header .saved-count:empty { display: none; }
+  .mj-header .site-nav a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .mj-header .saved-link:focus-visible, .mj-header .site-brand:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  @media (max-width: 760px) {
+    .mj-header .mj-header-inner { padding: 12px 14px; }
+    .mj-header .site-nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; gap: 16px; }
+  }
+</style>
+<header class="site-header mj-header"><div class="mj-header-inner"><a class="site-brand" href="../"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav class="site-nav" aria-label="Categories"><a class="active" aria-current="page" href="../whey/">Whey Protein</a><a href="../creatine/">Creatine (Powder)</a><a href="../creatine_capsules/">Creatine Capsules</a><a href="../creatine_gummies/">Creatine Gummies</a><a href="../preworkout/">Pre-Workout</a></nav><a class="saved-link" href="../saved.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span><span class="saved-count" id="saved-count"></span></a><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
 <div class="page">
-  <header class="site-header"><div class="topbar">
-    <div class="site-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</div>
-    <nav class="site-nav"><a href="../whey/" class="active">Whey Protein</a><a href="../creatine/">Creatine (Powder)</a><a href="../creatine_capsules/">Creatine Capsules</a><a href="../creatine_gummies/">Creatine Gummies</a><a href="../preworkout/">Pre-Workout</a><a href="../saved.html">Saved</a></nav>
-    <button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button>
-  </div></header>
 
   <div class="listing-heading"><h1>Whey Protein Price Comparison</h1>
-  <p class="gen-meta">Generated 25.09.2026 13:16 CEST &middot; 9 stores</p></div>
+  <p class="gen-meta">Generated 27.09.2026 11:13 CEST &middot; 9 stores</p></div>
 
   <section class="stats"><div class="stat"><div class="label">Cheapest per kg</div><div class="value">21.18 &euro;</div><div class="sub" title="Protein Anabolic Whey - GymBeam, 2.5 kg &middot; GymBeam HR">Protein Anabolic Whey - GymBeam, 2.5 kg &middot; GymBeam HR</div></div><div class="stat"><div class="label">Most protein per &euro;</div><div class="value">35.4 g</div><div class="sub" title="Protein Anabolic Whey - GymBeam, 2.5 kg &middot; GymBeam HR">Protein Anabolic Whey - GymBeam, 2.5 kg &middot; GymBeam HR</div></div></section>
 
@@ -229,7 +240,7 @@
       <span>&ndash;</span>
       <input type="number" id="maxPrice" placeholder="133.33" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / kg">
     </div>
-    <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">40</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>Proteini Outlet <span class="fcount">43</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>MyProtein <span class="fcount">12</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>THE Nutrition <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Scitec" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Scitec <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Polleo Sport <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>GAZ Nutrition <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Proteini.si <span class="fcount">17</span></button></div>
+    <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">40</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>Proteini Outlet <span class="fcount">43</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>MyProtein <span class="fcount">12</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>THE Nutrition <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Scitec" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Scitec <span class="fcount">10</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Polleo Sport <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>GAZ Nutrition <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Proteini.si <span class="fcount">17</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
@@ -436,6 +447,20 @@
           <td class="num extra-cell" data-v="26.6" data-label="Protein g/&euro;"><span title="assumes ~75% protein">26.6 <span class="est">g</span></span></td>
           
         </tr>
+        <tr data-store="Proteini Outlet" data-track-key="catalog:79157333dfe21654"
+            data-offer-id="catalog:d5a740852e84bdce" data-price-eur="57.8"
+            data-search="proteini outlet grizli whey protein">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/09/grizli-whey-protein-2kg-cokolada-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="Proteini Outlet"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>Proteini Outlet</span></td>
+          <td class="product-cell" data-v="Grizli Whey Protein"><a href="https://www.proteini-outlet.com/proizvod/grizli-whey-protein/" target="_blank" rel="noopener">Grizli Whey Protein</a><a class="details-link" href="products/proteini_outlet_grizli_whey_protein_2_0kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/grizli-whey-protein/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d5a740852e84bdce&quot;, &quot;name&quot;: &quot;Grizli Whey Protein&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/grizli-whey-protein/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 57.8, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2026/09/grizli-whey-protein-2kg-cokolada-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_grizli_whey_protein_2_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="57.8">57.80 &euro;</td>
+          <td class="num weight-cell" data-v="2.0">2 kg</td>
+          <td class="num metric-cell" data-v="28.9"><span class="pill good">28.90</span></td>
+          <td class="num extra-cell" data-v="26.0" data-label="Protein g/&euro;"><span title="assumes ~75% protein">26.0 <span class="est">g</span></span></td>
+          
+        </tr>
         <tr data-store="Proteini Outlet" data-track-key="catalog:d1867e2c37d4e9bb"
             data-offer-id="catalog:6bf92ad9bdda78de" data-price-eur="58.0"
             data-search="proteini outlet whey isolate">
@@ -576,6 +601,20 @@
           <td class="num extra-cell" data-v="23.7" data-label="Protein g/&euro;"><span title="assumes ~75% protein">23.7 <span class="est">g</span></span></td>
           
         </tr>
+        <tr data-store="MyProtein" data-track-key="catalog:a9c5fc5065ce5e94"
+            data-offer-id="catalog:39b1b73e93083ffc" data-price-eur="31.89"
+            data-search="myprotein hidrolizirani whey protein">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456583-1655179481077479.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#2e6b78"></span>MyProtein</span></td>
+          <td class="product-cell" data-v="Hidrolizirani Whey Protein"><a href="https://www.myprotein.hr/p/sports-nutrition/hidrolizirani-whey-protein/12456583/" target="_blank" rel="noopener">Hidrolizirani Whey Protein</a><a class="details-link" href="products/myprotein_hidrolizirani_whey_protein_1_0kg.html">View details</a><span class="badge promo" title="Includes site&#x27;s 45% promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/hidrolizirani-whey-protein/12456583/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:39b1b73e93083ffc&quot;, &quot;name&quot;: &quot;Hidrolizirani Whey Protein&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/hidrolizirani-whey-protein/12456583/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 31.89, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456583-1655179481077479.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_hidrolizirani_whey_protein_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="31.89">31.89 &euro;</td>
+          <td class="num weight-cell" data-v="1.0">1 kg</td>
+          <td class="num metric-cell" data-v="31.89"><span class="pill good">31.89</span></td>
+          <td class="num extra-cell" data-v="23.5" data-label="Protein g/&euro;"><span title="assumes ~75% protein">23.5 <span class="est">g</span></span></td>
+          
+        </tr>
         <tr data-store="Proteini Outlet" data-track-key="catalog:df39512049c474d8"
             data-offer-id="catalog:5c4a1a6d0df62431" data-price-eur="80.0"
             data-search="proteini outlet true whey">
@@ -699,20 +738,6 @@
           <td class="num price-cell" data-v="67.95">67.95 &euro;</td>
           <td class="num weight-cell" data-v="2.0">2 kg</td>
           <td class="num metric-cell" data-v="33.98"><span class="pill good">33.98</span></td>
-          <td class="num extra-cell" data-v="22.1" data-label="Protein g/&euro;"><span title="assumes ~75% protein">22.1 <span class="est">g</span></span></td>
-          
-        </tr>
-        <tr data-store="Proteini Outlet" data-track-key="catalog:79157333dfe21654"
-            data-offer-id="catalog:d5a740852e84bdce" data-price-eur="68.0"
-            data-search="proteini outlet grizli whey protein">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/09/grizli-whey-protein-2kg-cokolada-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="Proteini Outlet"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>Proteini Outlet</span></td>
-          <td class="product-cell" data-v="Grizli Whey Protein"><a href="https://www.proteini-outlet.com/proizvod/grizli-whey-protein/" target="_blank" rel="noopener">Grizli Whey Protein</a><a class="details-link" href="products/proteini_outlet_grizli_whey_protein_2_0kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/grizli-whey-protein/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d5a740852e84bdce&quot;, &quot;name&quot;: &quot;Grizli Whey Protein&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/grizli-whey-protein/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 68.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2026/09/grizli-whey-protein-2kg-cokolada-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_grizli_whey_protein_2_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="68.0">68.00 &euro;</td>
-          <td class="num weight-cell" data-v="2.0">2 kg</td>
-          <td class="num metric-cell" data-v="34.0"><span class="pill good">34.00</span></td>
           <td class="num extra-cell" data-v="22.1" data-label="Protein g/&euro;"><span title="assumes ~75% protein">22.1 <span class="est">g</span></span></td>
           
         </tr>
@@ -867,20 +892,6 @@
           <td class="num price-cell" data-v="37.95">37.95 &euro;</td>
           <td class="num weight-cell" data-v="1.0">1 kg</td>
           <td class="num metric-cell" data-v="37.95"><span class="pill good">37.95</span></td>
-          <td class="num extra-cell" data-v="19.8" data-label="Protein g/&euro;"><span title="assumes ~75% protein">19.8 <span class="est">g</span></span></td>
-          
-        </tr>
-        <tr data-store="MyProtein" data-track-key="catalog:585f4bad1129c3eb"
-            data-offer-id="catalog:e50ce4c06239469b" data-price-eur="15.94"
-            data-search="myprotein impact diet whey">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456803-8475193234186495.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#2e6b78"></span>MyProtein</span></td>
-          <td class="product-cell" data-v="Impact Diet Whey"><a href="https://www.myprotein.hr/p/sports-nutrition/impact-diet-whey/12456803/" target="_blank" rel="noopener">Impact Diet Whey</a><a class="details-link" href="products/myprotein_impact_diet_whey_0_42kg_2.html">View details</a><span class="badge promo" title="Includes site&#x27;s 45% promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/impact-diet-whey/12456803/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:e50ce4c06239469b&quot;, &quot;name&quot;: &quot;Impact Diet Whey&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/impact-diet-whey/12456803/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.42&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.94, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456803-8475193234186495.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_impact_diet_whey_0_42kg_2.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="15.94">15.94 &euro;</td>
-          <td class="num weight-cell" data-v="0.42">420 g</td>
-          <td class="num metric-cell" data-v="37.96"><span class="pill good">37.96</span></td>
           <td class="num extra-cell" data-v="19.8" data-label="Protein g/&euro;"><span title="assumes ~75% protein">19.8 <span class="est">g</span></span></td>
           
         </tr>
@@ -1090,7 +1101,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/high-whey-protein-2/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:625a85c727780085&quot;, &quot;name&quot;: &quot;High Whey Protein&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/high-whey-protein-2/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:2.27&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 92.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-high-whey-80-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_high_whey_protein_2_27kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="92.0">92.00 &euro;</td>
           <td class="num weight-cell" data-v="2.27">2.27 kg</td>
-          <td class="num metric-cell" data-v="40.53"><span class="pill good">40.53</span></td>
+          <td class="num metric-cell" data-v="40.53"><span class="pill mid">40.53</span></td>
           <td class="num extra-cell" data-v="18.5" data-label="Protein g/&euro;"><span title="assumes ~75% protein">18.5 <span class="est">g</span></span></td>
           
         </tr>
@@ -1484,20 +1495,6 @@
           <td class="num weight-cell" data-v="0.78">780 g</td>
           <td class="num metric-cell" data-v="46.03"><span class="pill mid">46.03</span></td>
           <td class="num extra-cell" data-v="16.3" data-label="Protein g/&euro;"><span title="assumes ~75% protein">16.3 <span class="est">g</span></span></td>
-          
-        </tr>
-        <tr data-store="Scitec" data-track-key="catalog:9ae723112d1719a9"
-            data-offer-id="catalog:f09aada687afa10a" data-price-eur="1.3"
-            data-search="scitec 100% whey(28 gr.)">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/16154_847ce513a1f1_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="Scitec"><span class="store"><span class="store-dot" style="background:#6a4f8a"></span>Scitec</span></td>
-          <td class="product-cell" data-v="100% Whey(28 gr.)"><a href="https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-28-gr-p16154" target="_blank" rel="noopener">100% Whey(28 gr.)</a><a class="details-link" href="products/scitec_100_whey_28_gr_0_028kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Scitec|https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-28-gr-p16154" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:f09aada687afa10a&quot;, &quot;name&quot;: &quot;100% Whey(28 gr.)&quot;, &quot;store&quot;: &quot;Scitec&quot;, &quot;source_url&quot;: &quot;https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-28-gr-p16154&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.028&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 1.3, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://scitec.hr/images/product_images/16154_847ce513a1f1_200x200.webp&quot;, &quot;detail_url&quot;: &quot;products/scitec_100_whey_28_gr_0_028kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="1.3">1.30 &euro;</td>
-          <td class="num weight-cell" data-v="0.028">28 g</td>
-          <td class="num metric-cell" data-v="46.43"><span class="pill mid">46.43</span></td>
-          <td class="num extra-cell" data-v="16.2" data-label="Protein g/&euro;"><span title="assumes ~75% protein">16.2 <span class="est">g</span></span></td>
           
         </tr>
         <tr data-store="THE Nutrition" data-track-key="catalog:28b20333e2012384"
@@ -2270,20 +2267,6 @@
           <td class="num extra-cell" data-v="11.8" data-label="Protein g/&euro;"><span title="assumes ~75% protein">11.8 <span class="est">g</span></span></td>
           
         </tr>
-        <tr data-store="Proteini Outlet" data-track-key="catalog:0ebf44d343d4ea6e"
-            data-offer-id="catalog:d1fb2e78e84c6a11" data-price-eur="25.5"
-            data-search="proteini outlet hy-pro protein">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-hy-pro-400g-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="Proteini Outlet"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>Proteini Outlet</span></td>
-          <td class="product-cell" data-v="Hy-Pro Protein"><a href="https://www.proteini-outlet.com/proizvod/hy-pro-protein/" target="_blank" rel="noopener">Hy-Pro Protein</a><a class="details-link" href="products/proteini_outlet_hy_pro_protein_0_4kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/hy-pro-protein/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d1fb2e78e84c6a11&quot;, &quot;name&quot;: &quot;Hy-Pro Protein&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/hy-pro-protein/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.4&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 25.5, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-hy-pro-400g-choc-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_hy_pro_protein_0_4kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="25.5">25.50 &euro;</td>
-          <td class="num weight-cell" data-v="0.4">400 g</td>
-          <td class="num metric-cell" data-v="63.75"><span class="pill high">63.75</span></td>
-          <td class="num extra-cell" data-v="11.8" data-label="Protein g/&euro;"><span title="assumes ~75% protein">11.8 <span class="est">g</span></span></td>
-          
-        </tr>
         <tr data-store="THE Nutrition" data-track-key="catalog:c9bb490c598eb8b1"
             data-offer-id="catalog:3ebf1a6d76f4dd64" data-price-eur="129.99"
             data-search="the nutrition the whey isolate (2000 g)">
@@ -2506,6 +2489,20 @@
           <td class="num weight-cell" data-v="0.3">300 g</td>
           <td class="num metric-cell" data-v="72.27"><span class="pill high">72.27</span></td>
           <td class="num extra-cell" data-v="10.4" data-label="Protein g/&euro;"><span title="assumes ~75% protein">10.4 <span class="est">g</span></span></td>
+          
+        </tr>
+        <tr data-store="Proteini Outlet" data-track-key="catalog:0ebf44d343d4ea6e"
+            data-offer-id="catalog:d1fb2e78e84c6a11" data-price-eur="30.0"
+            data-search="proteini outlet hy-pro protein">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-hy-pro-400g-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="Proteini Outlet"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>Proteini Outlet</span></td>
+          <td class="product-cell" data-v="Hy-Pro Protein"><a href="https://www.proteini-outlet.com/proizvod/hy-pro-protein/" target="_blank" rel="noopener">Hy-Pro Protein</a><a class="details-link" href="products/proteini_outlet_hy_pro_protein_0_4kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/hy-pro-protein/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d1fb2e78e84c6a11&quot;, &quot;name&quot;: &quot;Hy-Pro Protein&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/hy-pro-protein/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.4&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 30.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-hy-pro-400g-choc-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_hy_pro_protein_0_4kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="30.0">30.00 &euro;</td>
+          <td class="num weight-cell" data-v="0.4">400 g</td>
+          <td class="num metric-cell" data-v="75.0"><span class="pill high">75.00</span></td>
+          <td class="num extra-cell" data-v="10.0" data-label="Protein g/&euro;"><span title="assumes ~75% protein">10.0 <span class="est">g</span></span></td>
           
         </tr>
         <tr data-store="Proteini Outlet" data-track-key="catalog:47d8f565b5ce396f"

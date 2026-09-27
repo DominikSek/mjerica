@@ -1250,8 +1250,8 @@
       "detail_slug": "proteini_outlet_platinum_creatine_0_4kg",
       "package_key": "kg:0.4",
       "flavour": null,
-      "price_eur": 18.7,
-      "unit_price": 46.75,
+      "price_eur": 22.0,
+      "unit_price": 55.0,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -1318,8 +1318,8 @@
       "detail_slug": "proteini_outlet_creatine_monohydrate_0_3kg_2",
       "package_key": "kg:0.3",
       "flavour": null,
-      "price_eur": 21.25,
-      "unit_price": 70.83,
+      "price_eur": 25.0,
+      "unit_price": 83.33,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -1411,23 +1411,6 @@
       "note": "",
       "name": "Creatine (Creapure®)",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-creapure-300g-proteini-outlet-1-600x600.jpg"
-    },
-    {
-      "id": "catalog:5683aa1e05fcf620",
-      "offer_id": "catalog:5683aa1e05fcf620",
-      "store": "Proteini Outlet",
-      "source_url": "https://www.proteini-outlet.com/proizvod/creatine-monohydrate-creapure/",
-      "detail_slug": "proteini_outlet_creatine_monohydrate_creapure_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": "",
-      "price_eur": 50.0,
-      "unit_price": 100.0,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Creatine Monohydrate – CREAPURE®",
-      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/05/bodyfit-creapure-kreatin-novo-500g-bag-proteini-outlet-600x600.jpg"
     },
     {
       "id": "catalog:374e66610952ae6b",
@@ -1533,7 +1516,7 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-09-25T11:18:01.175433+00:00",
+  "checked_at": "2026-09-27T09:14:37.470628+00:00",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -2168,32 +2151,6 @@
       ]
     },
     {
-      "id": "catalog:f1f9beca01058540",
-      "name": "Creatine Monohydrate – CREAPURE®",
-      "category": "creatine",
-      "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/05/bodyfit-creapure-kreatin-novo-500g-bag-proteini-outlet-600x600.jpg",
-      "packages": [
-        "kg:0.5"
-      ],
-      "offers": [
-        {
-          "id": "catalog:5683aa1e05fcf620",
-          "offer_id": "catalog:5683aa1e05fcf620",
-          "store": "Proteini Outlet",
-          "source_url": "https://www.proteini-outlet.com/proizvod/creatine-monohydrate-creapure/",
-          "detail_slug": "proteini_outlet_creatine_monohydrate_creapure_0_5kg",
-          "package_key": "kg:0.5",
-          "flavour": null,
-          "price_eur": 50.0,
-          "unit_price": 100.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": ""
-        }
-      ]
-    },
-    {
       "id": "catalog:8326769fbb58603c",
       "name": "Creatine monohydrate+ - GymBeam",
       "category": "creatine",
@@ -2345,8 +2302,8 @@
           "detail_slug": "",
           "package_key": "kg:0.3",
           "flavour": "Bez okusa",
-          "price_eur": 21.25,
-          "unit_price": 70.83,
+          "price_eur": 25.0,
+          "unit_price": 83.33,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
@@ -2360,8 +2317,8 @@
           "detail_slug": "",
           "package_key": "kg:0.3",
           "flavour": "Mango",
-          "price_eur": 21.25,
-          "unit_price": 70.83,
+          "price_eur": 25.0,
+          "unit_price": 83.33,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
@@ -2375,8 +2332,8 @@
           "detail_slug": "",
           "package_key": "kg:0.3",
           "flavour": "Naranča",
-          "price_eur": 21.25,
-          "unit_price": 70.83,
+          "price_eur": 25.0,
+          "unit_price": 83.33,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
@@ -3440,8 +3397,8 @@
           "detail_slug": "",
           "package_key": "kg:0.4",
           "flavour": "Bez okusa",
-          "price_eur": 18.7,
-          "unit_price": 46.75,
+          "price_eur": 22.0,
+          "unit_price": 55.0,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",

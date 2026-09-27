@@ -298,8 +298,8 @@
       "detail_slug": "proteini_outlet_creatine_monohydrate_kapsule_220capsules",
       "package_key": "count:220",
       "flavour": "",
-      "price_eur": 18.36,
-      "unit_price": 0.083,
+      "price_eur": 21.6,
+      "unit_price": 0.098,
       "unit_label": "capsule",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -326,7 +326,7 @@
     }
   ],
   "category": "creatine_capsules",
-  "checked_at": "2026-09-25T11:18:09.825951+00:00",
+  "checked_at": "2026-09-27T09:14:46.609721+00:00",
   "products": [
     {
       "id": "catalog:c9ba6f77c7d20a81",
@@ -423,8 +423,8 @@
           "detail_slug": "proteini_outlet_creatine_monohydrate_kapsule_220capsules",
           "package_key": "count:220",
           "flavour": null,
-          "price_eur": 18.36,
-          "unit_price": 0.083,
+          "price_eur": 21.6,
+          "unit_price": 0.098,
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
