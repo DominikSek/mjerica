@@ -70,6 +70,23 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_shadow_fruit_punch_30_serve_bottle_front.png"
     },
     {
+      "id": "catalog:d78127c991398778",
+      "offer_id": "catalog:d78127c991398778",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-fuel-vitargo-600-g-gymbeam.html",
+      "detail_slug": "gymbeam_hr_thor_fuel_vitargo_gymbeam_0_6kg",
+      "package_key": "kg:0.6",
+      "flavour": null,
+      "price_eur": 21.95,
+      "unit_price": 36.58,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Thor Fuel + Vitargo - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_vitargo_watermelon_600_g_gymbeam_1.png"
+    },
+    {
       "id": "catalog:fb35ca7eea758101",
       "offer_id": "catalog:fb35ca7eea758101",
       "store": "GymBeam HR",
@@ -121,23 +138,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png"
     },
     {
-      "id": "catalog:4a8fe2599d6d0723",
-      "offer_id": "catalog:4a8fe2599d6d0723",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/stimulans-prije-treninga-gold-standard-pre-workout-optimum-nutrition.html",
-      "detail_slug": "gymbeam_hr_pre_workout_stimulans_gold_standard_pre_workout_optimum_nutrition_0_33kg",
-      "package_key": "kg:0.33",
-      "flavour": "",
-      "price_eur": 29.95,
-      "unit_price": 90.76,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Pre-workout stimulans Gold Standard Pre-Workout - Optimum Nutrition",
-      "image_url": "https://gymbeam.hr/media/catalog/product/g/s/gs_pwo_grn_apple_fr_6058191_seal_web.png"
-    },
-    {
       "id": "catalog:0a47968cb6c630ac",
       "offer_id": "catalog:0a47968cb6c630ac",
       "store": "GymBeam HR",
@@ -153,6 +153,23 @@
       "note": "",
       "name": "The Curse - JNX Sports",
       "image_url": "https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_curse_pre-workout_lemon_rush_50_serve_bottle_front.png"
+    },
+    {
+      "id": "catalog:4a8fe2599d6d0723",
+      "offer_id": "catalog:4a8fe2599d6d0723",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/stimulans-prije-treninga-gold-standard-pre-workout-optimum-nutrition.html",
+      "detail_slug": "gymbeam_hr_pre_workout_stimulans_gold_standard_pre_workout_optimum_nutrition_0_33kg",
+      "package_key": "kg:0.33",
+      "flavour": "",
+      "price_eur": 29.95,
+      "unit_price": 90.76,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Pre-workout stimulans Gold Standard Pre-Workout - Optimum Nutrition",
+      "image_url": "https://gymbeam.hr/media/catalog/product/g/s/gs_pwo_grn_apple_fr_6058191_seal_web.png"
     },
     {
       "id": "catalog:2404979e66548804",
@@ -274,23 +291,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/p/u/pump_30_eu_1.png"
     },
     {
-      "id": "catalog:fa86e533f006c674",
-      "offer_id": "catalog:fa86e533f006c674",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/pump-nutrend.html",
-      "detail_slug": "gymbeam_hr_pump_nutrend_0_23kg",
-      "package_key": "kg:0.23",
-      "flavour": "",
-      "price_eur": 21.95,
-      "unit_price": 97.56,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "PUMP - Nutrend",
-      "image_url": "https://gymbeam.hr/media/catalog/product/6/3/63da4cf24c412_.png"
-    },
-    {
       "id": "catalog:82c0fef692562de2",
       "offer_id": "catalog:82c0fef692562de2",
       "store": "GymBeam HR",
@@ -308,38 +308,21 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink_drive_strawberry_lemonade_300_g_beastpink_1_.png"
     },
     {
-      "id": "catalog:7c7c9f00cceb03b5",
-      "offer_id": "catalog:7c7c9f00cceb03b5",
+      "id": "catalog:fa86e533f006c674",
+      "offer_id": "catalog:fa86e533f006c674",
       "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-      "detail_slug": "gymbeam_hr_n1_pre_workout_nutrend_0_17_kg_0_17kg",
-      "package_key": "kg:0.17",
-      "flavour": null,
-      "price_eur": 13.95,
-      "unit_price": 82.06,
+      "source_url": "https://gymbeam.hr/pump-nutrend.html",
+      "detail_slug": "gymbeam_hr_pump_nutrend_0_23kg",
+      "package_key": "kg:0.23",
+      "flavour": "",
+      "price_eur": 21.95,
+      "unit_price": 97.56,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "name": "N1 Pre-Workout - Nutrend, 0.17 kg",
-      "image_url": "https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png"
-    },
-    {
-      "id": "catalog:1e60a928c46e8235",
-      "offer_id": "catalog:1e60a928c46e8235",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-      "detail_slug": "gymbeam_hr_n1_pre_workout_nutrend_0_51_kg_0_51kg",
-      "package_key": "kg:0.51",
-      "flavour": null,
-      "price_eur": 35.95,
-      "unit_price": 70.49,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "N1 Pre-Workout - Nutrend, 0.51 kg",
-      "image_url": "https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png"
+      "name": "PUMP - Nutrend",
+      "image_url": "https://gymbeam.hr/media/catalog/product/6/3/63da4cf24c412_.png"
     },
     {
       "id": "catalog:2b3f8c6b2531367b",
@@ -1022,23 +1005,6 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14269805-1675129203306464.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
-      "id": "catalog:6bddda96372f9f29",
-      "offer_id": "catalog:6bddda96372f9f29",
-      "store": "MyProtein",
-      "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-jacked-pre-workout/17627020/",
-      "detail_slug": "myprotein_origin_jacked_pre_workout_0_75kg",
-      "package_key": "kg:0.75",
-      "flavour": "",
-      "price_eur": 37.51,
-      "unit_price": 50.01,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
-      "name": "Origin Jacked Pre-Workout",
-      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17879939-9775332623822897.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
-    },
-    {
       "id": "catalog:72cf1815ab25a34d",
       "offer_id": "catalog:72cf1815ab25a34d",
       "store": "MyProtein",
@@ -1054,6 +1020,23 @@
       "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
       "name": "THE Pre-Workout",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11351672-1525253813176115.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:6bddda96372f9f29",
+      "offer_id": "catalog:6bddda96372f9f29",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-jacked-pre-workout/17627020/",
+      "detail_slug": "myprotein_origin_jacked_pre_workout_0_75kg",
+      "package_key": "kg:0.75",
+      "flavour": "",
+      "price_eur": 37.51,
+      "unit_price": 50.01,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Origin Jacked Pre-Workout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17879939-9775332623822897.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
       "id": "catalog:5f104c8428b473eb",
@@ -1124,23 +1107,6 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771601-1075192172761400.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
-      "id": "catalog:4b06fc1b0506f680",
-      "offer_id": "catalog:4b06fc1b0506f680",
-      "store": "MyProtein",
-      "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/",
-      "detail_slug": "myprotein_origin_shred_pre_workout_0_66kg",
-      "package_key": "kg:0.66",
-      "flavour": null,
-      "price_eur": 24.86,
-      "unit_price": 37.67,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
-      "name": "Origin Shred pre-workout",
-      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16547402-1705287072504314.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
-    },
-    {
       "id": "catalog:570db1e6381ae953",
       "offer_id": "catalog:570db1e6381ae953",
       "store": "MyProtein",
@@ -1190,6 +1156,23 @@
       "note": "",
       "name": "Impact Pre-Workout – Deadpool",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771600-6885192173004019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:4b06fc1b0506f680",
+      "offer_id": "catalog:4b06fc1b0506f680",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/",
+      "detail_slug": "myprotein_origin_shred_pre_workout_0_66kg",
+      "package_key": "kg:0.66",
+      "flavour": "",
+      "price_eur": 24.86,
+      "unit_price": 37.67,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Origin Shred pre-workout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16547402-1705287072504314.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
       "id": "catalog:27fc9f6bb80c4786",
@@ -1244,7 +1227,7 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-09-27T10:49:05.347059+00:00",
+  "checked_at": "2026-09-28T09:08:02.201848+00:00",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -2234,138 +2217,6 @@
       ]
     },
     {
-      "id": "catalog:446a5f9546c24a8a",
-      "name": "N1 Pre-Workout - Nutrend, 0.17 kg",
-      "category": "preworkout",
-      "image_url": "https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png",
-      "packages": [
-        "kg:0.17",
-        "kg:0.51"
-      ],
-      "offers": [
-        {
-          "id": "catalog:c59c1f0f63f57fb2",
-          "offer_id": "catalog:c59c1f0f63f57fb2",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.17",
-          "flavour": "crni ribiz",
-          "price_eur": 13.95,
-          "unit_price": 82.06,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:85fd33cc422c40ce",
-          "offer_id": "catalog:85fd33cc422c40ce",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.17",
-          "flavour": "crvena naranča",
-          "price_eur": 13.95,
-          "unit_price": 82.06,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:8104f27feea090f7",
-          "offer_id": "catalog:8104f27feea090f7",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.17",
-          "flavour": "grejp",
-          "price_eur": 13.95,
-          "unit_price": 82.06,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:5c5b67294ce78d34",
-          "offer_id": "catalog:5c5b67294ce78d34",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.17",
-          "flavour": "plava malina",
-          "price_eur": 13.95,
-          "unit_price": 82.06,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:e999b9d019c7d7d6",
-          "offer_id": "catalog:e999b9d019c7d7d6",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.51",
-          "flavour": "crni ribiz",
-          "price_eur": 35.95,
-          "unit_price": 70.49,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:7e2ec53368f9cc77",
-          "offer_id": "catalog:7e2ec53368f9cc77",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.51",
-          "flavour": "crvena naranča",
-          "price_eur": 35.95,
-          "unit_price": 70.49,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:8c14bc52f38c4114",
-          "offer_id": "catalog:8c14bc52f38c4114",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.51",
-          "flavour": "grejp",
-          "price_eur": 35.95,
-          "unit_price": 70.49,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:6e15e506a6ca03d7",
-          "offer_id": "catalog:6e15e506a6ca03d7",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/n1-pre-workout-510-g-nutrend.html",
-          "detail_slug": "",
-          "package_key": "kg:0.51",
-          "flavour": "plava malina",
-          "price_eur": 35.95,
-          "unit_price": 70.49,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        }
-      ]
-    },
-    {
       "id": "catalog:8b8e9efed199214a",
       "name": "NO Citrulline Plus - GymBeam, 0.42 kg",
       "category": "preworkout",
@@ -2576,34 +2427,19 @@
       ],
       "offers": [
         {
-          "id": "catalog:347b8670ac41d739",
-          "offer_id": "catalog:347b8670ac41d739",
+          "id": "catalog:4b06fc1b0506f680",
+          "offer_id": "catalog:4b06fc1b0506f680",
           "store": "MyProtein",
-          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/?variation=16547403",
-          "detail_slug": "",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/",
+          "detail_slug": "myprotein_origin_shred_pre_workout_0_66kg",
           "package_key": "kg:0.66",
-          "flavour": "Blue Raspberry Fizz",
-          "price_eur": 37.11,
-          "unit_price": 56.23,
+          "flavour": null,
+          "price_eur": 24.86,
+          "unit_price": 37.67,
           "unit_label": "€/kg",
           "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "Store price before discount codes. Confirm the final price at the store."
-        },
-        {
-          "id": "catalog:52ccc886a5755052",
-          "offer_id": "catalog:52ccc886a5755052",
-          "store": "MyProtein",
-          "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-shred-pre-workout/16547402/?variation=16547404",
-          "detail_slug": "",
-          "package_key": "kg:0.66",
-          "flavour": "Strawberry Laces",
-          "price_eur": 37.11,
-          "unit_price": 56.23,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "Store price before discount codes. Confirm the final price at the store."
+          "price_scope": "listing",
+          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
         }
       ]
     },
@@ -3172,6 +3008,32 @@
           "flavour": "water-melon",
           "price_eur": 10.15,
           "unit_price": 48.33,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:409ae65f8ecfb8d9",
+      "name": "Thor Fuel + Vitargo - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_vitargo_watermelon_600_g_gymbeam_1.png",
+      "packages": [
+        "kg:0.6"
+      ],
+      "offers": [
+        {
+          "id": "catalog:bb564efc1e6beaec",
+          "offer_id": "catalog:bb564efc1e6beaec",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/pre-workout-stimulans-thor-fuel-vitargo-600-g-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.6",
+          "flavour": "water-melon",
+          "price_eur": 21.95,
+          "unit_price": 36.58,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",

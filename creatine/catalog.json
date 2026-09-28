@@ -121,23 +121,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png"
     },
     {
-      "id": "catalog:4a00613dead50de4",
-      "offer_id": "catalog:4a00613dead50de4",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/creatine-performance-gymbeam.html",
-      "detail_slug": "gymbeam_hr_creatine_monohydrate_gymbeam_0_4kg",
-      "package_key": "kg:0.4",
-      "flavour": null,
-      "price_eur": 19.5,
-      "unit_price": 48.75,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Creatine monohydrate+ - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg"
-    },
-    {
       "id": "catalog:203048dd597b5031",
       "offer_id": "catalog:203048dd597b5031",
       "store": "GymBeam HR",
@@ -187,6 +170,23 @@
       "note": "",
       "name": "Kreatin Crea7in - GymBeam, 0.6 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png"
+    },
+    {
+      "id": "catalog:4a00613dead50de4",
+      "offer_id": "catalog:4a00613dead50de4",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/creatine-performance-gymbeam.html",
+      "detail_slug": "gymbeam_hr_creatine_monohydrate_gymbeam_0_4kg",
+      "package_key": "kg:0.4",
+      "flavour": null,
+      "price_eur": 19.5,
+      "unit_price": 48.75,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine monohydrate+ - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg"
     },
     {
       "id": "catalog:7d0db6b74d4d6bb6",
@@ -408,6 +408,23 @@
       "note": "",
       "name": "Kreatin Monohidrat – GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-monohydrate-120-caps-gymbeam.jpg"
+    },
+    {
+      "id": "catalog:9284358d35b57721",
+      "offer_id": "catalog:9284358d35b57721",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/double-kreatin-hmb-gymbeam.html",
+      "detail_slug": "gymbeam_hr_double_kreatin_hmb_gymbeam",
+      "package_key": "default",
+      "flavour": "",
+      "price_eur": 13.4,
+      "unit_price": null,
+      "unit_label": "€/kg",
+      "price_kind": "range",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Double Kreatin + HMB - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-hmb-pineapple-gymbeam.jpg"
     },
     {
       "id": "catalog:88036f92b1aeef42",
@@ -1413,23 +1430,6 @@
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-creapure-300g-proteini-outlet-1-600x600.jpg"
     },
     {
-      "id": "catalog:374e66610952ae6b",
-      "offer_id": "catalog:374e66610952ae6b",
-      "store": "MyProtein",
-      "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-creatine-chupa-chups-watermelon-lollipop/17526822/",
-      "detail_slug": "myprotein_impact_creatine_chupa_chups_watermelon_lollipop_0_25kg",
-      "package_key": "kg:0.25",
-      "flavour": "",
-      "price_eur": 12.72,
-      "unit_price": 50.89,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
-      "name": "Impact Creatine – Chupa Chups Watermelon Lollipop",
-      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17526822-1735285465352189.png&format=webp&auto=avif&width=450&height=450&fit=crop"
-    },
-    {
       "id": "catalog:d492f17e495b3cc7",
       "offer_id": "catalog:d492f17e495b3cc7",
       "store": "MyProtein",
@@ -1445,6 +1445,23 @@
       "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
       "name": "Kreatin Monohidrat Elite",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10872819-1055350489596192.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:374e66610952ae6b",
+      "offer_id": "catalog:374e66610952ae6b",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-creatine-chupa-chups-watermelon-lollipop/17526822/",
+      "detail_slug": "myprotein_impact_creatine_chupa_chups_watermelon_lollipop_0_25kg",
+      "package_key": "kg:0.25",
+      "flavour": "",
+      "price_eur": 12.72,
+      "unit_price": 50.89,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Impact Creatine – Chupa Chups Watermelon Lollipop",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17526822-1735285465352189.png&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
       "id": "catalog:3df15872e0fd9e16",
@@ -1516,7 +1533,7 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-09-27T10:47:49.057585+00:00",
+  "checked_at": "2026-09-28T09:06:58.819971+00:00",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -2548,6 +2565,32 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:733a5fe56f55df59",
+      "name": "Double Kreatin + HMB - GymBeam",
+      "category": "creatine",
+      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-hmb-pineapple-gymbeam.jpg",
+      "packages": [
+        "default"
+      ],
+      "offers": [
+        {
+          "id": "catalog:9284358d35b57721",
+          "offer_id": "catalog:9284358d35b57721",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/double-kreatin-hmb-gymbeam.html",
+          "detail_slug": "gymbeam_hr_double_kreatin_hmb_gymbeam",
+          "package_key": "default",
+          "flavour": null,
+          "price_eur": 13.4,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "range",
+          "price_scope": "listing",
           "note": ""
         }
       ]
