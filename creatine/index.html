@@ -60,8 +60,15 @@
   .scoop-art .scoop-bowl, .scoop-art .scoop-handle { fill: var(--accent); }
   .stat .label { font-size: 11px; color: var(--muted); font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
   .stat .value { font: 700 22px/1.2 var(--font-body); margin-top: 3px; }
-  .stat .sub { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .stat .per-dose, .stat .pack-size { font-size: 12px; font-weight: 650; color: var(--accent-text); margin-top: 2px; }
+  a.stat { color: inherit; text-decoration: none; transition: border-color .15s, box-shadow .15s, transform .15s; }
+  a.stat:hover { border-color: var(--accent); box-shadow: 0 10px 24px color-mix(in srgb, var(--text) 10%, transparent); transform: translateY(-2px); }
+  a.stat:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; }
+  .stat .sub { margin-top: 3px; }
+  .stat .sub-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+                    font-size: 14px; font-weight: 600; line-height: 1.3; color: var(--text); }
+  .stat .sub-sep { display: none; }
+  .stat .sub-store { display: block; font-size: 12px; color: var(--muted); }
+  .stat .per-dose, .stat .pack-size, .stat .protein-line { font-size: 12px; font-weight: 650; color: var(--accent-text); margin-top: 2px; }
 
   .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px;
               padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
@@ -156,7 +163,7 @@
   footer { color: var(--muted); font-size: 12px; margin-top: 24px; padding: 16px 0 8px; border-top: 1px solid var(--border); max-width: none; line-height: 1.7; }
   footer::after { content: "Offers and prices may change. Check the retailer for current availability and final price."; display: block; margin-top: 8px; color: var(--muted); }
   footer .how-link { display: block; margin-top: 8px; color: var(--accent-text); font-weight: 700; }
-  @media (prefers-reduced-motion: reduce) { .save-btn { transition: none; } .save-btn:hover { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .save-btn, a.stat { transition: none; } .save-btn:hover, a.stat:hover { transform: none; } }
 
   /* --- phone layout: this is the majority use case, not an afterthought --
      the table becomes a stack of compact cards instead of a wide grid that
@@ -306,9 +313,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine (Powder) Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a class="active" aria-current="page" href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 29.09.2026 14:28 CEST &middot; 8 stores</p></div>
+  <p class="gen-meta">Generated 29.09.2026 15:42 CEST &middot; 8 stores</p></div>
 
-  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">14.50 &euro;</div><div class="sub" title="Kreatin + Dekstroza - GymBeam &middot; GymBeam HR">Kreatin + Dekstroza - GymBeam &middot; GymBeam HR</div><div class="per-dose">&asymp; 0.07 &euro; per 5 g daily dose</div></div></div><div class="stat"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">5.14 &euro;</div><div class="sub" title="Kreatin HCl &middot; MyProtein">Kreatin HCl &middot; MyProtein</div><div class="pack-size">98.4 g pack</div></div></div></section>
+  <section class="stats"><a class="stat" href="products/gymbeam_hr_kreatin_dekstroza_gymbeam_1_0kg.html"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">14.50 &euro;</div><div class="sub" title="Kreatin + Dekstroza - GymBeam &middot; GymBeam HR"><span class="sub-name">Kreatin + Dekstroza - GymBeam</span><span class="sub-sep"> &middot; </span><span class="sub-store">GymBeam HR</span></div><div class="per-dose">&asymp; 0.07 &euro; per 5 g daily dose</div></div></a><a class="stat" href="products/myprotein_kreatin_hcl_0_0984kg.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">5.14 &euro;</div><div class="sub" title="Kreatin HCl &middot; MyProtein"><span class="sub-name">Kreatin HCl</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">98.4 g pack</div></div></a></section>
 
   
   <div class="controls">
@@ -319,7 +326,7 @@
       <span>&ndash;</span>
       <input type="number" id="maxPrice" placeholder="216.25" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / kg">
     </div>
-    <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">24</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
+    <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">25</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
@@ -1349,6 +1356,20 @@
           <td class="num price-cell" data-v="49.99">49.99 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
           <td class="num metric-cell" data-v="99.98"><span class="pill high">99.98</span></td>
+          
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:e1a2f25e563e8a78"
+            data-offer-id="catalog:b46bc87b1914c70b" data-price-eur="22.95"
+            data-search="gymbeam hr pink creatine - gymbeam">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="Pink Creatine - GymBeam"><a href="https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html" target="_blank" rel="noopener">Pink Creatine - GymBeam</a><a class="details-link" href="products/gymbeam_hr_pink_creatine_gymbeam_0_228kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b46bc87b1914c70b&quot;, &quot;name&quot;: &quot;Pink Creatine - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.228&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 22.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_pink_creatine_gymbeam_0_228kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="22.95">22.95 &euro;</td>
+          <td class="num weight-cell" data-v="0.228">228 g</td>
+          <td class="num metric-cell" data-v="100.66"><span class="pill high">100.66</span></td>
           
           
         </tr>

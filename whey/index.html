@@ -60,8 +60,15 @@
   .scoop-art .scoop-bowl, .scoop-art .scoop-handle { fill: var(--accent); }
   .stat .label { font-size: 11px; color: var(--muted); font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
   .stat .value { font: 700 22px/1.2 var(--font-body); margin-top: 3px; }
-  .stat .sub { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .stat .per-dose, .stat .pack-size { font-size: 12px; font-weight: 650; color: var(--accent-text); margin-top: 2px; }
+  a.stat { color: inherit; text-decoration: none; transition: border-color .15s, box-shadow .15s, transform .15s; }
+  a.stat:hover { border-color: var(--accent); box-shadow: 0 10px 24px color-mix(in srgb, var(--text) 10%, transparent); transform: translateY(-2px); }
+  a.stat:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; }
+  .stat .sub { margin-top: 3px; }
+  .stat .sub-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+                    font-size: 14px; font-weight: 600; line-height: 1.3; color: var(--text); }
+  .stat .sub-sep { display: none; }
+  .stat .sub-store { display: block; font-size: 12px; color: var(--muted); }
+  .stat .per-dose, .stat .pack-size, .stat .protein-line { font-size: 12px; font-weight: 650; color: var(--accent-text); margin-top: 2px; }
 
   .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px;
               padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
@@ -156,7 +163,7 @@
   footer { color: var(--muted); font-size: 12px; margin-top: 24px; padding: 16px 0 8px; border-top: 1px solid var(--border); max-width: none; line-height: 1.7; }
   footer::after { content: "Offers and prices may change. Check the retailer for current availability and final price."; display: block; margin-top: 8px; color: var(--muted); }
   footer .how-link { display: block; margin-top: 8px; color: var(--accent-text); font-weight: 700; }
-  @media (prefers-reduced-motion: reduce) { .save-btn { transition: none; } .save-btn:hover { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .save-btn, a.stat { transition: none; } .save-btn:hover, a.stat:hover { transform: none; } }
 
   /* --- phone layout: this is the majority use case, not an afterthought --
      the table becomes a stack of compact cards instead of a wide grid that
@@ -306,9 +313,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Whey Protein Price Comparison</h1>
-  <p class="gen-meta">Generated 29.09.2026 14:26 CEST &middot; 9 stores</p></div>
+  <p class="gen-meta">Generated 29.09.2026 15:41 CEST &middot; 9 stores</p></div>
 
-  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F2%2E27kg%5F%284%29%5F204011%2Ejpg.axd?maxwidth=600&amp;maxheight=600" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">21.98 &euro;</div><div class="sub" title="Superior Whey Core 2.27kg &middot; Proteka">Superior Whey Core 2.27kg &middot; Proteka</div><div class="per-dose">&asymp; 0.66 &euro; per 30 g scoop</div></div></div><div class="stat"><div class="stat-media"><img class="stat-img" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F2%2E27kg%5F%284%29%5F204011%2Ejpg.axd?maxwidth=600&amp;maxheight=600" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Most protein per &euro;</div><div class="value">34.1 g</div><div class="sub" title="Superior Whey Core 2.27kg &middot; Proteka">Superior Whey Core 2.27kg &middot; Proteka</div></div></div><div class="stat"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11052699-3225180485863684.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">12.09 &euro;</div><div class="sub" title="Essential Whey Protein &middot; MyProtein">Essential Whey Protein &middot; MyProtein</div><div class="pack-size">500 g pack</div></div></div></section>
+  <section class="stats"><a class="stat" href="products/proteka_superior_whey_core_2_27kg_2_27kg.html"><div class="stat-media"><img class="stat-img" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F2%2E27kg%5F%284%29%5F204011%2Ejpg.axd?maxwidth=600&amp;maxheight=600" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">21.98 &euro;</div><div class="sub" title="Superior Whey Core 2.27kg &middot; Proteka"><span class="sub-name">Superior Whey Core 2.27kg</span><span class="sub-sep"> &middot; </span><span class="sub-store">Proteka</span></div><div class="per-dose">&asymp; 0.66 &euro; per 30 g scoop</div><div class="protein-line">34.1 g protein per &euro;</div></div></a><a class="stat" href="products/myprotein_essential_whey_protein_0_5kg.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11052699-3225180485863684.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">12.09 &euro;</div><div class="sub" title="Essential Whey Protein &middot; MyProtein"><span class="sub-name">Essential Whey Protein</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">500 g pack</div></div></a></section>
 
   
   <div class="controls">
@@ -319,7 +326,7 @@
       <span>&ndash;</span>
       <input type="number" id="maxPrice" placeholder="133.33" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / kg">
     </div>
-    <div class="chip-group"><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Proteka <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteini Outlet <span class="fcount">43</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR <span class="fcount">41</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>MyProtein <span class="fcount">12</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>THE Nutrition <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Scitec" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Scitec <span class="fcount">10</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Polleo Sport <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>GAZ Nutrition <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Proteini.si <span class="fcount">17</span></button></div>
+    <div class="chip-group"><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Proteka <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteini Outlet <span class="fcount">43</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR <span class="fcount">41</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>MyProtein <span class="fcount">12</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>THE Nutrition <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Scitec" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Scitec <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Polleo Sport <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>GAZ Nutrition <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Proteini.si <span class="fcount">17</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
@@ -950,10 +957,10 @@
             data-offer-id="catalog:82e9e47fcfa4dfb6" data-price-eur="37.95"
             data-search="gymbeam hr yum yum whey - beastpink, 1 kg">
           <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/r/protein-yum-yum-whey-28936-1000g-copy.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
           <td class="product-cell" data-v="Yum Yum Whey - BeastPink, 1 kg"><a href="https://gymbeam.hr/yum-yum-whey-beastpink.html" target="_blank" rel="noopener">Yum Yum Whey - BeastPink, 1 kg</a><a class="details-link" href="products/gymbeam_hr_yum_yum_whey_beastpink_1_kg_1_0kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/yum-yum-whey-beastpink.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:82e9e47fcfa4dfb6&quot;, &quot;name&quot;: &quot;Yum Yum Whey - BeastPink, 1 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/yum-yum-whey-beastpink.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 37.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/r/protein-yum-yum-whey-28936-1000g-copy.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_yum_yum_whey_beastpink_1_kg_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/yum-yum-whey-beastpink.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:82e9e47fcfa4dfb6&quot;, &quot;name&quot;: &quot;Yum Yum Whey - BeastPink, 1 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/yum-yum-whey-beastpink.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 37.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_yum_yum_whey_beastpink_1_kg_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="37.95">37.95 &euro;</td>
           <td class="num weight-cell" data-v="1.0">1 kg</td>
           <td class="num metric-cell" data-v="37.95"><span class="pill good">37.95</span></td>
@@ -1028,6 +1035,20 @@
           <td class="num weight-cell" data-v="1.0">1 kg</td>
           <td class="num metric-cell" data-v="38.95"><span class="pill good">38.95</span></td>
           <td class="num extra-cell" data-v="19.3" data-label="Protein g/&euro;"><span title="assumes ~75% protein">19.3 <span class="est">g</span></span></td>
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:7acb48980a79ad4b"
+            data-offer-id="catalog:4082dac408ed7398" data-price-eur="77.95"
+            data-search="gymbeam hr asap true whey - gymbeam, 2 kg">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="ASAP True Whey - GymBeam, 2 kg"><a href="https://gymbeam.hr/true-whey-prodigest-gymbeam.html" target="_blank" rel="noopener">ASAP True Whey - GymBeam, 2 kg</a><a class="details-link" href="products/gymbeam_hr_asap_true_whey_gymbeam_2_kg_2_0kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/true-whey-prodigest-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4082dac408ed7398&quot;, &quot;name&quot;: &quot;ASAP True Whey - GymBeam, 2 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/true-whey-prodigest-gymbeam.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 77.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_asap_true_whey_gymbeam_2_kg_2_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="77.95">77.95 &euro;</td>
+          <td class="num weight-cell" data-v="2.0">2 kg</td>
+          <td class="num metric-cell" data-v="38.98"><span class="pill good">38.98</span></td>
+          <td class="num extra-cell" data-v="19.2" data-label="Protein g/&euro;"><span title="assumes ~75% protein">19.2 <span class="est">g</span></span></td>
           
         </tr>
         <tr data-store="Proteka" data-track-key="catalog:e165d8d8d9989e19"
@@ -1180,7 +1201,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/multiphase-whey-3/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3d315f528a17f383&quot;, &quot;name&quot;: &quot;MultiPhase Whey&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/multiphase-whey-3/&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 82.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/03/big-man-multi-phase-whey-new-chocolate-2kg-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_multiphase_whey_2_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="82.0">82.00 &euro;</td>
           <td class="num weight-cell" data-v="2.0">2 kg</td>
-          <td class="num metric-cell" data-v="41.0"><span class="pill good">41.00</span></td>
+          <td class="num metric-cell" data-v="41.0"><span class="pill mid">41.00</span></td>
           <td class="num extra-cell" data-v="18.3" data-label="Protein g/&euro;"><span title="assumes ~75% protein">18.3 <span class="est">g</span></span></td>
           
         </tr>
@@ -1251,6 +1272,20 @@
           <td class="num price-cell" data-v="76.99">76.99 &euro;</td>
           <td class="num weight-cell" data-v="1.8">1.8 kg</td>
           <td class="num metric-cell" data-v="42.77"><span class="pill mid">42.77</span></td>
+          <td class="num extra-cell" data-v="17.5" data-label="Protein g/&euro;"><span title="assumes ~75% protein">17.5 <span class="est">g</span></span></td>
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:1b8249fb4ed418eb"
+            data-offer-id="catalog:32149a24aa1cda1b" data-price-eur="38.5"
+            data-search="gymbeam hr asap true whey - gymbeam, 0.9 kg">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="ASAP True Whey - GymBeam, 0.9 kg"><a href="https://gymbeam.hr/true-whey-prodigest-gymbeam.html" target="_blank" rel="noopener">ASAP True Whey - GymBeam, 0.9 kg</a><a class="details-link" href="products/gymbeam_hr_asap_true_whey_gymbeam_0_9_kg_0_9kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/true-whey-prodigest-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:32149a24aa1cda1b&quot;, &quot;name&quot;: &quot;ASAP True Whey - GymBeam, 0.9 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/true-whey-prodigest-gymbeam.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.9&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 38.5, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_asap_true_whey_gymbeam_0_9_kg_0_9kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="38.5">38.50 &euro;</td>
+          <td class="num weight-cell" data-v="0.9">900 g</td>
+          <td class="num metric-cell" data-v="42.78"><span class="pill mid">42.78</span></td>
           <td class="num extra-cell" data-v="17.5" data-label="Protein g/&euro;"><span title="assumes ~75% protein">17.5 <span class="est">g</span></span></td>
           
         </tr>
@@ -1548,20 +1583,6 @@
           <td class="num extra-cell" data-v="18.6" data-label="Protein g/&euro;"><span title="assumes ~86% protein">18.6 <span class="est">g</span></span></td>
           
         </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:7acb48980a79ad4b"
-            data-offer-id="catalog:4082dac408ed7398" data-price-eur="91.95"
-            data-search="gymbeam hr asap true whey - gymbeam, 2 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="ASAP True Whey - GymBeam, 2 kg"><a href="https://gymbeam.hr/true-whey-prodigest-gymbeam.html" target="_blank" rel="noopener">ASAP True Whey - GymBeam, 2 kg</a><a class="details-link" href="products/gymbeam_hr_asap_true_whey_gymbeam_2_kg_2_0kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/true-whey-prodigest-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4082dac408ed7398&quot;, &quot;name&quot;: &quot;ASAP True Whey - GymBeam, 2 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/true-whey-prodigest-gymbeam.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 91.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_asap_true_whey_gymbeam_2_kg_2_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="91.95">91.95 &euro;</td>
-          <td class="num weight-cell" data-v="2.0">2 kg</td>
-          <td class="num metric-cell" data-v="45.98"><span class="pill mid">45.98</span></td>
-          <td class="num extra-cell" data-v="16.3" data-label="Protein g/&euro;"><span title="assumes ~75% protein">16.3 <span class="est">g</span></span></td>
-          
-        </tr>
         <tr data-store="Scitec" data-track-key="catalog:ca91a6b3a6168ea0"
             data-offer-id="catalog:3f7ef5aeee1d6b25" data-price-eur="35.9"
             data-search="scitec 100% whey protein professional(0,78 kg)">
@@ -1814,6 +1835,20 @@
           <td class="num extra-cell" data-v="14.7" data-label="Protein g/&euro;"><span title="assumes ~75% protein">14.7 <span class="est">g</span></span></td>
           
         </tr>
+        <tr data-store="Scitec" data-track-key="catalog:bfa2b606036ce609"
+            data-offer-id="catalog:3b90a8c20efbcf21" data-price-eur="25.9"
+            data-search="scitec 100% whey protein professional(0,5 kg)">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/13922_7ab7c78cfd0c_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="Scitec"><span class="store"><span class="store-dot" style="background:#6a4f8a"></span>Scitec</span></td>
+          <td class="product-cell" data-v="100% Whey Protein Professional(0,5 kg)"><a href="https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-0-5-kg-p13922" target="_blank" rel="noopener">100% Whey Protein Professional(0,5 kg)</a><a class="details-link" href="products/scitec_100_whey_protein_professional_0_5_kg_0_5kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Scitec|https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-0-5-kg-p13922" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3b90a8c20efbcf21&quot;, &quot;name&quot;: &quot;100% Whey Protein Professional(0,5 kg)&quot;, &quot;store&quot;: &quot;Scitec&quot;, &quot;source_url&quot;: &quot;https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-0-5-kg-p13922&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 25.9, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://scitec.hr/images/product_images/13922_7ab7c78cfd0c_200x200.webp&quot;, &quot;detail_url&quot;: &quot;products/scitec_100_whey_protein_professional_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="25.9">25.90 &euro;</td>
+          <td class="num weight-cell" data-v="0.5">500 g</td>
+          <td class="num metric-cell" data-v="51.8"><span class="pill mid">51.80</span></td>
+          <td class="num extra-cell" data-v="14.5" data-label="Protein g/&euro;"><span title="assumes ~75% protein">14.5 <span class="est">g</span></span></td>
+          
+        </tr>
         <tr data-store="Proteini Outlet" data-track-key="catalog:5c7b6538306ae218"
             data-offer-id="catalog:87896b863cdc34b5" data-price-eur="52.0"
             data-search="proteini outlet whey pure fusion">
@@ -1826,20 +1861,6 @@
           <td class="num weight-cell" data-v="1.0">1 kg</td>
           <td class="num metric-cell" data-v="52.0"><span class="pill mid">52.00</span></td>
           <td class="num extra-cell" data-v="15.0" data-label="Protein g/&euro;"><span title="assumes ~78% protein">15.0 <span class="est">g</span></span></td>
-          
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:1b8249fb4ed418eb"
-            data-offer-id="catalog:32149a24aa1cda1b" data-price-eur="46.95"
-            data-search="gymbeam hr asap true whey - gymbeam, 0.9 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="ASAP True Whey - GymBeam, 0.9 kg"><a href="https://gymbeam.hr/true-whey-prodigest-gymbeam.html" target="_blank" rel="noopener">ASAP True Whey - GymBeam, 0.9 kg</a><a class="details-link" href="products/gymbeam_hr_asap_true_whey_gymbeam_0_9_kg_0_9kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/true-whey-prodigest-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:32149a24aa1cda1b&quot;, &quot;name&quot;: &quot;ASAP True Whey - GymBeam, 0.9 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/true-whey-prodigest-gymbeam.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.9&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 46.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_asap_true_whey_gymbeam_0_9_kg_0_9kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="46.95">46.95 &euro;</td>
-          <td class="num weight-cell" data-v="0.9">900 g</td>
-          <td class="num metric-cell" data-v="52.17"><span class="pill mid">52.17</span></td>
-          <td class="num extra-cell" data-v="14.4" data-label="Protein g/&euro;"><span title="assumes ~75% protein">14.4 <span class="est">g</span></span></td>
           
         </tr>
         <tr data-store="GymBeam HR" data-track-key="catalog:97840dbf47597470"
@@ -1916,10 +1937,10 @@
             data-offer-id="catalog:b6679278c5184612" data-price-eur="26.95"
             data-search="gymbeam hr yum yum whey - beastpink, 0.5 kg">
           <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/r/protein-yum-yum-whey-28936-1000g-copy.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
           <td class="product-cell" data-v="Yum Yum Whey - BeastPink, 0.5 kg"><a href="https://gymbeam.hr/yum-yum-whey-beastpink.html" target="_blank" rel="noopener">Yum Yum Whey - BeastPink, 0.5 kg</a><a class="details-link" href="products/gymbeam_hr_yum_yum_whey_beastpink_0_5_kg_0_5kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/yum-yum-whey-beastpink.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b6679278c5184612&quot;, &quot;name&quot;: &quot;Yum Yum Whey - BeastPink, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/yum-yum-whey-beastpink.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 26.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/r/protein-yum-yum-whey-28936-1000g-copy.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_yum_yum_whey_beastpink_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/yum-yum-whey-beastpink.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b6679278c5184612&quot;, &quot;name&quot;: &quot;Yum Yum Whey - BeastPink, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/yum-yum-whey-beastpink.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 26.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_yum_yum_whey_beastpink_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="26.95">26.95 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
           <td class="num metric-cell" data-v="53.9"><span class="pill mid">53.90</span></td>
@@ -2210,10 +2231,10 @@
             data-offer-id="catalog:a5ac24d2a9bd8891" data-price-eur="1.8"
             data-search="gymbeam hr yum yum whey - beastpink, 0.03 kg">
           <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/r/protein-yum-yum-whey-28936-1000g-copy.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
           <td class="product-cell" data-v="Yum Yum Whey - BeastPink, 0.03 kg"><a href="https://gymbeam.hr/yum-yum-whey-beastpink.html" target="_blank" rel="noopener">Yum Yum Whey - BeastPink, 0.03 kg</a><a class="details-link" href="products/gymbeam_hr_yum_yum_whey_beastpink_0_03_kg_0_03kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/yum-yum-whey-beastpink.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a5ac24d2a9bd8891&quot;, &quot;name&quot;: &quot;Yum Yum Whey - BeastPink, 0.03 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/yum-yum-whey-beastpink.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.03&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 1.8, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/r/protein-yum-yum-whey-28936-1000g-copy.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_yum_yum_whey_beastpink_0_03_kg_0_03kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/yum-yum-whey-beastpink.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a5ac24d2a9bd8891&quot;, &quot;name&quot;: &quot;Yum Yum Whey - BeastPink, 0.03 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/yum-yum-whey-beastpink.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:0.03&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 1.8, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_yum_yum_whey_beastpink_0_03_kg_0_03kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="1.8">1.80 &euro;</td>
           <td class="num weight-cell" data-v="0.03">30 g</td>
           <td class="num metric-cell" data-v="60.0"><span class="pill high">60.00</span></td>
@@ -2626,18 +2647,18 @@
           <td class="num extra-cell" data-v="11.0" data-label="Protein g/&euro;"><span title="assumes ~86% protein">11.0 <span class="est">g</span></span></td>
           
         </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:62ddb66121a1b539"
-            data-offer-id="catalog:08ff56a4d66a9d3a" data-price-eur="124.95"
+        <tr data-store="GymBeam HR" data-track-key="catalog:ae08f5f324f2c074"
+            data-offer-id="catalog:25733a933027cf84" data-price-eur="124.95"
             data-search="gymbeam hr platinum hydrowhey - optimum nutrition">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/h/y/hydrowhey_4lb_van_fr_6059705_web.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="Platinum Hydrowhey - Optimum Nutrition"><a href="https://gymbeam.hr/protein-platinum-hydrowhey-1600-g-optimum-nutrition.html" target="_blank" rel="noopener">Platinum Hydrowhey - Optimum Nutrition</a><a class="details-link" href="products/gymbeam_hr_platinum_hydrowhey_optimum_nutrition_1_59kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/protein-platinum-hydrowhey-1600-g-optimum-nutrition.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:08ff56a4d66a9d3a&quot;, &quot;name&quot;: &quot;Platinum Hydrowhey - Optimum Nutrition&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/protein-platinum-hydrowhey-1600-g-optimum-nutrition.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;kg:1.59&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 124.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/h/y/hydrowhey_4lb_van_fr_6059705_web.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_platinum_hydrowhey_optimum_nutrition_1_59kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="product-cell" data-v="Platinum Hydrowhey - Optimum Nutrition"><a href="https://gymbeam.hr/protein-platinum-hydrowhey-1600-g-optimum-nutrition.html" target="_blank" rel="noopener">Platinum Hydrowhey - Optimum Nutrition</a><a class="details-link" href="products/gymbeam_hr_platinum_hydrowhey_optimum_nutrition.html">View details</a><span class="badge range">price varies by size</span></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/protein-platinum-hydrowhey-1600-g-optimum-nutrition.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:25733a933027cf84&quot;, &quot;name&quot;: &quot;Platinum Hydrowhey - Optimum Nutrition&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/protein-platinum-hydrowhey-1600-g-optimum-nutrition.html&quot;, &quot;category&quot;: &quot;whey&quot;, &quot;package_key&quot;: &quot;default&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 124.95, &quot;price_kind&quot;: &quot;range&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/h/y/hydrowhey_4lb_van_fr_6059705_web.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_platinum_hydrowhey_optimum_nutrition.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="124.95">124.95 &euro;</td>
-          <td class="num weight-cell" data-v="1.59">1.59 kg</td>
+          <td class="num weight-cell" data-v=""><span class="empty">&mdash;</span></td>
           <td class="num metric-cell" data-v="78.58"><span class="pill high">78.58</span></td>
-          <td class="num extra-cell" data-v="10.2" data-label="Protein g/&euro;"><span title="assumes ~80% protein">10.2 <span class="est">g</span></span></td>
+          <td class="num extra-cell" data-v="" data-label="Protein g/&euro;"><span class="empty">&mdash;</span></td>
           
         </tr>
         <tr data-store="Proteka" data-track-key="catalog:9b827e5a6a1c8edc"

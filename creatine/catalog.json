@@ -240,6 +240,23 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
     {
+      "id": "catalog:b46bc87b1914c70b",
+      "offer_id": "catalog:b46bc87b1914c70b",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html",
+      "detail_slug": "gymbeam_hr_pink_creatine_gymbeam_0_228kg",
+      "package_key": "kg:0.228",
+      "flavour": "",
+      "price_eur": 22.95,
+      "unit_price": 100.66,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Pink Creatine - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg"
+    },
+    {
       "id": "catalog:d590783102197f09",
       "offer_id": "catalog:d590783102197f09",
       "store": "GymBeam HR",
@@ -1516,7 +1533,7 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-09-29T12:28:23.974678+00:00",
+  "checked_at": "2026-09-29T13:42:56.386654+00:00",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -3358,6 +3375,32 @@
           "flavour": null,
           "price_eur": 20.54,
           "unit_price": 109.84,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:59e4bef899e5c02c",
+      "name": "Pink Creatine - GymBeam",
+      "category": "creatine",
+      "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg",
+      "packages": [
+        "kg:0.228"
+      ],
+      "offers": [
+        {
+          "id": "catalog:b46bc87b1914c70b",
+          "offer_id": "catalog:b46bc87b1914c70b",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html",
+          "detail_slug": "gymbeam_hr_pink_creatine_gymbeam_0_228kg",
+          "package_key": "kg:0.228",
+          "flavour": null,
+          "price_eur": 22.95,
+          "unit_price": 100.66,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",

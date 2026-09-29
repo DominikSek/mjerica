@@ -9,8 +9,8 @@
       "detail_slug": "gymbeam_hr_thor_gymbeam_0_21kg",
       "package_key": "kg:0.21",
       "flavour": null,
-      "price_eur": 10.15,
-      "unit_price": 48.33,
+      "price_eur": 16.95,
+      "unit_price": 80.71,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -104,23 +104,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_31782_total_rush_2.0_375g_cranberry_glutapep_1_.jpg"
     },
     {
-      "id": "catalog:35252c039b0a68d6",
-      "offer_id": "catalog:35252c039b0a68d6",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
-      "detail_slug": "gymbeam_hr_thor_stim_free_gymbeam_0_42kg",
-      "package_key": "kg:0.42",
-      "flavour": null,
-      "price_eur": 19.95,
-      "unit_price": 47.5,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Thor Stim-Free - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png"
-    },
-    {
       "id": "catalog:0a47968cb6c630ac",
       "offer_id": "catalog:0a47968cb6c630ac",
       "store": "GymBeam HR",
@@ -136,6 +119,23 @@
       "note": "",
       "name": "The Curse - JNX Sports",
       "image_url": "https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_curse_pre-workout_lemon_rush_50_serve_bottle_front.png"
+    },
+    {
+      "id": "catalog:35252c039b0a68d6",
+      "offer_id": "catalog:35252c039b0a68d6",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
+      "detail_slug": "gymbeam_hr_thor_stim_free_gymbeam_0_42kg",
+      "package_key": "kg:0.42",
+      "flavour": null,
+      "price_eur": 19.95,
+      "unit_price": 47.5,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Thor Stim-Free - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png"
     },
     {
       "id": "catalog:4a8fe2599d6d0723",
@@ -291,23 +291,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink_drive_strawberry_lemonade_300_g_beastpink_1_.png"
     },
     {
-      "id": "catalog:fa86e533f006c674",
-      "offer_id": "catalog:fa86e533f006c674",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/pump-nutrend.html",
-      "detail_slug": "gymbeam_hr_pump_nutrend_0_23kg",
-      "package_key": "kg:0.23",
-      "flavour": "",
-      "price_eur": 21.95,
-      "unit_price": 97.56,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "PUMP - Nutrend",
-      "image_url": "https://gymbeam.hr/media/catalog/product/6/3/63da4cf24c412_.png"
-    },
-    {
       "id": "catalog:7c7c9f00cceb03b5",
       "offer_id": "catalog:7c7c9f00cceb03b5",
       "store": "GymBeam HR",
@@ -340,6 +323,40 @@
       "note": "",
       "name": "N1 Pre-Workout - Nutrend, 0.51 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png"
+    },
+    {
+      "id": "catalog:fa86e533f006c674",
+      "offer_id": "catalog:fa86e533f006c674",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/pump-nutrend.html",
+      "detail_slug": "gymbeam_hr_pump_nutrend_0_23kg",
+      "package_key": "kg:0.23",
+      "flavour": "",
+      "price_eur": 21.95,
+      "unit_price": 97.56,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "PUMP - Nutrend",
+      "image_url": "https://gymbeam.hr/media/catalog/product/6/3/63da4cf24c412_.png"
+    },
+    {
+      "id": "catalog:059c9f5e7a368208",
+      "offer_id": "catalog:059c9f5e7a368208",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/creafue-pre-workout-gymbeam.html",
+      "detail_slug": "gymbeam_hr_creafue_pre_workout_gymbeam_0_45kg",
+      "package_key": "kg:0.45",
+      "flavour": null,
+      "price_eur": 22.95,
+      "unit_price": 51.0,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "CreaFue Pre-workout - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creafue_pre-workout_mango-maracuja_450_g_1__1.jpg"
     },
     {
       "id": "catalog:2b3f8c6b2531367b",
@@ -1244,7 +1261,7 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-09-29T12:29:31.438411+00:00",
+  "checked_at": "2026-09-29T13:44:11.573761+00:00",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -1602,6 +1619,62 @@
           "flavour": "Naranča",
           "price_eur": null,
           "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:96b9f88986624352",
+      "name": "CreaFue Pre-workout - GymBeam",
+      "category": "preworkout",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creafue_pre-workout_mango-maracuja_450_g_1__1.jpg",
+      "packages": [
+        "kg:0.45"
+      ],
+      "offers": [
+        {
+          "id": "catalog:c38fe133b469e367",
+          "offer_id": "catalog:c38fe133b469e367",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/creafue-pre-workout-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.45",
+          "flavour": "limun - limeta",
+          "price_eur": 22.95,
+          "unit_price": 51.0,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:9fa6d9eb55b476ef",
+          "offer_id": "catalog:9fa6d9eb55b476ef",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/creafue-pre-workout-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.45",
+          "flavour": "mango - marakuja",
+          "price_eur": 22.95,
+          "unit_price": 51.0,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:caad654da7cc6ebe",
+          "offer_id": "catalog:caad654da7cc6ebe",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/creafue-pre-workout-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.45",
+          "flavour": "šumsko voće",
+          "price_eur": 22.95,
+          "unit_price": 51.0,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
