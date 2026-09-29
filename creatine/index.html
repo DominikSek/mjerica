@@ -51,7 +51,7 @@
           display: flex; align-items: center; gap: 14px; }
   .stat-text { flex: 1; min-width: 0; }
   /* the named product's photo, or the drawn scoop when it has none (rendering.SCOOP_ART) */
-  .stat-media { flex: none; width: 56px; height: 56px; border-radius: 8px; overflow: hidden;
+  .stat-media { flex: none; width: 96px; height: 96px; border-radius: 8px; overflow: hidden;
                 background: var(--panel); display: flex; align-items: center; justify-content: center; }
   .stat-img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
   .stat-media .scoop-art { width: 80%; height: auto; }
@@ -61,6 +61,7 @@
   .stat .label { font-size: 11px; color: var(--muted); font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
   .stat .value { font: 700 22px/1.2 var(--font-body); margin-top: 3px; }
   .stat .sub { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .stat .per-dose, .stat .pack-size { font-size: 12px; font-weight: 650; color: var(--accent-text); margin-top: 2px; }
 
   .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px;
               padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
@@ -170,7 +171,9 @@
     .controls { padding: 10px; border-radius: 10px; }
     .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .stat { gap: 10px; padding: 11px 12px; }
-    .stat-media { width: 40px; height: 40px; }
+    .stat { flex-direction: column; align-items: flex-start; }
+    .stat-text { width: 100%; }
+    .stat-media { width: 64px; height: 64px; }
     .chip-group { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
     .chip { flex: none; }
     .mobile-sort { display: block; flex: 1 1 140px; padding: 8px 10px; border: 1px solid var(--border);
@@ -303,9 +306,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine (Powder) Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a class="active" aria-current="page" href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 29.09.2026 12:54 CEST &middot; 8 stores</p></div>
+  <p class="gen-meta">Generated 29.09.2026 14:28 CEST &middot; 8 stores</p></div>
 
-  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">14.50 &euro;</div><div class="sub" title="Kreatin + Dekstroza - GymBeam &middot; GymBeam HR">Kreatin + Dekstroza - GymBeam &middot; GymBeam HR</div></div></div></section>
+  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">14.50 &euro;</div><div class="sub" title="Kreatin + Dekstroza - GymBeam &middot; GymBeam HR">Kreatin + Dekstroza - GymBeam &middot; GymBeam HR</div><div class="per-dose">&asymp; 0.07 &euro; per 5 g daily dose</div></div></div><div class="stat"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">5.14 &euro;</div><div class="sub" title="Kreatin HCl &middot; MyProtein">Kreatin HCl &middot; MyProtein</div><div class="pack-size">98.4 g pack</div></div></div></section>
 
   
   <div class="controls">

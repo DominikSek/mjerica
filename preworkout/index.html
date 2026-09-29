@@ -51,7 +51,7 @@
           display: flex; align-items: center; gap: 14px; }
   .stat-text { flex: 1; min-width: 0; }
   /* the named product's photo, or the drawn scoop when it has none (rendering.SCOOP_ART) */
-  .stat-media { flex: none; width: 56px; height: 56px; border-radius: 8px; overflow: hidden;
+  .stat-media { flex: none; width: 96px; height: 96px; border-radius: 8px; overflow: hidden;
                 background: var(--panel); display: flex; align-items: center; justify-content: center; }
   .stat-img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
   .stat-media .scoop-art { width: 80%; height: auto; }
@@ -61,6 +61,7 @@
   .stat .label { font-size: 11px; color: var(--muted); font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
   .stat .value { font: 700 22px/1.2 var(--font-body); margin-top: 3px; }
   .stat .sub { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .stat .per-dose, .stat .pack-size { font-size: 12px; font-weight: 650; color: var(--accent-text); margin-top: 2px; }
 
   .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px;
               padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
@@ -170,7 +171,9 @@
     .controls { padding: 10px; border-radius: 10px; }
     .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .stat { gap: 10px; padding: 11px 12px; }
-    .stat-media { width: 40px; height: 40px; }
+    .stat { flex-direction: column; align-items: flex-start; }
+    .stat-text { width: 100%; }
+    .stat-media { width: 64px; height: 64px; }
     .chip-group { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
     .chip { flex: none; }
     .mobile-sort { display: block; flex: 1 1 140px; padding: 8px 10px; border: 1px solid var(--border);
@@ -303,9 +306,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Pre-Workout Price Comparison</h1>
-  <p class="gen-meta">Generated 29.09.2026 12:55 CEST &middot; 6 stores</p></div>
+  <p class="gen-meta">Generated 29.09.2026 14:29 CEST &middot; 6 stores</p></div>
 
-  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/mefirst_revive_orange_1000-1500.jpg?size=225" alt="" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">29.99 &euro;</div><div class="sub" title="Revive, 1000 g &middot; Polleo Sport">Revive, 1000 g &middot; Polleo Sport</div></div></div></section>
+  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/mefirst_revive_orange_1000-1500.jpg?size=225" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">29.99 &euro;</div><div class="sub" title="Revive, 1000 g &middot; Polleo Sport">Revive, 1000 g &middot; Polleo Sport</div></div></div><div class="stat"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">10.15 &euro;</div><div class="sub" title="Thor - GymBeam &middot; GymBeam HR">Thor - GymBeam &middot; GymBeam HR</div><div class="pack-size">210 g pack</div></div></div></section>
 
   
   <div class="controls">
@@ -316,7 +319,7 @@
       <span>&ndash;</span>
       <input type="number" id="maxPrice" placeholder="372.50" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / kg">
     </div>
-    <div class="chip-group"><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Polleo Sport <span class="fcount">24</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>GymBeam HR <span class="fcount">21</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>MyProtein <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>GAZ Nutrition <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>Proteka <span class="fcount">4</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Proteini Outlet <span class="fcount">5</span></button></div>
+    <div class="chip-group"><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Polleo Sport <span class="fcount">24</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>GymBeam HR <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>MyProtein <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>GAZ Nutrition <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>Proteka <span class="fcount">4</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Proteini Outlet <span class="fcount">5</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
@@ -453,6 +456,20 @@
           
           <td class="num extra-cell" data-v="30" data-label="Servings">30</td>
         </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:58d61157d6ea6efd"
+            data-offer-id="catalog:4ef8499343348a55" data-price-eur="10.15"
+            data-search="gymbeam hr thor - gymbeam">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#93692a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="Thor - GymBeam"><a href="https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html" target="_blank" rel="noopener">Thor - GymBeam</a><a class="details-link" href="products/gymbeam_hr_thor_gymbeam_0_21kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4ef8499343348a55&quot;, &quot;name&quot;: &quot;Thor - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html&quot;, &quot;category&quot;: &quot;preworkout&quot;, &quot;package_key&quot;: &quot;kg:0.21&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 10.15, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_thor_gymbeam_0_21kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="10.15">10.15 &euro;</td>
+          <td class="num weight-cell" data-v="0.21">210 g</td>
+          <td class="num metric-cell" data-v="48.33"><span class="pill good">48.33</span></td>
+          
+          <td class="num extra-cell" data-v="30" data-label="Servings">30</td>
+        </tr>
         <tr data-store="Polleo Sport" data-track-key="catalog:840b207d7a5757d8"
             data-offer-id="catalog:c2edc3ecda9c27e5" data-price-eur="49.99"
             data-search="polleo sport amino x, 1015g">
@@ -478,20 +495,6 @@
           <td class="num price-cell" data-v="37.51">37.51 &euro;</td>
           <td class="num weight-cell" data-v="0.75">750 g</td>
           <td class="num metric-cell" data-v="50.01"><span class="pill good">50.01</span></td>
-          
-          <td class="num extra-cell" data-v="25" data-label="Servings">25</td>
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:cd789c12d38cf3dc"
-            data-offer-id="catalog:059c9f5e7a368208" data-price-eur="22.95"
-            data-search="gymbeam hr creafue pre-workout - gymbeam">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creafue_pre-workout_mango-maracuja_450_g_1__1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#93692a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="CreaFue Pre-workout - GymBeam"><a href="https://gymbeam.hr/creafue-pre-workout-gymbeam.html" target="_blank" rel="noopener">CreaFue Pre-workout - GymBeam</a><a class="details-link" href="products/gymbeam_hr_creafue_pre_workout_gymbeam_0_45kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/creafue-pre-workout-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:059c9f5e7a368208&quot;, &quot;name&quot;: &quot;CreaFue Pre-workout - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/creafue-pre-workout-gymbeam.html&quot;, &quot;category&quot;: &quot;preworkout&quot;, &quot;package_key&quot;: &quot;kg:0.45&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 22.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creafue_pre-workout_mango-maracuja_450_g_1__1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_creafue_pre_workout_gymbeam_0_45kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="22.95">22.95 &euro;</td>
-          <td class="num weight-cell" data-v="0.45">450 g</td>
-          <td class="num metric-cell" data-v="51.0"><span class="pill good">51.00</span></td>
           
           <td class="num extra-cell" data-v="25" data-label="Servings">25</td>
         </tr>
@@ -673,7 +676,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-intense-pre-workout/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:019e75f24c6b17aa&quot;, &quot;name&quot;: &quot;Weider Intense Pre-Workout&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-intense-pre-workout/&quot;, &quot;category&quot;: &quot;preworkout&quot;, &quot;package_key&quot;: &quot;kg:0.375&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 26.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2025/10/gaz-nutrition-proizvod-weider-intense-preworkout-v011g.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_intense_pre_workout_0_375kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="26.95">26.95 &euro;</td>
           <td class="num weight-cell" data-v="0.375">375 g</td>
-          <td class="num metric-cell" data-v="71.87"><span class="pill good">71.87</span></td>
+          <td class="num metric-cell" data-v="71.87"><span class="pill mid">71.87</span></td>
           
           <td class="num extra-cell" data-v="" data-label="Servings"><span class="empty">&mdash;</span></td>
         </tr>
@@ -816,20 +819,6 @@
           <td class="num metric-cell" data-v="79.98"><span class="pill mid">79.98</span></td>
           
           <td class="num extra-cell" data-v="100" data-label="Servings">100</td>
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:58d61157d6ea6efd"
-            data-offer-id="catalog:4ef8499343348a55" data-price-eur="16.95"
-            data-search="gymbeam hr thor - gymbeam">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#93692a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="Thor - GymBeam"><a href="https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html" target="_blank" rel="noopener">Thor - GymBeam</a><a class="details-link" href="products/gymbeam_hr_thor_gymbeam_0_21kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4ef8499343348a55&quot;, &quot;name&quot;: &quot;Thor - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/pre-workout-stimulans-thor-gymbeam.html&quot;, &quot;category&quot;: &quot;preworkout&quot;, &quot;package_key&quot;: &quot;kg:0.21&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 16.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_thor_gymbeam_0_21kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="16.95">16.95 &euro;</td>
-          <td class="num weight-cell" data-v="0.21">210 g</td>
-          <td class="num metric-cell" data-v="80.71"><span class="pill mid">80.71</span></td>
-          
-          <td class="num extra-cell" data-v="30" data-label="Servings">30</td>
         </tr>
         <tr data-store="GymBeam HR" data-track-key="catalog:5fe406139c3b4a33"
             data-offer-id="catalog:7c7c9f00cceb03b5" data-price-eur="13.95"
