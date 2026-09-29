@@ -682,23 +682,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/h/y/hydrowhey.jpg"
     },
     {
-      "id": "catalog:279952765905d444",
-      "offer_id": "catalog:279952765905d444",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-      "detail_slug": "gymbeam_hr_gain_anabolic_protein_gymbeam_1_0kg",
-      "package_key": "kg:1",
-      "flavour": null,
-      "price_eur": 39.95,
-      "unit_price": 39.95,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Gain Anabolic Protein - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/g/a/gain_anabolic_protein_salted_caramel_mockup_1__1.jpg"
-    },
-    {
       "id": "catalog:7608c9c42750d23c",
       "offer_id": "catalog:7608c9c42750d23c",
       "store": "Polleo Sport",
@@ -3026,10 +3009,27 @@
       "note": "Includes site's 45% promo shown on the listing -- confirm it still applies at checkout.",
       "name": "Impact Whey izolat od sirutke krava hranjenih travom",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16795191-1835343294928140.png&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:39b1b73e93083ffc",
+      "offer_id": "catalog:39b1b73e93083ffc",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/hidrolizirani-whey-protein/12456583/",
+      "detail_slug": "myprotein_hidrolizirani_whey_protein_1_0kg",
+      "package_key": "kg:1",
+      "flavour": null,
+      "price_eur": 31.89,
+      "unit_price": 31.89,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 45% promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Hidrolizirani Whey Protein",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456583-1655179481077479.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     }
   ],
   "category": "whey",
-  "checked_at": "2026-09-28T09:05:40.988961+00:00",
+  "checked_at": "2026-09-28T22:29:48.676673+00:00",
   "products": [
     {
       "id": "catalog:cd184ec79598c449",
@@ -5147,81 +5147,6 @@
           "price_kind": "exact",
           "price_scope": "listing",
           "note": ""
-        },
-        {
-          "id": "catalog:09a8d557a308f3a2",
-          "offer_id": "catalog:09a8d557a308f3a2",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-4-kg-p17603",
-          "detail_slug": "",
-          "package_key": "kg:4",
-          "flavour": "jagoda-bijela čokolada",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:02773627f4a50071",
-          "offer_id": "catalog:02773627f4a50071",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-4-kg-p17603",
-          "detail_slug": "",
-          "package_key": "kg:4",
-          "flavour": "vanilija",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:7d95d80f2b72fa37",
-          "offer_id": "catalog:7d95d80f2b72fa37",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-4-kg-p17603",
-          "detail_slug": "",
-          "package_key": "kg:4",
-          "flavour": "čokolada",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:f2e97610891d2657",
-          "offer_id": "catalog:f2e97610891d2657",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-4-kg-p17603",
-          "detail_slug": "",
-          "package_key": "kg:4",
-          "flavour": "čokolada-cookies&cream",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:21fdf6765034e19b",
-          "offer_id": "catalog:21fdf6765034e19b",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-4-kg-p17603",
-          "detail_slug": "",
-          "package_key": "kg:4",
-          "flavour": "čokolada-lješnjak",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
         }
       ]
     },
@@ -6943,21 +6868,6 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": ""
-        },
-        {
-          "id": "catalog:fc926f858a75b7a5",
-          "offer_id": "catalog:fc926f858a75b7a5",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/cisti-protein-whey-beastpink-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.5",
-          "flavour": "mango - marakuja",
-          "price_eur": 25.15,
-          "unit_price": 50.3,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
         }
       ]
     },
@@ -7036,77 +6946,6 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "Store price before discount codes. Confirm the final price at the store."
-        }
-      ]
-    },
-    {
-      "id": "catalog:5fe67dcb3d6d2204",
-      "name": "Gain Anabolic Protein - GymBeam",
-      "category": "whey",
-      "image_url": "https://gymbeam.hr/media/catalog/product/g/a/gain_anabolic_protein_salted_caramel_mockup_1__1.jpg",
-      "packages": [
-        "kg:1"
-      ],
-      "offers": [
-        {
-          "id": "catalog:b7c651d6800f7406",
-          "offer_id": "catalog:b7c651d6800f7406",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "banana",
-          "price_eur": 39.95,
-          "unit_price": 39.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:1bc83a99e0047d88",
-          "offer_id": "catalog:1bc83a99e0047d88",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "slani karamel",
-          "price_eur": 39.95,
-          "unit_price": 39.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:8d7f9abdcf4aec29",
-          "offer_id": "catalog:8d7f9abdcf4aec29",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "vanilija",
-          "price_eur": 39.95,
-          "unit_price": 39.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:6c535e6876cdc20e",
-          "offer_id": "catalog:6c535e6876cdc20e",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "čokolada",
-          "price_eur": 39.95,
-          "unit_price": 39.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
         }
       ]
     },
@@ -7366,6 +7205,32 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": ""
+        }
+      ]
+    },
+    {
+      "id": "catalog:369dcd24c85f0bdb",
+      "name": "Hidrolizirani Whey Protein",
+      "category": "whey",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456583-1655179481077479.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "packages": [
+        "kg:1"
+      ],
+      "offers": [
+        {
+          "id": "catalog:3fa2c07987ffc6a0",
+          "offer_id": "catalog:3fa2c07987ffc6a0",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/hidrolizirani-whey-protein/12456583/?variation=12456585",
+          "detail_slug": "",
+          "package_key": "kg:1",
+          "flavour": "Bez okusa",
+          "price_eur": 57.99,
+          "unit_price": 57.99,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store."
         }
       ]
     },
@@ -9902,21 +9767,6 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": ""
-        },
-        {
-          "id": "catalog:93749fda63389ad2",
-          "offer_id": "catalog:93749fda63389ad2",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/protein-fusion-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "čokolada",
-          "price_eur": 23.95,
-          "unit_price": 23.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
         }
       ]
     },
@@ -9937,6 +9787,21 @@
           "detail_slug": "",
           "package_key": "kg:1",
           "flavour": "bez okusa",
+          "price_eur": 48.95,
+          "unit_price": 48.95,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": ""
+        },
+        {
+          "id": "catalog:82f3cf0d957a8c76",
+          "offer_id": "catalog:82f3cf0d957a8c76",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/protein-hydro-whey-dh-32-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:1",
+          "flavour": "čokolada",
           "price_eur": 48.95,
           "unit_price": 48.95,
           "unit_label": "€/kg",

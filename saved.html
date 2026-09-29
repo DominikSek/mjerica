@@ -6,20 +6,20 @@
 <script>try{const t=localStorage.getItem("mjerica:theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(_){}</script>
 <title>Saved products &middot; Mjerica</title>
 <style>
-  :root { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de;
-    --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb;
-    --accent-text: #0d5e59; --secondary: #245e68; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0b1220; --surface: #111c2d; --panel: #17263a;
-    --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6;
-    --accent-soft: #173f42; --accent-text: #8ae0d1; --secondary: #8fb9e8; } }
-  :root[data-theme="dark"] { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --accent-text: #8ae0d1; --secondary: #8fb9e8; }
-  :root[data-theme="light"] { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --accent-text: #0d5e59; --secondary: #245e68; }
+  :root { --bg: #fffcf8; --surface: #ffffff; --panel: #e8f7ee; --border: #d3e5de;
+    --text: #0b2b28; --muted: #4a625f; --accent: #0f5d52; --accent-soft: #e8f7ee;
+    --accent-text: #0f5d52; --secondary: #245e68; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0b1f22; --surface: #10292c; --panel: #173a38;
+    --border: #2a4a47; --text: #eef7f4; --muted: #a9c2bd; --accent: #6fd3bf;
+    --accent-soft: #173a38; --accent-text: #8fe3d1; --secondary: #9cc4e4; } }
+  :root[data-theme="dark"] { --bg: #0b1f22; --surface: #10292c; --panel: #173a38; --border: #2a4a47; --text: #eef7f4; --muted: #a9c2bd; --accent: #6fd3bf; --accent-soft: #173a38; --accent-text: #8fe3d1; --secondary: #9cc4e4; }
+  :root[data-theme="light"] { --bg: #fffcf8; --surface: #ffffff; --panel: #e8f7ee; --border: #d3e5de; --text: #0b2b28; --muted: #4a625f; --accent: #0f5d52; --accent-soft: #e8f7ee; --accent-text: #0f5d52; --secondary: #245e68; }
   * { box-sizing: border-box; }
   html, body { min-height: 100%; }
-  body { margin: 0; background: var(--bg); color: var(--text); display: flex; flex-direction: column; font: 14px/1.5 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
+  body { margin: 0; background: var(--bg); color: var(--text); display: flex; flex-direction: column; font: 15px/1.5 var(--font-body); }
   .page { width: 100%; margin: 0; padding: 0; flex: 1 0 auto; display: flex; flex-direction: column; }
   header { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 26px; padding: 18px 28px; flex: none; flex-wrap: wrap; }
-  .site-brand { display: flex; align-items: center; gap: 10px; font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em; color: var(--text); white-space: nowrap; text-decoration: none; }
+  .site-brand { display: flex; align-items: center; gap: 10px; font: 800 21px/1 var(--font-heading); letter-spacing: -.04em; color: var(--text); white-space: nowrap; text-decoration: none; }
   .site-brand .mark { width: 30px; height: 30px; display: inline-grid; place-items: center; background: var(--accent); color: var(--surface); border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); flex: none; }
   .site-brand .mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; flex: none; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
@@ -69,10 +69,77 @@
   @media (prefers-reduced-motion: reduce) { .theme-toggle, button { transition: none; } .theme-toggle:hover, .theme-toggle:active, button:hover { transform: none; } }
   @media (max-width: 700px) { header { padding: 10px 14px; gap: 8px; } nav { display: none; } .tab-select { display: block; flex: 1 1 100%; order: 2; padding: 8px 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; } .site-brand { order: 1; } .top-actions { order: 3; display: grid; grid-template-columns: auto auto 38px; justify-content: end; width: 100%; margin-left: 0; } .status-text { grid-column: 1 / -1; max-width: none; text-align: right; } .content { padding: 20px 14px 36px; } .app-footer { padding: 8px 14px; flex-direction: column; gap: 2px; } .price { margin-left: 0; } }
 </style>
+<style>
+  /* Self-hosted fonts (SIL Open Font License; static/fonts/).  is the path
+     from the page to the site root, filled in by the page's writer. */
+  @font-face { font-family: "Manrope"; font-style: normal; font-display: swap; font-weight: 200 800;
+    src: url("fonts/manrope-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-display: swap; font-weight: 200 800;
+    src: url("fonts/manrope-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Source Sans 3"; font-style: normal; font-display: swap; font-weight: 200 900;
+    src: url("fonts/source-sans-3-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Source Sans 3"; font-style: normal; font-display: swap; font-weight: 200 900;
+    src: url("fonts/source-sans-3-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  :root {
+    --font-heading: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  table, .price, .stat .value { font-variant-numeric: tabular-nums; }
+</style>
+<style>
+  /* Buttons and controls from the Mjerica design (spec 2026-09-28). Loaded after each
+     page's own styles, so these looks win over the page's older ones. */
+  .btn-primary, .btn-secondary, button.primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 48px; padding: 12px 22px; border-radius: 12px; font: 700 16px/1.2 var(--font-body); text-decoration: none;
+    cursor: pointer; transition: background 140ms ease, border-color 140ms ease, color 140ms ease; }
+  .btn-primary, button.primary { border: 1px solid var(--accent); background: var(--accent); color: var(--surface); }
+  .btn-primary:hover, button.primary:hover { border-color: color-mix(in srgb, var(--accent) 80%, #000); background: color-mix(in srgb, var(--accent) 80%, #000); }
+  .btn-secondary { border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent-text); }
+  .btn-secondary:hover { background: var(--accent-soft); }
+  .btn-primary svg, .btn-secondary svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .btn-primary:focus-visible, .btn-secondary:focus-visible, button.primary:focus-visible,
+  .save-product:focus-visible, .reset-btn:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; }
+
+  .save-product { display: inline-flex; flex: none; align-items: center; gap: 10px; min-height: 48px; padding: 10px 18px;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text);
+    font: 600 16px/1.2 var(--font-body); cursor: pointer; box-shadow: 0 1px 2px color-mix(in srgb, var(--text) 8%, transparent); }
+  .save-product svg { width: 20px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .save-product:hover { border-color: var(--accent); }
+  .save-product[aria-pressed="true"] { border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: var(--accent-soft); color: var(--accent-text); }
+  .save-product[aria-pressed="true"] svg { fill: currentColor; }
+  .save-product[aria-pressed="true"] span::after { content: " \2713"; }
+  .save-product:disabled { opacity: .6; cursor: not-allowed; }
+
+  .search { padding: 11px 14px 11px 42px; border: 1px solid var(--border); border-radius: 12px; color: var(--text);
+    background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a8f8b' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E") no-repeat 14px center / 18px 18px;
+    font: 16px/1.3 var(--font-body); }
+  .search::placeholder { color: var(--muted); }
+
+  .chip { padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text);
+    font: 600 14px/1.2 var(--font-body); }
+  .chip:hover { border-color: var(--accent); }
+  .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .chip[aria-pressed="false"] { opacity: .75; }
+
+  .reset-btn { padding: 8px 14px; border: 1.5px solid var(--accent); border-radius: 12px; background: var(--surface);
+    color: var(--accent-text); font: 600 14px/1.2 var(--font-body); cursor: pointer; }
+  .reset-btn:hover { background: var(--accent-soft); }
+</style>
+<style>
+  /* Must come after the components partial: the header's Run all button
+     keeps its compact pre-redesign look here (the shared button.primary
+     sizing is for the page's own big call-to-action buttons, not the
+     header). */
+  header button.primary { min-height: 0; padding: 8px 14px; font-size: 13px; border-radius: 4px; }
+</style>
 </head>
 <body>
 <main class="page">
-  <header><a class="site-brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav aria-label="Categories"><a class="tab" href="../whey/">Whey Protein</a><a class="tab" href="../creatine/">Creatine (Powder)</a><a class="tab" href="../creatine_capsules/">Creatine Capsules</a><a class="tab" href="../creatine_gummies/">Creatine Gummies</a><a class="tab" href="../preworkout/">Pre-Workout</a></nav><select class="tab-select" id="categorySelect" aria-label="Category"><option value="">Choose a category</option></select><div class="top-actions"><a class="header-list-link" href="saved.html">Saved <span id="savedCount"></span></a><span class="status-text" id="statusText"></span><button id="runBtn" hidden>Run</button><button class="primary" id="runAllBtn" hidden>Run all</button><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
+  <header><a class="site-brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.8c-.2-1.5.9-2.5 2.2-2.2.5-1.9 2.3-3 4.1-2.6 1.2-1.1 3.2-.7 3.8 1 1.1.4 1.5 2.1 1 3.8"/><path d="M2.5 10.8h14l-1.6 8a1.5 1.5 0 0 1-1.5 1.2H5.6a1.5 1.5 0 0 1-1.5-1.2z"/><path d="M16.1 11.6h4.6a1.6 1.6 0 0 1 0 3.2h-5.2"/></svg></span>Mjerica</a><nav aria-label="Categories"><a class="tab" href="../whey/">Whey Protein</a><a class="tab" href="../creatine/">Creatine (Powder)</a><a class="tab" href="../creatine_capsules/">Creatine Capsules</a><a class="tab" href="../creatine_gummies/">Creatine Gummies</a><a class="tab" href="../preworkout/">Pre-Workout</a></nav><select class="tab-select" id="categorySelect" aria-label="Category"><option value="">Choose a category</option></select><div class="top-actions"><a class="header-list-link" href="saved.html">Saved <span id="savedCount"></span></a><span class="status-text" id="statusText"></span><button id="runBtn" hidden>Run</button><button class="primary" id="runAllBtn" hidden>Run all</button><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
   <div class="content">
   <h1>Saved products</h1>
   <p class="intro">Saved products and price changes you’re watching, together in one list.</p>
@@ -155,9 +222,9 @@
   .saved-dialog { width: min(560px, calc(100% - 28px)); max-height: min(760px, calc(100dvh - 40px)); padding: 0; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 24px 80px #0005; }
   .saved-dialog::backdrop { background: #07131cb3; backdrop-filter: blur(3px); }
   .saved-dialog .saved-dialog-head { display: flex; align-items: center; gap: 12px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
-  .saved-dialog h2 { font: 750 20px/1.3 -apple-system,"Segoe UI",sans-serif; margin: 0; letter-spacing: -.025em; }
+  .saved-dialog h2 { font: 700 20px/1.3 var(--font-heading); margin: 0; letter-spacing: -.025em; }
   .saved-dialog-mark { width: 24px; height: 24px; color: var(--accent); fill: none; stroke: currentColor; stroke-width: 1.8; }
-  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 -apple-system,"Segoe UI",sans-serif; background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
+  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 var(--font-body); background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
   .saved-dialog button:hover, .saved-item-link:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text, var(--text)); }
   .saved-dialog button:focus-visible, .saved-item-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
   .saved-dialog .saved-dialog-close { margin-left: auto; padding: 0; width: 36px; font-size: 25px; border-color: transparent; }
@@ -180,6 +247,18 @@
   .saved-page-list .saved-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 12px; }
   .saved-page-list button { min-height: 36px; }
   @media(max-width: 480px) { .saved-dialog .saved-dialog-head { padding: 16px; } .saved-dialog-body { padding: 0 16px; } .saved-dialog-foot { padding: 12px 16px; } .saved-item { grid-template-columns: 54px minmax(0,1fr); column-gap: 10px; } .saved-item-image { width: 54px; height: 66px; } }
+  .saved-toast { position: fixed; right: 20px; bottom: 20px; z-index: 40; display: flex; align-items: flex-start; gap: 14px; max-width: min(420px, calc(100vw - 40px));
+    padding: 16px 18px; border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 14px; background: var(--accent-soft); color: var(--text);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--text) 14%, transparent); }
+  .saved-toast[hidden] { display: none; }
+  .saved-toast-icon { flex: none; width: 36px; height: 36px; }
+  .saved-toast-icon circle { fill: var(--accent); }
+  .saved-toast-icon path { fill: none; stroke: var(--surface); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .saved-toast-text { display: grid; gap: 2px; }
+  .saved-toast-text strong { font: 700 17px/1.3 var(--font-heading); }
+  .saved-toast-view { justify-self: start; margin-top: 6px; padding: 0; border: 0; background: none; color: var(--accent-text); font: 700 15px/1.3 var(--font-body); text-decoration: underline; cursor: pointer; }
+  .saved-toast-close { flex: none; margin-left: auto; padding: 0 4px; border: 0; background: none; color: var(--text); font-size: 22px; line-height: 1; cursor: pointer; }
+  .saved-toast-view:focus-visible, .saved-toast-close:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 2px; }
 </style>
 <dialog class="saved-dialog" id="savedDialog" aria-labelledby="savedDialogTitle">
   <div class="saved-dialog-head"><svg class="saved-dialog-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><h2 id="savedDialogTitle">Saved products</h2><span class="saved-dialog-count" id="savedDialogCount">0</span><button class="saved-dialog-close" type="button" aria-label="Close saved products" autofocus>×</button></div>
@@ -187,6 +266,11 @@
   <div class="saved-dialog-foot"><span class="saved-dialog-note">Kept in this browser. Price changes appear after prices are refreshed.</span><button type="button" id="savedClearAll">Clear all</button></div>
 </dialog>
 <div id="savedAnnouncement" role="status" aria-live="polite" class="saved-dialog-note"></div>
+<div class="saved-toast" id="savedToast" hidden>
+  <svg class="saved-toast-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>
+  <div class="saved-toast-text"><strong>Product saved</strong><span>We'll show how its price changes here.</span><button type="button" class="saved-toast-view" id="savedToastView">View saved</button></div>
+  <button type="button" class="saved-toast-close" id="savedToastClose" aria-label="Close">&times;</button>
+</div>
 <script>
 (function (root) {
   "use strict";
@@ -260,6 +344,23 @@
   const pageList = document.getElementById("saved-list");
   const announcement = document.getElementById("savedAnnouncement");
   announcement.style.cssText = "position:fixed;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)";
+  const toast = document.getElementById("savedToast");
+  let toastTimer, toastHover = false, toastFocus = false;
+  function hideToast() { clearTimeout(toastTimer); toast.hidden = true; }
+  function armToast() { clearTimeout(toastTimer); if (!toastHover && !toastFocus) toastTimer = setTimeout(hideToast, 5000); }
+  function showToast() { toast.hidden = false; toastHover = false; toastFocus = false; armToast(); }
+  document.getElementById("savedToastClose").addEventListener("click", hideToast);
+  document.getElementById("savedToastView").addEventListener("click", () => { hideToast(); open(); });
+  // Pause the auto-hide while the toast has hover or keyboard focus (WCAG
+  // 2.2.1): otherwise a control the user is about to use could vanish
+  // under them.
+  toast.addEventListener("mouseenter", () => { toastHover = true; clearTimeout(toastTimer); });
+  toast.addEventListener("mouseleave", () => { toastHover = false; armToast(); });
+  toast.addEventListener("focusin", () => { toastFocus = true; clearTimeout(toastTimer); });
+  toast.addEventListener("focusout", (event) => {
+    if (toast.contains(event.relatedTarget)) return;
+    toastFocus = false; armToast();
+  });
   let storage;
   try { storage = window.localStorage; } catch (_) { storage = {getItem:()=>null,setItem:()=>{throw Error("Storage unavailable");}}; }
   const state = window.createSavedStore(storage);
@@ -374,7 +475,7 @@
       const existing=state.read().find(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
       if(mutate(()=>existing?state.remove(existing.offer_id):state.save(offer))) {
         announcement.textContent=existing?"Removed from saved":"Product saved";
-        if(!existing) open();
+        if(!existing) showToast(); else hideToast();
       }
       return;
     }

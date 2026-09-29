@@ -495,23 +495,6 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225"
     },
     {
-      "id": "catalog:f34ec1a0f68e9931",
-      "offer_id": "catalog:f34ec1a0f68e9931",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime",
-      "detail_slug": "polleo_sport_creatine_direct_30_x_3_5_g_0_105kg",
-      "package_key": "kg:0.105",
-      "flavour": "Lemon Lime",
-      "price_eur": 11.99,
-      "unit_price": 114.19,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Creatine Direct, 30 x 3,5 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225"
-    },
-    {
       "id": "catalog:5e8d9ffc14783e50",
       "offer_id": "catalog:5e8d9ffc14783e50",
       "store": "Polleo Sport",
@@ -527,6 +510,23 @@
       "note": "",
       "name": "Creatine Powder, 317 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_93srv_fr_6058184_web_on00222_1.jpg?size=225"
+    },
+    {
+      "id": "catalog:f34ec1a0f68e9931",
+      "offer_id": "catalog:f34ec1a0f68e9931",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime",
+      "detail_slug": "polleo_sport_creatine_direct_30_x_3_5_g_0_105kg",
+      "package_key": "kg:0.105",
+      "flavour": "Lemon Lime",
+      "price_eur": 11.99,
+      "unit_price": 114.19,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Creatine Direct, 30 x 3,5 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225"
     },
     {
       "id": "catalog:4b1d6485d8233bc6",
@@ -546,23 +546,6 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_booty_creatine_250_lemonade.jpeg?size=225"
     },
     {
-      "id": "catalog:0d4cc0ae2a6df311",
-      "offer_id": "catalog:0d4cc0ae2a6df311",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-500-g",
-      "detail_slug": "polleo_sport_elite_creatine_500_g_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": "",
-      "price_eur": 49.99,
-      "unit_price": 99.98,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Elite Creatine, 500 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225"
-    },
-    {
       "id": "catalog:3b1d292e66ffeb95",
       "offer_id": "catalog:3b1d292e66ffeb95",
       "store": "Polleo Sport",
@@ -578,6 +561,23 @@
       "note": "",
       "name": "Elite Creatine, 250 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225"
+    },
+    {
+      "id": "catalog:0d4cc0ae2a6df311",
+      "offer_id": "catalog:0d4cc0ae2a6df311",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-500-g",
+      "detail_slug": "polleo_sport_elite_creatine_500_g_0_5kg",
+      "package_key": "kg:0.5",
+      "flavour": "",
+      "price_eur": 49.99,
+      "unit_price": 99.98,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Elite Creatine, 500 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225"
     },
     {
       "id": "catalog:33a56170275ec88e",
@@ -1533,7 +1533,7 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-09-28T09:06:58.819971+00:00",
+  "checked_at": "2026-09-29T09:47:59.168605+00:00",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -1586,21 +1586,6 @@
           "detail_slug": "",
           "package_key": "kg:0.25",
           "flavour": "mango - marakuja",
-          "price_eur": 6.55,
-          "unit_price": 26.2,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
-        {
-          "id": "catalog:7c1d19db829d639c",
-          "offer_id": "catalog:7c1d19db829d639c",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.25",
-          "flavour": "zelena jabuka",
           "price_eur": 6.55,
           "unit_price": 26.2,
           "unit_label": "€/kg",
@@ -2623,9 +2608,9 @@
     },
     {
       "id": "catalog:507b53d3ce915e54",
-      "name": "Elite Creatine, 500 g",
+      "name": "Elite Creatine, 250 g",
       "category": "creatine",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225",
       "packages": [
         "kg:0.25",
         "kg:0.5"

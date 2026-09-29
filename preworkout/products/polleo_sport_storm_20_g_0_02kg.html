@@ -7,21 +7,12 @@
 <script>if(window.self!==window.top&&location.pathname.startsWith("/report/"))document.documentElement.classList.add("embedded-report");</script>
 <title>Storm, 20 g &middot; Mjerica</title>
 <style>
-  :root { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --secondary: #245e68; --secondary-soft: #e0eff0; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --secondary: #8fb9e8; --secondary-soft: #1c3048; } }
-  :root[data-theme="dark"] { --bg: #0b1220; --surface: #111c2d; --panel: #17263a; --border: #2a3b52; --text: #eef5ff; --muted: #a8b7cc; --accent: #58c7b6; --accent-soft: #173f42; --secondary: #8fb9e8; --secondary-soft: #1c3048; }
-  :root[data-theme="light"] { --bg: #f5f8f7; --surface: #ffffff; --panel: #eef4f2; --border: #d3e2de; --text: #173d40; --muted: #4f6969; --accent: #16766f; --accent-soft: #dcefeb; --secondary: #245e68; --secondary-soft: #e0eff0; }
+  :root { --bg: #fffcf8; --surface: #ffffff; --panel: #e8f7ee; --border: #d3e5de; --text: #0b2b28; --muted: #4a625f; --accent: #0f5d52; --accent-soft: #e8f7ee; --accent-text: #0f5d52; --secondary: #245e68; --secondary-soft: #e3f0ef; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0b1f22; --surface: #10292c; --panel: #173a38; --border: #2a4a47; --text: #eef7f4; --muted: #a9c2bd; --accent: #6fd3bf; --accent-soft: #173a38; --accent-text: #8fe3d1; --secondary: #9cc4e4; --secondary-soft: #1c3a44; } }
+  :root[data-theme="dark"] { --bg: #0b1f22; --surface: #10292c; --panel: #173a38; --border: #2a4a47; --text: #eef7f4; --muted: #a9c2bd; --accent: #6fd3bf; --accent-soft: #173a38; --accent-text: #8fe3d1; --secondary: #9cc4e4; --secondary-soft: #1c3a44; }
+  :root[data-theme="light"] { --bg: #fffcf8; --surface: #ffffff; --panel: #e8f7ee; --border: #d3e5de; --text: #0b2b28; --muted: #4a625f; --accent: #0f5d52; --accent-soft: #e8f7ee; --accent-text: #0f5d52; --secondary: #245e68; --secondary-soft: #e3f0ef; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
-  .theme-toggle { width: 38px; height: 38px; display: inline-grid; place-items: center; flex: none; padding: 0; border: 1px solid var(--accent); border-radius: 10px 10px 10px 3px; background: var(--accent); color: var(--surface); cursor: pointer; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 22%, transparent); transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease; }
-  .theme-toggle:hover { border-color: var(--accent); background: var(--accent); color: var(--surface); filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 15px color-mix(in srgb, var(--accent) 32%, transparent); }
-  .theme-toggle:active { transform: translateY(0); filter: brightness(.98); }
-  .theme-toggle:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
-  .theme-toggle svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-  .theme-toggle .moon-icon { display: none; }
-  :root[data-theme="dark"] .theme-toggle .sun-icon { display: none; }
-  :root[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .sun-icon { display: none; } :root:not([data-theme="light"]) .theme-toggle .moon-icon { display: block; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 var(--font-body); }
   :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
   .page { max-width: 1120px; margin: 0 auto; padding: 28px 28px 72px; }
   .breadcrumb { display: flex; align-items: center; gap: 9px; margin-bottom: 28px; color: var(--muted); font-size: 13px; }
@@ -35,16 +26,16 @@
   .hero-empty { width: 100%; height: 300px; background: linear-gradient(135deg, var(--panel), var(--surface)); }
   .hero-body { min-width: 0; }
   .eyebrow { margin: 0 0 9px; color: var(--secondary); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
-  h1 { margin: 0 0 10px; font: 800 clamp(30px, 4vw, 52px)/1.03 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; letter-spacing: -.045em; }
+  h1 { margin: 0 0 10px; font: 800 clamp(30px, 4vw, 52px)/1.03 var(--font-heading); letter-spacing: -.045em; }
   .meta { color: var(--muted); margin: 0 0 24px; }
   .price-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
-  .price { font: 850 clamp(30px, 4vw, 42px)/1 -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; letter-spacing: -.04em; }
+  .price { font: 700 clamp(30px, 4vw, 44px)/1 var(--font-body); letter-spacing: -.04em; }
   .price-flavour { color: var(--muted); font-size: 14px; }
   .buy-link { display: inline-flex; align-items: center; justify-content: center; min-height: 45px; padding: 10px 18px; background: var(--accent); color: var(--surface); text-decoration: none; font-weight: 750; border-radius: 5px; }
   .buy-link:hover { background: var(--text); }
   .buy-link:focus-visible, .back:focus-visible, .flavour-chip:focus-visible, .package-chip:focus-visible, .store-link:focus-visible, .see-also-link:focus-visible { outline: 3px solid var(--secondary); outline-offset: 3px; }
   .card { background: var(--surface); border: 1px solid var(--border); padding: clamp(20px, 3vw, 30px); }
-  .card h2 { margin: 0 0 16px; font: 750 18px/1.2 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -.02em; }
+  .card h2 { margin: 0 0 16px; font: 700 18px/1.2 var(--font-heading); letter-spacing: -.02em; }
   .description { line-height: 1.7; max-width: 75ch; }
   .description p, .description ul, .description ol { margin: 0 0 1em; }
   .description h2, .description h3, .description h4 { line-height: 1.3; margin: 1.3em 0 .6em; }
@@ -63,16 +54,10 @@
   .store-link { color: var(--secondary); font-weight: 750; white-space: nowrap; }
   .see-also-link:hover { background: var(--secondary-soft); }
   .site-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; padding: 15px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  .site-footer .how-link { color: var(--accent-text); font-weight: 700; }
   @media (max-width: 720px) { .page { padding-left: 18px; padding-right: 18px; } .product-hero { grid-template-columns: 1fr; gap: 24px; } .hero-media { min-height: 260px; } .hero-img { height: 250px; } .hero-empty { height: 210px; } }
-  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } .theme-toggle:hover, .theme-toggle:active { transform: none; } }
-
-  /* Product pages use the richer navy direction from the Mjerica concept. */
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #10263a; --surface: #122b40; --panel: #19364b; --border: #304b60; --text: #eaf2f4; --muted: #a1b3c2; --accent: #35b8aa; --accent-soft: #183f49; --accent-text: #8ce0d4; --secondary: #9ab0c1; --secondary-soft: #1a3448; }
-  }
-  :root[data-theme="dark"] { --bg: #10263a; --surface: #122b40; --panel: #19364b; --border: #304b60; --text: #eaf2f4; --muted: #a1b3c2; --accent: #35b8aa; --accent-soft: #183f49; --accent-text: #8ce0d4; --secondary: #9ab0c1; --secondary-soft: #1a3448; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
   html.embedded-report .site-header { display: none; }
-  .save-toast { position: fixed; right: 20px; bottom: 20px; z-index: 20; padding: 11px 16px; border: 1px solid var(--accent); border-radius: 9px; color: var(--surface); background: var(--accent); box-shadow: 0 8px 24px #0003; font-weight: 700; }
   .page { max-width: 1480px; padding: 25px 34px 48px; }
   .product-shell { gap: 24px; }
   .breadcrumb { gap: 12px; margin-bottom: 20px; font-size: 14px; }
@@ -85,11 +70,6 @@
   .eyebrow { margin-bottom: 8px; color: var(--muted); font-size: 15px; font-weight: 500; letter-spacing: 0; }
   .product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 22px; }
   h1 { margin: 0 0 12px; font-size: clamp(30px, 3vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
-  .save-product { display: inline-flex; flex: none; align-items: center; gap: 9px; min-height: 44px; margin-top: 2px; padding: 9px 15px; border: 1px solid var(--border); border-radius: 10px 10px 10px 3px; background: var(--surface); color: var(--text); font: inherit; font-weight: 650; cursor: pointer; transition: background 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease; }
-  .save-product svg { width: 19px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .save-product:hover { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); transform: translateY(-1px); }
-  .save-product[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
-  .save-product[aria-pressed="true"] svg { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .review-summary { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 9px; width: fit-content; margin: 0 0 20px; color: var(--muted); text-decoration: none; }
   .review-summary:hover { color: var(--text); }
   .review-stars { color: var(--accent); letter-spacing: 1px; font-size: 18px; line-height: 1; }
@@ -145,9 +125,76 @@
   .meta, .review-source, .offer-count, .offer-footnote, .store-detail { color: var(--text); opacity: .82; }
   .offer-footnote, .related-unit-price { font-size: 13px; }
   .site-footer { margin-top: 6px; padding-top: 12px; }
-  @media (max-width: 850px) { .page { padding: 20px 22px 40px; } .product-hero { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 26px; } .hero-media { min-height: 340px; } .hero-img, .hero-empty { height: 320px; } .product-title-row { flex-direction: column-reverse; gap: 10px; } .save-product { min-height: 40px; } }
-  @media (max-width: 620px) { .page { padding: 17px 16px 32px; } .breadcrumb { margin-bottom: 14px; } .product-hero { grid-template-columns: 1fr; gap: 22px; } .hero-media { min-height: 270px; padding: 18px; } .hero-img, .hero-empty { height: 250px; } .hero-body { padding: 0; } .product-title-row { flex-direction: row; align-items: flex-start; } h1 { font-size: 31px; } .save-product { width: 44px; min-width: 44px; padding: 0; justify-content: center; font-size: 0; } .save-product svg { width: 20px; } .review-summary { margin-bottom: 15px; } .price-row { margin-bottom: 20px; } .hero-options { gap: 18px; } .compare-heading { align-items: flex-start; flex-direction: column; gap: 3px; } .related-heading h2 { font-size: 21px; } .related-product-grid { grid-template-columns: 1fr; } .related-product-card { grid-template-columns: 72px minmax(0, 1fr) 16px; gap: 12px; } .related-product-image { width: 72px; height: 78px; } .offer-table { min-width: 0; } .offer-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .offer-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 8px 10px; border-bottom: 1px solid var(--border); } .offer-table tbody td { padding: 4px 2px; border: 0; } .offer-table tbody td:first-child { grid-column: 1; grid-row: 1; } .offer-table tbody td:nth-child(2) { grid-column: 1; grid-row: 2; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; } .offer-table tbody td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(5) { grid-column: 1 / -1; justify-content: flex-end; padding-top: 8px; } .offer-action-cell { text-align: right; } .store-link { min-width: 0; } }
+  @media (max-width: 850px) { .page { padding: 20px 22px 40px; } .product-hero { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 26px; } .hero-media { min-height: 340px; } .hero-img, .hero-empty { height: 320px; } .product-title-row { flex-direction: column-reverse; gap: 10px; } }
+  @media (max-width: 620px) { .page { padding: 17px 16px 32px; } .breadcrumb { margin-bottom: 14px; } .product-hero { grid-template-columns: 1fr; gap: 22px; } .hero-media { min-height: 270px; padding: 18px; } .hero-img, .hero-empty { height: 250px; } .hero-body { padding: 0; } .product-title-row { flex-direction: row; align-items: flex-start; } h1 { font-size: 31px; } .review-summary { margin-bottom: 15px; } .price-row { margin-bottom: 20px; } .hero-options { gap: 18px; } .compare-heading { align-items: flex-start; flex-direction: column; gap: 3px; } .related-heading h2 { font-size: 21px; } .related-product-grid { grid-template-columns: 1fr; } .related-product-card { grid-template-columns: 72px minmax(0, 1fr) 16px; gap: 12px; } .related-product-image { width: 72px; height: 78px; } .offer-table { min-width: 0; } .offer-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .offer-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 8px 10px; border-bottom: 1px solid var(--border); } .offer-table tbody td { padding: 4px 2px; border: 0; } .offer-table tbody td:first-child { grid-column: 1; grid-row: 1; } .offer-table tbody td:nth-child(2) { grid-column: 1; grid-row: 2; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; } .offer-table tbody td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; color: var(--text); font-size: 13px; opacity: .82; } .offer-table tbody td:nth-child(5) { grid-column: 1 / -1; justify-content: flex-end; padding-top: 8px; } .offer-action-cell { text-align: right; } .store-link { min-width: 0; } }
   @media (prefers-reduced-motion: reduce) { .save-product { transition: none; } .save-product:hover { transform: none; } }
+</style>
+<style>
+  /* Self-hosted fonts (SIL Open Font License; static/fonts/). ../../ is the path
+     from the page to the site root, filled in by the page's writer. */
+  @font-face { font-family: "Manrope"; font-style: normal; font-display: swap; font-weight: 200 800;
+    src: url("../../fonts/manrope-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-display: swap; font-weight: 200 800;
+    src: url("../../fonts/manrope-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Source Sans 3"; font-style: normal; font-display: swap; font-weight: 200 900;
+    src: url("../../fonts/source-sans-3-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Source Sans 3"; font-style: normal; font-display: swap; font-weight: 200 900;
+    src: url("../../fonts/source-sans-3-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  :root {
+    --font-heading: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  table, .price, .stat .value { font-variant-numeric: tabular-nums; }
+</style>
+<style>
+  /* Buttons and controls from the Mjerica design (spec 2026-09-28). Loaded after each
+     page's own styles, so these looks win over the page's older ones. */
+  .btn-primary, .btn-secondary, button.primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 48px; padding: 12px 22px; border-radius: 12px; font: 700 16px/1.2 var(--font-body); text-decoration: none;
+    cursor: pointer; transition: background 140ms ease, border-color 140ms ease, color 140ms ease; }
+  .btn-primary, button.primary { border: 1px solid var(--accent); background: var(--accent); color: var(--surface); }
+  .btn-primary:hover, button.primary:hover { border-color: color-mix(in srgb, var(--accent) 80%, #000); background: color-mix(in srgb, var(--accent) 80%, #000); }
+  .btn-secondary { border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent-text); }
+  .btn-secondary:hover { background: var(--accent-soft); }
+  .btn-primary svg, .btn-secondary svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .btn-primary:focus-visible, .btn-secondary:focus-visible, button.primary:focus-visible,
+  .save-product:focus-visible, .reset-btn:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; }
+
+  .save-product { display: inline-flex; flex: none; align-items: center; gap: 10px; min-height: 48px; padding: 10px 18px;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text);
+    font: 600 16px/1.2 var(--font-body); cursor: pointer; box-shadow: 0 1px 2px color-mix(in srgb, var(--text) 8%, transparent); }
+  .save-product svg { width: 20px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .save-product:hover { border-color: var(--accent); }
+  .save-product[aria-pressed="true"] { border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: var(--accent-soft); color: var(--accent-text); }
+  .save-product[aria-pressed="true"] svg { fill: currentColor; }
+  .save-product[aria-pressed="true"] span::after { content: " \2713"; }
+  .save-product:disabled { opacity: .6; cursor: not-allowed; }
+
+  .search { padding: 11px 14px 11px 42px; border: 1px solid var(--border); border-radius: 12px; color: var(--text);
+    background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a8f8b' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E") no-repeat 14px center / 18px 18px;
+    font: 16px/1.3 var(--font-body); }
+  .search::placeholder { color: var(--muted); }
+
+  .chip { padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text);
+    font: 600 14px/1.2 var(--font-body); }
+  .chip:hover { border-color: var(--accent); }
+  .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .chip[aria-pressed="false"] { opacity: .75; }
+
+  .reset-btn { padding: 8px 14px; border: 1.5px solid var(--accent); border-radius: 12px; background: var(--surface);
+    color: var(--accent-text); font: 600 14px/1.2 var(--font-body); cursor: pointer; }
+  .reset-btn:hover { background: var(--accent-soft); }
+</style>
+<style>
+  /* Must come after the components partial: these override its unconditional
+     .save-product sizing so the icon-only phone button (design spec) wins the
+     cascade despite equal selector specificity. */
+  @media (max-width: 850px) { .save-product { min-height: 40px; } }
+  @media (max-width: 620px) { .save-product { width: 44px; min-width: 44px; padding: 0; justify-content: center; font-size: 0; } .save-product svg { width: 20px; } }
 </style>
 </head>
 <body>
@@ -156,7 +203,7 @@
   .mj-header { border-bottom: 1px solid var(--border); background: var(--surface); }
   .mj-header .mj-header-inner { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; }
   .mj-header .site-brand { display: inline-flex; align-items: center; gap: 10px; margin-right: auto; color: var(--text); text-decoration: none;
-                           font: 800 21px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: -.04em; }
+                           font: 800 21px/1 var(--font-heading); letter-spacing: -.04em; }
   .mj-header .brand-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; flex: none; color: var(--surface); background: var(--accent);
                            border-radius: 9px 9px 9px 3px; box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 24%, transparent); }
   .mj-header .brand-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
@@ -164,20 +211,35 @@
   .mj-header .site-nav a { padding: 6px 0; color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
   .mj-header .site-nav a:hover { color: var(--text); }
   .mj-header .site-nav a.active { color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); }
-  .mj-header .saved-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px 10px 10px 3px;
-                           color: var(--text); font-size: 14px; font-weight: 700; text-decoration: none; }
-  .mj-header .saved-link:hover { border-color: var(--accent); }
+  .mj-header .saved-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 12px;
+                           background: var(--surface); color: var(--text); font: 600 15px/1 var(--font-body); text-decoration: none; }
+  .mj-header .saved-link:hover { border-color: var(--accent); background: var(--accent-soft); }
   .mj-header .saved-link svg { width: 16px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .mj-header .saved-count { min-width: 20px; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 12px; text-align: center; }
-  .mj-header .saved-count:empty { display: none; }
+  .mj-header #saved-count { display: inline-block; box-sizing: border-box; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px;
+                            background: var(--accent); color: var(--surface); font: 700 12px/22px var(--font-body); text-align: center; }
+  .mj-header #saved-count:empty { display: none; }
   .mj-header .site-nav a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
   .mj-header .saved-link:focus-visible, .mj-header .site-brand:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .mj-header .theme-switch { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 4px; border: 0; border-radius: 999px;
+                             background: none; color: var(--muted); cursor: pointer; }
+  .mj-header .theme-switch svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .mj-header .theme-switch[aria-checked="true"] .moon-icon, .mj-header .theme-switch[aria-checked="false"] .sun-icon { color: var(--accent-text); }
+  .mj-header .switch-track { position: relative; flex: none; width: 44px; height: 24px; border-radius: 999px; background: var(--accent); }
+  .mj-header .switch-knob { position: absolute; top: 3px; left: 23px; width: 18px; height: 18px; border-radius: 50%; background: var(--surface); transition: left 160ms ease; }
+  .mj-header .theme-switch[aria-checked="true"] .switch-knob { left: 3px; }
+  .mj-header .theme-switch:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .mj-header .switch-knob { transition: none; } }
   @media (max-width: 760px) {
-    .mj-header .mj-header-inner { padding: 12px 14px; }
+    .mj-header .mj-header-inner { padding: 12px 14px; gap: 10px 12px; }
     .mj-header .site-nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; gap: 16px; }
+    .mj-header .theme-switch { gap: 6px; }
+  }
+  @media (max-width: 420px) {
+    .mj-header .saved-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   }
 </style>
-<header class="site-header mj-header"><div class="mj-header-inner"><a class="site-brand" href="../../"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h12l-1.5 13h-9L4 6Z"/><path d="M16 9h3a2 2 0 0 1 0 4h-3M7 10h6M7.5 13h5"/></svg></span>Mjerica</a><nav class="site-nav" aria-label="Categories"><a href="../../whey/">Whey Protein</a><a href="../../creatine/">Creatine (Powder)</a><a href="../../creatine_capsules/">Creatine Capsules</a><a href="../../creatine_gummies/">Creatine Gummies</a><a class="active" aria-current="page" href="../../preworkout/">Pre-Workout</a></nav><a class="saved-link" href="../../saved.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span><span class="saved-count" id="saved-count"></span></a><button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg></button></div></header>
+<header class="site-header mj-header"><div class="mj-header-inner"><a class="site-brand" href="../../"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.8c-.2-1.5.9-2.5 2.2-2.2.5-1.9 2.3-3 4.1-2.6 1.2-1.1 3.2-.7 3.8 1 1.1.4 1.5 2.1 1 3.8"/><path d="M2.5 10.8h14l-1.6 8a1.5 1.5 0 0 1-1.5 1.2H5.6a1.5 1.5 0 0 1-1.5-1.2z"/><path d="M16.1 11.6h4.6a1.6 1.6 0 0 1 0 3.2h-5.2"/></svg></span>Mjerica</a><nav class="site-nav" aria-label="Categories"><a href="../../whey/">Whey</a><a href="../../creatine/">Creatine</a><a class="active" aria-current="page" href="../../preworkout/">Pre-workout</a></nav><a class="saved-link" href="../../saved.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span class="saved-label">Saved</span><span class="saved-count" id="saved-count"></span></a><button class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Dark theme"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.7 8.7 0 1 0 20.4 15.3Z"/></svg><span class="switch-track" aria-hidden="true"><span class="switch-knob"></span></span><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button></div></header>
+<script>(function(){const root=document.documentElement,button=document.querySelector(".mj-header .theme-switch"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>button.setAttribute("aria-checked",current()==="dark"?"true":"false");button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});media.addEventListener("change",sync);sync();})();</script>
 <main class="page product-shell">
   <div class="breadcrumb"><a class="back" href="../">&larr; Back to Pre-Workout</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">Storm, 20 g</span></div>
   <section class="product-hero" aria-labelledby="product-title">
@@ -185,11 +247,9 @@
     <div class="hero-body"><p class="eyebrow">Polleo Sport</p><div class="product-title-row"><h1 id="product-title">Storm, 20 g</h1><button class="save-product" type="button" aria-pressed="false" data-save-offer="{&quot;id&quot;: &quot;catalog:8d6a62b6098cbf9a&quot;, &quot;offer_id&quot;: &quot;catalog:8d6a62b6098cbf9a&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/pre-workout/storm-20-g&quot;, &quot;detail_slug&quot;: &quot;&quot;, &quot;package_key&quot;: &quot;kg:0.02&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 1.99, &quot;unit_price&quot;: 99.5, &quot;unit_label&quot;: &quot;€/kg&quot;, &quot;price_kind&quot;: &quot;exact&quot;, &quot;price_scope&quot;: &quot;listing&quot;, &quot;note&quot;: &quot;&quot;, &quot;name&quot;: &quot;Storm, 20 g&quot;, &quot;category&quot;: &quot;preworkout&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/me-first/me_first_storm_20g_lemon_lime.png?size=225&quot;, &quot;detail_url&quot;: &quot;polleo_sport_storm_20_g_0_02kg.html&quot;}" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save product</span></button></div><a class="review-summary" href="https://polleosport.hr/sportska-prehrana/pre-workout/storm-20-g" target="_blank" rel="noopener" aria-label="4.3 out of 5 from 3 reviews at Polleo Sport"><span class="review-stars" aria-hidden="true">★★★★☆</span><span class="review-score">4.3</span><span class="review-source">3 reviews at Polleo Sport</span></a><p class="meta">Polleo Sport &middot; 20 g</p><div class="price-row"><span class="price">1.99 &euro;</span><span class="price-flavour"></span><span class="price-unit">99.50 &euro; / per kg</span></div><div class="hero-options"><div class="option-group package-selector"><h2>Package size</h2><div class="package-options"><span class="package-chip current">20 g</span></div></div><div class="option-group"><h2>Flavor</h2><p class="meta flavor-unverified">Flavor information not verified. Check the store for available options.</p><p class="meta">Available flavors at this store.</p></div></div></div>
   </section>
   <section class="store-comparison" aria-labelledby="compare-title"><div class="compare-heading"><h2 id="compare-title">Store offer</h2><span class="offer-count">1 offers</span></div><div class="table-scroll"><table class="offer-table"><thead><tr><th>Store</th><th>Flavor</th><th>Price</th><th>Per kg</th><th><span class="visually-hidden">Offer</span></th></tr></thead><tbody><tr class="lowest-price"><td><span class="store-name">Polleo Sport</span><small class=lowest-label>Lowest price</small></td><td>Any flavor</td><td class="store-price">1.99 &euro;</td><td class="store-per-unit">99.50 &euro;</td><td class="offer-action-cell"><a class="store-link" href="https://polleosport.hr/sportska-prehrana/pre-workout/storm-20-g" target="_blank" rel="noopener">Go to page</a></td></tr></tbody></table></div><p class="offer-footnote">Product prices only. Delivery costs may differ.</p></section>
-  <section class="related-products" aria-labelledby="related-title"><div class="related-heading"><div><p class="section-kicker">MORE TO COMPARE</p><h2 id="related-title">You might also like</h2></div></div><div class="related-product-grid"><a class="related-product-card" href="polleo_sport_n_o_ko_pre_workout_400_g_0_4kg.html"><img class="related-product-image" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleosport_noko_400_cola.jpg?size=225" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>N.O.KO Pre-Workout, 400 g</strong><span class="related-store">Best listed at Polleo Sport</span><span class="related-product-price">31.99 &euro;</span><span class=related-unit-price>79.97 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="myprotein_origin_pre_workout_0_6kg.html"><img class="related-product-image" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12941037-2015132581334232.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Origin Pre-Workout</strong><span class="related-store">Best listed at MyProtein</span><span class="related-product-price">26.12 &euro;</span><span class=related-unit-price>43.54 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gymbeam_hr_thor_gymbeam_0_21kg.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Thor - GymBeam</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">10.15 &euro;</span><span class=related-unit-price>48.33 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="polleo_sport_platinum_pump_pre_workout_380_g_0_38kg.html"><img class="related-product-image" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/_platinum_pump_pre-workout_-_380g_-_lemon-lime_1_(1).png?size=225" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Platinum Pump Pre-Workout, 380 g</strong><span class="related-store">Best listed at Polleo Sport</span><span class="related-product-price">49.99 &euro;</span><span class=related-unit-price>131.55 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a></div></section>
+  <section class="related-products" aria-labelledby="related-title"><div class="related-heading"><div><p class="section-kicker">MORE TO COMPARE</p><h2 id="related-title">You might also like</h2></div></div><div class="related-product-grid"><a class="related-product-card" href="gymbeam_hr_total_rush_2_0_weider_0_38kg.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/w/e/weider_31782_total_rush_2.0_375g_cranberry_glutapep_1_.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Total Rush 2.0 - Weider</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">35.95 &euro;</span><span class=related-unit-price>95.87 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gymbeam_hr_thor_stim_free_gymbeam_0_42kg.html"><img class="related-product-image" src="https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Thor Stim-Free - GymBeam</strong><span class="related-store">Best listed at GymBeam HR</span><span class="related-product-price">19.95 &euro;</span><span class=related-unit-price>47.50 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="myprotein_impact_pre_workout_deadpool_0_44kg.html"><img class="related-product-image" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771600-6885192173004019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Impact Pre-Workout – Deadpool</strong><span class="related-store">Best listed at MyProtein</span><span class="related-product-price">45.99 &euro;</span><span class=related-unit-price>104.52 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a><a class="related-product-card" href="gaz_nutrition_z_konzept_energy_booster_0_525kg.html"><img class="related-product-image" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-zkonzept-energy-booster-v01-1.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="related-product-copy"><strong>Z-Konzept Energy Booster</strong><span class="related-store">Best listed at GAZ Nutrition</span><span class="related-product-price">29.00 &euro;</span><span class=related-unit-price>55.24 &euro; per kg</span></span><span class="related-card-arrow" aria-hidden="true">↗</span></a></div></section>
 </main>
-<footer class="page site-footer"><span>Offers and prices may change. Check the retailer for the final price and availability.</span><span>Mjerica · Supplement price comparison</span></footer>
-<div id="save-toast" class="save-toast" role="status" aria-live="polite" hidden></div>
-<script>(function(){const root=document.documentElement,button=document.querySelector(".theme-toggle"),media=matchMedia("(prefers-color-scheme: dark)");if(!button)return;const current=()=>root.dataset.theme||(media.matches?"dark":"light");const sync=()=>{const dark=current()==="dark";button.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");button.title=dark?"Switch to light theme":"Switch to dark theme";};button.addEventListener("click",()=>{const next=current()==="dark"?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("mjerica:theme",next);if(window.parent!==window)window.parent.postMessage({type:"mjerica-theme",theme:next},location.origin);}catch(_){}sync();});sync();})();</script>
+<footer class="page site-footer"><span>Offers and prices may change. Check the retailer for the final price and availability.</span><span>Mjerica · Supplement price comparison</span><a class="how-link" href="../../how-prices-work.html">How prices work</a></footer>
 
 <style>
   header .header-list-link, header .saved-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; min-height: 44px; padding: 10px 13px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 13px; line-height: 1; font-weight: 650; text-decoration: none; white-space: nowrap; transition: background 140ms ease, border-color 140ms ease; }
@@ -213,9 +273,9 @@
   .saved-dialog { width: min(560px, calc(100% - 28px)); max-height: min(760px, calc(100dvh - 40px)); padding: 0; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 24px 80px #0005; }
   .saved-dialog::backdrop { background: #07131cb3; backdrop-filter: blur(3px); }
   .saved-dialog .saved-dialog-head { display: flex; align-items: center; gap: 12px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
-  .saved-dialog h2 { font: 750 20px/1.3 -apple-system,"Segoe UI",sans-serif; margin: 0; letter-spacing: -.025em; }
+  .saved-dialog h2 { font: 700 20px/1.3 var(--font-heading); margin: 0; letter-spacing: -.025em; }
   .saved-dialog-mark { width: 24px; height: 24px; color: var(--accent); fill: none; stroke: currentColor; stroke-width: 1.8; }
-  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 -apple-system,"Segoe UI",sans-serif; background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
+  .saved-dialog button, .saved-item-link { min-height: 36px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font: 650 13px/1.3 var(--font-body); background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; }
   .saved-dialog button:hover, .saved-item-link:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text, var(--text)); }
   .saved-dialog button:focus-visible, .saved-item-link:focus-visible { outline: 2px solid var(--accent-text, var(--text)); outline-offset: 3px; }
   .saved-dialog .saved-dialog-close { margin-left: auto; padding: 0; width: 36px; font-size: 25px; border-color: transparent; }
@@ -238,6 +298,18 @@
   .saved-page-list .saved-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 12px; }
   .saved-page-list button { min-height: 36px; }
   @media(max-width: 480px) { .saved-dialog .saved-dialog-head { padding: 16px; } .saved-dialog-body { padding: 0 16px; } .saved-dialog-foot { padding: 12px 16px; } .saved-item { grid-template-columns: 54px minmax(0,1fr); column-gap: 10px; } .saved-item-image { width: 54px; height: 66px; } }
+  .saved-toast { position: fixed; right: 20px; bottom: 20px; z-index: 40; display: flex; align-items: flex-start; gap: 14px; max-width: min(420px, calc(100vw - 40px));
+    padding: 16px 18px; border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 14px; background: var(--accent-soft); color: var(--text);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--text) 14%, transparent); }
+  .saved-toast[hidden] { display: none; }
+  .saved-toast-icon { flex: none; width: 36px; height: 36px; }
+  .saved-toast-icon circle { fill: var(--accent); }
+  .saved-toast-icon path { fill: none; stroke: var(--surface); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .saved-toast-text { display: grid; gap: 2px; }
+  .saved-toast-text strong { font: 700 17px/1.3 var(--font-heading); }
+  .saved-toast-view { justify-self: start; margin-top: 6px; padding: 0; border: 0; background: none; color: var(--accent-text); font: 700 15px/1.3 var(--font-body); text-decoration: underline; cursor: pointer; }
+  .saved-toast-close { flex: none; margin-left: auto; padding: 0 4px; border: 0; background: none; color: var(--text); font-size: 22px; line-height: 1; cursor: pointer; }
+  .saved-toast-view:focus-visible, .saved-toast-close:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 2px; }
 </style>
 <dialog class="saved-dialog" id="savedDialog" aria-labelledby="savedDialogTitle">
   <div class="saved-dialog-head"><svg class="saved-dialog-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><h2 id="savedDialogTitle">Saved products</h2><span class="saved-dialog-count" id="savedDialogCount">0</span><button class="saved-dialog-close" type="button" aria-label="Close saved products" autofocus>×</button></div>
@@ -245,6 +317,11 @@
   <div class="saved-dialog-foot"><span class="saved-dialog-note">Kept in this browser. Price changes appear after prices are refreshed.</span><button type="button" id="savedClearAll">Clear all</button></div>
 </dialog>
 <div id="savedAnnouncement" role="status" aria-live="polite" class="saved-dialog-note"></div>
+<div class="saved-toast" id="savedToast" hidden>
+  <svg class="saved-toast-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>
+  <div class="saved-toast-text"><strong>Product saved</strong><span>We'll show how its price changes here.</span><button type="button" class="saved-toast-view" id="savedToastView">View saved</button></div>
+  <button type="button" class="saved-toast-close" id="savedToastClose" aria-label="Close">&times;</button>
+</div>
 <script>
 (function (root) {
   "use strict";
@@ -318,6 +395,23 @@
   const pageList = document.getElementById("saved-list");
   const announcement = document.getElementById("savedAnnouncement");
   announcement.style.cssText = "position:fixed;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)";
+  const toast = document.getElementById("savedToast");
+  let toastTimer, toastHover = false, toastFocus = false;
+  function hideToast() { clearTimeout(toastTimer); toast.hidden = true; }
+  function armToast() { clearTimeout(toastTimer); if (!toastHover && !toastFocus) toastTimer = setTimeout(hideToast, 5000); }
+  function showToast() { toast.hidden = false; toastHover = false; toastFocus = false; armToast(); }
+  document.getElementById("savedToastClose").addEventListener("click", hideToast);
+  document.getElementById("savedToastView").addEventListener("click", () => { hideToast(); open(); });
+  // Pause the auto-hide while the toast has hover or keyboard focus (WCAG
+  // 2.2.1): otherwise a control the user is about to use could vanish
+  // under them.
+  toast.addEventListener("mouseenter", () => { toastHover = true; clearTimeout(toastTimer); });
+  toast.addEventListener("mouseleave", () => { toastHover = false; armToast(); });
+  toast.addEventListener("focusin", () => { toastFocus = true; clearTimeout(toastTimer); });
+  toast.addEventListener("focusout", (event) => {
+    if (toast.contains(event.relatedTarget)) return;
+    toastFocus = false; armToast();
+  });
   let storage;
   try { storage = window.localStorage; } catch (_) { storage = {getItem:()=>null,setItem:()=>{throw Error("Storage unavailable");}}; }
   const state = window.createSavedStore(storage);
@@ -432,7 +526,7 @@
       const existing=state.read().find(entry=>entry.offer_id===offer.offer_id || entry.legacy_key===offer.store+"|"+offer.source_url);
       if(mutate(()=>existing?state.remove(existing.offer_id):state.save(offer))) {
         announcement.textContent=existing?"Removed from saved":"Product saved";
-        if(!existing) open();
+        if(!existing) showToast(); else hideToast();
       }
       return;
     }
