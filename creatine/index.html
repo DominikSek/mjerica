@@ -47,7 +47,17 @@
            gap: 10px; background: transparent; border: 0; margin-bottom: 18px; }
   /* min-width: 0 lets a grid item shrink below its content; without it the nowrap .sub
      below pins the tracks at the longest product name and widens the whole page on phones */
-  .stat { background: var(--surface); padding: 13px 16px; min-width: 0; border: 1px solid var(--border); border-radius: 10px; }
+  .stat { background: var(--surface); padding: 13px 16px; min-width: 0; border: 1px solid var(--border); border-radius: 10px;
+          display: flex; align-items: center; gap: 14px; }
+  .stat-text { flex: 1; min-width: 0; }
+  /* the named product's photo, or the drawn scoop when it has none (rendering.SCOOP_ART) */
+  .stat-media { flex: none; width: 56px; height: 56px; border-radius: 8px; overflow: hidden;
+                background: var(--panel); display: flex; align-items: center; justify-content: center; }
+  .stat-img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+  .stat-media .scoop-art { width: 80%; height: auto; }
+  .scoop-art .scoop-shadow { fill: color-mix(in srgb, var(--text) 8%, transparent); }
+  .scoop-art .scoop-pile, .scoop-art .scoop-heap { fill: var(--surface); stroke: var(--border); stroke-width: 2; }
+  .scoop-art .scoop-bowl, .scoop-art .scoop-handle { fill: var(--accent); }
   .stat .label { font-size: 11px; color: var(--muted); font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
   .stat .value { font: 700 22px/1.2 var(--font-body); margin-top: 3px; }
   .stat .sub { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -159,6 +169,8 @@
     .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
     .controls { padding: 10px; border-radius: 10px; }
     .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .stat { gap: 10px; padding: 11px 12px; }
+    .stat-media { width: 40px; height: 40px; }
     .chip-group { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
     .chip { flex: none; }
     .mobile-sort { display: block; flex: 1 1 140px; padding: 8px 10px; border: 1px solid var(--border);
@@ -291,9 +303,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine (Powder) Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a class="active" aria-current="page" href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 29.09.2026 11:47 CEST &middot; 8 stores</p></div>
+  <p class="gen-meta">Generated 29.09.2026 12:54 CEST &middot; 8 stores</p></div>
 
-  <section class="stats"><div class="stat"><div class="label">Cheapest per kg</div><div class="value">14.50 &euro;</div><div class="sub" title="Kreatin + Dekstroza - GymBeam &middot; GymBeam HR">Kreatin + Dekstroza - GymBeam &middot; GymBeam HR</div></div></section>
+  <section class="stats"><div class="stat"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">14.50 &euro;</div><div class="sub" title="Kreatin + Dekstroza - GymBeam &middot; GymBeam HR">Kreatin + Dekstroza - GymBeam &middot; GymBeam HR</div></div></div></section>
 
   
   <div class="controls">
@@ -304,7 +316,7 @@
       <span>&ndash;</span>
       <input type="number" id="maxPrice" placeholder="216.25" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / kg">
     </div>
-    <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">25</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
+    <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">24</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
@@ -357,62 +369,6 @@
           
           
         </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:e993a83438a2adef"
-            data-offer-id="catalog:c83c849958ab2f34" data-price-eur="29.05"
-            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 1.5 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 1.5 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 1.5 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c83c849958ab2f34&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 1.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 29.05, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="29.05">29.05 &euro;</td>
-          <td class="num weight-cell" data-v="1.5">1.5 kg</td>
-          <td class="num metric-cell" data-v="19.37"><span class="pill good">19.37</span></td>
-          
-          
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:1e5055d0a051b2ef"
-            data-offer-id="catalog:3803de6301fbaa68" data-price-eur="19.95"
-            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 1 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 1 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 1 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_kg_1_0kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3803de6301fbaa68&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 1 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_kg_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="19.95">19.95 &euro;</td>
-          <td class="num weight-cell" data-v="1.0">1 kg</td>
-          <td class="num metric-cell" data-v="19.95"><span class="pill good">19.95</span></td>
-          
-          
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:e044aff88e0d92e4"
-            data-offer-id="catalog:b86a0810c8ea2496" data-price-eur="16.05"
-            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.75 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 0.75 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 0.75 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_75_kg_0_75kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b86a0810c8ea2496&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.75 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.75&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 16.05, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_75_kg_0_75kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="16.05">16.05 &euro;</td>
-          <td class="num weight-cell" data-v="0.75">750 g</td>
-          <td class="num metric-cell" data-v="21.4"><span class="pill good">21.40</span></td>
-          
-          
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:ca6bbf21fd2ec75c"
-            data-offer-id="catalog:2e93f61109bd6ef2" data-price-eur="11.0"
-            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.5 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 0.5 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 0.5 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_5_kg_0_5kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2e93f61109bd6ef2&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 11.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="11.0">11.00 &euro;</td>
-          <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="22.0"><span class="pill good">22.00</span></td>
-          
-          
-        </tr>
         <tr data-store="THE Nutrition" data-track-key="catalog:59792128ae097ee4"
             data-offer-id="catalog:7f414ef01ca8c3f5" data-price-eur="38.56"
             data-search="the nutrition the creatine fuel (1500 g)">
@@ -427,17 +383,59 @@
           
           
         </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:52653af175d9a9ee"
-            data-offer-id="catalog:abd289c8a62ae457" data-price-eur="6.55"
-            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.25 kg">
+        <tr data-store="GymBeam HR" data-track-key="catalog:e993a83438a2adef"
+            data-offer-id="catalog:c83c849958ab2f34" data-price-eur="41.95"
+            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 1.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 0.25 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 0.25 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_25_kg_0_25kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:abd289c8a62ae457&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.25 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 6.55, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_25_kg_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="6.55">6.55 &euro;</td>
-          <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="26.2"><span class="pill good">26.20</span></td>
+          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 1.5 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 1.5 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c83c849958ab2f34&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 1.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 41.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="41.95">41.95 &euro;</td>
+          <td class="num weight-cell" data-v="1.5">1.5 kg</td>
+          <td class="num metric-cell" data-v="27.97"><span class="pill good">27.97</span></td>
+          
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:1e5055d0a051b2ef"
+            data-offer-id="catalog:3803de6301fbaa68" data-price-eur="28.95"
+            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 1 kg">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 1 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 1 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_kg_1_0kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3803de6301fbaa68&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 1 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_kg_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="28.95">28.95 &euro;</td>
+          <td class="num weight-cell" data-v="1.0">1 kg</td>
+          <td class="num metric-cell" data-v="28.95"><span class="pill good">28.95</span></td>
+          
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:e044aff88e0d92e4"
+            data-offer-id="catalog:b86a0810c8ea2496" data-price-eur="22.95"
+            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.75 kg">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 0.75 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 0.75 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_75_kg_0_75kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b86a0810c8ea2496&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.75 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.75&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 22.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_75_kg_0_75kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="22.95">22.95 &euro;</td>
+          <td class="num weight-cell" data-v="0.75">750 g</td>
+          <td class="num metric-cell" data-v="30.6"><span class="pill good">30.60</span></td>
+          
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:ca6bbf21fd2ec75c"
+            data-offer-id="catalog:2e93f61109bd6ef2" data-price-eur="15.95"
+            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.5 kg">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 0.5 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 0.5 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_5_kg_0_5kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2e93f61109bd6ef2&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="15.95">15.95 &euro;</td>
+          <td class="num weight-cell" data-v="0.5">500 g</td>
+          <td class="num metric-cell" data-v="31.9"><span class="pill good">31.90</span></td>
           
           
         </tr>
@@ -466,6 +464,20 @@
           <td class="num price-cell" data-v="20.2">20.20 &euro;</td>
           <td class="num weight-cell" data-v="0.6">600 g</td>
           <td class="num metric-cell" data-v="33.67"><span class="pill good">33.67</span></td>
+          
+          
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:52653af175d9a9ee"
+            data-offer-id="catalog:abd289c8a62ae457" data-price-eur="8.95"
+            data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.25 kg">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
+          <td class="product-cell" data-v="100% Kreatin Monohidrat - GymBeam, 0.25 kg"><a href="https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" target="_blank" rel="noopener">100% Kreatin Monohidrat - GymBeam, 0.25 kg</a><a class="details-link" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_25_kg_0_25kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:abd289c8a62ae457&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.25 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 8.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_25_kg_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="8.95">8.95 &euro;</td>
+          <td class="num weight-cell" data-v="0.25">250 g</td>
+          <td class="num metric-cell" data-v="35.8"><span class="pill good">35.80</span></td>
           
           
         </tr>
@@ -1477,20 +1489,6 @@
           
           
         </tr>
-        <tr data-store="Polleo Sport" data-track-key="catalog:e1e3f3b9ec3fec16"
-            data-offer-id="catalog:f34ec1a0f68e9931" data-price-eur="11.99"
-            data-search="polleo sport creatine direct, 30 x 3,5 g">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="Polleo Sport"><span class="store"><span class="store-dot" style="background:#5a7a2e"></span>Polleo Sport</span></td>
-          <td class="product-cell" data-v="Creatine Direct, 30 x 3,5 g"><a href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime" target="_blank" rel="noopener">Creatine Direct, 30 x 3,5 g</a><a class="details-link" href="products/polleo_sport_creatine_direct_30_x_3_5_g_0_105kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:f34ec1a0f68e9931&quot;, &quot;name&quot;: &quot;Creatine Direct, 30 x 3,5 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.105&quot;, &quot;flavour&quot;: &quot;Lemon Lime&quot;, &quot;price_eur&quot;: 11.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_direct_30_x_3_5_g_0_105kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="11.99">11.99 &euro;</td>
-          <td class="num weight-cell" data-v="0.105">105 g</td>
-          <td class="num metric-cell" data-v="114.19"><span class="pill high">114.19</span></td>
-          
-          
-        </tr>
         <tr data-store="Polleo Sport" data-track-key="catalog:036e2ae266ffc346"
             data-offer-id="catalog:3b1d292e66ffeb95" data-price-eur="29.99"
             data-search="polleo sport elite creatine, 250 g">
@@ -1516,6 +1514,20 @@
           <td class="num price-cell" data-v="29.99">29.99 &euro;</td>
           <td class="num weight-cell" data-v="0.2475">247.5 g</td>
           <td class="num metric-cell" data-v="121.17"><span class="pill high">121.17</span></td>
+          
+          
+        </tr>
+        <tr data-store="Polleo Sport" data-track-key="catalog:e1e3f3b9ec3fec16"
+            data-offer-id="catalog:f34ec1a0f68e9931" data-price-eur="12.99"
+            data-search="polleo sport creatine direct, 30 x 3,5 g">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="Polleo Sport"><span class="store"><span class="store-dot" style="background:#5a7a2e"></span>Polleo Sport</span></td>
+          <td class="product-cell" data-v="Creatine Direct, 30 x 3,5 g"><a href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime" target="_blank" rel="noopener">Creatine Direct, 30 x 3,5 g</a><a class="details-link" href="products/polleo_sport_creatine_direct_30_x_3_5_g_0_105kg.html">View details</a></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:f34ec1a0f68e9931&quot;, &quot;name&quot;: &quot;Creatine Direct, 30 x 3,5 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.105&quot;, &quot;flavour&quot;: &quot;Lemon Lime&quot;, &quot;price_eur&quot;: 12.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_direct_30_x_3_5_g_0_105kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="12.99">12.99 &euro;</td>
+          <td class="num weight-cell" data-v="0.105">105 g</td>
+          <td class="num metric-cell" data-v="123.71"><span class="pill high">123.71</span></td>
           
           
         </tr>
@@ -1572,20 +1584,6 @@
           <td class="num price-cell" data-v="25.95">25.95 &euro;</td>
           <td class="num weight-cell" data-v="0.12">120 g</td>
           <td class="num metric-cell" data-v="216.25"><span class="pill high">216.25</span></td>
-          
-          
-        </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:9f441ddf3cc23d38"
-            data-offer-id="catalog:9284358d35b57721" data-price-eur="13.4"
-            data-search="gymbeam hr double kreatin + hmb - gymbeam">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/d/o/double-creatine-hmb-pineapple-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="Double Kreatin + HMB - GymBeam"><a href="https://gymbeam.hr/double-kreatin-hmb-gymbeam.html" target="_blank" rel="noopener">Double Kreatin + HMB - GymBeam</a><a class="details-link" href="products/gymbeam_hr_double_kreatin_hmb_gymbeam.html">View details</a><span class="badge range">price varies by size</span></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/double-kreatin-hmb-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:9284358d35b57721&quot;, &quot;name&quot;: &quot;Double Kreatin + HMB - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/double-kreatin-hmb-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;default&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 13.4, &quot;price_kind&quot;: &quot;range&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/d/o/double-creatine-hmb-pineapple-gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_double_kreatin_hmb_gymbeam.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="13.4">13.40 &euro;</td>
-          <td class="num weight-cell" data-v=""><span class="empty">&mdash;</span></td>
-          <td class="num metric-cell" data-v=""><span class="empty">&mdash;</span></td>
           
           
         </tr></tbody>

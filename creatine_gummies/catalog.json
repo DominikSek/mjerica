@@ -9,8 +9,8 @@
       "detail_slug": "gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies",
       "package_key": "count:60",
       "flavour": "",
-      "price_eur": 10.95,
-      "unit_price": 0.182,
+      "price_eur": 19.5,
+      "unit_price": 0.325,
       "unit_label": "gummy",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -139,7 +139,7 @@
     }
   ],
   "category": "creatine_gummies",
-  "checked_at": "2026-09-29T09:48:05.582665+00:00",
+  "checked_at": "2026-09-29T10:54:27.782925+00:00",
   "products": [
     {
       "id": "catalog:773a8d805e3bc4f2",
@@ -236,8 +236,8 @@
           "detail_slug": "gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies",
           "package_key": "count:60",
           "flavour": null,
-          "price_eur": 10.95,
-          "unit_price": 0.182,
+          "price_eur": 19.5,
+          "unit_price": 0.325,
           "unit_label": "gummy",
           "price_kind": "exact",
           "price_scope": "listing",
