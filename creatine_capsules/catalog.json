@@ -15,6 +15,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine (100% Creapure®) - GymBeam, 120 kaps.",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png"
     },
@@ -32,6 +34,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine (100% Creapure®) - GymBeam, 240 kaps.",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png"
     },
@@ -49,6 +53,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin TABS 1000 mg - GymBeam, 300 tab.",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png"
     },
@@ -66,6 +72,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin HCl 120 kaps – GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg"
     },
@@ -83,6 +91,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine TABS 100% Creapure® - GymBeam, 120 tab.",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg"
     },
@@ -100,6 +110,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine Monohydrate, 160 kapsula",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-creatine-monohydrate-160-capsules.jpg?size=225"
     },
@@ -117,6 +129,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine Ethyl Ester, 120 kapsula",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225"
     },
@@ -134,6 +148,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creafast 120 tableta",
       "image_url": "https://www.proteka.hr/upload/proizvodi/creafast%5F14219%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -151,6 +167,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Weider Creatine HCL 150 kapsula",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fcreatine%5Fhidroklorid%5F22755%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -168,6 +186,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Weider Maximum KreaGenic 100 kapsula",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmaximum%5Fkreagenic%5F01549%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -185,6 +205,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Weider Pure Creatine 200 kapsula",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fpure%5Fcreatine%5F225333%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -202,6 +224,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Weider Pure Creatine Capsules",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-caps-3000mg-creapure-v01g.jpg"
     },
@@ -219,6 +243,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "VAST CREATINE ULTRA PURE CAPS, 300 kapsula",
       "image_url": "https://www.proteini.si/images/e18f528712a3fc5b825a4a1ad4b1a147/vast-creatine-ultra-pure-caps-300-kapsula.jpg?v26"
     },
@@ -236,6 +262,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "VAST CREATINE CREAPURE CAPS, 90 kapsula",
       "image_url": "https://www.proteini.si/images/64ee5417e4d591ccd038f0dafa075632/vast-creatine-creapure-caps-90-kapsula.jpg?v26"
     },
@@ -253,6 +281,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "USN CREATINE ULTRA 1250, 120 kapsula",
       "image_url": "https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26"
     },
@@ -270,6 +300,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "X3M Kick Start (120 caps.)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2175_cat_744202.jpg"
     },
@@ -287,6 +319,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "THE Creatine (100 caps.)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2046_cat_302354.jpg"
     },
@@ -304,6 +338,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine Monohydrate kapsule",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/09/amix-nutrition-creatine-kapsule-proteini-outlet-600x600.jpg"
     },
@@ -321,18 +357,21 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin monohidrat kapsule",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/optimum-nutrition-creatine-2500-200kapsule-proteini-outlet-600x600.jpg"
     }
   ],
   "category": "creatine_capsules",
-  "checked_at": "2026-09-30T08:40:48.792239+00:00",
+  "checked_at": "2026-09-30T15:22:11.823473+00:00",
   "products": [
     {
       "id": "catalog:c9ba6f77c7d20a81",
       "name": "Creafast 120 tableta",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/creafast%5F14219%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -350,7 +389,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -359,6 +400,7 @@
       "name": "Creatine (100% Creapure®) - GymBeam, 120 kaps.",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -376,7 +418,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -385,6 +429,7 @@
       "name": "Creatine Ethyl Ester, 120 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -402,7 +447,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -411,6 +458,7 @@
       "name": "Creatine Monohydrate kapsule",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/09/amix-nutrition-creatine-kapsule-proteini-outlet-600x600.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:220"
       ],
@@ -428,7 +476,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -437,6 +487,7 @@
       "name": "Creatine Monohydrate, 160 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-creatine-monohydrate-160-capsules.jpg?size=225",
+      "product_kind": "unknown",
       "packages": [
         "count:160"
       ],
@@ -454,7 +505,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -463,6 +516,7 @@
       "name": "Creatine TABS 100% Creapure® - GymBeam, 120 tab.",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -480,7 +534,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -489,6 +545,7 @@
       "name": "Kreatin HCl 120 kaps – GymBeam",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -506,7 +563,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -515,6 +574,7 @@
       "name": "Kreatin monohidrat kapsule",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/optimum-nutrition-creatine-2500-200kapsule-proteini-outlet-600x600.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:200"
       ],
@@ -532,7 +592,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -541,6 +603,7 @@
       "name": "Kreatin TABS 1000 mg - GymBeam, 300 tab.",
       "category": "creatine_capsules",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png",
+      "product_kind": "unknown",
       "packages": [
         "count:300"
       ],
@@ -558,7 +621,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -567,6 +632,7 @@
       "name": "THE Creatine (100 caps.)",
       "category": "creatine_capsules",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2046_cat_302354.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:100"
       ],
@@ -584,7 +650,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -593,6 +661,7 @@
       "name": "USN CREATINE ULTRA 1250, 120 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -610,7 +679,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -619,6 +690,7 @@
       "name": "VAST CREATINE CREAPURE CAPS, 90 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini.si/images/64ee5417e4d591ccd038f0dafa075632/vast-creatine-creapure-caps-90-kapsula.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "count:90"
       ],
@@ -636,7 +708,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -645,6 +719,7 @@
       "name": "VAST CREATINE ULTRA PURE CAPS, 300 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteini.si/images/e18f528712a3fc5b825a4a1ad4b1a147/vast-creatine-ultra-pure-caps-300-kapsula.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "count:300"
       ],
@@ -662,7 +737,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -671,6 +748,7 @@
       "name": "Weider Creatine HCL 150 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fcreatine%5Fhidroklorid%5F22755%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "unknown",
       "packages": [
         "count:150"
       ],
@@ -688,7 +766,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -697,6 +777,7 @@
       "name": "Weider Maximum KreaGenic 100 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmaximum%5Fkreagenic%5F01549%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "unknown",
       "packages": [
         "count:100"
       ],
@@ -714,7 +795,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -723,6 +806,7 @@
       "name": "Weider Pure Creatine 200 kapsula",
       "category": "creatine_capsules",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fpure%5Fcreatine%5F225333%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "unknown",
       "packages": [
         "count:200"
       ],
@@ -740,7 +824,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -749,6 +835,7 @@
       "name": "Weider Pure Creatine Capsules",
       "category": "creatine_capsules",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-caps-3000mg-creapure-v01g.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:200"
       ],
@@ -766,7 +853,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -775,6 +864,7 @@
       "name": "X3M Kick Start (120 caps.)",
       "category": "creatine_capsules",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2175_cat_744202.jpg",
+      "product_kind": "unknown",
       "packages": [
         "count:120"
       ],
@@ -792,7 +882,9 @@
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     }

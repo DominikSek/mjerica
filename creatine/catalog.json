@@ -15,6 +15,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "100% Kreatin Monohidrat - GymBeam, 0.25 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg"
     },
@@ -32,6 +34,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "100% Kreatin Monohidrat - GymBeam, 0.5 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg"
     },
@@ -49,6 +53,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "100% Kreatin Monohidrat - GymBeam, 0.75 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg"
     },
@@ -66,6 +72,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "100% Kreatin Monohidrat - GymBeam, 1 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg"
     },
@@ -83,6 +91,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "100% Kreatin Monohidrat - GymBeam, 1.5 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg"
     },
@@ -100,6 +110,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Micronized Creatine Powder – Optimum Nutrition, 0.317 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png"
     },
@@ -117,6 +129,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Micronized Creatine Powder – Optimum Nutrition, 0.634 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png"
     },
@@ -134,6 +148,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin Crea7in - GymBeam, 0.01 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png"
     },
@@ -151,6 +167,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin Crea7in - GymBeam, 0.3 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png"
     },
@@ -168,6 +186,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin Crea7in - GymBeam, 0.6 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png"
     },
@@ -185,6 +205,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "name_only",
       "name": "Creatine monohydrate+ - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg"
     },
@@ -202,6 +224,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
@@ -219,6 +243,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.5 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
@@ -236,6 +262,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 1 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
@@ -253,6 +281,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Pink Creatine - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg"
     },
@@ -270,6 +300,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Čisti kreatin - Weider, 0.25 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg"
     },
@@ -287,6 +319,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Čisti kreatin - Weider, 0.6 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg"
     },
@@ -304,6 +338,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin monohidrat prah - Mammut Nutrition",
       "image_url": "https://gymbeam.hr/media/catalog/product/n/_/n_vrh_bez_n_zvu_33_.png"
     },
@@ -321,6 +357,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine Yummies - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_gummies_60_gummies_gymbeam.png"
     },
@@ -338,6 +376,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "name_only",
       "name": "Kreatin + Beta-Alanin - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-beta-alanine-500g-unflavoured-gymbeam.jpg"
     },
@@ -355,6 +395,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Čisti kreatin - Weider",
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_31741_pure_creatine_100_caps_vs_1_.png"
     },
@@ -372,6 +414,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin monohidrat - Mammut Nutrition",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatin_monohydrat_300g.png"
     },
@@ -389,6 +433,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "other_form",
+      "kind_confidence": "name_only",
       "name": "Kreatin Alkalin 1500  - Megabol",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-alkaline-120-caps.jpg"
     },
@@ -406,6 +452,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "name_only",
       "name": "Kreatin + Dekstroza - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg"
     },
@@ -423,6 +471,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin Monohidrat – GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-monohydrate-120-caps-gymbeam.jpg"
     },
@@ -440,6 +490,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Creatine Monohydrate, 250 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_250g_unflavoured.jpg?size=225"
     },
@@ -457,6 +509,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Creatine Monohydrate, 500 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_500g_unflavoured.jpg?size=225"
     },
@@ -474,6 +528,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Creatine Monohydrate, 150 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_creatine_monohydrate_150g.jpg?size=225"
     },
@@ -491,8 +547,29 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Clear Creatine Monohydrate, 250 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225"
+    },
+    {
+      "id": "catalog:3b1d292e66ffeb95",
+      "offer_id": "catalog:3b1d292e66ffeb95",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-250-g",
+      "detail_slug": "polleo_sport_elite_creatine_250_g_0_25kg",
+      "package_key": "kg:0.25",
+      "flavour": "",
+      "price_eur": 29.99,
+      "unit_price": 119.96,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
+      "name": "Elite Creatine, 250 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225"
     },
     {
       "id": "catalog:5e8d9ffc14783e50",
@@ -508,6 +585,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Creatine Powder, 317 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_93srv_fr_6058184_web_on00222_1.jpg?size=225"
     },
@@ -525,6 +604,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "zoe Booty Creatine, 250 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_booty_creatine_250_lemonade.jpeg?size=225"
     },
@@ -542,6 +623,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine Direct, 30 x 3,5 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225"
     },
@@ -559,6 +642,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Creatine Powder, 247.5 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_creatine_247.5g_55sv_blueraspberry_6076549_ecomm.jpg?size=225"
     },
@@ -576,25 +661,10 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Elite Creatine, 500 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225"
-    },
-    {
-      "id": "catalog:3b1d292e66ffeb95",
-      "offer_id": "catalog:3b1d292e66ffeb95",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-250-g",
-      "detail_slug": "polleo_sport_elite_creatine_250_g_0_25kg",
-      "package_key": "kg:0.25",
-      "flavour": "",
-      "price_eur": 29.99,
-      "unit_price": 119.96,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Elite Creatine, 250 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225"
     },
     {
       "id": "catalog:33a56170275ec88e",
@@ -610,6 +680,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Creatine Powder, 187 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/optimum-nutrition-micronised-creatine-powder-187g.jpg?size=225"
     },
@@ -627,6 +699,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Creatine DNA, 216 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn_creatine.jpg?size=225"
     },
@@ -644,6 +718,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Pure Creatine Weider 250 g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F250%5Fg%5F201121%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -661,6 +737,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Pure Creatine Weider 600 g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F600%5Fg%5F132648%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -678,6 +756,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Verviavita Kreatin Monohidrat 900g (2+1 GRATIS)",
       "image_url": "https://www.proteka.hr/upload/proizvodi/verviavita%5Fkreatin%5Fakcija%5F%282%29%5F135725%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -695,6 +775,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Verviavita Kreatin Monohidrat 300g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/verviavita%5Fcreatine%5Fmonohydrate%5F300g%5F134422%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -712,6 +794,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Tesla 100%  Kreatin Monohidrat 300g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/tesla%5Fkreatin%5F300g%5F165426%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -723,12 +807,14 @@
       "detail_slug": "proteka_superior_100_kreatin_monohidrat_300g_0_3kg",
       "package_key": "kg:0.3",
       "flavour": null,
-      "price_eur": 20.0,
-      "unit_price": 66.67,
+      "price_eur": 16.0,
+      "unit_price": 53.33,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Superior 100% Kreatin Monohidrat 300g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/superior%5F100%5Fkreatin%5Fmonohidrat%5F161531%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -746,6 +832,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Proteos Creatine MagnaPower 700 g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F182647%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -763,6 +851,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Proteos Creatine MagnaPower 300 g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F300g%5F182928%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -780,6 +870,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Weider Mikronizirani Kreatin Monohidrat 300 g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fmonohidrat%5F%5F20214%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
@@ -797,6 +889,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Weider Creatine Monohydrate Micronised Powder",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-creatine-monohydrate-micronised-powder-v01-1.jpg"
     },
@@ -814,6 +908,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Weider Premium Creatine 100% Creapure®",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/01/gaz-nutrition-proizvod-weider-premium-creatine-v01-1.jpg"
     },
@@ -831,6 +927,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Weider Pure Creatine, 0.25 kg",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg"
     },
@@ -848,6 +946,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Weider Pure Creatine, 0.6 kg",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg"
     },
@@ -865,6 +965,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Powerbar Black Line Creatine Monohydrate",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-powerbar-creatine-monohydrate-powder-v01-1.jpg"
     },
@@ -882,6 +984,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Dymatize Creapure Creatine Monohydrate",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-dymatize-creatine-v01.jpg"
     },
@@ -899,6 +1003,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Etixx Creatine Creapure",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-etixx-creatine-creapure-v01-1.jpg"
     },
@@ -916,6 +1022,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Pure Gold Creatine Monohydrate",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-puregold-creatine-monohydrate-v01-1.jpg"
     },
@@ -933,6 +1041,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "BATTERY REBEL CREATINE, 300g",
       "image_url": "https://www.proteini.si/images/78ff3b1dc443d6ad46d9ec684a2da936/battery-rebel-creatine-300g.jpg?v26"
     },
@@ -950,6 +1060,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "BATTERY CREATINE, 250g",
       "image_url": "https://www.proteini.si/images/ba23a47d0b079cfb440a569e2887e4f1/battery-creatine-250g.jpg?v26"
     },
@@ -967,6 +1079,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "BATTERY CREATINE, 500g",
       "image_url": "https://www.proteini.si/images/9124bb998eca24fbfbd2f5b535ab1daf/battery-creatine-500g.jpg?v26"
     },
@@ -984,6 +1098,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "PROTEINI.SI 100% PURE CREATINE, 200g",
       "image_url": "https://www.proteini.si/images/8863eb0c88d867d86d8dc21452068940/proteini-si-100-pure-creatine-200g.jpg?v26"
     },
@@ -1001,6 +1117,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "SPORTNAHRUNG CREATINE MONOHYDRATE POWDER (NEW), 330g",
       "image_url": "https://www.proteini.si/images/0de9ccadd66e12e09537b3236ac81080/sportnahrung-creatine-monohydrate-powder-new-330g.jpg?v26"
     },
@@ -1018,6 +1136,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "NÄNO SUPPS CREATINE POP, 200g",
       "image_url": "https://www.proteini.si/images/0d548e58ff4467397d6c7829980a8b17/nano-supps-creatine-pop-200g.jpg?v26"
     },
@@ -1035,6 +1155,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "OPTIMUM CREATINE POWDER, 187g",
       "image_url": "https://www.proteini.si/images/0327cdcf9b23cadf492ecfa82d88bd2f/optimum-creatine-powder-187g.jpg?v26"
     },
@@ -1052,6 +1174,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "BODY ATTACK 100% PURE CREATINE MONOHYDRATE (s okusom), 500g",
       "image_url": "https://www.proteini.si/images/9ff405c44c323226624420cd468919d4/body-attack-100-pure-creatine-monohydrate-s-okusom-500g.jpg?v26"
     },
@@ -1069,6 +1193,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "PROTEINI.SI 100% PURE CREATINE (FLAVOURED), 200g",
       "image_url": "https://www.proteini.si/images/969c059d1715d8c6f3c74cdbd3824408/proteini-si-100-pure-creatine-flavoured-200g.jpg?v26"
     },
@@ -1086,6 +1212,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "name_only",
       "name": "BATTERY CREATINE RELOAD+, 500g",
       "image_url": "https://www.proteini.si/images/6343140306c95215c35423b1000a96ac/battery-creatine-reload-500g.jpg?v26"
     },
@@ -1103,6 +1231,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "BATTERY CREATINE (FLAVOURED), 500g",
       "image_url": "https://www.proteini.si/images/73d8b60c401acca7638fc0243da92baf/battery-creatine-flavoured-500g.jpg?v26"
     },
@@ -1120,6 +1250,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "THE Creatine (500 g)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/672_cat_655520.jpg"
     },
@@ -1137,6 +1269,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "THE Creatine (500 g)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/1890_cat_448316.jpg"
     },
@@ -1154,6 +1288,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "name_only",
       "name": "THE Creatine + Hydration (500 g)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2174_cat_678148.jpg"
     },
@@ -1171,6 +1307,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "X3M Creatine Power (500 g)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2055_cat_488363.jpg"
     },
@@ -1188,6 +1326,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "THE Creatine Fuel (1500 g)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2047_cat_473079.jpg"
     },
@@ -1205,6 +1345,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "CreaVolution® (kreatin monohidrat)",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2025/11/swedish-supplements-creavolution-300g-proteini-outlet-600x600.jpg"
     },
@@ -1222,6 +1364,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin monohidrat",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-kreatin-317g-proteini-outlet-111-600x600.jpg"
     },
@@ -1239,6 +1383,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Animal Creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/08/animal-creatin-500g-prah-proteini-outlet-1-600x600.jpg"
     },
@@ -1256,6 +1402,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Platinum Creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/09/platinum-creatine-400g-proteini-outlet-austria-vegan-600x600.jpg"
     },
@@ -1273,6 +1421,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Creatine Monohydrate",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-creatine-500g-proteini-outlet-600x600.jpg"
     },
@@ -1290,6 +1440,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "CREATINE MONOHYDRATE",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-novo-1000g-proteini-outlet-1-600x600.jpg"
     },
@@ -1307,6 +1459,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Creatine Monohydrate",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/01/big-man-creatine-monohydrate-300g-novo-proteini-outlet-1-600x600.jpg"
     },
@@ -1324,6 +1478,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "CREATINE MONOHYDRATE",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg"
     },
@@ -1341,6 +1497,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Creatine Monohydrate",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2020/11/amix_nutrition_kreatin_monohidrat_proteini_outlet-600x600.jpg"
     },
@@ -1358,6 +1516,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "CREATINE PURE",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2020/11/creatine_pure_prolabs_proteini_outlet3_LgfdSCKqg4-600x600.jpg"
     },
@@ -1375,6 +1535,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin monohidrat",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/02/popust-optimum-nutrition-kreatin-634g-proteini-outlet-222-600x600.jpg"
     },
@@ -1392,6 +1554,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "CREATINE MONOHYDRATE",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg"
     },
@@ -1409,6 +1573,8 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Creatine (Creapure®)",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-creapure-300g-proteini-outlet-1-600x600.jpg"
     },
@@ -1420,12 +1586,14 @@
       "detail_slug": "myprotein_impact_creatine_chupa_chups_watermelon_lollipop_0_25kg",
       "package_key": "kg:0.25",
       "flavour": "",
-      "price_eur": 12.72,
-      "unit_price": 50.89,
+      "price_eur": 18.99,
+      "unit_price": 75.96,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Impact Creatine – Chupa Chups Watermelon Lollipop",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17526822-1735285465352189.png&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
@@ -1437,12 +1605,14 @@
       "detail_slug": "myprotein_kreatin_monohidrat_elite_0_9996kg",
       "package_key": "kg:0.9996",
       "flavour": "",
-      "price_eur": 38.18,
-      "unit_price": 38.18,
+      "price_eur": 56.99,
+      "unit_price": 56.99,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin Monohidrat Elite",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10872819-1055350489596192.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
@@ -1454,12 +1624,14 @@
       "detail_slug": "myprotein_mikroniziran_kreatin_u_prahu_0_25kg",
       "package_key": "kg:0.25",
       "flavour": null,
-      "price_eur": 13.39,
-      "unit_price": 53.57,
+      "price_eur": 19.99,
+      "unit_price": 79.96,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
       "name": "Mikroniziran Kreatin u Prahu",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17902344-1145367083640477.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
@@ -1471,12 +1643,14 @@
       "detail_slug": "myprotein_kreatin_monohidrat_0_1kg",
       "package_key": "kg:0.1",
       "flavour": null,
-      "price_eur": 6.69,
-      "unit_price": 66.93,
+      "price_eur": 9.99,
+      "unit_price": 99.9,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Kreatin Monohidrat",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456626-1775344551897936.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
@@ -1488,12 +1662,14 @@
       "detail_slug": "myprotein_creapure_kreatin_0_25kg",
       "package_key": "kg:0.25",
       "flavour": null,
-      "price_eur": 16.74,
-      "unit_price": 66.97,
+      "price_eur": 24.99,
+      "unit_price": 99.96,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "",
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "name_only",
       "name": "Creapure® Kreatin",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456548-1395323601967762.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
@@ -1505,12 +1681,14 @@
       "detail_slug": "myprotein_kreatin_hcl_0_0984kg",
       "package_key": "kg:0.0984",
       "flavour": "",
-      "price_eur": 5.14,
-      "unit_price": 51.39,
+      "price_eur": 7.67,
+      "unit_price": 76.7,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "",
+      "product_kind": "other_form",
+      "kind_confidence": "name_only",
       "name": "Kreatin HCl",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
@@ -1528,18 +1706,21 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
       "name": "Kreatin – 100 % čisti, 200 g",
       "image_url": "https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1757599646/assets/pas/images/37b90764-196e-436d-ab36-10619a85ff26/proteini-si-kreatin-100-cisti"
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-09-30T08:40:39.609686+00:00",
+  "checked_at": "2026-09-30T15:22:02.800903+00:00",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
       "name": "100% Kreatin Monohidrat - GymBeam, 0.25 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25",
         "kg:0.5",
@@ -1548,21 +1729,6 @@
         "kg:1.5"
       ],
       "offers": [
-        {
-          "id": "catalog:06a96a59c81c3724",
-          "offer_id": "catalog:06a96a59c81c3724",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.25",
-          "flavour": "bez okusa",
-          "price_eur": 8.95,
-          "unit_price": 35.8,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": ""
-        },
         {
           "id": "catalog:6cf47e383fa865cb",
           "offer_id": "catalog:6cf47e383fa865cb",
@@ -1576,7 +1742,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:e056c01f04a343e4",
@@ -1591,7 +1759,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:1472c931e4a8aab0",
@@ -1606,7 +1776,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:0473d4a3cd9aa2d8",
@@ -1621,7 +1793,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:209dce05ca769cbb",
@@ -1636,7 +1810,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:e49a1fd7271f1700",
@@ -1651,7 +1827,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:131a996cae98316c",
@@ -1666,7 +1844,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:dd9bf784301a1101",
@@ -1681,7 +1861,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:306d10fe20dff425",
@@ -1696,7 +1878,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:14104f50773869c9",
@@ -1711,7 +1895,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:21c901b109f1a2e8",
@@ -1726,7 +1912,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:957a1de95b961783",
@@ -1741,7 +1929,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:630065c265734af3",
@@ -1756,7 +1946,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:2bddf1997f7c4eb7",
@@ -1771,7 +1963,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:68543c13c9fd953c",
@@ -1786,7 +1980,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:5ee8a4344f1dadd2",
@@ -1801,7 +1997,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:4335a4410ab89c5b",
@@ -1816,7 +2014,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -1825,6 +2025,7 @@
       "name": "Animal Creatine",
       "category": "creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/08/animal-creatin-500g-prah-proteini-outlet-1-600x600.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.5"
       ],
@@ -1842,7 +2043,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -1851,6 +2054,7 @@
       "name": "BATTERY CREATINE (FLAVOURED), 500g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/73d8b60c401acca7638fc0243da92baf/battery-creatine-flavoured-500g.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.5"
       ],
@@ -1868,7 +2072,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -1877,6 +2083,7 @@
       "name": "BATTERY CREATINE RELOAD+, 500g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/6343140306c95215c35423b1000a96ac/battery-creatine-reload-500g.jpg?v26",
+      "product_kind": "blend",
       "packages": [
         "kg:0.5"
       ],
@@ -1894,7 +2101,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "blend",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -1903,6 +2112,7 @@
       "name": "BATTERY CREATINE, 250g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/ba23a47d0b079cfb440a569e2887e4f1/battery-creatine-250g.jpg?v26",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25",
         "kg:0.5"
@@ -1921,7 +2131,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:a60dd733987637d6",
@@ -1936,7 +2148,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -1945,6 +2159,7 @@
       "name": "BATTERY REBEL CREATINE, 300g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/78ff3b1dc443d6ad46d9ec684a2da936/battery-rebel-creatine-300g.jpg?v26",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -1962,7 +2177,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -1971,6 +2188,7 @@
       "name": "BODY ATTACK 100% PURE CREATINE MONOHYDRATE (s okusom), 500g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/9ff405c44c323226624420cd468919d4/body-attack-100-pure-creatine-monohydrate-s-okusom-500g.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.5"
       ],
@@ -1988,7 +2206,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -1997,6 +2217,7 @@
       "name": "Clear Creatine Monohydrate, 250 g",
       "category": "creatine",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.25"
       ],
@@ -2014,7 +2235,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:fa4720cecd6006cf",
@@ -2029,7 +2252,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2038,6 +2263,7 @@
       "name": "Creapure® Kreatin",
       "category": "creatine",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456548-1395323601967762.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25"
       ],
@@ -2055,7 +2281,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": "Store price before discount codes. Confirm the final price at the store."
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2064,6 +2292,7 @@
       "name": "Creatine (Creapure®)",
       "category": "creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-creapure-300g-proteini-outlet-1-600x600.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -2081,7 +2310,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -2090,6 +2321,7 @@
       "name": "Creatine Direct, 30 x 3,5 g",
       "category": "creatine",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.105"
       ],
@@ -2107,7 +2339,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:b39a142b34a43618",
@@ -2122,7 +2356,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2131,6 +2367,7 @@
       "name": "Creatine DNA, 216 g",
       "category": "creatine",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn_creatine.jpg?size=225",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.216"
       ],
@@ -2148,7 +2385,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -2157,6 +2396,7 @@
       "name": "Creatine monohydrate+ - GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg",
+      "product_kind": "blend",
       "packages": [
         "kg:0.4"
       ],
@@ -2174,7 +2414,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:8808223018cce8da",
@@ -2189,7 +2431,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:e65754d10b383c21",
@@ -2204,7 +2448,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:c33f690d732944be",
@@ -2219,7 +2465,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2228,6 +2476,7 @@
       "name": "Creatine Monohydrate, 250 g",
       "category": "creatine",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_250g_unflavoured.jpg?size=225",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.15",
         "kg:0.25",
@@ -2249,7 +2498,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:88036f92b1aeef42",
@@ -2264,7 +2515,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:428b97529a780a8d",
@@ -2279,7 +2532,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:941047fb0d532a14",
@@ -2294,7 +2549,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:b3045130a6fb42f0",
@@ -2309,7 +2566,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:4609f27501ec308e",
@@ -2324,7 +2583,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:d74961feec65da67",
@@ -2339,7 +2600,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:fd2cdff13b26294f",
@@ -2354,7 +2617,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         },
         {
           "id": "catalog:ca5f1ed659aae65b",
@@ -2369,7 +2634,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:4b4dbf9e6c85a78e",
@@ -2384,7 +2651,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:b99ba85af6ea089e",
@@ -2399,7 +2668,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2408,6 +2679,7 @@
       "name": "Creatine Powder, 317 g",
       "category": "creatine",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_93srv_fr_6058184_web_on00222_1.jpg?size=225",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.187",
         "kg:0.2475",
@@ -2427,7 +2699,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:3ef05bd9a83497bf",
@@ -2442,7 +2716,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:eddbe330d6c8c365",
@@ -2457,7 +2733,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:5e8d9ffc14783e50",
@@ -2472,7 +2750,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -2481,6 +2761,7 @@
       "name": "CREATINE PURE",
       "category": "creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2020/11/creatine_pure_prolabs_proteini_outlet3_LgfdSCKqg4-600x600.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.3"
       ],
@@ -2498,7 +2779,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2507,6 +2790,7 @@
       "name": "Creatine Yummies - GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_gummies_60_gummies_gymbeam.png",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.18"
       ],
@@ -2524,7 +2808,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2533,6 +2819,7 @@
       "name": "CreaVolution® (kreatin monohidrat)",
       "category": "creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2025/11/swedish-supplements-creavolution-300g-proteini-outlet-600x600.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -2550,7 +2837,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2559,6 +2848,7 @@
       "name": "Dymatize Creapure Creatine Monohydrate",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-dymatize-creatine-v01.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -2576,15 +2866,18 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
     {
       "id": "catalog:507b53d3ce915e54",
-      "name": "Elite Creatine, 500 g",
+      "name": "Elite Creatine, 250 g",
       "category": "creatine",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25",
         "kg:0.5"
@@ -2603,7 +2896,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:0d4cc0ae2a6df311",
@@ -2618,7 +2913,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -2627,6 +2924,7 @@
       "name": "Etixx Creatine Creapure",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-etixx-creatine-creapure-v01-1.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -2644,7 +2942,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -2653,6 +2953,7 @@
       "name": "Impact Creatine – Chupa Chups Watermelon Lollipop",
       "category": "creatine",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17526822-1735285465352189.png&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.25"
       ],
@@ -2665,12 +2966,14 @@
           "detail_slug": "myprotein_impact_creatine_chupa_chups_watermelon_lollipop_0_25kg",
           "package_key": "kg:0.25",
           "flavour": null,
-          "price_eur": 12.72,
-          "unit_price": 50.89,
+          "price_eur": 18.99,
+          "unit_price": 75.96,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2679,6 +2982,7 @@
       "name": "Kreatin + Beta-Alanin - GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-beta-alanine-500g-unflavoured-gymbeam.jpg",
+      "product_kind": "blend",
       "packages": [
         "kg:0.5"
       ],
@@ -2696,7 +3000,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "blend",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -2705,6 +3011,7 @@
       "name": "Kreatin + Dekstroza - GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg",
+      "product_kind": "blend",
       "packages": [
         "kg:1"
       ],
@@ -2722,7 +3029,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:ca9d1e5e373e8508",
@@ -2737,7 +3046,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2746,6 +3057,7 @@
       "name": "Kreatin Alkalin 1500  - Megabol",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-alkaline-120-caps.jpg",
+      "product_kind": "other_form",
       "packages": [
         "kg:0.13"
       ],
@@ -2763,7 +3075,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "other_form",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -2772,6 +3086,7 @@
       "name": "Kreatin Crea7in - GymBeam, 0.01 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.01",
         "kg:0.3",
@@ -2791,7 +3106,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:6cf6d388b88f10c1",
@@ -2806,7 +3123,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:146cab8911db9813",
@@ -2821,7 +3140,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:b396ab4402d9b30b",
@@ -2836,7 +3157,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:c6d500ee7247a137",
@@ -2851,7 +3174,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:1ea1740c2fe5564f",
@@ -2866,7 +3191,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:5caffcf59c1cf7aa",
@@ -2881,7 +3208,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:e85bfaa985e6b249",
@@ -2896,7 +3225,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:0fd49ed27852c355",
@@ -2911,7 +3242,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:3785bc314b55f5e4",
@@ -2926,7 +3259,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:022ef06cac2034d0",
@@ -2941,7 +3276,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:fb86bd42a5562320",
@@ -2956,7 +3293,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -2965,6 +3304,7 @@
       "name": "Kreatin HCl",
       "category": "creatine",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "product_kind": "other_form",
       "packages": [
         "kg:0.0984"
       ],
@@ -2977,12 +3317,14 @@
           "detail_slug": "myprotein_kreatin_hcl_0_0984kg",
           "package_key": "kg:0.0984",
           "flavour": null,
-          "price_eur": 5.14,
-          "unit_price": 51.39,
+          "price_eur": 7.67,
+          "unit_price": 76.7,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+          "note": "",
+          "product_kind": "other_form",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -2991,6 +3333,7 @@
       "name": "Kreatin monohidrat",
       "category": "creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-kreatin-317g-proteini-outlet-111-600x600.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.1",
         "kg:0.317",
@@ -3010,7 +3353,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": "Store price before discount codes. Confirm the final price at the store."
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:0dbc0dd6a087de6b",
@@ -3025,7 +3370,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": "Store price before discount codes. Confirm the final price at the store."
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:a530256159b8b488",
@@ -3040,7 +3387,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:0f380344ba41ddff",
@@ -3055,7 +3404,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3064,6 +3415,7 @@
       "name": "Kreatin monohidrat - Mammut Nutrition",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatin_monohydrat_300g.png",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3081,7 +3433,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3090,6 +3444,7 @@
       "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25",
         "kg:0.5",
@@ -3109,7 +3464,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:5c12bb2ca03d092d",
@@ -3124,7 +3481,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:7222ead4acc5e400",
@@ -3139,7 +3498,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3148,6 +3509,7 @@
       "name": "Kreatin Monohidrat Elite",
       "category": "creatine",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10872819-1055350489596192.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.9996"
       ],
@@ -3160,12 +3522,14 @@
           "detail_slug": "myprotein_kreatin_monohidrat_elite_0_9996kg",
           "package_key": "kg:0.9996",
           "flavour": null,
-          "price_eur": 38.18,
-          "unit_price": 38.18,
+          "price_eur": 56.99,
+          "unit_price": 56.99,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout."
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3174,6 +3538,7 @@
       "name": "Kreatin monohidrat prah - Mammut Nutrition",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/n/_/n_vrh_bez_n_zvu_33_.png",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.55"
       ],
@@ -3191,7 +3556,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3200,6 +3567,7 @@
       "name": "Kreatin Monohidrat – GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-monohydrate-120-caps-gymbeam.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.1"
       ],
@@ -3217,7 +3585,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3226,6 +3596,7 @@
       "name": "Kreatin – 100 % čisti, 200 g",
       "category": "creatine",
       "image_url": "https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1757599646/assets/pas/images/37b90764-196e-436d-ab36-10619a85ff26/proteini-si-kreatin-100-cisti",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.2"
       ],
@@ -3243,7 +3614,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3252,6 +3625,7 @@
       "name": "Micronized Creatine Powder – Optimum Nutrition, 0.317 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.317",
         "kg:0.634"
@@ -3270,7 +3644,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:b3b85b20e022e59d",
@@ -3285,7 +3661,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3294,6 +3672,7 @@
       "name": "Mikroniziran Kreatin u Prahu",
       "category": "creatine",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17902344-1145367083640477.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25"
       ],
@@ -3311,7 +3690,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": "Store price before discount codes. Confirm the final price at the store."
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3320,6 +3701,7 @@
       "name": "NÄNO SUPPS CREATINE POP, 200g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/0d548e58ff4467397d6c7829980a8b17/nano-supps-creatine-pop-200g.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.2"
       ],
@@ -3337,7 +3719,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3346,6 +3730,7 @@
       "name": "OPTIMUM CREATINE POWDER, 187g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/0327cdcf9b23cadf492ecfa82d88bd2f/optimum-creatine-powder-187g.jpg?v26",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.187"
       ],
@@ -3363,7 +3748,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3372,6 +3759,7 @@
       "name": "Pink Creatine - GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.23"
       ],
@@ -3389,7 +3777,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3398,6 +3788,7 @@
       "name": "Platinum Creatine",
       "category": "creatine",
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2024/09/platinum-creatine-400g-proteini-outlet-austria-vegan-600x600.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.4"
       ],
@@ -3415,7 +3806,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3424,6 +3817,7 @@
       "name": "Powerbar Black Line Creatine Monohydrate",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-powerbar-creatine-monohydrate-powder-v01-1.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3441,7 +3835,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3450,6 +3846,7 @@
       "name": "PROTEINI.SI 100% PURE CREATINE (FLAVOURED), 200g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/969c059d1715d8c6f3c74cdbd3824408/proteini-si-100-pure-creatine-flavoured-200g.jpg?v26",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.2"
       ],
@@ -3467,7 +3864,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3476,6 +3875,7 @@
       "name": "PROTEINI.SI 100% PURE CREATINE, 200g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/8863eb0c88d867d86d8dc21452068940/proteini-si-100-pure-creatine-200g.jpg?v26",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.2"
       ],
@@ -3493,7 +3893,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3502,6 +3904,7 @@
       "name": "Proteos Creatine MagnaPower 700 g",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F182647%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.3",
         "kg:0.7"
@@ -3520,7 +3923,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:fafd61b306026dfe",
@@ -3535,7 +3940,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3544,6 +3951,7 @@
       "name": "Pure Creatine Weider 250 g",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F250%5Fg%5F201121%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25",
         "kg:0.6"
@@ -3562,7 +3970,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         },
         {
           "id": "catalog:6f266bdace027867",
@@ -3577,7 +3987,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3586,6 +3998,7 @@
       "name": "Pure Gold Creatine Monohydrate",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-puregold-creatine-monohydrate-v01-1.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.5"
       ],
@@ -3603,7 +4016,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3612,6 +4027,7 @@
       "name": "SPORTNAHRUNG CREATINE MONOHYDRATE POWDER (NEW), 330g",
       "category": "creatine",
       "image_url": "https://www.proteini.si/images/0de9ccadd66e12e09537b3236ac81080/sportnahrung-creatine-monohydrate-powder-new-330g.jpg?v26",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.33"
       ],
@@ -3629,7 +4045,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3638,6 +4056,7 @@
       "name": "Superior 100% Kreatin Monohidrat 300g",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/superior%5F100%5Fkreatin%5Fmonohidrat%5F161531%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3650,12 +4069,14 @@
           "detail_slug": "",
           "package_key": "kg:0.3",
           "flavour": "neutralni okus",
-          "price_eur": 20.0,
-          "unit_price": 66.67,
+          "price_eur": 16.0,
+          "unit_price": 53.33,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3664,6 +4085,7 @@
       "name": "Tesla 100%  Kreatin Monohidrat 300g",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/tesla%5Fkreatin%5F300g%5F165426%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3681,7 +4103,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3690,6 +4114,7 @@
       "name": "THE Creatine (500 g)",
       "category": "creatine",
       "image_url": "https://hr.the-nutrition.com/store/images/products/672_cat_655520.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.5"
       ],
@@ -3707,7 +4132,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:837856308a225c6f",
@@ -3722,7 +4149,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3731,6 +4160,7 @@
       "name": "THE Creatine + Hydration (500 g)",
       "category": "creatine",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2174_cat_678148.jpg",
+      "product_kind": "blend",
       "packages": [
         "kg:0.5"
       ],
@@ -3748,7 +4178,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "blend",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3757,6 +4189,7 @@
       "name": "THE Creatine Fuel (1500 g)",
       "category": "creatine",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2047_cat_473079.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:1.5"
       ],
@@ -3774,7 +4207,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3783,6 +4218,7 @@
       "name": "Verviavita Kreatin Monohidrat 300g",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/verviavita%5Fcreatine%5Fmonohydrate%5F300g%5F134422%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3800,7 +4236,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -3809,6 +4247,7 @@
       "name": "Verviavita Kreatin Monohidrat 900g (2+1 GRATIS)",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/verviavita%5Fkreatin%5Fakcija%5F%282%29%5F135725%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:2.7"
       ],
@@ -3826,7 +4265,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3835,6 +4276,7 @@
       "name": "Weider Creatine Monohydrate Micronised Powder",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-creatine-monohydrate-micronised-powder-v01-1.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3852,7 +4294,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3861,6 +4305,7 @@
       "name": "Weider Mikronizirani Kreatin Monohidrat 300 g",
       "category": "creatine",
       "image_url": "https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fmonohidrat%5F%5F20214%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.3"
       ],
@@ -3878,7 +4323,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3887,6 +4334,7 @@
       "name": "Weider Premium Creatine 100% Creapure®",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2026/01/gaz-nutrition-proizvod-weider-premium-creatine-v01-1.jpg",
+      "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.375"
       ],
@@ -3904,7 +4352,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "name_only"
         }
       ]
     },
@@ -3913,6 +4363,7 @@
       "name": "Weider Pure Creatine, 0.25 kg",
       "category": "creatine",
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.25",
         "kg:0.6"
@@ -3931,7 +4382,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:80aab9283a604715",
@@ -3946,7 +4399,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3955,6 +4410,7 @@
       "name": "X3M Creatine Power (500 g)",
       "category": "creatine",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2055_cat_488363.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.5"
       ],
@@ -3972,7 +4428,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -3981,6 +4439,7 @@
       "name": "zoe Booty Creatine, 250 g",
       "category": "creatine",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_booty_creatine_250_lemonade.jpeg?size=225",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.25"
       ],
@@ -3998,7 +4457,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
@@ -4007,6 +4468,7 @@
       "name": "Čisti kreatin - Weider, 0.25 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg",
+      "product_kind": "unknown",
       "packages": [
         "kg:0.12",
         "kg:0.25",
@@ -4026,7 +4488,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:d590783102197f09",
@@ -4041,7 +4505,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:640fbfb9a4be708e",
@@ -4056,7 +4522,9 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
-          "note": ""
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     }
