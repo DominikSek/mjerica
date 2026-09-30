@@ -190,19 +190,31 @@
     table { min-width: 0; }
     thead { display: none; }
     tbody { display: block; }
-    tr { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; row-gap: 3px;
-         background: var(--surface); border: 1px solid var(--border); padding: 11px 12px; margin-bottom: 8px; }
+    /* One card per product: photo on the left; store and save, name and
+       "View details", then price, size and the per-kg figure with its unit.
+       No rank number: the cards are already in order (owner, 2026-09-30). */
+    tr { display: grid; grid-template-columns: 76px 1fr 1fr auto; column-gap: 12px; row-gap: 4px;
+         grid-template-areas: "thumb store store save" "thumb product product product"
+                              "thumb price weight metric";
+         align-items: center; background: var(--surface); border: 1px solid var(--border);
+         border-radius: 12px; padding: 12px; margin-bottom: 8px; }
     tr.tracked { box-shadow: none; border-color: var(--accent); }
     td { padding: 0; border-bottom: none; }
-    .thumb-cell { flex: 0 0 auto; width: auto; padding: 0; align-self: center; }
-    .rank-cell { flex: 0 0 auto; width: auto; }
-    .store-cell { flex: 0 0 auto; margin-left: auto; }
+    .rank-cell { display: none; }
+    .thumb-cell { grid-area: thumb; width: auto; align-self: start; }
+    .thumb, .thumb-empty { width: 76px; height: 76px; border-radius: 8px; }
+    .thumb { background: #fff; }   /* store photos are shot on white */
+    .store-cell { grid-area: store; font-size: 12px; }
     .store-cell .store { background: none; padding: 0; }
-    .product-cell { flex: 0 0 100%; font-size: 14.5px; }
-    .save-cell { margin-left: auto; }
-    .price-cell, .weight-cell { flex: 1 1 0; text-align: left; color: var(--muted); }
-    .metric-cell { flex: 0 0 auto; margin-left: auto; }
-    .extra-cell { flex: 0 0 100%; font-size: 12px; color: var(--muted); }
+    .save-cell { grid-area: save; justify-self: end; }
+    .product-cell { grid-area: product; font-size: 15px; font-weight: 600; line-height: 1.3; }
+    .product-cell .details-link { display: block; width: max-content; margin: 3px 0 0; padding: 0;
+                                  background: none; font-size: 13px; }
+    .price-cell { grid-area: price; text-align: left; font-weight: 600; }
+    .weight-cell { grid-area: weight; text-align: left; color: var(--muted); }
+    .metric-cell { grid-area: metric; }
+    .metric-cell[data-unit]::after { content: " " attr(data-unit); font-size: 11px; font-weight: 600; }
+    .extra-cell { grid-column: 2 / -1; font-size: 12px; color: var(--muted); }   /* one row each */
     .extra-cell[data-label]::before { content: attr(data-label) ": "; }
   }
 </style>
@@ -313,7 +325,7 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine (Powder) Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a class="active" aria-current="page" href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 30.09.2026 09:45 CEST &middot; 9 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 10:40 CEST &middot; 9 stores</p></div>
 
   <section class="stats"><a class="stat" href="products/proteka_verviavita_kreatin_monohidrat_900g_2_1_gratis_2_7kg.html"><div class="stat-media"><img class="stat-img" src="https://www.proteka.hr/upload/proizvodi/verviavita%5Fkreatin%5Fakcija%5F%282%29%5F135725%2Ejpg.axd?maxwidth=600&amp;maxheight=600" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">14.81 &euro;</div><div class="sub" title="Verviavita Kreatin Monohidrat 900g (2+1 GRATIS) &middot; Proteka"><span class="sub-name">Verviavita Kreatin Monohidrat 900g (2+1 GRATIS)</span><span class="sub-sep"> &middot; </span><span class="sub-store">Proteka</span></div><div class="per-dose">&asymp; 0.07 &euro; per 5 g daily dose</div></div></a><a class="stat" href="products/myprotein_kreatin_hcl_0_0984kg.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">5.14 &euro;</div><div class="sub" title="Kreatin HCl &middot; MyProtein"><span class="sub-name">Kreatin HCl</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">98.4 g pack</div></div></a></section>
 
@@ -361,7 +373,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/verviavita-kreatin-monohidrat-900g-akcija-4600" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a6b4be78ca2e3bbe&quot;, &quot;name&quot;: &quot;Verviavita Kreatin Monohidrat 900g (2+1 GRATIS)&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/verviavita-kreatin-monohidrat-900g-akcija-4600&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:2.7&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 40.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/verviavita%5Fkreatin%5Fakcija%5F%282%29%5F135725%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_verviavita_kreatin_monohidrat_900g_2_1_gratis_2_7kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="40.0">40.00 &euro;</td>
           <td class="num weight-cell" data-v="2.7">2.7 kg</td>
-          <td class="num metric-cell" data-v="14.81"><span class="pill good">14.81</span></td>
+          <td class="num metric-cell" data-v="14.81" data-unit="&euro;/kg"><span class="pill good">14.81</span></td>
           
           
         </tr>
@@ -375,7 +387,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-dekstroza-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a5f61eaeeb8fb54d&quot;, &quot;name&quot;: &quot;Kreatin + Dekstroza - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-dekstroza-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 14.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_dekstroza_gymbeam_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="14.95">14.95 &euro;</td>
           <td class="num weight-cell" data-v="1.0">1 kg</td>
-          <td class="num metric-cell" data-v="14.95"><span class="pill good">14.95</span></td>
+          <td class="num metric-cell" data-v="14.95" data-unit="&euro;/kg"><span class="pill good">14.95</span></td>
           
           
         </tr>
@@ -389,7 +401,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="THE Nutrition|https://hr.the-nutrition.com/proizvod/2047/THE-Creatine-Fuel/b/trgovina/cat/6/stype/2/ob/0" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:7f414ef01ca8c3f5&quot;, &quot;name&quot;: &quot;THE Creatine Fuel (1500 g)&quot;, &quot;store&quot;: &quot;THE Nutrition&quot;, &quot;source_url&quot;: &quot;https://hr.the-nutrition.com/proizvod/2047/THE-Creatine-Fuel/b/trgovina/cat/6/stype/2/ob/0&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 38.56, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://hr.the-nutrition.com/store/images/products/2047_cat_473079.jpg&quot;, &quot;detail_url&quot;: &quot;products/the_nutrition_the_creatine_fuel_1500_g_1_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="38.56">38.56 &euro;</td>
           <td class="num weight-cell" data-v="1.5">1.5 kg</td>
-          <td class="num metric-cell" data-v="25.71"><span class="pill good">25.71</span></td>
+          <td class="num metric-cell" data-v="25.71" data-unit="&euro;/kg"><span class="pill good">25.71</span></td>
           
           
         </tr>
@@ -403,7 +415,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c83c849958ab2f34&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 1.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 41.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="41.95">41.95 &euro;</td>
           <td class="num weight-cell" data-v="1.5">1.5 kg</td>
-          <td class="num metric-cell" data-v="27.97"><span class="pill good">27.97</span></td>
+          <td class="num metric-cell" data-v="27.97" data-unit="&euro;/kg"><span class="pill good">27.97</span></td>
           
           
         </tr>
@@ -417,7 +429,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3803de6301fbaa68&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 1 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_kg_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="28.95">28.95 &euro;</td>
           <td class="num weight-cell" data-v="1.0">1 kg</td>
-          <td class="num metric-cell" data-v="28.95"><span class="pill good">28.95</span></td>
+          <td class="num metric-cell" data-v="28.95" data-unit="&euro;/kg"><span class="pill good">28.95</span></td>
           
           
         </tr>
@@ -431,7 +443,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b86a0810c8ea2496&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.75 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.75&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 22.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_75_kg_0_75kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="22.95">22.95 &euro;</td>
           <td class="num weight-cell" data-v="0.75">750 g</td>
-          <td class="num metric-cell" data-v="30.6"><span class="pill good">30.60</span></td>
+          <td class="num metric-cell" data-v="30.6" data-unit="&euro;/kg"><span class="pill good">30.60</span></td>
           
           
         </tr>
@@ -445,7 +457,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2e93f61109bd6ef2&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="15.95">15.95 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="31.9"><span class="pill good">31.90</span></td>
+          <td class="num metric-cell" data-v="31.9" data-unit="&euro;/kg"><span class="pill good">31.90</span></td>
           
           
         </tr>
@@ -459,7 +471,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d8284d5ca761942c&quot;, &quot;name&quot;: &quot;Kreatin Crea7in - GymBeam, 0.6 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.6&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.2, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_crea7in_gymbeam_0_6_kg_0_6kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.2">20.20 &euro;</td>
           <td class="num weight-cell" data-v="0.6">600 g</td>
-          <td class="num metric-cell" data-v="33.67"><span class="pill good">33.67</span></td>
+          <td class="num metric-cell" data-v="33.67" data-unit="&euro;/kg"><span class="pill good">33.67</span></td>
           
           
         </tr>
@@ -473,7 +485,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/creatine-beta-alanine-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:cc093cc03b52d9ca&quot;, &quot;name&quot;: &quot;Kreatin + Beta-Alanin - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/creatine-beta-alanine-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 16.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine-beta-alanine-500g-unflavoured-gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_beta_alanin_gymbeam_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="16.95">16.95 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="33.9"><span class="pill good">33.90</span></td>
+          <td class="num metric-cell" data-v="33.9" data-unit="&euro;/kg"><span class="pill good">33.90</span></td>
           
           
         </tr>
@@ -487,7 +499,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:abd289c8a62ae457&quot;, &quot;name&quot;: &quot;100% Kreatin Monohidrat - GymBeam, 0.25 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 8.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_0_25_kg_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="8.95">8.95 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="35.8"><span class="pill good">35.80</span></td>
+          <td class="num metric-cell" data-v="35.8" data-unit="&euro;/kg"><span class="pill good">35.80</span></td>
           
           
         </tr>
@@ -501,7 +513,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/body-attack-100-pure-creatine-monohydrate-s-okusom-500g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:419495eb49972940&quot;, &quot;name&quot;: &quot;BODY ATTACK 100% PURE CREATINE MONOHYDRATE (s okusom), 500g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/body-attack-100-pure-creatine-monohydrate-s-okusom-500g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 18.25, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/9ff405c44c323226624420cd468919d4/body-attack-100-pure-creatine-monohydrate-s-okusom-500g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_body_attack_100_pure_creatine_monohydrate_s_okusom_500g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="18.25">18.25 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="36.5"><span class="pill good">36.50</span></td>
+          <td class="num metric-cell" data-v="36.5" data-unit="&euro;/kg"><span class="pill good">36.50</span></td>
           
           
         </tr>
@@ -515,7 +527,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:71e9f2d2bb6a46a7&quot;, &quot;name&quot;: &quot;Kreatin Crea7in - GymBeam, 0.3 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 11.35, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_crea7in_gymbeam_0_3_kg_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="11.35">11.35 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="37.83"><span class="pill good">37.83</span></td>
+          <td class="num metric-cell" data-v="37.83" data-unit="&euro;/kg"><span class="pill good">37.83</span></td>
           
           
         </tr>
@@ -529,7 +541,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/puregold-creatine-monohydrate/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:7d5525c76aea3815&quot;, &quot;name&quot;: &quot;Pure Gold Creatine Monohydrate&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/puregold-creatine-monohydrate/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 18.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-puregold-creatine-monohydrate-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_pure_gold_creatine_monohydrate_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="18.95">18.95 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="37.9"><span class="pill good">37.90</span></td>
+          <td class="num metric-cell" data-v="37.9" data-unit="&euro;/kg"><span class="pill good">37.90</span></td>
           
           
         </tr>
@@ -543,7 +555,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kreatin-monohidrat-elite/10872819/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d492f17e495b3cc7&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat Elite&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kreatin-monohidrat-elite/10872819/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.9996&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 38.18, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10872819-1055350489596192.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kreatin_monohidrat_elite_0_9996kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="38.18">38.18 &euro;</td>
           <td class="num weight-cell" data-v="0.9996">999.6 g</td>
-          <td class="num metric-cell" data-v="38.18"><span class="pill good">38.18</span></td>
+          <td class="num metric-cell" data-v="38.18" data-unit="&euro;/kg"><span class="pill good">38.18</span></td>
           
           
         </tr>
@@ -557,7 +569,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="THE Nutrition|https://hr.the-nutrition.com/proizvod/2174/THE-Creatine-+-Hydration/b/trgovina/cat/6/stype/2/ob/0" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:0379d11646a9ce36&quot;, &quot;name&quot;: &quot;THE Creatine + Hydration (500 g)&quot;, &quot;store&quot;: &quot;THE Nutrition&quot;, &quot;source_url&quot;: &quot;https://hr.the-nutrition.com/proizvod/2174/THE-Creatine-+-Hydration/b/trgovina/cat/6/stype/2/ob/0&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.7, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://hr.the-nutrition.com/store/images/products/2174_cat_678148.jpg&quot;, &quot;detail_url&quot;: &quot;products/the_nutrition_the_creatine_hydration_500_g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="19.7">19.70 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="39.4"><span class="pill good">39.40</span></td>
+          <td class="num metric-cell" data-v="39.4" data-unit="&euro;/kg"><span class="pill good">39.40</span></td>
           
           
         </tr>
@@ -571,7 +583,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/creatine-performance-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4a00613dead50de4&quot;, &quot;name&quot;: &quot;Creatine monohydrate+ - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/creatine-performance-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.4&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.5, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_creatine_monohydrate_gymbeam_0_4kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="19.5">19.50 &euro;</td>
           <td class="num weight-cell" data-v="0.4">400 g</td>
-          <td class="num metric-cell" data-v="48.75"><span class="pill good">48.75</span></td>
+          <td class="num metric-cell" data-v="48.75" data-unit="&euro;/kg"><span class="pill good">48.75</span></td>
           
           
         </tr>
@@ -585,7 +597,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/impact-creatine-chupa-chups-watermelon-lollipop/17526822/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:374e66610952ae6b&quot;, &quot;name&quot;: &quot;Impact Creatine – Chupa Chups Watermelon Lollipop&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/impact-creatine-chupa-chups-watermelon-lollipop/17526822/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 12.72, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17526822-1735285465352189.png&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_impact_creatine_chupa_chups_watermelon_lollipop_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="12.72">12.72 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="50.89"><span class="pill good">50.89</span></td>
+          <td class="num metric-cell" data-v="50.89" data-unit="&euro;/kg"><span class="pill good">50.89</span></td>
           
           
         </tr>
@@ -599,7 +611,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kreatin-hcl/17169974/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:92eefdbd65aacb67&quot;, &quot;name&quot;: &quot;Kreatin HCl&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kreatin-hcl/17169974/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.0984&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 5.14, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kreatin_hcl_0_0984kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="5.14">5.14 &euro;</td>
           <td class="num weight-cell" data-v="0.0984">98.4 g</td>
-          <td class="num metric-cell" data-v="51.39"><span class="pill good">51.39</span></td>
+          <td class="num metric-cell" data-v="51.39" data-unit="&euro;/kg"><span class="pill good">51.39</span></td>
           
           
         </tr>
@@ -613,7 +625,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/battery-rebel-creatine-300g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ff238affc8bba8e3&quot;, &quot;name&quot;: &quot;BATTERY REBEL CREATINE, 300g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/battery-rebel-creatine-300g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.97, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/78ff3b1dc443d6ad46d9ec684a2da936/battery-rebel-creatine-300g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_battery_rebel_creatine_300g_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="15.97">15.97 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="53.23"><span class="pill good">53.23</span></td>
+          <td class="num metric-cell" data-v="53.23" data-unit="&euro;/kg"><span class="pill good">53.23</span></td>
           
           
         </tr>
@@ -627,7 +639,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/mikroniziran-kreatin-u-prahu/17902344/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3df15872e0fd9e16&quot;, &quot;name&quot;: &quot;Mikroniziran Kreatin u Prahu&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/mikroniziran-kreatin-u-prahu/17902344/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 13.39, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17902344-1145367083640477.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_mikroniziran_kreatin_u_prahu_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="13.39">13.39 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="53.57"><span class="pill good">53.57</span></td>
+          <td class="num metric-cell" data-v="53.57" data-unit="&euro;/kg"><span class="pill good">53.57</span></td>
           
           
         </tr>
@@ -641,7 +653,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="THE Nutrition|https://hr.the-nutrition.com/proizvod/1890/THE-Creatine/b/trgovina/cat/6/stype/2/ob/0" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:837856308a225c6f&quot;, &quot;name&quot;: &quot;THE Creatine (500 g)&quot;, &quot;store&quot;: &quot;THE Nutrition&quot;, &quot;source_url&quot;: &quot;https://hr.the-nutrition.com/proizvod/1890/THE-Creatine/b/trgovina/cat/6/stype/2/ob/0&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 27.13, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://hr.the-nutrition.com/store/images/products/1890_cat_448316.jpg&quot;, &quot;detail_url&quot;: &quot;products/the_nutrition_the_creatine_500_g_0_5kg_2.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="27.13">27.13 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="54.26"><span class="pill good">54.26</span></td>
+          <td class="num metric-cell" data-v="54.26" data-unit="&euro;/kg"><span class="pill good">54.26</span></td>
           
           
         </tr>
@@ -655,7 +667,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/platinum-creatine/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ba4129f3a39ff083&quot;, &quot;name&quot;: &quot;Platinum Creatine&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/platinum-creatine/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.4&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 22.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/09/platinum-creatine-400g-proteini-outlet-austria-vegan-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_platinum_creatine_0_4kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="22.0">22.00 &euro;</td>
           <td class="num weight-cell" data-v="0.4">400 g</td>
-          <td class="num metric-cell" data-v="55.0"><span class="pill good">55.00</span></td>
+          <td class="num metric-cell" data-v="55.0" data-unit="&euro;/kg"><span class="pill good">55.00</span></td>
           
           
         </tr>
@@ -669,7 +681,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:06e0e8cff7139bc8&quot;, &quot;name&quot;: &quot;CREATINE MONOHYDRATE&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-monohydrate/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 55.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-novo-1000g-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_monohydrate_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="55.0">55.00 &euro;</td>
           <td class="num weight-cell" data-v="1.0">1 kg</td>
-          <td class="num metric-cell" data-v="55.0"><span class="pill good">55.00</span></td>
+          <td class="num metric-cell" data-v="55.0" data-unit="&euro;/kg"><span class="pill good">55.00</span></td>
           
           
         </tr>
@@ -683,7 +695,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="THE Nutrition|https://hr.the-nutrition.com/proizvod/672/THE-Creatine/b/trgovina/cat/6/stype/2/ob/0" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:e20804d5917369a4&quot;, &quot;name&quot;: &quot;THE Creatine (500 g)&quot;, &quot;store&quot;: &quot;THE Nutrition&quot;, &quot;source_url&quot;: &quot;https://hr.the-nutrition.com/proizvod/672/THE-Creatine/b/trgovina/cat/6/stype/2/ob/0&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.56, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://hr.the-nutrition.com/store/images/products/672_cat_655520.jpg&quot;, &quot;detail_url&quot;: &quot;products/the_nutrition_the_creatine_500_g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="28.56">28.56 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="57.12"><span class="pill good">57.12</span></td>
+          <td class="num metric-cell" data-v="57.12" data-unit="&euro;/kg"><span class="pill good">57.12</span></td>
           
           
         </tr>
@@ -697,7 +709,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-500g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a60dd733987637d6&quot;, &quot;name&quot;: &quot;BATTERY CREATINE, 500g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-500g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 29.67, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/9124bb998eca24fbfbd2f5b535ab1daf/battery-creatine-500g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_battery_creatine_500g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="29.67">29.67 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="59.34"><span class="pill good">59.34</span></td>
+          <td class="num metric-cell" data-v="59.34" data-unit="&euro;/kg"><span class="pill good">59.34</span></td>
           
           
         </tr>
@@ -711,7 +723,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:67675167d66bf619&quot;, &quot;name&quot;: &quot;Kreatin monohidrat prah - Mammut Nutrition&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.55&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 32.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/n/_/n_vrh_bez_n_zvu_33_.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_prah_mammut_nutrition_0_55kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="32.95">32.95 &euro;</td>
           <td class="num weight-cell" data-v="0.55">550 g</td>
-          <td class="num metric-cell" data-v="59.91"><span class="pill good">59.91</span></td>
+          <td class="num metric-cell" data-v="59.91" data-unit="&euro;/kg"><span class="pill good">59.91</span></td>
           
           
         </tr>
@@ -725,7 +737,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-5/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:fd2cdff13b26294f&quot;, &quot;name&quot;: &quot;CREATINE MONOHYDRATE&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-monohydrate-5/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 30.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_monohydrate_0_5kg_3.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="30.0">30.00 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="60.0"><span class="pill good">60.00</span></td>
+          <td class="num metric-cell" data-v="60.0" data-unit="&euro;/kg"><span class="pill good">60.00</span></td>
           
           
         </tr>
@@ -739,7 +751,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-flavoured-500g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:033b5e63f7d7a13e&quot;, &quot;name&quot;: &quot;BATTERY CREATINE (FLAVOURED), 500g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-flavoured-500g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 30.81, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/73d8b60c401acca7638fc0243da92baf/battery-creatine-flavoured-500g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_battery_creatine_flavoured_500g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="30.81">30.81 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="61.62"><span class="pill good">61.62</span></td>
+          <td class="num metric-cell" data-v="61.62" data-unit="&euro;/kg"><span class="pill good">61.62</span></td>
           
           
         </tr>
@@ -753,7 +765,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-creapure-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:1a7ff9e0d6ba4196&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat 100% Creapure® - GymBeam, 1 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-creapure-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 61.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_1_kg_1_0kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="61.95">61.95 &euro;</td>
           <td class="num weight-cell" data-v="1.0">1 kg</td>
-          <td class="num metric-cell" data-v="61.95"><span class="pill good">61.95</span></td>
+          <td class="num metric-cell" data-v="61.95" data-unit="&euro;/kg"><span class="pill good">61.95</span></td>
           
           
         </tr>
@@ -767,7 +779,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-powder-optimum-nutrition.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b3b85b20e022e59d&quot;, &quot;name&quot;: &quot;Micronized Creatine Powder – Optimum Nutrition, 0.634 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-powder-optimum-nutrition.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.634&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 39.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_micronized_creatine_powder_optimum_nutrition_0_634_kg_0_634kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="39.95">39.95 &euro;</td>
           <td class="num weight-cell" data-v="0.634">634 g</td>
-          <td class="num metric-cell" data-v="63.01"><span class="pill good">63.01</span></td>
+          <td class="num metric-cell" data-v="63.01" data-unit="&euro;/kg"><span class="pill good">63.01</span></td>
           
           
         </tr>
@@ -781,7 +793,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-2/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:e501dabefaeccc75&quot;, &quot;name&quot;: &quot;Creatine Monohydrate&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-monohydrate-2/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 31.8, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2020/11/amix_nutrition_kreatin_monohidrat_proteini_outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_monohydrate_0_5kg_2.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="31.8">31.80 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="63.6"><span class="pill mid">63.60</span></td>
+          <td class="num metric-cell" data-v="63.6" data-unit="&euro;/kg"><span class="pill mid">63.60</span></td>
           
           
         </tr>
@@ -795,7 +807,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-reload-500g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2b16e2bf4d20658f&quot;, &quot;name&quot;: &quot;BATTERY CREATINE RELOAD+, 500g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-reload-500g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 31.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/6343140306c95215c35423b1000a96ac/battery-creatine-reload-500g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_battery_creatine_reload_500g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="31.95">31.95 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="63.9"><span class="pill mid">63.90</span></td>
+          <td class="num metric-cell" data-v="63.9" data-unit="&euro;/kg"><span class="pill mid">63.90</span></td>
           
           
         </tr>
@@ -809,7 +821,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-monohidrat-mammut-nutrition.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:08355e705221e6bc&quot;, &quot;name&quot;: &quot;Kreatin monohidrat - Mammut Nutrition&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-monohidrat-mammut-nutrition.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatin_monohydrat_300g.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_mammut_nutrition_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="19.95">19.95 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="66.5"><span class="pill mid">66.50</span></td>
+          <td class="num metric-cell" data-v="66.5" data-unit="&euro;/kg"><span class="pill mid">66.50</span></td>
           
           
         </tr>
@@ -823,7 +835,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/verviavita-kreatin-monohidrat-300g-4588" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:f555bcb4fdd005e9&quot;, &quot;name&quot;: &quot;Verviavita Kreatin Monohidrat 300g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/verviavita-kreatin-monohidrat-300g-4588&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/verviavita%5Fcreatine%5Fmonohydrate%5F300g%5F134422%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_verviavita_kreatin_monohidrat_300g_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.0">20.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="66.67"><span class="pill mid">66.67</span></td>
+          <td class="num metric-cell" data-v="66.67" data-unit="&euro;/kg"><span class="pill mid">66.67</span></td>
           
           
         </tr>
@@ -837,7 +849,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/tesla-kreatin-monohidrat-prah-4083" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:64fd5bc81639b66f&quot;, &quot;name&quot;: &quot;Tesla 100%  Kreatin Monohidrat 300g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/tesla-kreatin-monohidrat-prah-4083&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/tesla%5Fkreatin%5F300g%5F165426%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_tesla_100_kreatin_monohidrat_300g_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.0">20.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="66.67"><span class="pill mid">66.67</span></td>
+          <td class="num metric-cell" data-v="66.67" data-unit="&euro;/kg"><span class="pill mid">66.67</span></td>
           
           
         </tr>
@@ -851,7 +863,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/superior-kreatin-monohidrat-prah-3749" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4888e5271df30eb2&quot;, &quot;name&quot;: &quot;Superior 100% Kreatin Monohidrat 300g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/superior-kreatin-monohidrat-prah-3749&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/superior%5F100%5Fkreatin%5Fmonohidrat%5F161531%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_superior_100_kreatin_monohidrat_300g_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.0">20.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="66.67"><span class="pill mid">66.67</span></td>
+          <td class="num metric-cell" data-v="66.67" data-unit="&euro;/kg"><span class="pill mid">66.67</span></td>
           
           
         </tr>
@@ -865,7 +877,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kreatin-monohidrat/12456626/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:83c678f7e4f4e9c4&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kreatin-monohidrat/12456626/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 6.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456626-1775344551897936.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kreatin_monohidrat_0_1kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="6.69">6.69 &euro;</td>
           <td class="num weight-cell" data-v="0.1">100 g</td>
-          <td class="num metric-cell" data-v="66.93"><span class="pill mid">66.93</span></td>
+          <td class="num metric-cell" data-v="66.93" data-unit="&euro;/kg"><span class="pill mid">66.93</span></td>
           
           
         </tr>
@@ -879,7 +891,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/creapure-kreatin/12456548/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ea815019314054ae&quot;, &quot;name&quot;: &quot;Creapure® Kreatin&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/creapure-kreatin/12456548/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 16.74, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456548-1395323601967762.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_creapure_kreatin_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="16.74">16.74 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="66.97"><span class="pill mid">66.97</span></td>
+          <td class="num metric-cell" data-v="66.97" data-unit="&euro;/kg"><span class="pill mid">66.97</span></td>
           
           
         </tr>
@@ -893,7 +905,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-creapure-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d993446c125da645&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat 100% Creapure® - GymBeam, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-creapure-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 33.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="33.95">33.95 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="67.9"><span class="pill mid">67.90</span></td>
+          <td class="num metric-cell" data-v="67.9" data-unit="&euro;/kg"><span class="pill mid">67.90</span></td>
           
           
         </tr>
@@ -907,7 +919,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/proteini-si-100-pure-creatine-200g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c4cc4b3c45bdc2f1&quot;, &quot;name&quot;: &quot;PROTEINI.SI 100% PURE CREATINE, 200g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/proteini-si-100-pure-creatine-200g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 13.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/8863eb0c88d867d86d8dc21452068940/proteini-si-100-pure-creatine-200g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_proteini_si_100_pure_creatine_200g_0_2kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="13.69">13.69 &euro;</td>
           <td class="num weight-cell" data-v="0.2">200 g</td>
-          <td class="num metric-cell" data-v="68.45"><span class="pill mid">68.45</span></td>
+          <td class="num metric-cell" data-v="68.45" data-unit="&euro;/kg"><span class="pill mid">68.45</span></td>
           
           
         </tr>
@@ -921,7 +933,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/proteini-si-100-pure-creatine-flavoured-200g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c6e3accb3721cc75&quot;, &quot;name&quot;: &quot;PROTEINI.SI 100% PURE CREATINE (FLAVOURED), 200g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/proteini-si-100-pure-creatine-flavoured-200g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 13.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/969c059d1715d8c6f3c74cdbd3824408/proteini-si-100-pure-creatine-flavoured-200g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_proteini_si_100_pure_creatine_flavoured_200g_0_2kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="13.69">13.69 &euro;</td>
           <td class="num weight-cell" data-v="0.2">200 g</td>
-          <td class="num metric-cell" data-v="68.45"><span class="pill mid">68.45</span></td>
+          <td class="num metric-cell" data-v="68.45" data-unit="&euro;/kg"><span class="pill mid">68.45</span></td>
           
           
         </tr>
@@ -935,7 +947,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="THE Nutrition|https://hr.the-nutrition.com/proizvod/2055/X3M-Creatine-Power/b/trgovina/cat/6/stype/2/ob/0" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:b64317cae122c849&quot;, &quot;name&quot;: &quot;X3M Creatine Power (500 g)&quot;, &quot;store&quot;: &quot;THE Nutrition&quot;, &quot;source_url&quot;: &quot;https://hr.the-nutrition.com/proizvod/2055/X3M-Creatine-Power/b/trgovina/cat/6/stype/2/ob/0&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 34.27, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://hr.the-nutrition.com/store/images/products/2055_cat_488363.jpg&quot;, &quot;detail_url&quot;: &quot;products/the_nutrition_x3m_creatine_power_500_g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="34.27">34.27 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="68.54"><span class="pill mid">68.54</span></td>
+          <td class="num metric-cell" data-v="68.54" data-unit="&euro;/kg"><span class="pill mid">68.54</span></td>
           
           
         </tr>
@@ -949,7 +961,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/sportnahrung-creatine-monohydrate-powder-new-330g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:404a8ffaff402fba&quot;, &quot;name&quot;: &quot;SPORTNAHRUNG CREATINE MONOHYDRATE POWDER (NEW), 330g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/sportnahrung-creatine-monohydrate-powder-new-330g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.33&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 22.82, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/0de9ccadd66e12e09537b3236ac81080/sportnahrung-creatine-monohydrate-powder-new-330g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_sportnahrung_creatine_monohydrate_powder_new_330g_0_33kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="22.82">22.82 &euro;</td>
           <td class="num weight-cell" data-v="0.33">330 g</td>
-          <td class="num metric-cell" data-v="69.15"><span class="pill mid">69.15</span></td>
+          <td class="num metric-cell" data-v="69.15" data-unit="&euro;/kg"><span class="pill mid">69.15</span></td>
           
           
         </tr>
@@ -963,7 +975,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-powder-optimum-nutrition.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:fcfa3121eee82377&quot;, &quot;name&quot;: &quot;Micronized Creatine Powder – Optimum Nutrition, 0.317 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-powder-optimum-nutrition.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.317&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 21.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_micronized_creatine_powder_optimum_nutrition_0_317_kg_0_317kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="21.95">21.95 &euro;</td>
           <td class="num weight-cell" data-v="0.317">317 g</td>
-          <td class="num metric-cell" data-v="69.24"><span class="pill mid">69.24</span></td>
+          <td class="num metric-cell" data-v="69.24" data-unit="&euro;/kg"><span class="pill mid">69.24</span></td>
           
           
         </tr>
@@ -977,7 +989,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-6/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2fcfdd3dd7308e42&quot;, &quot;name&quot;: &quot;Creatine Monohydrate&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-monohydrate-6/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 35.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-creatine-500g-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_monohydrate_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="35.0">35.00 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="70.0"><span class="pill mid">70.00</span></td>
+          <td class="num metric-cell" data-v="70.0" data-unit="&euro;/kg"><span class="pill mid">70.00</span></td>
           
           
         </tr>
@@ -991,7 +1003,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-creatine-monohydrate-micronised-powder/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ff24ba4d436fb721&quot;, &quot;name&quot;: &quot;Weider Creatine Monohydrate Micronised Powder&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-creatine-monohydrate-micronised-powder/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 21.55, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-creatine-monohydrate-micronised-powder-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_creatine_monohydrate_micronised_powder_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="21.55">21.55 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="71.83"><span class="pill mid">71.83</span></td>
+          <td class="num metric-cell" data-v="71.83" data-unit="&euro;/kg"><span class="pill mid">71.83</span></td>
           
           
         </tr>
@@ -1005,7 +1017,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-creapure-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:7d0db6b74d4d6bb6&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-creapure-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 18.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_25_kg_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="18.95">18.95 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="75.8"><span class="pill mid">75.80</span></td>
+          <td class="num metric-cell" data-v="75.8" data-unit="&euro;/kg"><span class="pill mid">75.80</span></td>
           
           
         </tr>
@@ -1019,7 +1031,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="dm|https://www.dm.hr/p/d/2446526/proteini-si-kreatin-100-cisti" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:1290329bf75c5084&quot;, &quot;name&quot;: &quot;Kreatin – 100 % čisti, 200 g&quot;, &quot;store&quot;: &quot;dm&quot;, &quot;source_url&quot;: &quot;https://www.dm.hr/p/d/2446526/proteini-si-kreatin-100-cisti&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1757599646/assets/pas/images/37b90764-196e-436d-ab36-10619a85ff26/proteini-si-kreatin-100-cisti&quot;, &quot;detail_url&quot;: &quot;products/dm_kreatin_100_isti_200_g_0_2kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="15.95">15.95 &euro;</td>
           <td class="num weight-cell" data-v="0.2">200 g</td>
-          <td class="num metric-cell" data-v="79.75"><span class="pill mid">79.75</span></td>
+          <td class="num metric-cell" data-v="79.75" data-unit="&euro;/kg"><span class="pill mid">79.75</span></td>
           
           
         </tr>
@@ -1033,7 +1045,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-mikronizirani-kreatin-monohidrat-300-g-5084" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c63b36ecc16eeb0b&quot;, &quot;name&quot;: &quot;Weider Mikronizirani Kreatin Monohidrat 300 g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/weider-mikronizirani-kreatin-monohidrat-300-g-5084&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 23.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fmonohidrat%5F%5F20214%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_weider_mikronizirani_kreatin_monohidrat_300_g_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="23.95">23.95 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="79.83"><span class="pill mid">79.83</span></td>
+          <td class="num metric-cell" data-v="79.83" data-unit="&euro;/kg"><span class="pill mid">79.83</span></td>
           
           
         </tr>
@@ -1047,7 +1059,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/cisti-kreatin-weider-116053.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:640fbfb9a4be708e&quot;, &quot;name&quot;: &quot;Čisti kreatin - Weider, 0.6 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/cisti-kreatin-weider-116053.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.6&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 47.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_isti_kreatin_weider_0_6_kg_0_6kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="47.95">47.95 &euro;</td>
           <td class="num weight-cell" data-v="0.6">600 g</td>
-          <td class="num metric-cell" data-v="79.92"><span class="pill mid">79.92</span></td>
+          <td class="num metric-cell" data-v="79.92" data-unit="&euro;/kg"><span class="pill mid">79.92</span></td>
           
           
         </tr>
@@ -1061,7 +1073,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-500-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:428b97529a780a8d&quot;, &quot;name&quot;: &quot;Creatine Monohydrate, 500 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-500-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 39.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_500g_unflavoured.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_monohydrate_500_g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="39.99">39.99 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="79.98"><span class="pill mid">79.98</span></td>
+          <td class="num metric-cell" data-v="79.98" data-unit="&euro;/kg"><span class="pill mid">79.98</span></td>
           
           
         </tr>
@@ -1075,7 +1087,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-250g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:1c0f945fbe2ece01&quot;, &quot;name&quot;: &quot;BATTERY CREATINE, 250g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/battery-creatine-250g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.54, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/ba23a47d0b079cfb440a569e2887e4f1/battery-creatine-250g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_battery_creatine_250g_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.54">20.54 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="82.16"><span class="pill mid">82.16</span></td>
+          <td class="num metric-cell" data-v="82.16" data-unit="&euro;/kg"><span class="pill mid">82.16</span></td>
           
           
         </tr>
@@ -1089,7 +1101,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:242cc4e231be9098&quot;, &quot;name&quot;: &quot;CREATINE MONOHYDRATE&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-monohydrate-3/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 25.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_monohydrate_0_3kg_2.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="25.0">25.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="83.33"><span class="pill mid">83.33</span></td>
+          <td class="num metric-cell" data-v="83.33" data-unit="&euro;/kg"><span class="pill mid">83.33</span></td>
           
           
         </tr>
@@ -1103,7 +1115,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-pure/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:40671dba214bcc01&quot;, &quot;name&quot;: &quot;CREATINE PURE&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-pure/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 25.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2020/11/creatine_pure_prolabs_proteini_outlet3_LgfdSCKqg4-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_pure_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="25.0">25.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="83.33"><span class="pill mid">83.33</span></td>
+          <td class="num metric-cell" data-v="83.33" data-unit="&euro;/kg"><span class="pill mid">83.33</span></td>
           
           
         </tr>
@@ -1117,7 +1129,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/proteos-creatine-magnapower-700-g-5055" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:fafd61b306026dfe&quot;, &quot;name&quot;: &quot;Proteos Creatine MagnaPower 700 g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/proteos-creatine-magnapower-700-g-5055&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.7&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 59.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F182647%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_proteos_creatine_magnapower_700_g_0_7kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="59.0">59.00 &euro;</td>
           <td class="num weight-cell" data-v="0.7">700 g</td>
-          <td class="num metric-cell" data-v="84.29"><span class="pill mid">84.29</span></td>
+          <td class="num metric-cell" data-v="84.29" data-unit="&euro;/kg"><span class="pill mid">84.29</span></td>
           
           
         </tr>
@@ -1131,7 +1143,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/nano-supps-creatine-pop-200g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:69dc1c962dc636d2&quot;, &quot;name&quot;: &quot;NÄNO SUPPS CREATINE POP, 200g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/nano-supps-creatine-pop-200g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.2&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 17.11, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/0d548e58ff4467397d6c7829980a8b17/nano-supps-creatine-pop-200g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_n_no_supps_creatine_pop_200g_0_2kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="17.11">17.11 &euro;</td>
           <td class="num weight-cell" data-v="0.2">200 g</td>
-          <td class="num metric-cell" data-v="85.55"><span class="pill mid">85.55</span></td>
+          <td class="num metric-cell" data-v="85.55" data-unit="&euro;/kg"><span class="pill mid">85.55</span></td>
           
           
         </tr>
@@ -1145,7 +1157,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-pure-creatine/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:80aab9283a604715&quot;, &quot;name&quot;: &quot;Weider Pure Creatine, 0.6 kg&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-pure-creatine/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.6&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 53.05, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_pure_creatine_0_6_kg_0_6kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="53.05">53.05 &euro;</td>
           <td class="num weight-cell" data-v="0.6">600 g</td>
-          <td class="num metric-cell" data-v="88.42"><span class="pill mid">88.42</span></td>
+          <td class="num metric-cell" data-v="88.42" data-unit="&euro;/kg"><span class="pill mid">88.42</span></td>
           
           
         </tr>
@@ -1159,7 +1171,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:bf74b58197aa2441&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat – GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.1&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 8.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine-monohydrate-120-caps-gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_gymbeam_0_1kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="8.95">8.95 &euro;</td>
           <td class="num weight-cell" data-v="0.1">100 g</td>
-          <td class="num metric-cell" data-v="89.5"><span class="pill mid">89.50</span></td>
+          <td class="num metric-cell" data-v="89.5" data-unit="&euro;/kg"><span class="pill mid">89.50</span></td>
           
           
         </tr>
@@ -1173,7 +1185,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/etixx-creatine-creapure/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:c6b5c4880395dee8&quot;, &quot;name&quot;: &quot;Etixx Creatine Creapure&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/etixx-creatine-creapure/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 26.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-etixx-creatine-creapure-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_etixx_creatine_creapure_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="26.95">26.95 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="89.83"><span class="pill mid">89.83</span></td>
+          <td class="num metric-cell" data-v="89.83" data-unit="&euro;/kg"><span class="pill mid">89.83</span></td>
           
           
         </tr>
@@ -1187,7 +1199,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/animal-kreatin-500g-prah/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:5d3971a64d47f00b&quot;, &quot;name&quot;: &quot;Animal Creatine&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/animal-kreatin-500g-prah/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 45.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2026/08/animal-creatin-500g-prah-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_animal_creatine_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="45.0">45.00 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="90.0"><span class="pill mid">90.00</span></td>
+          <td class="num metric-cell" data-v="90.0" data-unit="&euro;/kg"><span class="pill mid">90.00</span></td>
           
           
         </tr>
@@ -1201,7 +1213,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-monohydrate-4/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:88dd3306fc84516c&quot;, &quot;name&quot;: &quot;Creatine Monohydrate&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-monohydrate-4/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 27.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2024/01/big-man-creatine-monohydrate-300g-novo-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_monohydrate_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="27.0">27.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="90.0"><span class="pill mid">90.00</span></td>
+          <td class="num metric-cell" data-v="90.0" data-unit="&euro;/kg"><span class="pill mid">90.00</span></td>
           
           
         </tr>
@@ -1215,7 +1227,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/kreatin-monohidrat/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:0f380344ba41ddff&quot;, &quot;name&quot;: &quot;Kreatin monohidrat&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/kreatin-monohidrat/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.634&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 58.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2021/02/popust-optimum-nutrition-kreatin-634g-proteini-outlet-222-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_kreatin_monohidrat_0_634kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="58.0">58.00 &euro;</td>
           <td class="num weight-cell" data-v="0.634">634 g</td>
-          <td class="num metric-cell" data-v="91.48"><span class="pill high">91.48</span></td>
+          <td class="num metric-cell" data-v="91.48" data-unit="&euro;/kg"><span class="pill high">91.48</span></td>
           
           
         </tr>
@@ -1229,7 +1241,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creavolution-kreatin-monohidrat/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:57f54a8b4e236407&quot;, &quot;name&quot;: &quot;CreaVolution® (kreatin monohidrat)&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creavolution-kreatin-monohidrat/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2025/11/swedish-supplements-creavolution-300g-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creavolution_kreatin_monohidrat_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="28.0">28.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="93.33"><span class="pill high">93.33</span></td>
+          <td class="num metric-cell" data-v="93.33" data-unit="&euro;/kg"><span class="pill high">93.33</span></td>
           
           
         </tr>
@@ -1243,7 +1255,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/cisti-kreatin-weider-116053.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d590783102197f09&quot;, &quot;name&quot;: &quot;Čisti kreatin - Weider, 0.25 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/cisti-kreatin-weider-116053.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 23.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_isti_kreatin_weider_0_25_kg_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="23.95">23.95 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="95.8"><span class="pill high">95.80</span></td>
+          <td class="num metric-cell" data-v="95.8" data-unit="&euro;/kg"><span class="pill high">95.80</span></td>
           
           
         </tr>
@@ -1257,7 +1269,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/powerbar-black-line-creatine-monohydrate/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:68fc53cc5b0ca4a3&quot;, &quot;name&quot;: &quot;Powerbar Black Line Creatine Monohydrate&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/powerbar-black-line-creatine-monohydrate/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.75, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-powerbar-creatine-monohydrate-powder-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_powerbar_black_line_creatine_monohydrate_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="28.75">28.75 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="95.83"><span class="pill high">95.83</span></td>
+          <td class="num metric-cell" data-v="95.83" data-unit="&euro;/kg"><span class="pill high">95.83</span></td>
           
           
         </tr>
@@ -1271,7 +1283,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-premium-creatine-100-creapure/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2f785be540b3f686&quot;, &quot;name&quot;: &quot;Weider Premium Creatine 100% Creapure®&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-premium-creatine-100-creapure/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.375&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 35.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2026/01/gaz-nutrition-proizvod-weider-premium-creatine-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_premium_creatine_100_creapure_0_375kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="35.95">35.95 &euro;</td>
           <td class="num weight-cell" data-v="0.375">375 g</td>
-          <td class="num metric-cell" data-v="95.87"><span class="pill high">95.87</span></td>
+          <td class="num metric-cell" data-v="95.87" data-unit="&euro;/kg"><span class="pill high">95.87</span></td>
           
           
         </tr>
@@ -1285,7 +1297,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/kreatin-monohidrat-mikronizirani/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:996c9893c7f1e310&quot;, &quot;name&quot;: &quot;Kreatin monohidrat&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/kreatin-monohidrat-mikronizirani/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.317&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 30.4, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-kreatin-317g-proteini-outlet-111-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_kreatin_monohidrat_0_317kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="30.4">30.40 &euro;</td>
           <td class="num weight-cell" data-v="0.317">317 g</td>
-          <td class="num metric-cell" data-v="95.9"><span class="pill high">95.90</span></td>
+          <td class="num metric-cell" data-v="95.9" data-unit="&euro;/kg"><span class="pill high">95.90</span></td>
           
           
         </tr>
@@ -1299,7 +1311,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-250-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:88036f92b1aeef42&quot;, &quot;name&quot;: &quot;Creatine Monohydrate, 250 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-250-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 23.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_250g_unflavoured.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_monohydrate_250_g_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="23.99">23.99 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="95.96"><span class="pill high">95.96</span></td>
+          <td class="num metric-cell" data-v="95.96" data-unit="&euro;/kg"><span class="pill high">95.96</span></td>
           
           
         </tr>
@@ -1313,7 +1325,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/proteos-creatine-magnapower-300-g-5056" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d2a484042a9dbb30&quot;, &quot;name&quot;: &quot;Proteos Creatine MagnaPower 300 g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/proteos-creatine-magnapower-300-g-5056&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 29.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F300g%5F182928%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_proteos_creatine_magnapower_300_g_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="29.0">29.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="96.67"><span class="pill high">96.67</span></td>
+          <td class="num metric-cell" data-v="96.67" data-unit="&euro;/kg"><span class="pill high">96.67</span></td>
           
           
         </tr>
@@ -1327,7 +1339,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/pure-creatine-weider-global-932" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:e830547ab0416f00&quot;, &quot;name&quot;: &quot;Pure Creatine Weider 600 g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/pure-creatine-weider-global-932&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.6&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 58.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F600%5Fg%5F132648%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_pure_creatine_weider_600_g_0_6kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="58.95">58.95 &euro;</td>
           <td class="num weight-cell" data-v="0.6">600 g</td>
-          <td class="num metric-cell" data-v="98.25"><span class="pill high">98.25</span></td>
+          <td class="num metric-cell" data-v="98.25" data-unit="&euro;/kg"><span class="pill high">98.25</span></td>
           
           
         </tr>
@@ -1341,7 +1353,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-150-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:fc9abf7de767f395&quot;, &quot;name&quot;: &quot;Creatine Monohydrate, 150 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-monohydrate-150-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.15&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 14.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_creatine_monohydrate_150g.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_monohydrate_150_g_0_15kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="14.99">14.99 &euro;</td>
           <td class="num weight-cell" data-v="0.15">150 g</td>
-          <td class="num metric-cell" data-v="99.93"><span class="pill high">99.93</span></td>
+          <td class="num metric-cell" data-v="99.93" data-unit="&euro;/kg"><span class="pill high">99.93</span></td>
           
           
         </tr>
@@ -1355,7 +1367,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-500-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:0d4cc0ae2a6df311&quot;, &quot;name&quot;: &quot;Elite Creatine, 500 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-500-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 49.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_elite_creatine_500_g_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="49.99">49.99 &euro;</td>
           <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="99.98"><span class="pill high">99.98</span></td>
+          <td class="num metric-cell" data-v="99.98" data-unit="&euro;/kg"><span class="pill high">99.98</span></td>
           
           
         </tr>
@@ -1369,7 +1381,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-317-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:5e8d9ffc14783e50&quot;, &quot;name&quot;: &quot;Creatine Powder, 317 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-317-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.317&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 32.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_93srv_fr_6058184_web_on00222_1.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_powder_317_g_0_317kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="32.99">32.99 &euro;</td>
           <td class="num weight-cell" data-v="0.317">317 g</td>
-          <td class="num metric-cell" data-v="104.07"><span class="pill high">104.07</span></td>
+          <td class="num metric-cell" data-v="104.07" data-unit="&euro;/kg"><span class="pill high">104.07</span></td>
           
           
         </tr>
@@ -1383,7 +1395,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ecb3d56f324c49b5&quot;, &quot;name&quot;: &quot;Pink Creatine - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.23&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 23.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_pink_creatine_gymbeam_0_23kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="23.95">23.95 &euro;</td>
           <td class="num weight-cell" data-v="0.23">230 g</td>
-          <td class="num metric-cell" data-v="105.04"><span class="pill high">105.04</span></td>
+          <td class="num metric-cell" data-v="105.04" data-unit="&euro;/kg"><span class="pill high">105.04</span></td>
           
           
         </tr>
@@ -1397,7 +1409,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-pure-creatine/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:33e62b87b1ca2226&quot;, &quot;name&quot;: &quot;Weider Pure Creatine, 0.25 kg&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-pure-creatine/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 26.55, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_pure_creatine_0_25_kg_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="26.55">26.55 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="106.2"><span class="pill high">106.20</span></td>
+          <td class="num metric-cell" data-v="106.2" data-unit="&euro;/kg"><span class="pill high">106.20</span></td>
           
           
         </tr>
@@ -1411,7 +1423,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/dymatize-creatine-monohydrate/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:060a9dc32dd31d23&quot;, &quot;name&quot;: &quot;Dymatize Creapure Creatine Monohydrate&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/dymatize-creatine-monohydrate/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 31.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-dymatize-creatine-v01.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_dymatize_creapure_creatine_monohydrate_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="31.95">31.95 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="106.5"><span class="pill high">106.50</span></td>
+          <td class="num metric-cell" data-v="106.5" data-unit="&euro;/kg"><span class="pill high">106.50</span></td>
           
           
         </tr>
@@ -1425,7 +1437,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-187-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:33a56170275ec88e&quot;, &quot;name&quot;: &quot;Creatine Powder, 187 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-187-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.187&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/optimum-nutrition-micronised-creatine-powder-187g.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_powder_187_g_0_187kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="19.99">19.99 &euro;</td>
           <td class="num weight-cell" data-v="0.187">187 g</td>
-          <td class="num metric-cell" data-v="106.9"><span class="pill high">106.90</span></td>
+          <td class="num metric-cell" data-v="106.9" data-unit="&euro;/kg"><span class="pill high">106.90</span></td>
           
           
         </tr>
@@ -1439,7 +1451,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/creatine-yummies-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:722182ddbb624cbf&quot;, &quot;name&quot;: &quot;Creatine Yummies - GymBeam&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/creatine-yummies-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.18&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.5, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine_gummies_60_gummies_gymbeam.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_creatine_yummies_gymbeam_0_18kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="19.5">19.50 &euro;</td>
           <td class="num weight-cell" data-v="0.18">180 g</td>
-          <td class="num metric-cell" data-v="108.33"><span class="pill high">108.33</span></td>
+          <td class="num metric-cell" data-v="108.33" data-unit="&euro;/kg"><span class="pill high">108.33</span></td>
           
           
         </tr>
@@ -1453,7 +1465,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini.si|https://www.proteini.si/hr/kreatin/monohidrat/optimum-creatine-powder-187g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3ba3159b97212387&quot;, &quot;name&quot;: &quot;OPTIMUM CREATINE POWDER, 187g&quot;, &quot;store&quot;: &quot;Proteini.si&quot;, &quot;source_url&quot;: &quot;https://www.proteini.si/hr/kreatin/monohidrat/optimum-creatine-powder-187g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.187&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.54, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini.si/images/0327cdcf9b23cadf492ecfa82d88bd2f/optimum-creatine-powder-187g.jpg?v26&quot;, &quot;detail_url&quot;: &quot;products/proteini_si_optimum_creatine_powder_187g_0_187kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.54">20.54 &euro;</td>
           <td class="num weight-cell" data-v="0.187">187 g</td>
-          <td class="num metric-cell" data-v="109.84"><span class="pill high">109.84</span></td>
+          <td class="num metric-cell" data-v="109.84" data-unit="&euro;/kg"><span class="pill high">109.84</span></td>
           
           
         </tr>
@@ -1467,7 +1479,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creatine-creapure/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a8bf9f19684c3b49&quot;, &quot;name&quot;: &quot;Creatine (Creapure®)&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creatine-creapure/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 33.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-creapure-300g-proteini-outlet-1-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creatine_creapure_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="33.0">33.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="110.0"><span class="pill high">110.00</span></td>
+          <td class="num metric-cell" data-v="110.0" data-unit="&euro;/kg"><span class="pill high">110.00</span></td>
           
           
         </tr>
@@ -1481,7 +1493,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/pure-creatine-weider-250-g-4703" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:67adec2aaa6dcefc&quot;, &quot;name&quot;: &quot;Pure Creatine Weider 250 g&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/pure-creatine-weider-250-g-4703&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 27.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F250%5Fg%5F201121%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_pure_creatine_weider_250_g_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="27.95">27.95 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="111.8"><span class="pill high">111.80</span></td>
+          <td class="num metric-cell" data-v="111.8" data-unit="&euro;/kg"><span class="pill high">111.80</span></td>
           
           
         </tr>
@@ -1495,7 +1507,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/clear-creatine-monohydrate-250-g-lemonade" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:e5a0f55756e5ce3f&quot;, &quot;name&quot;: &quot;Clear Creatine Monohydrate, 250 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/clear-creatine-monohydrate-250-g-lemonade&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;Lemonade&quot;, &quot;price_eur&quot;: 27.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_clear_creatine_monohydrate_250_g_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="27.99">27.99 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="111.96"><span class="pill high">111.96</span></td>
+          <td class="num metric-cell" data-v="111.96" data-unit="&euro;/kg"><span class="pill high">111.96</span></td>
           
           
         </tr>
@@ -1509,7 +1521,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/zoe-booty-creatine-250-g-lemonade" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4b1d6485d8233bc6&quot;, &quot;name&quot;: &quot;zoe Booty Creatine, 250 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/zoe-booty-creatine-250-g-lemonade&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;Lemonade&quot;, &quot;price_eur&quot;: 27.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_booty_creatine_250_lemonade.jpeg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_zoe_booty_creatine_250_g_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="27.99">27.99 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="111.96"><span class="pill high">111.96</span></td>
+          <td class="num metric-cell" data-v="111.96" data-unit="&euro;/kg"><span class="pill high">111.96</span></td>
           
           
         </tr>
@@ -1523,7 +1535,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-250-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:3b1d292e66ffeb95&quot;, &quot;name&quot;: &quot;Elite Creatine, 250 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-250-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.25&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 29.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_elite_creatine_250_g_0_25kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="29.99">29.99 &euro;</td>
           <td class="num weight-cell" data-v="0.25">250 g</td>
-          <td class="num metric-cell" data-v="119.96"><span class="pill high">119.96</span></td>
+          <td class="num metric-cell" data-v="119.96" data-unit="&euro;/kg"><span class="pill high">119.96</span></td>
           
           
         </tr>
@@ -1537,7 +1549,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-247-5-g-naranca" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:eddbe330d6c8c365&quot;, &quot;name&quot;: &quot;Creatine Powder, 247.5 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-247-5-g-naranca&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.2475&quot;, &quot;flavour&quot;: &quot;Naranča&quot;, &quot;price_eur&quot;: 29.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_creatine_247.5g_55sv_blueraspberry_6076549_ecomm.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_powder_247_5_g_0_2475kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="29.99">29.99 &euro;</td>
           <td class="num weight-cell" data-v="0.2475">247.5 g</td>
-          <td class="num metric-cell" data-v="121.17"><span class="pill high">121.17</span></td>
+          <td class="num metric-cell" data-v="121.17" data-unit="&euro;/kg"><span class="pill high">121.17</span></td>
           
           
         </tr>
@@ -1551,7 +1563,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:f34ec1a0f68e9931&quot;, &quot;name&quot;: &quot;Creatine Direct, 30 x 3,5 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-direct-30-x-3-5-g-lemon-lime&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.105&quot;, &quot;flavour&quot;: &quot;Lemon Lime&quot;, &quot;price_eur&quot;: 12.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_direct_30_x_3_5_g_0_105kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="12.99">12.99 &euro;</td>
           <td class="num weight-cell" data-v="0.105">105 g</td>
-          <td class="num metric-cell" data-v="123.71"><span class="pill high">123.71</span></td>
+          <td class="num metric-cell" data-v="123.71" data-unit="&euro;/kg"><span class="pill high">123.71</span></td>
           
           
         </tr>
@@ -1565,21 +1577,21 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-dna-216-g" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:4075657f882b0d96&quot;, &quot;name&quot;: &quot;Creatine DNA, 216 g&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-dna-216-g&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.216&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 27.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn_creatine.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_dna_216_g_0_216kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="27.99">27.99 &euro;</td>
           <td class="num weight-cell" data-v="0.216">216 g</td>
-          <td class="num metric-cell" data-v="129.58"><span class="pill high">129.58</span></td>
+          <td class="num metric-cell" data-v="129.58" data-unit="&euro;/kg"><span class="pill high">129.58</span></td>
           
           
         </tr>
         <tr data-store="GymBeam HR" data-track-key="catalog:8bb1d68e540adc1d"
-            data-offer-id="catalog:203048dd597b5031" data-price-eur="1.5"
+            data-offer-id="catalog:203048dd597b5031" data-price-eur="1.4"
             data-search="gymbeam hr kreatin crea7in - gymbeam, 0.01 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#93692a"></span>GymBeam HR</span></td>
           <td class="product-cell" data-v="Kreatin Crea7in - GymBeam, 0.01 kg"><a href="https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html" target="_blank" rel="noopener">Kreatin Crea7in - GymBeam, 0.01 kg</a><a class="details-link" href="products/gymbeam_hr_kreatin_crea7in_gymbeam_0_01_kg_0_01kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:203048dd597b5031&quot;, &quot;name&quot;: &quot;Kreatin Crea7in - GymBeam, 0.01 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.01&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 1.5, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_crea7in_gymbeam_0_01_kg_0_01kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="1.5">1.50 &euro;</td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:203048dd597b5031&quot;, &quot;name&quot;: &quot;Kreatin Crea7in - GymBeam, 0.01 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.01&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 1.4, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_crea7in_gymbeam_0_01_kg_0_01kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="1.4">1.40 &euro;</td>
           <td class="num weight-cell" data-v="0.01">10 g</td>
-          <td class="num metric-cell" data-v="150.0"><span class="pill high">150.00</span></td>
+          <td class="num metric-cell" data-v="140.0" data-unit="&euro;/kg"><span class="pill high">140.00</span></td>
           
           
         </tr>
@@ -1593,7 +1605,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/176-creatine-alkaline-megabol.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:58bb03ebbcb516fa&quot;, &quot;name&quot;: &quot;Kreatin Alkalin 1500  - Megabol&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/176-creatine-alkaline-megabol.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.13&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 20.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creatine-alkaline-120-caps.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_alkalin_1500_megabol_0_13kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="20.95">20.95 &euro;</td>
           <td class="num weight-cell" data-v="0.13">130 g</td>
-          <td class="num metric-cell" data-v="161.15"><span class="pill high">161.15</span></td>
+          <td class="num metric-cell" data-v="161.15" data-unit="&euro;/kg"><span class="pill high">161.15</span></td>
           
           
         </tr>
@@ -1607,7 +1619,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/cisti-kreatin-weider.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:473a867d9acdd96a&quot;, &quot;name&quot;: &quot;Čisti kreatin - Weider&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/cisti-kreatin-weider.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.12&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 25.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/w/e/weider_31741_pure_creatine_100_caps_vs_1_.png&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_isti_kreatin_weider_0_12kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="25.95">25.95 &euro;</td>
           <td class="num weight-cell" data-v="0.12">120 g</td>
-          <td class="num metric-cell" data-v="216.25"><span class="pill high">216.25</span></td>
+          <td class="num metric-cell" data-v="216.25" data-unit="&euro;/kg"><span class="pill high">216.25</span></td>
           
           
         </tr></tbody>
