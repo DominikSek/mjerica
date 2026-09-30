@@ -1390,7 +1390,87 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-09-30T16:15:46.247153+00:00",
+  "checked_at": "2026-09-30T21:32:03.369645+00:00",
+  "built_at": "2026-09-30T21:32:03Z",
+  "store_checks": {
+    "GymBeam HR": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:37Z",
+      "last_success_at": "2026-09-30T21:26:37Z",
+      "reason": "",
+      "product_count": 20
+    },
+    "Polleo Sport": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:40Z",
+      "last_success_at": "2026-09-30T21:26:40Z",
+      "reason": "",
+      "product_count": 24
+    },
+    "Proteka": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:44Z",
+      "last_success_at": "2026-09-30T21:26:44Z",
+      "reason": "",
+      "product_count": 4
+    },
+    "GAZ Nutrition": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:44Z",
+      "last_success_at": "2026-09-30T21:26:44Z",
+      "reason": "",
+      "product_count": 6
+    },
+    "Zeta Nutrition": {
+      "status": "failed",
+      "attempted_at": "2026-09-30T21:26:47Z",
+      "last_success_at": null,
+      "reason": "store site looked unavailable",
+      "product_count": 0
+    },
+    "Proteini.si": {
+      "status": "not_configured",
+      "attempted_at": "2026-09-30T21:26:47Z",
+      "last_success_at": null,
+      "reason": "no listing for this category",
+      "product_count": 0
+    },
+    "THE Nutrition": {
+      "status": "not_configured",
+      "attempted_at": "2026-09-30T21:26:47Z",
+      "last_success_at": null,
+      "reason": "no listing for this category",
+      "product_count": 0
+    },
+    "Proteini Outlet": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:47Z",
+      "last_success_at": "2026-09-30T21:26:47Z",
+      "reason": "",
+      "product_count": 5
+    },
+    "Scitec": {
+      "status": "not_configured",
+      "attempted_at": "2026-09-30T21:26:49Z",
+      "last_success_at": null,
+      "reason": "no listing for this category",
+      "product_count": 0
+    },
+    "MyProtein": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:49Z",
+      "last_success_at": "2026-09-30T21:26:49Z",
+      "reason": "",
+      "product_count": 14
+    },
+    "dm": {
+      "status": "not_configured",
+      "attempted_at": "2026-09-30T21:26:54Z",
+      "last_success_at": null,
+      "reason": "no listing for this category",
+      "product_count": 0
+    }
+  },
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",

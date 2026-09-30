@@ -37,6 +37,18 @@
   .listing-heading { margin-bottom: 22px; }
   h1 { font: 800 clamp(28px, 4vw, 42px)/1.05 var(--font-heading); letter-spacing: -.04em; margin: 0 0 7px; }
   .gen-meta { margin: 0 0 18px; color: var(--muted); font-size: 12.5px; }
+  /* "Store checks" (plan 2026-09-30 D2): closed by default so the listing stays first. */
+  .store-checks { margin: -14px 0 22px; font-size: 13px; color: var(--muted); }
+  .store-checks summary { width: fit-content; cursor: pointer; font-weight: 650; color: var(--text); }
+  .store-checks summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; border-radius: 4px; }
+  .checks-summary { margin-left: 6px; font-weight: 400; color: var(--muted); }
+  .checks-list { display: grid; gap: 6px; margin: 10px 0 6px; padding: 0; list-style: none; }
+  .check { display: grid; grid-template-columns: minmax(110px, 170px) minmax(0, 1fr) auto; gap: 2px 12px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+  .check-store { font-weight: 650; color: var(--text); }
+  .check-status { overflow-wrap: anywhere; }
+  .check[data-status="failed"] .check-status, .check[data-status="partial"] .check-status { font-weight: 650; color: var(--text); }
+  .check-stale { margin-left: 6px; padding: 0 6px; border: 1px solid currentColor; border-radius: 999px; font-size: 11px; font-weight: 700; }
+  .checks-note { margin: 6px 0 0; font-size: 12px; }
   .category-switch { display: inline-flex; gap: 4px; margin: 2px 0 14px; padding: 4px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
   .category-switch a { padding: 8px 16px; border-radius: 9px; color: var(--text); font: 600 15px/1.2 var(--font-body); text-decoration: none; white-space: nowrap; }
   .category-switch a:hover { background: var(--accent-soft); }
@@ -189,6 +201,7 @@
   @media (max-width: 720px) {
     .page { padding: 18px 14px 40px; }
     h1 { font-size: 22px; }
+    .check { grid-template-columns: minmax(0, 1fr); }
     .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
     .controls { padding: 10px; border-radius: 10px; }
     .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -340,7 +353,8 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine Gummies Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a class="active" aria-current="page" href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 30.09.2026 18:14 CEST &middot; 5 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 23:31 CEST &middot; 5 stores</p></div>
+  <details class="store-checks" data-stale-days="8"><summary>Store checks <span class="checks-summary">5 OK · 1 failed · 4 no matching products<span class="checks-stale-count"></span></span></summary><ul class="checks-list"><li class="check" data-status="success" data-attempted="2026-09-30T21:26:34Z"><span class="check-store">GymBeam HR</span><span class="check-status">OK: 1 product</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:34Z"><span class="check-store">Polleo Sport</span><span class="check-status">OK: 1 product</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:34Z"><span class="check-store">Proteka</span><span class="check-status">OK: 2 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:34Z"><span class="check-store">GAZ Nutrition</span><span class="check-status">OK: 2 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="failed" data-attempted="2026-09-30T21:26:35Z"><span class="check-store">Zeta Nutrition</span><span class="check-status">Failed: store site looked unavailable</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span> · no earlier working check</span></li><li class="check" data-status="empty" data-attempted="2026-09-30T21:26:35Z"><span class="check-store">Proteini.si</span><span class="check-status">No matching products: no matching products listed</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="empty" data-attempted="2026-09-30T21:26:35Z"><span class="check-store">THE Nutrition</span><span class="check-status">No matching products: no matching products listed</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="empty" data-attempted="2026-09-30T21:26:35Z"><span class="check-store">Proteini Outlet</span><span class="check-status">No matching products: the store lists no products for this search</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:37Z"><span class="check-store">MyProtein</span><span class="check-status">OK: 2 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="empty" data-attempted="2026-09-30T21:26:37Z"><span class="check-store">dm</span><span class="check-status">No matching products: no matching products listed</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li></ul><p class="checks-note">Dates are when we last looked at each store's listing. Stale means older than 8 days.</p></details>
 
   <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html"><div class="stat-media"><img class="stat-img" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per gummy</div><div class="value">0.234 &euro;</div><div class="sub" title="Weider Micronized Creatine Gummies &middot; GAZ Nutrition"><span class="sub-name">Weider Micronized Creatine Gummies</span><span class="sub-sep"> &middot; </span><span class="sub-store">GAZ Nutrition</span></div></div></a><a class="stat" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">9.99 &euro;</div><div class="sub" title="Kremaste gumene bombone s kreatinom &middot; MyProtein"><span class="sub-name">Kremaste gumene bombone s kreatinom</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">30 gummies</div></div></a></section>
@@ -732,6 +746,42 @@
   }
 
   applyFilters();
+})();
+</script>
+<script>
+/* Store checks (plan 2026-09-30 D2): the dates are fixed at build time, so the
+   age and "Stale" follow the viewer's clock -- a static page must not look
+   fresh forever. A time in the future (a wrong clock) gets no age at all. */
+(() => {
+  const box = document.querySelector(".store-checks");
+  if (!box) return;
+  const DAY = 86400000;
+  const staleMs = (Number(box.dataset.staleDays) || 8) * DAY;
+  const now = Date.now();
+  let stale = 0;
+  box.querySelectorAll("li.check[data-attempted]").forEach((li) => {
+    const at = Date.parse(li.dataset.attempted);
+    const age = li.querySelector(".check-age");
+    let badge = li.querySelector(".check-stale");
+    if (!Number.isFinite(at) || at > now) {
+      if (badge) stale++;
+      return;
+    }
+    const days = Math.floor((now - at) / DAY);
+    if (age) age.textContent = days < 1 ? " (under a day ago)" : ` (${days} day${days === 1 ? "" : "s"} ago)`;
+    const isStale = now - at >= staleMs;
+    if (isStale && !badge) {
+      badge = document.createElement("span");
+      badge.className = "check-stale";
+      badge.textContent = "Stale";
+      li.querySelector(".check-when").append(" ", badge);
+    } else if (!isStale && badge) {
+      badge.remove();
+    }
+    if (isStale) stale++;
+  });
+  const count = box.querySelector(".checks-stale-count");
+  if (count) count.textContent = stale ? ` · ${stale} stale` : "";
 })();
 </script>
 <style>

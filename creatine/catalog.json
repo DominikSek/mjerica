@@ -230,25 +230,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
     {
-      "id": "catalog:d993446c125da645",
-      "offer_id": "catalog:d993446c125da645",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_5_kg_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": null,
-      "price_eur": 33.95,
-      "unit_price": 67.9,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "pure_monohydrate",
-      "kind_confidence": "verified",
-      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.5 kg",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
-    },
-    {
       "id": "catalog:1a7ff9e0d6ba4196",
       "offer_id": "catalog:1a7ff9e0d6ba4196",
       "store": "GymBeam HR",
@@ -1713,7 +1694,87 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-09-30T16:14:44.684151+00:00",
+  "checked_at": "2026-09-30T21:31:12.055625+00:00",
+  "built_at": "2026-09-30T21:31:12Z",
+  "store_checks": {
+    "GymBeam HR": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:20Z",
+      "last_success_at": "2026-09-30T21:26:20Z",
+      "reason": "",
+      "product_count": 24
+    },
+    "Polleo Sport": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:21Z",
+      "last_success_at": "2026-09-30T21:26:21Z",
+      "reason": "",
+      "product_count": 12
+    },
+    "Proteka": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:21Z",
+      "last_success_at": "2026-09-30T21:26:21Z",
+      "reason": "",
+      "product_count": 9
+    },
+    "GAZ Nutrition": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:22Z",
+      "last_success_at": "2026-09-30T21:26:22Z",
+      "reason": "",
+      "product_count": 8
+    },
+    "Zeta Nutrition": {
+      "status": "failed",
+      "attempted_at": "2026-09-30T21:26:22Z",
+      "last_success_at": null,
+      "reason": "store site looked unavailable",
+      "product_count": 0
+    },
+    "Proteini.si": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:22Z",
+      "last_success_at": "2026-09-30T21:26:22Z",
+      "reason": "",
+      "product_count": 11
+    },
+    "THE Nutrition": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:22Z",
+      "last_success_at": "2026-09-30T21:26:22Z",
+      "reason": "",
+      "product_count": 5
+    },
+    "Proteini Outlet": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:22Z",
+      "last_success_at": "2026-09-30T21:26:22Z",
+      "reason": "",
+      "product_count": 13
+    },
+    "Scitec": {
+      "status": "not_configured",
+      "attempted_at": "2026-09-30T21:26:29Z",
+      "last_success_at": null,
+      "reason": "no listing for this category",
+      "product_count": 0
+    },
+    "MyProtein": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:29Z",
+      "last_success_at": "2026-09-30T21:26:29Z",
+      "reason": "",
+      "product_count": 6
+    },
+    "dm": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:31Z",
+      "last_success_at": "2026-09-30T21:26:31Z",
+      "reason": "",
+      "product_count": 1
+    }
+  },
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -3447,7 +3508,6 @@
       "product_kind": "pure_monohydrate",
       "packages": [
         "kg:0.25",
-        "kg:0.5",
         "kg:1"
       ],
       "offers": [
@@ -3461,23 +3521,6 @@
           "flavour": "bez okusa",
           "price_eur": 18.95,
           "unit_price": 75.8,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "pure_monohydrate",
-          "kind_confidence": "verified"
-        },
-        {
-          "id": "catalog:5c12bb2ca03d092d",
-          "offer_id": "catalog:5c12bb2ca03d092d",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.5",
-          "flavour": "bez okusa",
-          "price_eur": 33.95,
-          "unit_price": 67.9,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",

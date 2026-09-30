@@ -364,7 +364,87 @@
     }
   ],
   "category": "creatine_capsules",
-  "checked_at": "2026-09-30T16:14:54.513868+00:00",
+  "checked_at": "2026-09-30T21:31:21.517430+00:00",
+  "built_at": "2026-09-30T21:31:21Z",
+  "store_checks": {
+    "GymBeam HR": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:31Z",
+      "last_success_at": "2026-09-30T21:26:31Z",
+      "reason": "",
+      "product_count": 5
+    },
+    "Polleo Sport": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:31Z",
+      "last_success_at": "2026-09-30T21:26:31Z",
+      "reason": "",
+      "product_count": 2
+    },
+    "Proteka": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:32Z",
+      "last_success_at": "2026-09-30T21:26:32Z",
+      "reason": "",
+      "product_count": 4
+    },
+    "GAZ Nutrition": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:32Z",
+      "last_success_at": "2026-09-30T21:26:32Z",
+      "reason": "",
+      "product_count": 1
+    },
+    "Zeta Nutrition": {
+      "status": "failed",
+      "attempted_at": "2026-09-30T21:26:32Z",
+      "last_success_at": null,
+      "reason": "store site looked unavailable",
+      "product_count": 0
+    },
+    "Proteini.si": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:32Z",
+      "last_success_at": "2026-09-30T21:26:32Z",
+      "reason": "",
+      "product_count": 3
+    },
+    "THE Nutrition": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:32Z",
+      "last_success_at": "2026-09-30T21:26:32Z",
+      "reason": "",
+      "product_count": 2
+    },
+    "Proteini Outlet": {
+      "status": "success",
+      "attempted_at": "2026-09-30T21:26:32Z",
+      "last_success_at": "2026-09-30T21:26:32Z",
+      "reason": "",
+      "product_count": 2
+    },
+    "Scitec": {
+      "status": "not_configured",
+      "attempted_at": "2026-09-30T21:26:34Z",
+      "last_success_at": null,
+      "reason": "no listing for this category",
+      "product_count": 0
+    },
+    "MyProtein": {
+      "status": "empty",
+      "attempted_at": "2026-09-30T21:26:34Z",
+      "last_success_at": "2026-09-30T21:26:34Z",
+      "reason": "no matching products listed",
+      "product_count": 0
+    },
+    "dm": {
+      "status": "empty",
+      "attempted_at": "2026-09-30T21:26:34Z",
+      "last_success_at": "2026-09-30T21:26:34Z",
+      "reason": "no matching products listed",
+      "product_count": 0
+    }
+  },
   "products": [
     {
       "id": "catalog:c9ba6f77c7d20a81",

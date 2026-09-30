@@ -37,6 +37,18 @@
   .listing-heading { margin-bottom: 22px; }
   h1 { font: 800 clamp(28px, 4vw, 42px)/1.05 var(--font-heading); letter-spacing: -.04em; margin: 0 0 7px; }
   .gen-meta { margin: 0 0 18px; color: var(--muted); font-size: 12.5px; }
+  /* "Store checks" (plan 2026-09-30 D2): closed by default so the listing stays first. */
+  .store-checks { margin: -14px 0 22px; font-size: 13px; color: var(--muted); }
+  .store-checks summary { width: fit-content; cursor: pointer; font-weight: 650; color: var(--text); }
+  .store-checks summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; border-radius: 4px; }
+  .checks-summary { margin-left: 6px; font-weight: 400; color: var(--muted); }
+  .checks-list { display: grid; gap: 6px; margin: 10px 0 6px; padding: 0; list-style: none; }
+  .check { display: grid; grid-template-columns: minmax(110px, 170px) minmax(0, 1fr) auto; gap: 2px 12px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+  .check-store { font-weight: 650; color: var(--text); }
+  .check-status { overflow-wrap: anywhere; }
+  .check[data-status="failed"] .check-status, .check[data-status="partial"] .check-status { font-weight: 650; color: var(--text); }
+  .check-stale { margin-left: 6px; padding: 0 6px; border: 1px solid currentColor; border-radius: 999px; font-size: 11px; font-weight: 700; }
+  .checks-note { margin: 6px 0 0; font-size: 12px; }
   .category-switch { display: inline-flex; gap: 4px; margin: 2px 0 14px; padding: 4px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
   .category-switch a { padding: 8px 16px; border-radius: 9px; color: var(--text); font: 600 15px/1.2 var(--font-body); text-decoration: none; white-space: nowrap; }
   .category-switch a:hover { background: var(--accent-soft); }
@@ -189,6 +201,7 @@
   @media (max-width: 720px) {
     .page { padding: 18px 14px 40px; }
     h1 { font-size: 22px; }
+    .check { grid-template-columns: minmax(0, 1fr); }
     .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
     .controls { padding: 10px; border-radius: 10px; }
     .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -340,7 +353,8 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine (Powder) Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a class="active" aria-current="page" href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 30.09.2026 18:14 CEST &middot; 9 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 23:31 CEST &middot; 9 stores</p></div>
+  <details class="store-checks" data-stale-days="8"><summary>Store checks <span class="checks-summary">9 OK · 1 failed<span class="checks-stale-count"></span></span></summary><ul class="checks-list"><li class="check" data-status="success" data-attempted="2026-09-30T21:26:20Z"><span class="check-store">GymBeam HR</span><span class="check-status">OK: 24 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:21Z"><span class="check-store">Polleo Sport</span><span class="check-status">OK: 12 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:21Z"><span class="check-store">Proteka</span><span class="check-status">OK: 9 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:22Z"><span class="check-store">GAZ Nutrition</span><span class="check-status">OK: 8 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="failed" data-attempted="2026-09-30T21:26:22Z"><span class="check-store">Zeta Nutrition</span><span class="check-status">Failed: store site looked unavailable</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span> · no earlier working check</span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:22Z"><span class="check-store">Proteini.si</span><span class="check-status">OK: 11 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:22Z"><span class="check-store">THE Nutrition</span><span class="check-status">OK: 5 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:22Z"><span class="check-store">Proteini Outlet</span><span class="check-status">OK: 13 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:29Z"><span class="check-store">MyProtein</span><span class="check-status">OK: 6 products</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li><li class="check" data-status="success" data-attempted="2026-09-30T21:26:31Z"><span class="check-store">dm</span><span class="check-status">OK: 1 product</span><span class="check-when">Checked 30.09.2026<span class="check-age"></span></span></li></ul><p class="checks-note">Dates are when we last looked at each store's listing. Stale means older than 8 days.</p></details>
 
   <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest pure monohydrate per kg</div><div class="value">27.97 &euro;</div><div class="sub" title="100% Kreatin Monohidrat - GymBeam, 1.5 kg &middot; GymBeam HR"><span class="sub-name">100% Kreatin Monohidrat - GymBeam, 1.5 kg</span><span class="sub-sep"> &middot; </span><span class="sub-store">GymBeam HR</span></div><div class="per-dose">&asymp; 0.14 &euro; per 5 g of powder</div></div></a><a class="stat" href="products/myprotein_kreatin_hcl_0_0984kg.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">7.67 &euro;</div><div class="sub" title="Kreatin HCl &middot; MyProtein"><span class="sub-name">Kreatin HCl</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">98.4 g pack</div></div></a></section>
@@ -354,7 +368,7 @@
       <span>&ndash;</span>
       <input type="number" id="maxPrice" placeholder="216.25" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / kg">
     </div>
-    <div class="chip-group"><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>GymBeam HR <span class="fcount">25</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="dm" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>dm <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
+    <div class="chip-group"><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>GymBeam HR <span class="fcount">24</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="dm" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>dm <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <details class="more-filters">
       <summary><span class="more-filters-title">Type and pack size</span><span class="filters-on" hidden> &middot; on</span></summary>
@@ -955,23 +969,6 @@
           
           
         </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:b2325140f2a4a0ba"
-            data-offer-id="catalog:d993446c125da645" data-price-eur="33.95"
-            data-product-kind="pure_monohydrate"
-            data-package-kg="0.5"
-            data-package-count=""
-            data-search="gymbeam hr kreatin monohidrat 100% creapure® - gymbeam, 0.5 kg">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#93692a"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="Kreatin Monohidrat 100% Creapure® - GymBeam, 0.5 kg"><a href="https://gymbeam.hr/kreatin-creapure-gymbeam.html" target="_blank" rel="noopener">Kreatin Monohidrat 100% Creapure® - GymBeam, 0.5 kg</a><span class="kind-badge" title="Ingredients checked on the store page (2026-09-30): Sastav ... bez okusa Kreatin monohidrat Creapure®">Pure monohydrate &#10003;</span><a class="details-link" href="products/gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_5_kg_0_5kg.html">View details</a></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/kreatin-creapure-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:d993446c125da645&quot;, &quot;name&quot;: &quot;Kreatin Monohidrat 100% Creapure® - GymBeam, 0.5 kg&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/kreatin-creapure-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.5&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 33.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_5_kg_0_5kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="33.95">33.95 &euro;</td>
-          <td class="num weight-cell" data-v="0.5">500 g</td>
-          <td class="num metric-cell" data-v="67.9" data-unit="&euro;/kg"><span class="pill mid">67.90</span></td>
-          
-          
-        </tr>
         <tr data-store="Proteini.si" data-track-key="catalog:ef6a070ada511cf7"
             data-offer-id="catalog:c4cc4b3c45bdc2f1" data-price-eur="13.69"
             data-product-kind="pure_monohydrate"
@@ -1427,7 +1424,7 @@
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteini Outlet|https://www.proteini-outlet.com/proizvod/creavolution-kreatin-monohidrat/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:57f54a8b4e236407&quot;, &quot;name&quot;: &quot;CreaVolution® (kreatin monohidrat)&quot;, &quot;store&quot;: &quot;Proteini Outlet&quot;, &quot;source_url&quot;: &quot;https://www.proteini-outlet.com/proizvod/creavolution-kreatin-monohidrat/&quot;, &quot;category&quot;: &quot;creatine&quot;, &quot;package_key&quot;: &quot;kg:0.3&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.0, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteini-outlet.com/wp-content/uploads/2025/11/swedish-supplements-creavolution-300g-proteini-outlet-600x600.jpg&quot;, &quot;detail_url&quot;: &quot;products/proteini_outlet_creavolution_kreatin_monohidrat_0_3kg.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="28.0">28.00 &euro;</td>
           <td class="num weight-cell" data-v="0.3">300 g</td>
-          <td class="num metric-cell" data-v="93.33" data-unit="&euro;/kg"><span class="pill high">93.33</span></td>
+          <td class="num metric-cell" data-v="93.33" data-unit="&euro;/kg"><span class="pill mid">93.33</span></td>
           
           
         </tr>
@@ -2126,6 +2123,42 @@
   }
 
   applyFilters();
+})();
+</script>
+<script>
+/* Store checks (plan 2026-09-30 D2): the dates are fixed at build time, so the
+   age and "Stale" follow the viewer's clock -- a static page must not look
+   fresh forever. A time in the future (a wrong clock) gets no age at all. */
+(() => {
+  const box = document.querySelector(".store-checks");
+  if (!box) return;
+  const DAY = 86400000;
+  const staleMs = (Number(box.dataset.staleDays) || 8) * DAY;
+  const now = Date.now();
+  let stale = 0;
+  box.querySelectorAll("li.check[data-attempted]").forEach((li) => {
+    const at = Date.parse(li.dataset.attempted);
+    const age = li.querySelector(".check-age");
+    let badge = li.querySelector(".check-stale");
+    if (!Number.isFinite(at) || at > now) {
+      if (badge) stale++;
+      return;
+    }
+    const days = Math.floor((now - at) / DAY);
+    if (age) age.textContent = days < 1 ? " (under a day ago)" : ` (${days} day${days === 1 ? "" : "s"} ago)`;
+    const isStale = now - at >= staleMs;
+    if (isStale && !badge) {
+      badge = document.createElement("span");
+      badge.className = "check-stale";
+      badge.textContent = "Stale";
+      li.querySelector(".check-when").append(" ", badge);
+    } else if (!isStale && badge) {
+      badge.remove();
+    }
+    if (isStale) stale++;
+  });
+  const count = box.querySelector(".checks-stale-count");
+  if (count) count.textContent = stale ? ` · ${stale} stale` : "";
 })();
 </script>
 <style>
