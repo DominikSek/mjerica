@@ -86,6 +86,17 @@
   .saved-chip[aria-pressed="true"] { opacity: 1; color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
   .saved-chip[aria-pressed="true"] .saved-chip-icon { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .reset-btn { cursor: pointer; }
+  /* Type and pack size (plan 2026-09-30 C): a small panel, closed by default */
+  .more-filters { flex-basis: 100%; }
+  .more-filters summary { cursor: pointer; font-size: 13px; font-weight: 650; color: var(--accent-text); width: max-content; }
+  .more-filters summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .more-filters-body { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+  .filter-label { font-size: 12px; font-weight: 650; color: var(--muted); }
+  .filter-select { max-width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 7px;
+                   background: var(--surface); color: var(--text); font: inherit; }
+  .filter-select:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 1px; }
+  .filter-message { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--mid); }
+  .stats-note { margin: 0 0 6px; font-size: 11px; font-weight: 650; letter-spacing: .045em; text-transform: uppercase; color: var(--muted); }
   .count { color: var(--muted); font-size: 12.5px; margin-left: auto; white-space: nowrap; }
 
   /* --- table --- */
@@ -329,8 +340,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine Capsules Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a href="../creatine/">Powder</a><a class="active" aria-current="page" href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 30.09.2026 17:54 CEST &middot; 7 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 18:14 CEST &middot; 7 stores</p></div>
 
+  <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/gymbeam_hr_kreatin_tabs_1000_mg_gymbeam_300_tab_300capsules.html"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per capsule</div><div class="value">0.062 &euro;</div><div class="sub" title="Kreatin TABS 1000 mg - GymBeam, 300 tab. &middot; GymBeam HR"><span class="sub-name">Kreatin TABS 1000 mg - GymBeam, 300 tab.</span><span class="sub-sep"> &middot; </span><span class="sub-store">GymBeam HR</span></div></div></a><a class="stat" href="products/gymbeam_hr_kreatin_hcl_120_kaps_gymbeam_120capsules.html"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">12.95 &euro;</div><div class="sub" title="Kreatin HCl 120 kaps – GymBeam &middot; GymBeam HR"><span class="sub-name">Kreatin HCl 120 kaps – GymBeam</span><span class="sub-sep"> &middot; </span><span class="sub-store">GymBeam HR</span></div><div class="pack-size">120 capsules</div></div></a></section>
 
   
@@ -344,6 +356,21 @@
     </div>
     <div class="chip-group"><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GymBeam HR <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteini Outlet <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>Polleo Sport <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">3</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>THE Nutrition <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>GAZ Nutrition <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Proteka <span class="fcount">4</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
+    <details class="more-filters">
+      <summary><span class="more-filters-title">Pack size</span><span class="filters-on" hidden> &middot; on</span></summary>
+      <div class="more-filters-body">
+        
+        <span class="filter-label" id="sizeLabel">Pack size (capsules)</span>
+        <div class="range-row" role="group" aria-labelledby="sizeLabel">
+          <input type="number" id="sizeMin" min="0" step="any" inputmode="decimal" aria-label="Smallest pack (capsules)" placeholder="from"
+                 aria-describedby="sizeFilterMessage" data-per-piece="true">
+          <span>&ndash;</span>
+          <input type="number" id="sizeMax" min="0" step="any" inputmode="decimal" aria-label="Largest pack (capsules)" placeholder="to"
+                 aria-describedby="sizeFilterMessage">
+        </div>
+        <p class="filter-message" id="sizeFilterMessage" role="status"></p>
+      </div>
+    </details>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
   </div>
@@ -370,6 +397,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:790be8b60cae4105"
             data-offer-id="catalog:5d54a6309b63a84c" data-price-eur="18.5"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="300"
             data-search="gymbeam hr kreatin tabs 1000 mg - gymbeam, 300 tab.">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_1000_mg_300_tabs_gymbeam_nov_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -385,6 +414,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:55749d7e445b00ab"
             data-offer-id="catalog:978d7a40bfb362a4" data-price-eur="21.6"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="220"
             data-search="proteini outlet creatine monohydrate kapsule">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2021/09/amix-nutrition-creatine-kapsule-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -400,6 +431,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:6449670a17edcd2b"
             data-offer-id="catalog:4f65c72e5ac10b2c" data-price-eur="12.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="gymbeam hr kreatin hcl 120 kaps – gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-hcl-120-caps-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -415,6 +448,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:9491e101bd205c2d"
             data-offer-id="catalog:e41c0cc6d2dbdadb" data-price-eur="27.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="240"
             data-search="gymbeam hr creatine (100% creapure®) - gymbeam, 240 kaps.">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -430,6 +465,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:d98383293f1ca29e"
             data-offer-id="catalog:ffe789045a3fc876" data-price-eur="19.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="160"
             data-search="polleo sport creatine monohydrate, 160 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-creatine-monohydrate-160-capsules.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -445,6 +482,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:9491e101bd205c2d"
             data-offer-id="catalog:e41c0cc6d2dbdadb" data-price-eur="15.5"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="gymbeam hr creatine (100% creapure®) - gymbeam, 120 kaps.">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creapure__120_vegan_caps_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -460,6 +499,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:f46c9e0168beb28d"
             data-offer-id="catalog:eba0d767cb4c27e0" data-price-eur="39.94"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="300"
             data-search="proteini.si vast creatine ultra pure caps, 300 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/e18f528712a3fc5b825a4a1ad4b1a147/vast-creatine-ultra-pure-caps-300-kapsula.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -475,6 +516,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:5429ef084cd9521a"
             data-offer-id="catalog:fb4645f8dbd03967" data-price-eur="14.27"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="100"
             data-search="the nutrition the creatine (100 caps.)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2046_cat_302354.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -490,6 +533,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:3713e717b3cce8ad"
             data-offer-id="catalog:c2ab8d7705b9f81c" data-price-eur="17.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="gymbeam hr creatine tabs 100% creapure® - gymbeam, 120 tab.">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -505,6 +550,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:dbb1b7204aed92f1"
             data-offer-id="catalog:a067377e8a8a167a" data-price-eur="20.54"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="proteini.si usn creatine ultra 1250, 120 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -520,6 +567,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:3a445d7b53f36adb"
             data-offer-id="catalog:730d6dbf710db55e" data-price-eur="21.41"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="the nutrition x3m kick start (120 caps.)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2175_cat_744202.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -535,6 +584,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:728ef4c5b33b875a"
             data-offer-id="catalog:13f710e6ad1b27ae" data-price-eur="42.0"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="200"
             data-search="proteini outlet kreatin monohidrat kapsule">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/03/optimum-nutrition-creatine-2500-200kapsule-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -550,6 +601,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:743d07b77cbde5a7"
             data-offer-id="catalog:4fb00dd7b5f405e5" data-price-eur="43.15"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="200"
             data-search="gaz nutrition weider pure creatine capsules">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-caps-3000mg-creapure-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -565,6 +618,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:509332738140998d"
             data-offer-id="catalog:6173c81ad1708b37" data-price-eur="26.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="polleo sport creatine ethyl ester, 120 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo-c2-elite-creaethyl-120-capsules.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -580,6 +635,8 @@
         <tr data-store="Proteka" data-track-key="catalog:9b99b777546137d7"
             data-offer-id="catalog:c30f0d38f4c178ff" data-price-eur="47.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="200"
             data-search="proteka weider pure creatine 200 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fpure%5Fcreatine%5F225333%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -595,6 +652,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:3d55ffc4c1da9880"
             data-offer-id="catalog:09a865c2e04c3ca2" data-price-eur="21.68"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="90"
             data-search="proteini.si vast creatine creapure caps, 90 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/64ee5417e4d591ccd038f0dafa075632/vast-creatine-creapure-caps-90-kapsula.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -610,6 +669,8 @@
         <tr data-store="Proteka" data-track-key="catalog:fa01c1e82ad126ad"
             data-offer-id="catalog:06244e03309163f6" data-price-eur="39.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="150"
             data-search="proteka weider creatine hcl 150 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fcreatine%5Fhidroklorid%5F22755%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -625,6 +686,8 @@
         <tr data-store="Proteka" data-track-key="catalog:2bd72946b1d0d3c0"
             data-offer-id="catalog:6dadf4ac20c5d93f" data-price-eur="33.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="120"
             data-search="proteka creafast 120 tableta">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/creafast%5F14219%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -640,6 +703,8 @@
         <tr data-store="Proteka" data-track-key="catalog:7ea32a1dac14687c"
             data-offer-id="catalog:61620894beeec414" data-price-eur="37.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="100"
             data-search="proteka weider maximum kreagenic 100 kapsula">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fmaximum%5Fkreagenic%5F01549%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -670,6 +735,35 @@
   const storeChips = Array.from(document.querySelectorAll("[data-store-check]"));
   const minPrice = document.getElementById("minPrice");
   const maxPrice = document.getElementById("maxPrice");
+  // Type and pack size (plan 2026-09-30 C): ANDed into applyFilters below.
+  const kindFilter = document.getElementById("kindFilter");
+  const sizeMin = document.getElementById("sizeMin");
+  const sizeMax = document.getElementById("sizeMax");
+  const sizeMessage = document.getElementById("sizeFilterMessage");
+  const perPiece = sizeMin ? sizeMin.dataset.perPiece === "true" : false;
+  const moreFilters = document.querySelector(".more-filters");
+  const filtersOn = moreFilters ? moreFilters.querySelector(".filters-on") : null;
+
+  // The pack-size bounds, or {active: false} with a message when they cannot be used.
+  function sizeBounds() {
+    const raw = [sizeMin, sizeMax].map((el) => (el && el.value !== "") ? Number(el.value) : null);
+    let message = "";
+    const bad = [sizeMin, sizeMax].map((el, i) => !!el && ((el.validity && el.validity.badInput)
+        || (raw[i] !== null && (!Number.isFinite(raw[i]) || raw[i] < 0))));
+    const reversed = !bad.some(Boolean) && raw[0] !== null && raw[1] !== null && raw[0] > raw[1];
+    if (bad.some(Boolean)) {
+      message = "Pack size must be a number of zero or more.";
+    } else if (reversed) {
+      message = "The smallest pack is larger than the largest; nothing was filtered by size.";
+    }
+    [sizeMin, sizeMax].forEach((el, i) => {
+      if (el) el.setAttribute("aria-invalid", (bad[i] || reversed) ? "true" : "false");
+    });
+    // Rewrite the live region only when the words change, so it is not re-announced per keystroke.
+    if (sizeMessage && sizeMessage.textContent !== message) sizeMessage.textContent = message;
+    const active = !message && (raw[0] !== null || raw[1] !== null);
+    return {active, lo: raw[0] === null ? -Infinity : raw[0], hi: raw[1] === null ? Infinity : raw[1]};
+  }
   const count = document.getElementById("count");
   const metricIndex = headers.findIndex((h) => h.dataset.metric);
   window.addEventListener("mjerica-saved-change", () => { applyFilters(); });
@@ -763,24 +857,39 @@
     const lo = (!minPrice || minPrice.value === "") ? -Infinity : parseFloat(minPrice.value);
     const hi = (!maxPrice || maxPrice.value === "") ? Infinity : parseFloat(maxPrice.value);
     const priceActive = (minPrice && minPrice.value !== "") || (maxPrice && maxPrice.value !== "");
+    const selectedKind = kindFilter ? kindFilter.value : "all";
+    const size = sizeBounds();
     let shown = 0;
     rows.forEach((r) => {
       const metricRaw = metricIndex >= 0 ? r.cells[metricIndex].dataset.v : "";
       const metricOk = !priceActive || (metricRaw !== "" && parseFloat(metricRaw) >= lo && parseFloat(metricRaw) <= hi);
+      const typeOk = selectedKind === "all" || r.dataset.productKind === selectedKind;
+      // Unknown size ("") passes only while no size bound is set; never read as 0.
+      const rawSize = perPiece ? r.dataset.packageCount : r.dataset.packageKg;
+      // Rounded: 1.015 kg * 1000 is 1014.999... in floating point, still a 1015 g pack.
+      const packSize = (rawSize === undefined || rawSize === "") ? null
+        : Math.round(Number(rawSize) * (perPiece ? 1 : 1000) * 1000) / 1000;
+      const sizeOk = !size.active || (packSize !== null && packSize >= size.lo && packSize <= size.hi);
       const visible = (!q || r.dataset.search.includes(q))
         && (activeStores.length === storeChips.length || activeStores.includes(r.dataset.store))
         && (!onlySaved || r.classList.contains("saved"))
-        && metricOk;
+        && metricOk && typeOk && sizeOk;
       r.hidden = !visible;
       if (visible) shown++;
     });
     if (count) count.textContent = shown + " of " + rows.length + " shown";
+    // An active type or size filter is never hidden behind a closed panel.
+    const panelOn = selectedKind !== "all" || size.active;
+    if (filtersOn) filtersOn.hidden = !panelOn;
+    if (panelOn && moreFilters) moreFilters.open = true;
     renumberRanks();
   }
 
   if (search) search.addEventListener("input", applyFilters);
   if (minPrice) minPrice.addEventListener("input", applyFilters);
   if (maxPrice) maxPrice.addEventListener("input", applyFilters);
+  if (kindFilter) kindFilter.addEventListener("change", applyFilters);
+  [sizeMin, sizeMax].forEach((el) => { if (el) el.addEventListener("input", applyFilters); });
   if (savedOnly) {
     savedOnly.addEventListener("click", () => {
       savedOnly.setAttribute("aria-pressed", savedOnly.getAttribute("aria-pressed") === "true" ? "false" : "true");
@@ -801,6 +910,9 @@
       if (minPrice) minPrice.value = "";
       if (maxPrice) maxPrice.value = "";
       if (savedOnly) savedOnly.setAttribute("aria-pressed", "false");
+      if (kindFilter) kindFilter.value = "all";
+      if (sizeMin) sizeMin.value = "";
+      if (sizeMax) sizeMax.value = "";
       storeChips.forEach((c) => c.setAttribute("aria-pressed", "true"));
       applyFilters();
     });

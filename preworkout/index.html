@@ -86,6 +86,17 @@
   .saved-chip[aria-pressed="true"] { opacity: 1; color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
   .saved-chip[aria-pressed="true"] .saved-chip-icon { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .reset-btn { cursor: pointer; }
+  /* Type and pack size (plan 2026-09-30 C): a small panel, closed by default */
+  .more-filters { flex-basis: 100%; }
+  .more-filters summary { cursor: pointer; font-size: 13px; font-weight: 650; color: var(--accent-text); width: max-content; }
+  .more-filters summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .more-filters-body { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+  .filter-label { font-size: 12px; font-weight: 650; color: var(--muted); }
+  .filter-select { max-width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 7px;
+                   background: var(--surface); color: var(--text); font: inherit; }
+  .filter-select:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 1px; }
+  .filter-message { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--mid); }
+  .stats-note { margin: 0 0 6px; font-size: 11px; font-weight: 650; letter-spacing: .045em; text-transform: uppercase; color: var(--muted); }
   .count { color: var(--muted); font-size: 12.5px; margin-left: auto; white-space: nowrap; }
 
   /* --- table --- */
@@ -329,8 +340,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Pre-Workout Price Comparison</h1>
-  <p class="gen-meta">Generated 30.09.2026 17:54 CEST &middot; 6 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 18:15 CEST &middot; 6 stores</p></div>
 
+  <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/polleo_sport_revive_1000_g_1_0kg.html"><div class="stat-media"><img class="stat-img" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/mefirst_revive_orange_1000-1500.jpg?size=225" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">29.99 &euro;</div><div class="sub" title="Revive, 1000 g &middot; Polleo Sport"><span class="sub-name">Revive, 1000 g</span><span class="sub-sep"> &middot; </span><span class="sub-store">Polleo Sport</span></div></div></a><a class="stat" href="products/gymbeam_hr_n1_pre_workout_nutrend_0_17_kg_0_17kg.html"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">13.95 &euro;</div><div class="sub" title="N1 Pre-Workout - Nutrend, 0.17 kg &middot; GymBeam HR"><span class="sub-name">N1 Pre-Workout - Nutrend, 0.17 kg</span><span class="sub-sep"> &middot; </span><span class="sub-store">GymBeam HR</span></div><div class="pack-size">170 g pack</div></div></a></section>
 
   
@@ -344,6 +356,21 @@
     </div>
     <div class="chip-group"><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Polleo Sport <span class="fcount">24</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>GymBeam HR <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>MyProtein <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>GAZ Nutrition <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>Proteka <span class="fcount">4</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Proteini Outlet <span class="fcount">5</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
+    <details class="more-filters">
+      <summary><span class="more-filters-title">Pack size</span><span class="filters-on" hidden> &middot; on</span></summary>
+      <div class="more-filters-body">
+        
+        <span class="filter-label" id="sizeLabel">Pack size (g)</span>
+        <div class="range-row" role="group" aria-labelledby="sizeLabel">
+          <input type="number" id="sizeMin" min="0" step="any" inputmode="decimal" aria-label="Smallest pack (g)" placeholder="from"
+                 aria-describedby="sizeFilterMessage" data-per-piece="false">
+          <span>&ndash;</span>
+          <input type="number" id="sizeMax" min="0" step="any" inputmode="decimal" aria-label="Largest pack (g)" placeholder="to"
+                 aria-describedby="sizeFilterMessage">
+        </div>
+        <p class="filter-message" id="sizeFilterMessage" role="status"></p>
+      </div>
+    </details>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
   </div>
@@ -370,6 +397,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:47258b2990c3296d"
             data-offer-id="catalog:07fbe9b1aa227c53" data-price-eur="29.99"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="polleo sport revive, 1000 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/mefirst_revive_orange_1000-1500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -385,6 +414,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:1ab039262989ff05"
             data-offer-id="catalog:8f6f1595d4b04a72" data-price-eur="20.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr veinz pre-workout - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/v/e/veinz_wildcherry_mockup.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -400,6 +431,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:23e4d35ab1105174"
             data-offer-id="catalog:35252c039b0a68d6" data-price-eur="18.5"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="gymbeam hr thor stim-free - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/h/thor_stimfree_2_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -415,6 +448,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:406eb81106bf2191"
             data-offer-id="catalog:686a8c729bcc99c1" data-price-eur="28.99"
             data-product-kind="unknown"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="myprotein origin stim-free pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14269805-1675129203306464.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -430,6 +465,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:840b207d7a5757d8"
             data-offer-id="catalog:c2edc3ecda9c27e5" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="1.015"
+            data-package-count=""
             data-search="polleo sport amino x, 1015g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn/aminox.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -445,6 +482,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:394338688d6df30f"
             data-offer-id="catalog:82c0fef692562de2" data-price-eur="16.5"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gymbeam hr pink drive - beastpink">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/i/pink_drive_strawberry_lemonade_300_g_beastpink_1_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -460,6 +499,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:667abeb567a3492d"
             data-offer-id="catalog:1bde75901620050f" data-price-eur="29.0"
             data-product-kind="unknown"
+            data-package-kg="0.525"
+            data-package-count=""
             data-search="gaz nutrition z-konzept energy booster">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-zkonzept-energy-booster-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -475,6 +516,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:ff359a16ae2d3ba8"
             data-offer-id="catalog:4b06fc1b0506f680" data-price-eur="37.11"
             data-product-kind="unknown"
+            data-package-kg="0.66"
+            data-package-count=""
             data-search="myprotein origin shred pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16547402-1705287072504314.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -490,6 +533,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:9439a2fe410bc45e"
             data-offer-id="catalog:84ed125292247089" data-price-eur="29.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport defender, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/scm04329-scimuscle-defender-500-front.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -505,6 +550,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:55ccebb3c9661857"
             data-offer-id="catalog:689885ac58afc416" data-price-eur="29.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport hemopump, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_hemopump_lemon_500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -520,6 +567,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:b11b9df95b3ba627"
             data-offer-id="catalog:6aa2ac9c28b39560" data-price-eur="25.95"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="gymbeam hr asap pre-workout - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_preworkout_mango-maracuja_425_g_gymbeam_1_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -535,6 +584,8 @@
         <tr data-store="Proteka" data-track-key="catalog:91245a320036aacd"
             data-offer-id="catalog:5b1c709a92e4c45e" data-price-eur="32.9"
             data-product-kind="unknown"
+            data-package-kg="0.525"
+            data-package-count=""
             data-search="proteka z-konzept energy booster 525 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/z%2Dkonzept%5Fenergy%5Fbooster%5F14471%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -550,6 +601,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:ce413fcf29f19db7"
             data-offer-id="catalog:b69d7924684b6b61" data-price-eur="18.95"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gymbeam hr focus blend pre-workout - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/f/o/focusblend_wildcherry_mockup.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -565,6 +618,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:a41478e0fd5d57ca"
             data-offer-id="catalog:2404979e66548804" data-price-eur="26.95"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="gymbeam hr no citrulline plus - gymbeam, 0.42 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/n/o/no_citrulline_plus_mango-maracuja_420_g_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -580,6 +635,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:7307f3815280432f"
             data-offer-id="catalog:5f104c8428b473eb" data-price-eur="38.99"
             data-product-kind="unknown"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="myprotein origin pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12941037-2015132581334232.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -595,6 +652,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:e60692a38b631cdc"
             data-offer-id="catalog:c5be1e7e2c575513" data-price-eur="45.0"
             data-product-kind="unknown"
+            data-package-kg="0.65"
+            data-package-count=""
             data-search="proteini outlet n.o. xplode 3.0">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/03/bsn-no-explode-650g-proteini-outlet-333-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -610,6 +669,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:7c095e4ab11226ed"
             data-offer-id="catalog:1e60a928c46e8235" data-price-eur="35.95"
             data-product-kind="unknown"
+            data-package-kg="0.51"
+            data-package-count=""
             data-search="gymbeam hr n1 pre-workout - nutrend, 0.51 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -625,6 +686,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:2505268cc9fac869"
             data-offer-id="catalog:019e75f24c6b17aa" data-price-eur="26.95"
             data-product-kind="unknown"
+            data-package-kg="0.375"
+            data-package-count=""
             data-search="gaz nutrition weider intense pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/10/gaz-nutrition-proizvod-weider-intense-preworkout-v011g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -640,6 +703,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:89503efcd59352b6"
             data-offer-id="catalog:9da28d26c2865cf5" data-price-eur="40.45"
             data-product-kind="unknown"
+            data-package-kg="0.554"
+            data-package-count=""
             data-search="gaz nutrition weider maximum krea-genic® powder">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-maximum-krea-genic-powder-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -655,6 +720,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:58d61157d6ea6efd"
             data-offer-id="catalog:4ef8499343348a55" data-price-eur="15.5"
             data-product-kind="unknown"
+            data-package-kg="0.21"
+            data-package-count=""
             data-search="gymbeam hr thor - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/h/thor_lemon-lime_210_g_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -670,6 +737,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:9003d15201221910"
             data-offer-id="catalog:6bddda96372f9f29" data-price-eur="55.99"
             data-product-kind="unknown"
+            data-package-kg="0.75"
+            data-package-count=""
             data-search="myprotein origin jacked pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17879939-9775332623822897.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -685,6 +754,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:212164b72bdc635f"
             data-offer-id="catalog:d41428329652a149" data-price-eur="23.36"
             data-product-kind="unknown"
+            data-package-kg="0.31"
+            data-package-count=""
             data-search="gaz nutrition weider premium l-citrulline malate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/05/gaz-nutrition-proizvod-weider-premium-l-citrulline-malate-v02g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -700,6 +771,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:34a3d2c80a39a68f"
             data-offer-id="catalog:b184e5ed18b411cb" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="0.65"
+            data-package-count=""
             data-search="polleo sport no xplode legendary pre-workout, 650g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn-no-xplode-650g-purple-power-jpg.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -715,6 +788,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:3194d7a6cc2cc733"
             data-offer-id="catalog:833b3c811b80d01a" data-price-eur="31.0"
             data-product-kind="unknown"
+            data-package-kg="0.39"
+            data-package-count=""
             data-search="proteini outlet n.o. xplode 3.0">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2022/03/bsn-no-explode-390g-proteini-outlet-222-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -730,6 +805,8 @@
         <tr data-store="Proteka" data-track-key="catalog:0fbc6dc518090184"
             data-offer-id="catalog:49d3dd7389bcfdf3" data-price-eur="29.95"
             data-product-kind="unknown"
+            data-package-kg="0.375"
+            data-package-count=""
             data-search="proteka weider intense pre-workout 375g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fintense%5Fpre%2Dworkout%5F375g%5F193456%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -745,6 +822,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:fa31cc16f7456f35"
             data-offer-id="catalog:5940d2c363b22e5c" data-price-eur="31.99"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="polleo sport n.o.ko pre-workout, 400 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleosport_noko_400_cola.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -760,6 +839,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:857e2786c2892c65"
             data-offer-id="catalog:784b51fc2c7f5387" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport revive, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/xoauv8wq.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -775,6 +856,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:69ffd8cfd9589c8f"
             data-offer-id="catalog:a905d09468a2c78f" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport aminorage, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/aminorage_500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -790,6 +873,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:e0122ca2bcefd493"
             data-offer-id="catalog:ea36e5c568730692" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport massrage, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_massrage-500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -805,6 +890,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:5fe406139c3b4a33"
             data-offer-id="catalog:7c7c9f00cceb03b5" data-price-eur="13.95"
             data-product-kind="unknown"
+            data-package-kg="0.17"
+            data-package-count=""
             data-search="gymbeam hr n1 pre-workout - nutrend, 0.17 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/n/1/n1_510g_redorange.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -820,6 +907,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:d27c56744f6d398e"
             data-offer-id="catalog:fb35ca7eea758101" data-price-eur="33.95"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="gymbeam hr c4 original - cellucor">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/4/c4_original_30_serve_ga.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -835,6 +924,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:55ff7cbcdedee501"
             data-offer-id="catalog:5db10c518f1e877c" data-price-eur="21.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="myprotein pre-workout mješavina">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12457711-5315245804881378.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -850,6 +941,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:717dd4769d954f2e"
             data-offer-id="catalog:ff92ca9265432ae9" data-price-eur="44.99"
             data-product-kind="unknown"
+            data-package-kg="0.51"
+            data-package-count=""
             data-search="polleo sport moonstruck® ii, 510 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoo1012_8436551611549_moonstruck_ii_devil_cherry_1[1].png?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -865,6 +958,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:ac8bf133f67be0bc"
             data-offer-id="catalog:65243a73a83d9a51" data-price-eur="55.99"
             data-product-kind="unknown"
+            data-package-kg="0.625"
+            data-package-count=""
             data-search="myprotein origin jacked pump">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17627019-1945332900280970.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -880,6 +975,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:dd85289042afb2d0"
             data-offer-id="catalog:4a8fe2599d6d0723" data-price-eur="29.95"
             data-product-kind="unknown"
+            data-package-kg="0.33"
+            data-package-count=""
             data-search="gymbeam hr pre-workout stimulans gold standard pre-workout - optimum nutrition">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/g/s/gs_pwo_grn_apple_fr_6058191_seal_web.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -895,6 +992,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:78129bfbbf2152c2"
             data-offer-id="catalog:0e3c78c37f1e0940" data-price-eur="31.0"
             data-product-kind="unknown"
+            data-package-kg="0.33"
+            data-package-count=""
             data-search="proteini outlet gold standard pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2021/04/optimum-nutrition-gold-preworkout-kiwi-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -910,6 +1009,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:c88e419e0f77bc67"
             data-offer-id="catalog:2e217c92bf5fd0c0" data-price-eur="45.99"
             data-product-kind="unknown"
+            data-package-kg="0.48"
+            data-package-count=""
             data-search="myprotein impact pre-workout – wolverine">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771601-1075192172761400.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -925,6 +1026,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:94ed6678e4bc301a"
             data-offer-id="catalog:b37e2ecb9fa7f60e" data-price-eur="35.95"
             data-product-kind="unknown"
+            data-package-kg="0.38"
+            data-package-count=""
             data-search="gymbeam hr total rush 2.0 - weider">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/e/weider_31782_total_rush_2.0_375g_cranberry_glutapep_1_.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -940,6 +1043,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:dd31182fe7ab3c0e"
             data-offer-id="catalog:fa86e533f006c674" data-price-eur="21.95"
             data-product-kind="unknown"
+            data-package-kg="0.23"
+            data-package-count=""
             data-search="gymbeam hr pump - nutrend">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/6/3/63da4cf24c412_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -955,6 +1060,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:cac573d9e2144563"
             data-offer-id="catalog:8d6a62b6098cbf9a" data-price-eur="1.99"
             data-product-kind="unknown"
+            data-package-kg="0.02"
+            data-package-count=""
             data-search="polleo sport storm, 20 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/me-first/me_first_storm_20g_lemon_lime.png?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -970,6 +1077,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:9ae105f4d0f4b9c0"
             data-offer-id="catalog:09ce200be777ef1d" data-price-eur="24.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport aminorage, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/aminorage_250.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -985,6 +1094,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:b9749c2ad8f9e1f9"
             data-offer-id="catalog:49eb5c0382de77c9" data-price-eur="24.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport massrage, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_massrage-250.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1000,6 +1111,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:c1e0c324a6101532"
             data-offer-id="catalog:a103297897441aad" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport stormx pump pre-workout, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/stormx_pump_500g_fruit_punch.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1015,6 +1128,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:1f0a0b65b877f0c7"
             data-offer-id="catalog:dd243f9d85f2a689" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport n.o.ko pump pre-workout, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/n.o.ko%20pump%20500g%20cola.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1030,6 +1145,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:ac87951fcbbb569b"
             data-offer-id="catalog:e151099646e3c803" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport abe pump, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/abe-pump-stim-free-pre-workout-500g---blue-razz.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1045,6 +1162,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:ade3e2d521b02b4e"
             data-offer-id="catalog:92a76063dd19a03a" data-price-eur="43.0"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="proteini outlet platinum pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/05/optimum-nutrition-gold-preworkout-platinum-fruit-punch-proteini-outlet-sp-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1060,6 +1179,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:d5eaafecbc96e753"
             data-offer-id="catalog:1c7ce3d24daeb57e" data-price-eur="45.99"
             data-product-kind="unknown"
+            data-package-kg="0.44"
+            data-package-count=""
             data-search="myprotein impact pre-workout – deadpool">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771600-6885192173004019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1075,6 +1196,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:849d2ae88da0a819"
             data-offer-id="catalog:27fc9f6bb80c4786" data-price-eur="45.99"
             data-product-kind="unknown"
+            data-package-kg="0.44"
+            data-package-count=""
             data-search="myprotein myprotein impact pre-workout, marvel venom (alt)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17585477-5605288565058632.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1090,6 +1213,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:accc2bc873e89274"
             data-offer-id="catalog:33d5373cabbf4600" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg="0.375"
+            data-package-count=""
             data-search="polleo sport abe ultimate pre-workout, 375 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/abe-ultimate-pre-workout-375g---sour-gummy-bear-v1.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1105,6 +1230,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:28957aec4c5f5223"
             data-offer-id="catalog:60505cedd3b8eb27" data-price-eur="40.45"
             data-product-kind="unknown"
+            data-package-kg="0.375"
+            data-package-count=""
             data-search="gaz nutrition weider total rush 2.0">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-total-rush-20-v02-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1120,6 +1247,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:fe85541d37c52496"
             data-offer-id="catalog:0a47968cb6c630ac" data-price-eur="27.95"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="gymbeam hr the curse - jnx sports">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_curse_pre-workout_lemon_rush_50_serve_bottle_front.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1135,6 +1264,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:ccfac970e4cc1083"
             data-offer-id="catalog:f6d1272322ff54d2" data-price-eur="44.99"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="polleo sport stormx pre-workout, 400 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/stormx_400g_sour_gummy (1).jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1150,6 +1281,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:bf2a78d325d36f3a"
             data-offer-id="catalog:deff612820b144f6" data-price-eur="55.95"
             data-product-kind="unknown"
+            data-package-kg="0.495"
+            data-package-count=""
             data-search="gymbeam hr animal fury - universal nutrition, 0.495 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/f/u/fury_watermelon_20serv_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1165,6 +1298,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:8606ef547c960ee8"
             data-offer-id="catalog:2b3f8c6b2531367b" data-price-eur="34.99"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="polleo sport cre-amino, 300 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleosport_creamino_300_cola.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1180,6 +1315,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:2f27232c1ca1cfd0"
             data-offer-id="catalog:77050cc5edcbf91c" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="polleo sport gold pre-workout advanced, 420 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_gspw_adv_30srvtrop_6063799_on00538_1.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1195,6 +1332,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:75bed8b3e1a2bbf3"
             data-offer-id="catalog:0704309616381f55" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg="0.33"
+            data-package-count=""
             data-search="polleo sport gold standard pre workout, 330 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_gspwo_30srv_blurazz_6058720_on00537_1.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1210,6 +1349,8 @@
         <tr data-store="Proteka" data-track-key="catalog:5410f78f7d51535f"
             data-offer-id="catalog:2b57907d2f79607b" data-price-eur="46.0"
             data-product-kind="unknown"
+            data-package-kg="0.375"
+            data-package-count=""
             data-search="proteka weider total rush 2.0 375 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Ftotal%5Frush%5F2%2E0%5F221440%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1225,6 +1366,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:3df079af418a066b"
             data-offer-id="catalog:09ca38b8e9c1695f" data-price-eur="37.99"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="polleo sport zoe furiosa pre-workout, 300 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_furiosa_pre_workout_tropical_300g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1240,6 +1383,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:25afc211a681b039"
             data-offer-id="catalog:b9a607e2bf016301" data-price-eur="34.95"
             data-product-kind="unknown"
+            data-package-kg="0.27"
+            data-package-count=""
             data-search="gymbeam hr the shadow - jnx sports">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/j/n/jnx_sports_the_shadow_fruit_punch_30_serve_bottle_front.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1255,6 +1400,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:fc5b7839c853018d"
             data-offer-id="catalog:a7a8745c637350ba" data-price-eur="35.05"
             data-product-kind="unknown"
+            data-package-kg="0.27"
+            data-package-count=""
             data-search="gaz nutrition weider mega mass pump">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/05/gaz-nutrition-proizvod-weider-mega-mass-pump-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1270,6 +1417,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:0bf9c944b5beff3b"
             data-offer-id="catalog:d12d15d2da776c62" data-price-eur="49.99"
             data-product-kind="unknown"
+            data-package-kg="0.38"
+            data-package-count=""
             data-search="polleo sport platinum pump pre-workout, 380 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/_platinum_pump_pre-workout_-_380g_-_lemon-lime_1_(1).png?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1285,6 +1434,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:9f4a407aa6181f14"
             data-offer-id="catalog:eef01a51faed20b9" data-price-eur="19.99"
             data-product-kind="unknown"
+            data-package-kg="0.15"
+            data-package-count=""
             data-search="polleo sport stormx pre-workout, 150 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/stormx_150g_juicy_burst.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1300,6 +1451,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:c03de79d81e7e693"
             data-offer-id="catalog:927afe99d19826c5" data-price-eur="43.95"
             data-product-kind="unknown"
+            data-package-kg="0.328"
+            data-package-count=""
             data-search="gymbeam hr animal fury - universal nutrition, 0.328 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/f/u/fury_watermelon_20serv_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1315,6 +1468,8 @@
         <tr data-store="Proteka" data-track-key="catalog:443db00d868ffa91"
             data-offer-id="catalog:0d5dad5e61db8aea" data-price-eur="38.95"
             data-product-kind="unknown"
+            data-package-kg="0.27"
+            data-package-count=""
             data-search="proteka weider mega mass pump 270g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fmega%5Fmass%5Fpump%5F185250%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1330,6 +1485,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:4d75c0f67d5a506d"
             data-offer-id="catalog:5abfa36b1bee3d57" data-price-eur="26.95"
             data-product-kind="unknown"
+            data-package-kg="0.17"
+            data-package-count=""
             data-search="gymbeam hr c4 ripped - cellucor">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/4/c4-ripped-30-serve-tp_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1345,6 +1502,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:594d1ebe8963853d"
             data-offer-id="catalog:8bcc33177152052b" data-price-eur="16.5"
             data-product-kind="unknown"
+            data-package-kg="0.1"
+            data-package-count=""
             data-search="gymbeam hr fuepump - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/f/u/fuepump_hp_120_caps_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1360,6 +1519,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:acb1a51c9c81dcfa"
             data-offer-id="catalog:570db1e6381ae953" data-price-eur="3.99"
             data-product-kind="unknown"
+            data-package-kg="0.02"
+            data-package-count=""
             data-search="myprotein alpha pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13757999-1955180472592347.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1375,6 +1536,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:bb93952ea9a62979"
             data-offer-id="catalog:0b8d3c803631ec7e" data-price-eur="49.95"
             data-product-kind="unknown"
+            data-package-kg="0.23"
+            data-package-count=""
             data-search="gymbeam hr natural sterol complex - universal nutrition">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/n/a/naturalsterol-180tabs.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1390,6 +1553,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:82a8356dcad2fb30"
             data-offer-id="catalog:a95b96e80337a9e6" data-price-eur="76.5"
             data-product-kind="unknown"
+            data-package-kg="0.34"
+            data-package-count=""
             data-search="proteini outlet grizli pump&amp;power pack">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/03/Grizli-Pump-and-Power-Packv2.0-12-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1405,6 +1570,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:eb5446fec9c12322"
             data-offer-id="catalog:72cf1815ab25a34d" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count=""
             data-search="myprotein the pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11351672-1525253813176115.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1420,6 +1587,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:e7e1d82f35e38f7c"
             data-offer-id="catalog:62fc1435648d80e4" data-price-eur="29.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count=""
             data-search="myprotein gumeni bomboni pre-workout">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12899623-1105170402605819.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1435,6 +1604,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:5db2b4fc96c5a2a1"
             data-offer-id="catalog:ce066caeb993b074" data-price-eur="22.07"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count=""
             data-search="myprotein origin pre-workout dry scoop">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14024015-2135132278255974.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1450,6 +1621,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:cf575bb5d6027bb5"
             data-offer-id="catalog:d2a6902272e6aa59" data-price-eur="44.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count=""
             data-search="myprotein myprotein the pre workout (cee)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15238939-2975247320737851.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1480,6 +1653,35 @@
   const storeChips = Array.from(document.querySelectorAll("[data-store-check]"));
   const minPrice = document.getElementById("minPrice");
   const maxPrice = document.getElementById("maxPrice");
+  // Type and pack size (plan 2026-09-30 C): ANDed into applyFilters below.
+  const kindFilter = document.getElementById("kindFilter");
+  const sizeMin = document.getElementById("sizeMin");
+  const sizeMax = document.getElementById("sizeMax");
+  const sizeMessage = document.getElementById("sizeFilterMessage");
+  const perPiece = sizeMin ? sizeMin.dataset.perPiece === "true" : false;
+  const moreFilters = document.querySelector(".more-filters");
+  const filtersOn = moreFilters ? moreFilters.querySelector(".filters-on") : null;
+
+  // The pack-size bounds, or {active: false} with a message when they cannot be used.
+  function sizeBounds() {
+    const raw = [sizeMin, sizeMax].map((el) => (el && el.value !== "") ? Number(el.value) : null);
+    let message = "";
+    const bad = [sizeMin, sizeMax].map((el, i) => !!el && ((el.validity && el.validity.badInput)
+        || (raw[i] !== null && (!Number.isFinite(raw[i]) || raw[i] < 0))));
+    const reversed = !bad.some(Boolean) && raw[0] !== null && raw[1] !== null && raw[0] > raw[1];
+    if (bad.some(Boolean)) {
+      message = "Pack size must be a number of zero or more.";
+    } else if (reversed) {
+      message = "The smallest pack is larger than the largest; nothing was filtered by size.";
+    }
+    [sizeMin, sizeMax].forEach((el, i) => {
+      if (el) el.setAttribute("aria-invalid", (bad[i] || reversed) ? "true" : "false");
+    });
+    // Rewrite the live region only when the words change, so it is not re-announced per keystroke.
+    if (sizeMessage && sizeMessage.textContent !== message) sizeMessage.textContent = message;
+    const active = !message && (raw[0] !== null || raw[1] !== null);
+    return {active, lo: raw[0] === null ? -Infinity : raw[0], hi: raw[1] === null ? Infinity : raw[1]};
+  }
   const count = document.getElementById("count");
   const metricIndex = headers.findIndex((h) => h.dataset.metric);
   window.addEventListener("mjerica-saved-change", () => { applyFilters(); });
@@ -1573,24 +1775,39 @@
     const lo = (!minPrice || minPrice.value === "") ? -Infinity : parseFloat(minPrice.value);
     const hi = (!maxPrice || maxPrice.value === "") ? Infinity : parseFloat(maxPrice.value);
     const priceActive = (minPrice && minPrice.value !== "") || (maxPrice && maxPrice.value !== "");
+    const selectedKind = kindFilter ? kindFilter.value : "all";
+    const size = sizeBounds();
     let shown = 0;
     rows.forEach((r) => {
       const metricRaw = metricIndex >= 0 ? r.cells[metricIndex].dataset.v : "";
       const metricOk = !priceActive || (metricRaw !== "" && parseFloat(metricRaw) >= lo && parseFloat(metricRaw) <= hi);
+      const typeOk = selectedKind === "all" || r.dataset.productKind === selectedKind;
+      // Unknown size ("") passes only while no size bound is set; never read as 0.
+      const rawSize = perPiece ? r.dataset.packageCount : r.dataset.packageKg;
+      // Rounded: 1.015 kg * 1000 is 1014.999... in floating point, still a 1015 g pack.
+      const packSize = (rawSize === undefined || rawSize === "") ? null
+        : Math.round(Number(rawSize) * (perPiece ? 1 : 1000) * 1000) / 1000;
+      const sizeOk = !size.active || (packSize !== null && packSize >= size.lo && packSize <= size.hi);
       const visible = (!q || r.dataset.search.includes(q))
         && (activeStores.length === storeChips.length || activeStores.includes(r.dataset.store))
         && (!onlySaved || r.classList.contains("saved"))
-        && metricOk;
+        && metricOk && typeOk && sizeOk;
       r.hidden = !visible;
       if (visible) shown++;
     });
     if (count) count.textContent = shown + " of " + rows.length + " shown";
+    // An active type or size filter is never hidden behind a closed panel.
+    const panelOn = selectedKind !== "all" || size.active;
+    if (filtersOn) filtersOn.hidden = !panelOn;
+    if (panelOn && moreFilters) moreFilters.open = true;
     renumberRanks();
   }
 
   if (search) search.addEventListener("input", applyFilters);
   if (minPrice) minPrice.addEventListener("input", applyFilters);
   if (maxPrice) maxPrice.addEventListener("input", applyFilters);
+  if (kindFilter) kindFilter.addEventListener("change", applyFilters);
+  [sizeMin, sizeMax].forEach((el) => { if (el) el.addEventListener("input", applyFilters); });
   if (savedOnly) {
     savedOnly.addEventListener("click", () => {
       savedOnly.setAttribute("aria-pressed", savedOnly.getAttribute("aria-pressed") === "true" ? "false" : "true");
@@ -1611,6 +1828,9 @@
       if (minPrice) minPrice.value = "";
       if (maxPrice) maxPrice.value = "";
       if (savedOnly) savedOnly.setAttribute("aria-pressed", "false");
+      if (kindFilter) kindFilter.value = "all";
+      if (sizeMin) sizeMin.value = "";
+      if (sizeMax) sizeMax.value = "";
       storeChips.forEach((c) => c.setAttribute("aria-pressed", "true"));
       applyFilters();
     });

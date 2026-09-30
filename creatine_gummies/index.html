@@ -86,6 +86,17 @@
   .saved-chip[aria-pressed="true"] { opacity: 1; color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
   .saved-chip[aria-pressed="true"] .saved-chip-icon { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .reset-btn { cursor: pointer; }
+  /* Type and pack size (plan 2026-09-30 C): a small panel, closed by default */
+  .more-filters { flex-basis: 100%; }
+  .more-filters summary { cursor: pointer; font-size: 13px; font-weight: 650; color: var(--accent-text); width: max-content; }
+  .more-filters summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .more-filters-body { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+  .filter-label { font-size: 12px; font-weight: 650; color: var(--muted); }
+  .filter-select { max-width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 7px;
+                   background: var(--surface); color: var(--text); font: inherit; }
+  .filter-select:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 1px; }
+  .filter-message { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--mid); }
+  .stats-note { margin: 0 0 6px; font-size: 11px; font-weight: 650; letter-spacing: .045em; text-transform: uppercase; color: var(--muted); }
   .count { color: var(--muted); font-size: 12.5px; margin-left: auto; white-space: nowrap; }
 
   /* --- table --- */
@@ -329,8 +340,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine Gummies Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a class="active" aria-current="page" href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 30.09.2026 17:54 CEST &middot; 5 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 18:14 CEST &middot; 5 stores</p></div>
 
+  <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html"><div class="stat-media"><img class="stat-img" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per gummy</div><div class="value">0.234 &euro;</div><div class="sub" title="Weider Micronized Creatine Gummies &middot; GAZ Nutrition"><span class="sub-name">Weider Micronized Creatine Gummies</span><span class="sub-sep"> &middot; </span><span class="sub-store">GAZ Nutrition</span></div></div></a><a class="stat" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">9.99 &euro;</div><div class="sub" title="Kremaste gumene bombone s kreatinom &middot; MyProtein"><span class="sub-name">Kremaste gumene bombone s kreatinom</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">30 gummies</div></div></a></section>
 
   
@@ -344,6 +356,21 @@
     </div>
     <div class="chip-group"><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>GAZ Nutrition <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteka <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>GymBeam HR <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>MyProtein <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>Polleo Sport <span class="fcount">1</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
+    <details class="more-filters">
+      <summary><span class="more-filters-title">Pack size</span><span class="filters-on" hidden> &middot; on</span></summary>
+      <div class="more-filters-body">
+        
+        <span class="filter-label" id="sizeLabel">Pack size (gummies)</span>
+        <div class="range-row" role="group" aria-labelledby="sizeLabel">
+          <input type="number" id="sizeMin" min="0" step="any" inputmode="decimal" aria-label="Smallest pack (gummies)" placeholder="from"
+                 aria-describedby="sizeFilterMessage" data-per-piece="true">
+          <span>&ndash;</span>
+          <input type="number" id="sizeMax" min="0" step="any" inputmode="decimal" aria-label="Largest pack (gummies)" placeholder="to"
+                 aria-describedby="sizeFilterMessage">
+        </div>
+        <p class="filter-message" id="sizeFilterMessage" role="status"></p>
+      </div>
+    </details>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
   </div>
@@ -370,6 +397,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:6ded38df3c6c3cbf"
             data-offer-id="catalog:8b3d0499aa13dff2" data-price-eur="14.04"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="60"
             data-search="gaz nutrition weider micronized creatine gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -385,6 +414,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:83121494807e25ff"
             data-offer-id="catalog:7f1151d35054df58" data-price-eur="14.91"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="60"
             data-search="gaz nutrition weider premium creatine gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -400,6 +431,8 @@
         <tr data-store="Proteka" data-track-key="catalog:7ef1c4b13713112f"
             data-offer-id="catalog:2656952d9abe3da2" data-price-eur="15.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="60"
             data-search="proteka weider mikronizirani kreatin gumeni bomboni 60 bombona">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -415,6 +448,8 @@
         <tr data-store="Proteka" data-track-key="catalog:b70c58ac5962c64c"
             data-offer-id="catalog:ecc5f1ca4a68b341" data-price-eur="16.95"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="60"
             data-search="proteka weider premium kreatin gumeni bomboni 60 bombona">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -430,6 +465,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:ed50b7c3f9b91487"
             data-offer-id="catalog:8cb47872cf0bceab" data-price-eur="19.5"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="60"
             data-search="gymbeam hr ružičasti žele bomboni s kreatinom - gymbeam, 60 kaps.">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -445,6 +482,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:4508e7998dd1fb7e"
             data-offer-id="catalog:0c6cbc96d45d3420" data-price-eur="9.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="30"
             data-search="myprotein kremaste gumene bombone s kreatinom">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -460,6 +499,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:aaa011411bb10443"
             data-offer-id="catalog:5d65ce266b5904e3" data-price-eur="9.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="30"
             data-search="myprotein kremaste žvakaće bombone s kreatinom bez šećera">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -475,6 +516,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:fe4994801e8c6f5a"
             data-offer-id="catalog:a1fea203b7778631" data-price-eur="23.99"
             data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="60"
             data-search="polleo sport creatine gummies, 60 gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -505,6 +548,35 @@
   const storeChips = Array.from(document.querySelectorAll("[data-store-check]"));
   const minPrice = document.getElementById("minPrice");
   const maxPrice = document.getElementById("maxPrice");
+  // Type and pack size (plan 2026-09-30 C): ANDed into applyFilters below.
+  const kindFilter = document.getElementById("kindFilter");
+  const sizeMin = document.getElementById("sizeMin");
+  const sizeMax = document.getElementById("sizeMax");
+  const sizeMessage = document.getElementById("sizeFilterMessage");
+  const perPiece = sizeMin ? sizeMin.dataset.perPiece === "true" : false;
+  const moreFilters = document.querySelector(".more-filters");
+  const filtersOn = moreFilters ? moreFilters.querySelector(".filters-on") : null;
+
+  // The pack-size bounds, or {active: false} with a message when they cannot be used.
+  function sizeBounds() {
+    const raw = [sizeMin, sizeMax].map((el) => (el && el.value !== "") ? Number(el.value) : null);
+    let message = "";
+    const bad = [sizeMin, sizeMax].map((el, i) => !!el && ((el.validity && el.validity.badInput)
+        || (raw[i] !== null && (!Number.isFinite(raw[i]) || raw[i] < 0))));
+    const reversed = !bad.some(Boolean) && raw[0] !== null && raw[1] !== null && raw[0] > raw[1];
+    if (bad.some(Boolean)) {
+      message = "Pack size must be a number of zero or more.";
+    } else if (reversed) {
+      message = "The smallest pack is larger than the largest; nothing was filtered by size.";
+    }
+    [sizeMin, sizeMax].forEach((el, i) => {
+      if (el) el.setAttribute("aria-invalid", (bad[i] || reversed) ? "true" : "false");
+    });
+    // Rewrite the live region only when the words change, so it is not re-announced per keystroke.
+    if (sizeMessage && sizeMessage.textContent !== message) sizeMessage.textContent = message;
+    const active = !message && (raw[0] !== null || raw[1] !== null);
+    return {active, lo: raw[0] === null ? -Infinity : raw[0], hi: raw[1] === null ? Infinity : raw[1]};
+  }
   const count = document.getElementById("count");
   const metricIndex = headers.findIndex((h) => h.dataset.metric);
   window.addEventListener("mjerica-saved-change", () => { applyFilters(); });
@@ -598,24 +670,39 @@
     const lo = (!minPrice || minPrice.value === "") ? -Infinity : parseFloat(minPrice.value);
     const hi = (!maxPrice || maxPrice.value === "") ? Infinity : parseFloat(maxPrice.value);
     const priceActive = (minPrice && minPrice.value !== "") || (maxPrice && maxPrice.value !== "");
+    const selectedKind = kindFilter ? kindFilter.value : "all";
+    const size = sizeBounds();
     let shown = 0;
     rows.forEach((r) => {
       const metricRaw = metricIndex >= 0 ? r.cells[metricIndex].dataset.v : "";
       const metricOk = !priceActive || (metricRaw !== "" && parseFloat(metricRaw) >= lo && parseFloat(metricRaw) <= hi);
+      const typeOk = selectedKind === "all" || r.dataset.productKind === selectedKind;
+      // Unknown size ("") passes only while no size bound is set; never read as 0.
+      const rawSize = perPiece ? r.dataset.packageCount : r.dataset.packageKg;
+      // Rounded: 1.015 kg * 1000 is 1014.999... in floating point, still a 1015 g pack.
+      const packSize = (rawSize === undefined || rawSize === "") ? null
+        : Math.round(Number(rawSize) * (perPiece ? 1 : 1000) * 1000) / 1000;
+      const sizeOk = !size.active || (packSize !== null && packSize >= size.lo && packSize <= size.hi);
       const visible = (!q || r.dataset.search.includes(q))
         && (activeStores.length === storeChips.length || activeStores.includes(r.dataset.store))
         && (!onlySaved || r.classList.contains("saved"))
-        && metricOk;
+        && metricOk && typeOk && sizeOk;
       r.hidden = !visible;
       if (visible) shown++;
     });
     if (count) count.textContent = shown + " of " + rows.length + " shown";
+    // An active type or size filter is never hidden behind a closed panel.
+    const panelOn = selectedKind !== "all" || size.active;
+    if (filtersOn) filtersOn.hidden = !panelOn;
+    if (panelOn && moreFilters) moreFilters.open = true;
     renumberRanks();
   }
 
   if (search) search.addEventListener("input", applyFilters);
   if (minPrice) minPrice.addEventListener("input", applyFilters);
   if (maxPrice) maxPrice.addEventListener("input", applyFilters);
+  if (kindFilter) kindFilter.addEventListener("change", applyFilters);
+  [sizeMin, sizeMax].forEach((el) => { if (el) el.addEventListener("input", applyFilters); });
   if (savedOnly) {
     savedOnly.addEventListener("click", () => {
       savedOnly.setAttribute("aria-pressed", savedOnly.getAttribute("aria-pressed") === "true" ? "false" : "true");
@@ -636,6 +723,9 @@
       if (minPrice) minPrice.value = "";
       if (maxPrice) maxPrice.value = "";
       if (savedOnly) savedOnly.setAttribute("aria-pressed", "false");
+      if (kindFilter) kindFilter.value = "all";
+      if (sizeMin) sizeMin.value = "";
+      if (sizeMax) sizeMax.value = "";
       storeChips.forEach((c) => c.setAttribute("aria-pressed", "true"));
       applyFilters();
     });

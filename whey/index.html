@@ -86,6 +86,17 @@
   .saved-chip[aria-pressed="true"] { opacity: 1; color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
   .saved-chip[aria-pressed="true"] .saved-chip-icon { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .reset-btn { cursor: pointer; }
+  /* Type and pack size (plan 2026-09-30 C): a small panel, closed by default */
+  .more-filters { flex-basis: 100%; }
+  .more-filters summary { cursor: pointer; font-size: 13px; font-weight: 650; color: var(--accent-text); width: max-content; }
+  .more-filters summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .more-filters-body { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+  .filter-label { font-size: 12px; font-weight: 650; color: var(--muted); }
+  .filter-select { max-width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 7px;
+                   background: var(--surface); color: var(--text); font: inherit; }
+  .filter-select:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 1px; }
+  .filter-message { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--mid); }
+  .stats-note { margin: 0 0 6px; font-size: 11px; font-weight: 650; letter-spacing: .045em; text-transform: uppercase; color: var(--muted); }
   .count { color: var(--muted); font-size: 12.5px; margin-left: auto; white-space: nowrap; }
 
   /* --- table --- */
@@ -329,8 +340,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Whey Protein Price Comparison</h1>
-  <p class="gen-meta">Generated 30.09.2026 17:53 CEST &middot; 10 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 18:13 CEST &middot; 10 stores</p></div>
 
+  <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/proteka_superior_whey_core_2_27kg_2_27kg.html"><div class="stat-media"><img class="stat-img" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F2%2E27kg%5F%284%29%5F204011%2Ejpg.axd?maxwidth=600&amp;maxheight=600" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per kg</div><div class="value">21.98 &euro;</div><div class="sub" title="Superior Whey Core 2.27kg &middot; Proteka"><span class="sub-name">Superior Whey Core 2.27kg</span><span class="sub-sep"> &middot; </span><span class="sub-store">Proteka</span></div><div class="per-dose">&asymp; 0.66 &euro; per 30 g of powder</div><div class="protein-line">&asymp; 34.1 g estimated protein per &euro;</div></div></a><a class="stat" href="products/myprotein_essential_whey_protein_0_5kg.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11052699-3225180485863684.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">12.09 &euro;</div><div class="sub" title="Essential Whey Protein &middot; MyProtein"><span class="sub-name">Essential Whey Protein</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">500 g pack</div></div></a></section>
 
   
@@ -344,6 +356,21 @@
     </div>
     <div class="chip-group"><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Proteka <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>Proteini Outlet <span class="fcount">43</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>MyProtein <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>THE Nutrition <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GymBeam HR <span class="fcount">40</span></button><button type="button" class="chip" data-store-check="Scitec" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Scitec <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>Polleo Sport <span class="fcount">20</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>GAZ Nutrition <span class="fcount">14</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Proteini.si <span class="fcount">17</span></button><button type="button" class="chip" data-store-check="dm" aria-pressed="true"><span class="store-dot" style="background:#4a6b8a"></span>dm <span class="fcount">9</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
+    <details class="more-filters">
+      <summary><span class="more-filters-title">Type and pack size</span><span class="filters-on" hidden> &middot; on</span></summary>
+      <div class="more-filters-body">
+        <label class="filter-label" for="kindFilter">Type</label><select id="kindFilter" class="filter-select"><option value="all">All types</option><option value="concentrate">Concentrate</option><option value="isolate">Isolate</option><option value="hydrolysed">Hydrolysed</option><option value="blend">Blend</option><option value="unknown">Unknown</option></select>
+        <span class="filter-label" id="sizeLabel">Pack size (g)</span>
+        <div class="range-row" role="group" aria-labelledby="sizeLabel">
+          <input type="number" id="sizeMin" min="0" step="any" inputmode="decimal" aria-label="Smallest pack (g)" placeholder="from"
+                 aria-describedby="sizeFilterMessage" data-per-piece="false">
+          <span>&ndash;</span>
+          <input type="number" id="sizeMax" min="0" step="any" inputmode="decimal" aria-label="Largest pack (g)" placeholder="to"
+                 aria-describedby="sizeFilterMessage">
+        </div>
+        <p class="filter-message" id="sizeFilterMessage" role="status"></p>
+      </div>
+    </details>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
   </div>
@@ -370,6 +397,8 @@
         <tr data-store="Proteka" data-track-key="catalog:b21523636042c19c"
             data-offer-id="catalog:72ad5dfa6761ce73" data-price-eur="49.9"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="proteka superior whey core 2.27kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F2%2E27kg%5F%284%29%5F204011%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -385,6 +414,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:47574c7a70c50161"
             data-offer-id="catalog:1e29c0f76b405c73" data-price-eur="67.0"
             data-product-kind="unknown"
+            data-package-kg="3"
+            data-package-count=""
             data-search="proteini outlet 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/01/5stars-whey-protein-concentrate-3kg-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -400,6 +431,8 @@
         <tr data-store="Proteka" data-track-key="catalog:7f6484215d867a1a"
             data-offer-id="catalog:9de504f82378d19d" data-price-eur="53.9"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="proteka tesla whey charger 100 2.27kg + majica gratis">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/tesla%5Fwhey%5F%5Fmajica%5F123040%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -415,6 +448,8 @@
         <tr data-store="Proteka" data-track-key="catalog:517b683c64e6bf43"
             data-offer-id="catalog:0727f0884c19a9e5" data-price-eur="119.0"
             data-product-kind="unknown"
+            data-package-kg="5"
+            data-package-count=""
             data-search="proteka superior whey core 5kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F5%5Fkg%5F%281%29%5F124637%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -430,6 +465,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:36fd66c3bd587dcd"
             data-offer-id="catalog:586d12010edf86d4" data-price-eur="12.09"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="myprotein essential whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11052699-3225180485863684.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -445,6 +482,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:b6d038bb72291514"
             data-offer-id="catalog:b8c73be66486ff9d" data-price-eur="56.56"
             data-product-kind="unknown"
+            data-package-kg="2.3"
+            data-package-count=""
             data-search="the nutrition the amino whey (2300 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/315_cat_109988.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -460,6 +499,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:6e26a523d8d47d6b"
             data-offer-id="catalog:88965fac8adcbb73" data-price-eur="51.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet whey pro">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/02/nutriversum-whey-pro-2kg-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -475,6 +516,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:ae969ceef61a5e5e"
             data-offer-id="catalog:3c76ffaaed003bc0" data-price-eur="63.95"
             data-product-kind="unknown"
+            data-package-kg="2.5"
+            data-package-count=""
             data-search="gymbeam hr protein anabolic whey - gymbeam, 2.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/n/anabolic_whey_choco_1200x1200.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -490,6 +533,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:5de5b4cf37cfbc4c"
             data-offer-id="catalog:987bf5c3d2d999f7" data-price-eur="123.95"
             data-product-kind="unknown"
+            data-package-kg="4.54"
+            data-package-count=""
             data-search="gymbeam hr mutant whey - pvl, 4.54 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/m/u/mutantwhey2_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -505,6 +550,8 @@
         <tr data-store="Scitec" data-track-key="catalog:f753fb2e239aa2f7"
             data-offer-id="catalog:e4bf0a08ba17c40c" data-price-eur="27.9"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="scitec 100% whey(1 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/16152_a64458580fda_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -520,6 +567,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:33353e88d6753b1a"
             data-offer-id="catalog:a25ab2609ebc1f4c" data-price-eur="63.95"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="gymbeam hr mutant whey - pvl, 2.27 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/m/u/mutantwhey2_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -535,6 +584,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:79157333dfe21654"
             data-offer-id="catalog:d5a740852e84bdce" data-price-eur="68.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet grizli whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/09/grizli-whey-protein-2kg-cokolada-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -550,6 +601,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:6dbb9b402c221f2c"
             data-offer-id="catalog:a0f0dfe772a43376" data-price-eur="41.95"
             data-product-kind="unknown"
+            data-package-kg="1.45"
+            data-package-count=""
             data-search="gymbeam hr refuel whey protein - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/r/e/refuel_whey_protein_vanilla_mockup-1450g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -565,6 +618,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:5a053013310816d5"
             data-offer-id="catalog:eb70ed64bf5508cf" data-price-eur="28.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr protein anabolic whey - gymbeam, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/n/anabolic_whey_choco_1200x1200.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -580,6 +635,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:442711e6b9e72173"
             data-offer-id="catalog:6df3763e6cc5d901" data-price-eur="28.95"
             data-product-kind="blend"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr whey + collagen protein - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey_collagen_protein_chocolate_1000g_gymbeam_1__1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -595,6 +652,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:d1867e2c37d4e9bb"
             data-offer-id="catalog:6bf92ad9bdda78de" data-price-eur="58.0"
             data-product-kind="isolate"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet whey isolate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/01/5stars-whey-protein-isolate-2kg-van-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -610,6 +669,8 @@
         <tr data-store="Proteka" data-track-key="catalog:d435dfab85cae496"
             data-offer-id="catalog:54473a9930e542c2" data-price-eur="26.9"
             data-product-kind="unknown"
+            data-package-kg="0.908"
+            data-package-count=""
             data-search="proteka superior whey core 908g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/superior%5Fwhey%5Fcore%5F908g%5F16154%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -625,6 +686,8 @@
         <tr data-store="Proteka" data-track-key="catalog:47c5e37028f2c3e4"
             data-offer-id="catalog:804f8d5aba70e3e0" data-price-eur="29.9"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteka superior whey professional 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/whey%5Fprofessional%5F16451%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -640,6 +703,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:1a94719f4af60334"
             data-offer-id="catalog:03f5171905cb4f49" data-price-eur="59.99"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="polleo sport nextgen protein, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/nextgen_protein_cookiesncream_2000-1500.png?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -655,6 +720,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:0577b87b54c687b2"
             data-offer-id="catalog:39f6eaf703ceda9e" data-price-eur="59.99"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="polleo sport 100r whey, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_100r_whey_2kg_chocolate.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -670,6 +737,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:08c07816253879a5"
             data-offer-id="catalog:c78e6b1dff3a4519" data-price-eur="70.48"
             data-product-kind="unknown"
+            data-package-kg="2.3"
+            data-package-count=""
             data-search="gaz nutrition pure gold compact whey, 2.3 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-pg-compact-gold-whey-000-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -685,6 +754,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:ef6896468bfe0bb8"
             data-offer-id="catalog:053038cb843c26a8" data-price-eur="22.0"
             data-product-kind="unknown"
+            data-package-kg="0.7"
+            data-package-count=""
             data-search="proteini outlet whey pro">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/02/nutriversum-whey-pro-700g-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -700,6 +771,8 @@
         <tr data-store="Scitec" data-track-key="catalog:ffc0decc44e80270"
             data-offer-id="catalog:e0e39cd7ace18c06" data-price-eur="73.9"
             data-product-kind="unknown"
+            data-package-kg="2.35"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(2,35 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/5146_b3e789ff0e89_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -715,6 +788,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:be5d7fabe984e783"
             data-offer-id="catalog:ff7bfa6b503a32f2" data-price-eur="75.95"
             data-product-kind="unknown"
+            data-package-kg="2.4"
+            data-package-count=""
             data-search="gymbeam hr whey protein 360 ® - the protein works, 2.4 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey_protein_360_gold_-_medium_-_4.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -730,6 +805,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:a9c5fc5065ce5e94"
             data-offer-id="catalog:39b1b73e93083ffc" data-price-eur="31.89"
             data-product-kind="hydrolysed"
+            data-package-kg="1"
+            data-package-count=""
             data-search="myprotein hidrolizirani whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456583-1655179481077479.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -745,6 +822,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:df39512049c474d8"
             data-offer-id="catalog:5c4a1a6d0df62431" data-price-eur="80.0"
             data-product-kind="unknown"
+            data-package-kg="2.5"
+            data-package-count=""
             data-search="proteini outlet true whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/gymbeam-true-whey-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -760,6 +839,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:b6393476562b6925"
             data-offer-id="catalog:55aad6e17fe8afa0" data-price-eur="115.07"
             data-product-kind="unknown"
+            data-package-kg="3.5"
+            data-package-count=""
             data-search="the nutrition all in 1 protein (3000g + 500g free)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/340_cat_482941.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -775,6 +856,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:592f1bda9af3d169"
             data-offer-id="catalog:e1ed0f92a671a6ff" data-price-eur="66.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-100-whey-proteini-outlet-2-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -790,6 +873,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:b729b2ada2417dc5"
             data-offer-id="catalog:78e6069140eb117c" data-price-eur="66.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet ultimate whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/big-man-ultimate-whey-protein-novo-chocolate-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -805,6 +890,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:11d2fca25e65bb3c"
             data-offer-id="catalog:0382f570a2ec642b" data-price-eur="66.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/02/Ostrovit-100-whey-protein-2000g-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -820,6 +907,8 @@
         <tr data-store="Scitec" data-track-key="catalog:24dda352589abd1f"
             data-offer-id="catalog:7bb93a9eec164af7" data-price-eur="133.9"
             data-product-kind="unknown"
+            data-package-kg="4"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(4 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/17603_d28c1cdbcbd9_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -835,6 +924,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:7d042c4e81acc1ea"
             data-offer-id="catalog:e2586667dc492397" data-price-eur="68.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet platinum whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/09/platinum-whey-2kg-chocolate-proteini-outlet-austria-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -850,6 +941,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:c4dd336e0b3fcb99"
             data-offer-id="catalog:8fd41dc3b6d61b8e" data-price-eur="41.95"
             data-product-kind="unknown"
+            data-package-kg="1.2"
+            data-package-count=""
             data-search="gymbeam hr whey protein 360 ® - the protein works, 1.2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey_protein_360_gold_-_medium_-_4.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -865,6 +958,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:ebf77d799e3c5f72"
             data-offer-id="catalog:65ee9164a8c45722" data-price-eur="70.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet 100% professional whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/big-man-100-professional-whey-novo-chocolate-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -880,6 +975,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:62d29e1ff15646d8"
             data-offer-id="catalog:4f4483b8d61cb8a0" data-price-eur="87.95"
             data-product-kind="unknown"
+            data-package-kg="2.5"
+            data-package-count=""
             data-search="gymbeam hr true whey - gymbeam, 2.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/r/truewhey_2500_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -895,6 +992,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:263d934175928f5b"
             data-offer-id="catalog:34c7260923197a03" data-price-eur="28.53"
             data-product-kind="unknown"
+            data-package-kg="0.8"
+            data-package-count=""
             data-search="proteini.si battery whey protein, 800g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/15be7ea008ff5fb6d958f58d2f16ffc4/battery-whey-protein-800g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -910,6 +1009,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:8abda3c4a5853152"
             data-offer-id="catalog:10b86adef9c29420" data-price-eur="35.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr true whey - gymbeam, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/r/truewhey_2500_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -925,6 +1026,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:bb785017c3d13aaf"
             data-offer-id="catalog:da9508b7f06a3472" data-price-eur="71.95"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="gymbeam hr just whey grass-fed protein – gymbeam, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/j/u/just_whey_cookies_and_cream_2000_g_gymbeam_1_.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -940,6 +1043,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:acd6a16edc35acdb"
             data-offer-id="catalog:0babc05c2be85b81" data-price-eur="165.0"
             data-product-kind="unknown"
+            data-package-kg="4.53"
+            data-package-count=""
             data-search="proteini outlet 100% whey gold standard">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-100-whey-gold-standard-454kg-proteini-outlet-11-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -955,6 +1060,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:f000541a140738e2"
             data-offer-id="catalog:c5f4691ee49c391f" data-price-eur="66.97"
             data-product-kind="unknown"
+            data-package-kg="1.8"
+            data-package-count=""
             data-search="proteini.si battery rebel whey protein, 1800g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/ccfe99842a05a48c6d669500e0bb27c8/battery-rebel-whey-protein-1800g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -970,6 +1077,8 @@
         <tr data-store="dm" data-track-key="catalog:75f1263b90fbad4f"
             data-offer-id="catalog:65b99716d0428ec3" data-price-eur="84.95"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="dm 1st whey proteinski prah – keks &amp; krema, 2,27 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1769176134/assets/pas/images/57995551-56a4-46f3-bcaa-b098a256b1de/polleosport-1st-whey-proteinski-prah-keks-krema" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -985,6 +1094,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:7a518d656c27a83f"
             data-offer-id="catalog:bcaa16cf38e0d11e" data-price-eur="85.0"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="proteini outlet long 80 multiprotein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-long80-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1000,6 +1111,8 @@
         <tr data-store="Scitec" data-track-key="catalog:ac34e7fac969f9ba"
             data-offer-id="catalog:b348af678f70e484" data-price-eur="37.5"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(1 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/16209_2249c1423bee_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1015,6 +1128,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:d50b8312210eaf89"
             data-offer-id="catalog:f4c2029eee2407d0" data-price-eur="112.95"
             data-product-kind="unknown"
+            data-package-kg="3"
+            data-package-count=""
             data-search="gymbeam hr whey protein – mammut nutrition, 3 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1030,6 +1145,8 @@
         <tr data-store="dm" data-track-key="catalog:ce3025577e6550da"
             data-offer-id="catalog:91d6fe3d629ce4a8" data-price-eur="16.95"
             data-product-kind="unknown"
+            data-package-kg="0.45"
+            data-package-count=""
             data-search="dm whey protein u prahu s okusom vanilije, 450 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1755021263/assets/pas/images/92341978-7f0c-4256-aa27-ec41c34eb74a/sportness-whey-protein-u-prahu-s-okusom-vanilije" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1045,6 +1162,8 @@
         <tr data-store="dm" data-track-key="catalog:04b38ad524d653d1"
             data-offer-id="catalog:509d18c9be0b1f19" data-price-eur="16.95"
             data-product-kind="unknown"
+            data-package-kg="0.45"
+            data-package-count=""
             data-search="dm whey protein u prahu s okusom čokolade, 450 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1766010174/assets/pas/images/39c01845-574c-4b19-88f3-51c2b50293a6/sportness-whey-protein-u-prahu-s-okusom-cokolade" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1060,6 +1179,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:029154afb2ae85d7"
             data-offer-id="catalog:186cea97e9eb6e01" data-price-eur="37.95"
             data-product-kind="blend"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr protein fusion - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/r/protein_fusion_1000g_chocolate_gymbeam_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1075,6 +1196,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:585f4bad1129c3eb"
             data-offer-id="catalog:e50ce4c06239469b" data-price-eur="15.94"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="myprotein impact diet whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456803-8475193234186495.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1090,6 +1213,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:fcbe28ae33a61663"
             data-offer-id="catalog:473a5bd797a5a517" data-price-eur="151.99"
             data-product-kind="unknown"
+            data-package-kg="4"
+            data-package-count=""
             data-search="the nutrition the amino whey   (4000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/1697_cat_462733.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1105,6 +1230,8 @@
         <tr data-store="Scitec" data-track-key="catalog:01621fb3e02208cd"
             data-offer-id="catalog:a4f3cedd28756283" data-price-eur="69.9"
             data-product-kind="unknown"
+            data-package-kg="1.816"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(1,816 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/17604_0ff647fea053_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1120,6 +1247,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:cd71a389d1052f53"
             data-offer-id="catalog:250578b73575cdf7" data-price-eur="34.99"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="polleo sport 100r whey, 900 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_100r_whey_900g_chocolate.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1135,6 +1264,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:38c7c2d70454e783"
             data-offer-id="catalog:7afd666d47e7709a" data-price-eur="38.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr whey protein – mammut nutrition, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1150,6 +1281,8 @@
         <tr data-store="Proteka" data-track-key="catalog:e165d8d8d9989e19"
             data-offer-id="catalog:e3b0732642312ff8" data-price-eur="89.99"
             data-product-kind="concentrate"
+            data-package-kg="2.3"
+            data-package-count=""
             data-search="proteka proteos whey protein concentrate 80, 2.3 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/proteos%5Fwhey%5Fprotein%5F80%5F%281%29%5F184455%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1165,6 +1298,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:a943a089b3781f67"
             data-offer-id="catalog:e76c66351e1ff99f" data-price-eur="39.51"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gaz nutrition pure gold compact whey, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-pg-compact-gold-whey-000-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1180,6 +1315,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:3ab513e5e616d622"
             data-offer-id="catalog:cf4965e349d89790" data-price-eur="35.95"
             data-product-kind="unknown"
+            data-package-kg="0.908"
+            data-package-count=""
             data-search="gymbeam hr mutant whey - pvl, 0.908 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/m/u/mutantwhey2_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1195,6 +1332,8 @@
         <tr data-store="Proteka" data-track-key="catalog:1e9b2cd69f1e4c2e"
             data-offer-id="catalog:59314dad856a2edb" data-price-eur="179.26"
             data-product-kind="concentrate"
+            data-package-kg="4.5"
+            data-package-count=""
             data-search="proteka proteos whey protein concentrate 80, 4.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/proteos%5Fwhey%5Fprotein%5F80%5F%281%29%5F184455%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1210,6 +1349,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:67616696cf8c848a"
             data-offer-id="catalog:da29383f256122ed" data-price-eur="23.95"
             data-product-kind="unknown"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="gymbeam hr whey protein 360 ® - the protein works, 0.6 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey_protein_360_gold_-_medium_-_4.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1225,6 +1366,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:61dd1695c6196e53"
             data-offer-id="catalog:3c222460179fde7a" data-price-eur="39.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr just whey grass-fed protein – gymbeam, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/j/u/just_whey_cookies_and_cream_2000_g_gymbeam_1_.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1240,6 +1383,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:540188d9009ec18c"
             data-offer-id="catalog:82e9e47fcfa4dfb6" data-price-eur="39.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr yum yum whey - beastpink, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1255,6 +1400,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:01bc1b83377c9b64"
             data-offer-id="catalog:3efac29d92076d5c" data-price-eur="39.95"
             data-product-kind="blend"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr whey + izolat s enzimima digezyme® – gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/h/whey-isolate-1000-g-strawberry-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1270,6 +1417,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:83f32ca61c888940"
             data-offer-id="catalog:8e8b0a401481064e" data-price-eur="40.0"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet long 80 multiprotein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-long80-proteini-outlet-123-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1285,6 +1434,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:40d705542c85371f"
             data-offer-id="catalog:89fca6b796cac611" data-price-eur="30.24"
             data-product-kind="blend"
+            data-package-kg="0.75"
+            data-package-count=""
             data-search="myprotein impact whey protein + collagen">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17725536-1785352312066954.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1300,6 +1451,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:f0c8fc40564130b1"
             data-offer-id="catalog:edac6de6a37f0c83" data-price-eur="81.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="the nutrition all in 1 whey (2000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2081_cat_924287.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1315,6 +1468,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:9c1b3d4ab13ae639"
             data-offer-id="catalog:625a85c727780085" data-price-eur="92.0"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="proteini outlet high whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-high-whey-80-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1330,6 +1485,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:737df7f05e0a7400"
             data-offer-id="catalog:3d315f528a17f383" data-price-eur="82.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet multiphase whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/03/big-man-multi-phase-whey-new-chocolate-2kg-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1345,6 +1502,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:649bd069184d8f1b"
             data-offer-id="catalog:47646297e75e7895" data-price-eur="29.0"
             data-product-kind="unknown"
+            data-package-kg="0.7"
+            data-package-count=""
             data-search="proteini outlet 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/12/Ostrovit-100-whey-protein-700g-proteini-outlet-1-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1360,6 +1519,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:bf4cf637ecba96b5"
             data-offer-id="catalog:3f54d5d8b9acbcbb" data-price-eur="95.0"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="proteini outlet 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-100-whey-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1375,6 +1536,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:326aa5698813c7db"
             data-offer-id="catalog:ad5b85f2af0214e8" data-price-eur="42.0"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet high whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-high-whey-80-proteini-outlet-11-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1390,6 +1553,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:8b1958092006e05f"
             data-offer-id="catalog:afb0b03b09c2089c" data-price-eur="76.99"
             data-product-kind="unknown"
+            data-package-kg="1.8"
+            data-package-count=""
             data-search="the nutrition the whey signature (1800 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2173_cat_472790.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1405,6 +1570,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:9f6803c4c35b33df"
             data-offer-id="catalog:86223e5c8f51c8d8" data-price-eur="77.0"
             data-product-kind="unknown"
+            data-package-kg="1.8"
+            data-package-count=""
             data-search="proteini outlet whey deluxe">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/03/swedish-supplements-deluxe-whey-chocolate-1.8kg-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1420,6 +1587,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:b3336e858bc22ea2"
             data-offer-id="catalog:279952765905d444" data-price-eur="42.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr gain anabolic protein - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/g/a/gain_anabolic_protein_salted_caramel_mockup_1__1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1435,6 +1604,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:e7215d4a0c2179f4"
             data-offer-id="catalog:ea707ba1c8eb2702" data-price-eur="43.0"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet multiphase whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/big-man-multi-phase-whey-new-1kg-proteini_outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1450,6 +1621,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:7c6a1285e8ce55e8"
             data-offer-id="catalog:94a824ba8f0c7232" data-price-eur="39.59"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="myprotein impact whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10530943-5295330627384187.png&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1465,6 +1638,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:0a137d286a096c23"
             data-offer-id="catalog:4896ffbfa22cb796" data-price-eur="99.9"
             data-product-kind="unknown"
+            data-package-kg="2.27"
+            data-package-count=""
             data-search="polleo sport 1st whey, 2270 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_1stwhey_choco_jaffa_2270g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1480,6 +1655,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:896ad7ced7e9481f"
             data-offer-id="catalog:88be4fba6a078e86" data-price-eur="39.94"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="proteini.si sportnahrung everyday whey (new), 900g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/22d23d3127a391b3cfb36663ee910ed6/sportnahrung-everyday-whey-new-900g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1495,6 +1672,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:c9c46aed6f7e3926"
             data-offer-id="catalog:34e66fb94c4bd039" data-price-eur="199.99"
             data-product-kind="unknown"
+            data-package-kg="4.5"
+            data-package-count=""
             data-search="polleo sport 1st whey, 4.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/me_first_1st_whey_4,5kg_vanilla_madagaascar.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1510,6 +1689,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:15376abed07b480e"
             data-offer-id="catalog:c41a9a999c507e77" data-price-eur="79.99"
             data-product-kind="unknown"
+            data-package-kg="1.8"
+            data-package-count=""
             data-search="the nutrition x3m whey (1800 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/474_cat_82149.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1525,6 +1706,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:e4b2527276260ddc"
             data-offer-id="catalog:3df667f31408911a" data-price-eur="80.0"
             data-product-kind="unknown"
+            data-package-kg="1.8"
+            data-package-count=""
             data-search="proteini outlet syntha-6 edge protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2022/03/bsn-syntha-6-edge-1.8kg-choc-proteini-outlet-2--600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1540,6 +1723,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:f4ad6f3c67f0049b"
             data-offer-id="catalog:204692f88ba25490" data-price-eur="40.27"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="the nutrition the whey signature (900 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2172_cat_361673.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1555,6 +1740,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:271d4a5a64ac263f"
             data-offer-id="catalog:f0f2b8495bfdd773" data-price-eur="44.84"
             data-product-kind="concentrate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="the nutrition the whey concentrate (1000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2027_cat_352682.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1570,6 +1757,8 @@
         <tr data-store="Proteka" data-track-key="catalog:25109c238e091aa6"
             data-offer-id="catalog:a96669d6e871ab8d" data-price-eur="89.9"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteka whey vita 2kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/whey%5Fvita%5F2kg%5F151151%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1585,6 +1774,8 @@
         <tr data-store="Proteka" data-track-key="catalog:9f9fce2c91261257"
             data-offer-id="catalog:ceb854c73248816b" data-price-eur="44.99"
             data-product-kind="concentrate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteka proteos whey protein concentrate 80, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/proteos%5Fwhey%5Fprotein%5F80%5F%281%29%5F184455%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1600,6 +1791,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:6b8d70d3bbc7e137"
             data-offer-id="catalog:e90f972ffd5db8a2" data-price-eur="44.99"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="the nutrition the amino whey (1000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2038_cat_620276.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1615,6 +1808,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:ce72161cbc266260"
             data-offer-id="catalog:940ddaf9d0b8f1a5" data-price-eur="44.99"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="myprotein impact whey protein elite">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11243021-6495289072911925.png&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1630,6 +1825,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:6e62a3485d26cec5"
             data-offer-id="catalog:010a463a9286e763" data-price-eur="90.0"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet ultra pure whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/09/amix-black-line-ultra-pure-whey-2kg-choc-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1645,6 +1842,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:112c51620bbfc514"
             data-offer-id="catalog:8dd5c9d71dfd6225" data-price-eur="180.0"
             data-product-kind="blend"
+            data-package-kg="4"
+            data-package-count=""
             data-search="proteini outlet whey pure fusion">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2021/04/amix-nutrition-whey-fusion-4kg-bucket-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1660,6 +1859,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:955d67dfb4ecb444"
             data-offer-id="catalog:050d1adcc054bc64" data-price-eur="45.13"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="the nutrition the lactose-free whey - natural (1000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2025_cat_128656.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1675,6 +1876,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:debfd24bc743ff90"
             data-offer-id="catalog:27eda4d4ee4236e9" data-price-eur="41.0"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="proteini outlet lifestyle whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/swedish-supplements-lifestyle-whey-tro-coko-novo-900g-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1690,6 +1893,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:fd8233b5ebab895e"
             data-offer-id="catalog:428e3088d1d0f2ec" data-price-eur="105.0"
             data-product-kind="isolate"
+            data-package-kg="2.3"
+            data-package-count=""
             data-search="proteini outlet animal iso whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/09/animal-isolate-loaded-whey-protein-2.3kg-chocolate-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1705,6 +1910,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:0c6a9ccf57708824"
             data-offer-id="catalog:157116d86bd696ed" data-price-eur="105.0"
             data-product-kind="blend"
+            data-package-kg="2.3"
+            data-package-count=""
             data-search="proteini outlet whey pure fusion">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/amix-nutrition-whey-fusion-2.3kg-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1720,6 +1927,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:37f173d0883a3eb0"
             data-offer-id="catalog:ba5809a4244b58ed" data-price-eur="45.75"
             data-product-kind="isolate"
+            data-package-kg="0.99"
+            data-package-count=""
             data-search="myprotein impact whey izolat od sirutke krava hranjenih travom">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16795191-1835343294928140.png&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1735,6 +1944,8 @@
         <tr data-store="Scitec" data-track-key="catalog:ca91a6b3a6168ea0"
             data-offer-id="catalog:3f7ef5aeee1d6b25" data-price-eur="35.9"
             data-product-kind="unknown"
+            data-package-kg="0.78"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(0,78 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/17602_cb0c67dd5bc2_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1750,6 +1961,8 @@
         <tr data-store="Scitec" data-track-key="catalog:9ae723112d1719a9"
             data-offer-id="catalog:f09aada687afa10a" data-price-eur="1.3"
             data-product-kind="unknown"
+            data-package-kg="0.028"
+            data-package-count=""
             data-search="scitec 100% whey(28 gr.)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/16154_847ce513a1f1_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1765,6 +1978,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:28b20333e2012384"
             data-offer-id="catalog:de4f595b35eba02a" data-price-eur="46.56"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="the nutrition the lactose-free whey (1000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2020_cat_738526.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1780,6 +1995,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:a2cabf2daec19863"
             data-offer-id="catalog:16dc33a20ce97efe" data-price-eur="33.09"
             data-product-kind="unknown"
+            data-package-kg="0.7"
+            data-package-count=""
             data-search="proteini.si battery rebel whey protein, 700g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/446316dfbab6699acc2c05d7d662e62d/battery-rebel-whey-protein-700g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1795,6 +2012,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:834086a343c71d1e"
             data-offer-id="catalog:9b88e35846119946" data-price-eur="21.59"
             data-product-kind="unknown"
+            data-package-kg="0.454"
+            data-package-count=""
             data-search="polleo sport zoe whey protein, 454 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_whey_protein_454_mozart.jpeg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1810,6 +2029,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:c4836d7d46b7f67f"
             data-offer-id="catalog:6126fa734ae39903" data-price-eur="118.95"
             data-product-kind="isolate"
+            data-package-kg="2.5"
+            data-package-count=""
             data-search="gymbeam hr pure isowhey - gymbeam, 2.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/u/pureisowhey-chocolate-2500g-mockup.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1825,6 +2046,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:e851d299ff1daca2"
             data-offer-id="catalog:fe25ea8c83b01b38" data-price-eur="86.75"
             data-product-kind="unknown"
+            data-package-kg="1.816"
+            data-package-count=""
             data-search="proteini.si scitec 100% whey protein professional, 1816g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/8d05ff1ebacf48d64f6b721638726510/scitec-100-whey-protein-professional-1816g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1840,6 +2063,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:7acb48980a79ad4b"
             data-offer-id="catalog:4082dac408ed7398" data-price-eur="96.95"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="gymbeam hr asap true whey - gymbeam, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1855,6 +2080,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:06df5fc53f41846a"
             data-offer-id="catalog:7cc96cff2947646d" data-price-eur="219.99"
             data-product-kind="unknown"
+            data-package-kg="4.5"
+            data-package-count=""
             data-search="polleo sport 100% whey gold standard, 4,5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gs_whey_10lb_choc_fr_6056570_web_on00244_1.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1870,6 +2097,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:3cae133f4678f54c"
             data-offer-id="catalog:f4120643859b9fff" data-price-eur="44.0"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="proteini outlet 100% whey gold standard">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-100-whey-gold-standard-900g-proteini-outlet-11-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1885,6 +2114,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:4e6df055afdcc27c"
             data-offer-id="catalog:8e98195384b68ce4" data-price-eur="97.95"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="gymbeam hr protein 80 plus - weider, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/e/weider_30119_protein_80plus_2kg_beutel_chocolate.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1900,6 +2131,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:76646f6189546a89"
             data-offer-id="catalog:33f7e8f94c105cba" data-price-eur="45.0"
             data-product-kind="unknown"
+            data-package-kg="0.908"
+            data-package-count=""
             data-search="proteini outlet 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-100-whey-choc-908-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1915,6 +2148,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:ef0a867c0954eaa6"
             data-offer-id="catalog:d13a595a9c94611c" data-price-eur="38.8"
             data-product-kind="unknown"
+            data-package-kg="0.78"
+            data-package-count=""
             data-search="proteini.si scitec 100% whey protein professional, 780g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/1771f7c2c74688170b589378a8688ffc/scitec-100-whey-protein-professional-780g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1930,6 +2165,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:3ff9571bd01ea953"
             data-offer-id="catalog:696373661c095a01" data-price-eur="49.95"
             data-product-kind="isolate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr pure isowhey - gymbeam, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/u/pureisowhey-chocolate-2500g-mockup.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1945,6 +2182,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:23eb6c713d58ed35"
             data-offer-id="catalog:726858c523663261" data-price-eur="1.5"
             data-product-kind="unknown"
+            data-package-kg="0.03"
+            data-package-count=""
             data-search="gymbeam hr true whey - gymbeam, 0.03 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/t/r/truewhey_2500_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1960,6 +2199,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:0fc5c2737dbaa9db"
             data-offer-id="catalog:1633e581fc3d2205" data-price-eur="102.0"
             data-product-kind="unknown"
+            data-package-kg="2.02"
+            data-package-count=""
             data-search="proteini outlet 100% whey gold standard">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/10/optimum-nutrition-100-whey-gold-standard-202kg-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1975,6 +2216,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:bb2ca507247776fe"
             data-offer-id="catalog:fc137483619970b2" data-price-eur="45.65"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="proteini.si vast muscle whey, 900g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/db3dd598af96f2cf84445dd4aa4d3ba1/vast-muscle-whey-900g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1990,6 +2233,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:b16dd07140e3e355"
             data-offer-id="catalog:535c7fdbc782f6b2" data-price-eur="102.0"
             data-product-kind="isolate"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet zeropro® native whey isolate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2022/01/amix-nutrition-zero-pro-nativ-whey-isolate-2kg-choc-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2005,6 +2250,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:a302e00f71c75044"
             data-offer-id="catalog:db0bdf0f5b38dbc5" data-price-eur="102.3"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="gaz nutrition weider gold whey protein, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/08/gaz-nutrition-proizvod-weider-gold-whey-protein-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2020,6 +2267,8 @@
         <tr data-store="Scitec" data-track-key="catalog:bfa2b606036ce609"
             data-offer-id="catalog:3b90a8c20efbcf21" data-price-eur="25.9"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(0,5 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/13922_7ab7c78cfd0c_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2035,6 +2284,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:5c7b6538306ae218"
             data-offer-id="catalog:87896b863cdc34b5" data-price-eur="52.0"
             data-product-kind="blend"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet whey pure fusion">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/10/amix-nutrition-whey-fusion-1kg-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2050,6 +2301,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:97840dbf47597470"
             data-offer-id="catalog:fe652856b2362161" data-price-eur="237.95"
             data-product-kind="unknown"
+            data-package-kg="4.54"
+            data-package-count=""
             data-search="gymbeam hr 100% whey gold standard - optimum nutrition, 4.54 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/e/u/eu_on_gsw_5lb_tub_2kg_2ply_drc_6078372_angle01_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2065,6 +2318,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:35e74f3f32196769"
             data-offer-id="catalog:257481eb8bbd008b" data-price-eur="26.24"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini.si ironmaxx coconut milk protein, 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/b6952bd3c5442dd0f868b87e7ddb5db3/ironmaxx-coconut-milk-protein-500g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2080,6 +2335,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:bda73d317de68303"
             data-offer-id="catalog:7ce29b754bb5f325" data-price-eur="52.5"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini.si sportnahrung whey deluxe (new), 1000g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/56ed4a901fd9a400ed6a3a1feac9b551/sportnahrung-whey-deluxe-new-1000g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2095,6 +2352,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:5a64fadcec5c3216"
             data-offer-id="catalog:4d2695a851e3e8f3" data-price-eur="47.99"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="polleo sport body attack 100% whey protein, 900 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/body_attack_whey_chocolate_brownie_900g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2110,6 +2369,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:9b66ba7847fb84cd"
             data-offer-id="catalog:aedc54392a44eb7e" data-price-eur="26.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr just whey grass-fed protein – gymbeam, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/j/u/just_whey_cookies_and_cream_2000_g_gymbeam_1_.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2125,6 +2386,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:b17eb723d5cfb8b0"
             data-offer-id="catalog:b6679278c5184612" data-price-eur="26.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr yum yum whey - beastpink, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2140,6 +2403,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:5cd531af71343318"
             data-offer-id="catalog:f33205432babf699" data-price-eur="26.99"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport sahne protein, natural, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/ba_sahneprotein_500g_1200x1200-removebg-preview.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2155,6 +2420,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:1b8249fb4ed418eb"
             data-offer-id="catalog:32149a24aa1cda1b" data-price-eur="48.95"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="gymbeam hr asap true whey - gymbeam, 0.9 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2170,6 +2437,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:9684fc551514f63e"
             data-offer-id="catalog:a18e9a536b11bcb2" data-price-eur="48.95"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="gymbeam hr bio whey protein - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/b/i/bio_whey_protein_900_g_cocoa_gymbeam_1__1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2185,6 +2454,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:8074f0cbe0bffdb7"
             data-offer-id="catalog:7723d8849eeb65ba" data-price-eur="109.58"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini.si optimum gold standard 100% whey (new), 2000g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/5da434d6d7bf9bfdef5d8e6cf9c29cc9/optimum-gold-standard-100-whey-new-2000g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2200,6 +2471,8 @@
         <tr data-store="dm" data-track-key="catalog:688486ef171e20b7"
             data-offer-id="catalog:f54d8f616f1f50ef" data-price-eur="24.95"
             data-product-kind="unknown"
+            data-package-kg="0.454"
+            data-package-count=""
             data-search="dm 1st whey proteinski prah s okusom vanilije, 454 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1769175738/assets/pas/images/d3047eaf-9114-4a5f-991a-714de8538bb4/polleosport-1st-whey-proteinski-prah-s-okusom-vanilije" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2215,6 +2488,8 @@
         <tr data-store="dm" data-track-key="catalog:e90ed54d85f6d804"
             data-offer-id="catalog:566fabb04d49b2cc" data-price-eur="24.95"
             data-product-kind="unknown"
+            data-package-kg="0.454"
+            data-package-count=""
             data-search="dm 1st whey proteinski prah s okusom švicarske..., 454 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1769074259/assets/pas/images/fdbd2fab-fa3a-4755-bc5f-536c54747b6e/polleosport-1st-whey-proteinski-prah-s-okusom-svicarske-cokolade" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2230,6 +2505,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:cb70d33387969536"
             data-offer-id="catalog:49f5d32990232f65" data-price-eur="109.99"
             data-product-kind="unknown"
+            data-package-kg="2"
+            data-package-count=""
             data-search="polleo sport gold standard 100% whey protein, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_gsw_2kg_01.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2245,6 +2522,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:471991885d6e54f6"
             data-offer-id="catalog:54a6325c258e02fd" data-price-eur="49.65"
             data-product-kind="unknown"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="proteini.si battery complete whey, 30x30g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/17d02afaf0fc23f32ee1a5696bc5665e/battery-complete-whey-30x30g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2260,6 +2539,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:e2b808c7c58148c5"
             data-offer-id="catalog:d270a5c41f91365b" data-price-eur="110.95"
             data-product-kind="unknown"
+            data-package-kg="2.01"
+            data-package-count=""
             data-search="gymbeam hr 100% whey gold standard - optimum nutrition, 2.01 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/e/u/eu_on_gsw_5lb_tub_2kg_2ply_drc_6078372_angle01_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2275,6 +2556,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:9462830df4e53c3c"
             data-offer-id="catalog:41b1d6b15ca688df" data-price-eur="112.0"
             data-product-kind="isolate"
+            data-package-kg="2"
+            data-package-count=""
             data-search="proteini outlet cfm 90 whey izolat">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-cfm-90-whey-isolate-2kg-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2290,6 +2573,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:a58d205ae77a7acc"
             data-offer-id="catalog:e3c447bca2159bae" data-price-eur="56.0"
             data-product-kind="isolate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet zeropro® native whey isolate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2022/01/amix-nutrition-zero-pro-nativ-whey-isolate-1kg-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2305,6 +2590,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:45e99addae4cb806"
             data-offer-id="catalog:33fb36adf15a39cd" data-price-eur="51.14"
             data-product-kind="isolate"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="myprotein impact whey izolat">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10530911-1595330627973648.png&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2320,6 +2607,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:cd83a3e938ec69bf"
             data-offer-id="catalog:54e071f9be53c39c" data-price-eur="17.11"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini.si proteini.si my new whey, 300g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/4a158f40da711a18c1a928097f55cd3a/proteini-si-my-new-whey-300g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2335,6 +2624,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:5454f2e868a4c803"
             data-offer-id="catalog:1206e2144ea9c5fc" data-price-eur="132.56"
             data-product-kind="unknown"
+            data-package-kg="2.3"
+            data-package-count=""
             data-search="gaz nutrition weider premium whey protein, 2.3 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/09/gaz-nutrition-proizvod-weider-premium-whey-protein-prah-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2350,6 +2641,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:617d5e9638c9567a"
             data-offer-id="catalog:6a3aa8f26728bb7c" data-price-eur="1.85"
             data-product-kind="unknown"
+            data-package-kg="0.032"
+            data-package-count=""
             data-search="gaz nutrition pure gold compact whey, 0.032 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-pg-compact-gold-whey-000-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2365,6 +2658,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:1ad1274165c64150"
             data-offer-id="catalog:61dba7b6f86b65df" data-price-eur="28.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr protein 80 plus - weider, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/e/weider_30119_protein_80plus_2kg_beutel_chocolate.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2380,6 +2675,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:ac79c95c3b806b6a"
             data-offer-id="catalog:28e855e2cd3b960e" data-price-eur="57.95"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr protein clear whey isofue - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/l/clearwheyisofue_green_apple_1000_g_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2395,6 +2692,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:930da163c1a580b1"
             data-offer-id="catalog:674c018cadd6e87d" data-price-eur="133.0"
             data-product-kind="isolate"
+            data-package-kg="2.28"
+            data-package-count=""
             data-search="proteini outlet gold whey protein isolate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2021/04/amix-nutrition-gold-isolate-2.28kg-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2410,6 +2709,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:b6fd72d97df98c75"
             data-offer-id="catalog:7fc3efa5e978b2d9" data-price-eur="59.0"
             data-product-kind="isolate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet cfm 90 whey izolat">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-cfm-90-whey-isolate-1kg-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2425,6 +2726,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:4540363bbfdfc946"
             data-offer-id="catalog:6489575104f35b98" data-price-eur="135.96"
             data-product-kind="unknown"
+            data-package-kg="2.28"
+            data-package-count=""
             data-search="gaz nutrition z-konzept prime whey protein, 2.28 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-zkonzept-prime-whey-protein-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2440,6 +2743,8 @@
         <tr data-store="Scitec" data-track-key="catalog:6f4f1933dd68985e"
             data-offer-id="catalog:3d9843a722db867a" data-price-eur="23.9"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(0,4 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/17601_4360a430874d_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2455,6 +2760,8 @@
         <tr data-store="Scitec" data-track-key="catalog:23fe203a53eae316"
             data-offer-id="catalog:e38cc779cfe52eb7" data-price-eur="23.9"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="scitec 100% whey protein professional (unflavored)(0,4 kg)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/17626_353c307128c8_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2470,6 +2777,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:bbe40cbaa6534216"
             data-offer-id="catalog:bd7c8c6b80f1f4d8" data-price-eur="30.0"
             data-product-kind="blend"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini outlet whey pure fusion">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2022/05/amix-nutrition-whey-fusion-500g-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2485,6 +2794,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:ca6ca48e46f99dad"
             data-offer-id="catalog:6047605c34f8cc77" data-price-eur="54.99"
             data-product-kind="unknown"
+            data-package-kg="0.908"
+            data-package-count=""
             data-search="polleo sport 1st whey, 908 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/cologne_1st_whey_vanilla_908g.png?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2500,6 +2811,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:959c3cb6b9f47a39"
             data-offer-id="catalog:6e24ba362bf122ca" data-price-eur="55.0"
             data-product-kind="unknown"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet animal 100% whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/09/animal-100-whey-protein-1kg-chocolate-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2515,6 +2828,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:89afc5d0268a8de5"
             data-offer-id="catalog:694f595d3e44cb04" data-price-eur="98.0"
             data-product-kind="hydrolysed"
+            data-package-kg="1.6"
+            data-package-count=""
             data-search="proteini outlet platinum hydro whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-platinum-hydrowhey-choc-proteini-outlet-sp-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2530,6 +2845,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:20337e070d9189f8"
             data-offer-id="catalog:95a3eedb85484f97" data-price-eur="62.13"
             data-product-kind="isolate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="the nutrition the clear whey isolate (1000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2080_cat_356368.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2545,6 +2862,8 @@
         <tr data-store="dm" data-track-key="catalog:e28f3219d4c819c2"
             data-offer-id="catalog:0ec10b689c009222" data-price-eur="31.25"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="dm protein gold whey – vanilija, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747444999/assets/pas/images/ff0e0591-39f1-4293-a38c-42cb8682ff75/weider-protein-gold-whey-vanilija" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2560,6 +2879,8 @@
         <tr data-store="dm" data-track-key="catalog:0ddec17c1e541654"
             data-offer-id="catalog:6e18bbb7c52f2296" data-price-eur="31.25"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="dm protein gold whey, okus mliječna čokolada, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747445177/assets/pas/images/1b6ea9e1-b06b-444a-b3b7-e450cd6ab7d6/weider-protein-gold-whey-okus-mlijecna-cokolada" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2575,6 +2896,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:01a7778205dbcc0d"
             data-offer-id="catalog:18f9cdda42f16d41" data-price-eur="26.55"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="gaz nutrition maxinutrition max whey 100% protein sirutke">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/05/gaz-nutrition-proizvod-istaknuto-maxinutrition-max-whey-01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2590,6 +2913,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:2b6308dc8ccb8869"
             data-offer-id="catalog:af548b18360fd742" data-price-eur="28.53"
             data-product-kind="unknown"
+            data-package-kg="0.45"
+            data-package-count=""
             data-search="proteini.si maltesers hi protein powder, 450g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/8f3e300bdb36a3f97fbed67b02adf003/maltesers-hi-protein-powder-450g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2605,6 +2930,8 @@
         <tr data-store="dm" data-track-key="catalog:9cbd647570b106eb"
             data-offer-id="catalog:6e1b6add2807135a" data-price-eur="31.75"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="dm protein 80 plus, okus vanilije, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747445001/assets/pas/images/9117d903-6385-4021-8327-0aafc1d39664/weider-protein-80-plus-okus-vanilije" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2620,6 +2947,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:ac1bf481e80f0480"
             data-offer-id="catalog:d8f30ebb67a4e2dd" data-price-eur="26.99"
             data-product-kind="unknown"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="myprotein impact diet whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10530657-2085372280065763.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2635,6 +2964,8 @@
         <tr data-store="dm" data-track-key="catalog:78b3ee6fb77ddc46"
             data-offer-id="catalog:bed471833027d1df" data-price-eur="32.25"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="dm protein 80 plus, okus čokolade, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747444998/assets/pas/images/51e02341-51da-42ce-b890-f9312b087c4e/weider-protein-80-plus-okus-cokolade" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2650,6 +2981,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:da086381c7b245d0"
             data-offer-id="catalog:f5414105d2d2306b" data-price-eur="1.95"
             data-product-kind="unknown"
+            data-package-kg="0.03"
+            data-package-count=""
             data-search="gymbeam hr just whey grass-fed protein – gymbeam, 0.03 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/j/u/just_whey_cookies_and_cream_2000_g_gymbeam_1_.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2665,6 +2998,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:b633ff371add9dd4"
             data-offer-id="catalog:a5ac24d2a9bd8891" data-price-eur="1.95"
             data-product-kind="unknown"
+            data-package-kg="0.03"
+            data-package-count=""
             data-search="gymbeam hr yum yum whey - beastpink, 0.03 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/y/u/yum_yum_white_chocolate_coconut_1000_g_beastpink_wb.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2680,6 +3015,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:c9bb490c598eb8b1"
             data-offer-id="catalog:3ebf1a6d76f4dd64" data-price-eur="129.99"
             data-product-kind="isolate"
+            data-package-kg="2"
+            data-package-count=""
             data-search="the nutrition the whey isolate (2000 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/143_cat_994708.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2695,6 +3032,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:b2b2669284c418ef"
             data-offer-id="catalog:e26bdbc30fda8bdb" data-price-eur="32.99"
             data-product-kind="blend"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="myprotein clear protein | whey &amp; collagen">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17263290-1535351063250996.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2710,6 +3049,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:ab76a9ee735631f5"
             data-offer-id="catalog:d40e63ac1d0b2322" data-price-eur="33.2"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gaz nutrition weider gold whey protein, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/08/gaz-nutrition-proizvod-weider-gold-whey-protein-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2725,6 +3066,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:994f4c255354feed"
             data-offer-id="catalog:6e68ec49cff5375c" data-price-eur="34.15"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gaz nutrition z-konzept prime whey protein, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-zkonzept-prime-whey-protein-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2740,6 +3083,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:67f5da8fd185b930"
             data-offer-id="catalog:8a0891b8bf2e9b95" data-price-eur="53.64"
             data-product-kind="unknown"
+            data-package-kg="0.78"
+            data-package-count=""
             data-search="proteini.si optimum gold standard 100% whey (new), 780g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/315357cb59b77ab99ad75bc9449274db/optimum-gold-standard-100-whey-new-780g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2755,6 +3100,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:df58e7bcc7e84a59"
             data-offer-id="catalog:288e4b1d05e06240" data-price-eur="62.0"
             data-product-kind="isolate"
+            data-package-kg="0.9"
+            data-package-count=""
             data-search="proteini outlet clear protein iso whey 90">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/11/extrifit-clear-whey-isolate-900g-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2770,6 +3117,8 @@
         <tr data-store="Proteka" data-track-key="catalog:cfbfc77568f49d59"
             data-offer-id="catalog:90f70a3f0d3a9c67" data-price-eur="34.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteka weider gold whey 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fgold%5Fwhey%5F151637%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2785,6 +3134,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:991a0cd62c5ae54e"
             data-offer-id="catalog:f6e4da9419a33c55" data-price-eur="143.58"
             data-product-kind="isolate"
+            data-package-kg="2"
+            data-package-count=""
             data-search="gaz nutrition weider isolate whey 100 cfm, 2 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/08/gaz-nutrition-proizvod-weider-isolate-whey-100-CFM-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2800,6 +3151,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:fca3ad3bbcc37d3f"
             data-offer-id="catalog:420d800b79d0554b" data-price-eur="35.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr clear whey hydrate - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/l/clear-whey-hydrate_peach-ice-tea_mockup_1_.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2815,6 +3168,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:9615e97eb8d2b5bd"
             data-offer-id="catalog:6a5cff3f2d000534" data-price-eur="21.68"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini.si vast muscle whey, 300g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/ae9a56dd6d6b19f74144fc005452c3c7/vast-muscle-whey-300g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2830,6 +3185,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:bd21260fb985fe10"
             data-offer-id="catalog:c0b8f925eb61b514" data-price-eur="32.95"
             data-product-kind="unknown"
+            data-package-kg="0.45"
+            data-package-count=""
             data-search="gymbeam hr 100% whey gold standard - optimum nutrition, 0.45 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/e/u/eu_on_gsw_5lb_tub_2kg_2ply_drc_6078372_angle01_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2845,6 +3202,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:d7a321b63a8794d0"
             data-offer-id="catalog:ab894a5da2ceb6d5" data-price-eur="36.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr clear whey protein - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/l/clear-whey-protein-beastpink-gymbeam-500g-mango-maracuja-mockup-20260907_13.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2860,6 +3219,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:481c55083259d9ef"
             data-offer-id="catalog:bf7314781f1752e4" data-price-eur="56.95"
             data-product-kind="unknown"
+            data-package-kg="0.768"
+            data-package-count=""
             data-search="gymbeam hr 100% whey gold standard - optimum nutrition, 0.768 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/e/u/eu_on_gsw_5lb_tub_2kg_2ply_drc_6078372_angle01_1.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2875,6 +3236,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:0ebf44d343d4ea6e"
             data-offer-id="catalog:d1fb2e78e84c6a11" data-price-eur="30.0"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="proteini outlet hy-pro protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-hy-pro-400g-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2890,6 +3253,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:47d8f565b5ce396f"
             data-offer-id="catalog:8be605eb57524e1e" data-price-eur="30.0"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="proteini outlet deluxe protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/03/all-stars-deluxe-protein-choc-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2905,6 +3270,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:43b66561522342ef"
             data-offer-id="catalog:d4c6b454d9443ebb" data-price-eur="60.49"
             data-product-kind="unknown"
+            data-package-kg="0.8"
+            data-package-count=""
             data-search="proteini.si nutrend 100% whey protein (novi), 800g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/e62ae0360ab6e0c60fc715a8d35fe88d/nutrend-100-whey-protein-novi-800g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2920,6 +3287,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:0e855493ab2234e9"
             data-offer-id="catalog:72f41c9fa0c23a95" data-price-eur="37.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gaz nutrition weider premium whey protein, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/09/gaz-nutrition-proizvod-weider-premium-whey-protein-prah-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2935,6 +3304,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:fe9da4d850a97fcc"
             data-offer-id="catalog:d848113e635741be" data-price-eur="34.99"
             data-product-kind="unknown"
+            data-package-kg="0.454"
+            data-package-count=""
             data-search="polleo sport 1st whey, 454 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_1st_whey_454g_milk-choco-buenissimo.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2950,6 +3321,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:cdd5aed253093785"
             data-offer-id="catalog:91345ab12beab21e" data-price-eur="34.99"
             data-product-kind="blend"
+            data-package-kg="0.454"
+            data-package-count=""
             data-search="polleo sport zoe boss protein fusion, 454 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_boss_proteinfusion_454_vanilla.jpeg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2965,6 +3338,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:314423da1bb7aa50"
             data-offer-id="catalog:ee226357fa0e04d6" data-price-eur="59.99"
             data-product-kind="unknown"
+            data-package-kg="0.77"
+            data-package-count=""
             data-search="polleo sport gold standard 100% whey protein, 770 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_gsw_2lb tub_775g_drc_6078373_ecom.png?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2980,6 +3355,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:5e58e904ebe54142"
             data-offer-id="catalog:898bb0647be31de9" data-price-eur="78.15"
             data-product-kind="isolate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gaz nutrition maxinutrition max isolate 100% whey protein isolate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/04/gaz-nutrition-proizvod-maxinutrition-max-isolate-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -2995,6 +3372,8 @@
         <tr data-store="Proteka" data-track-key="catalog:9b827e5a6a1c8edc"
             data-offer-id="catalog:0a6497bda9f468d1" data-price-eur="39.95"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteka weider premium whey 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fpremium%5Fwhey%5F%5F20655%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3010,6 +3389,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:37f366176fcb812e"
             data-offer-id="catalog:7da362cd9c2acabe" data-price-eur="19.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport 1st whey, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/1stwhey_250g_dubai_style_chocolate.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3025,6 +3406,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:0b201e5607d994b7"
             data-offer-id="catalog:09fc2d8cd0679fc1" data-price-eur="19.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport zoe whey protein, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe%20nutrition%20whey%20protein%20french%20vanilla%20macaron%20250g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3040,6 +3423,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:8f3c3322c9ab40b7"
             data-offer-id="catalog:e49fa4189a540de7" data-price-eur="40.69"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="myprotein myprotein clear whey protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12081395-1865329355991483.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3055,6 +3440,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:62ddb66121a1b539"
             data-offer-id="catalog:08ff56a4d66a9d3a" data-price-eur="137.95"
             data-product-kind="hydrolysed"
+            data-package-kg="1.59"
+            data-package-count=""
             data-search="gymbeam hr platinum hydrowhey - optimum nutrition">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/h/y/hydrowhey_4lb_van_fr_6059705_web.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3070,6 +3457,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:f9d5783b746e9665"
             data-offer-id="catalog:3bfaf899202d2c4d" data-price-eur="16.99"
             data-product-kind="unknown"
+            data-package-kg="0.192"
+            data-package-count=""
             data-search="myprotein adventski kalendar s proteinskim čokoladama">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17649475-2355366883572802.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3085,6 +3474,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:6fc7535b77894668"
             data-offer-id="catalog:6f297e4b3f150ab7" data-price-eur="39.99"
             data-product-kind="unknown"
+            data-package-kg="0.45"
+            data-package-count=""
             data-search="polleo sport 100% whey gold standard, 450 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gs_whey_1lb_choc_fr_6056573_web_on00247_on00247_1.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3100,6 +3491,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:bc8902426f9259a6"
             data-offer-id="catalog:23a215d7421eb25a" data-price-eur="37.75"
             data-product-kind="isolate"
+            data-package-kg="0.42"
+            data-package-count=""
             data-search="gaz nutrition maxinutrition maxclear 100% whey isolate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/05/gaz-nutrition-proizvod-istaknuto-maxinutrition-max-clear-01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3115,6 +3508,8 @@
         <tr data-store="Scitec" data-track-key="catalog:29709add089ac82b"
             data-offer-id="catalog:0e5b53195c5c81a0" data-price-eur="2.7"
             data-product-kind="unknown"
+            data-package-kg="0.03"
+            data-package-count=""
             data-search="scitec 100% whey protein professional(30 gr.)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://scitec.hr/images/product_images/5372_25b75c3d5fbc_200x200.webp" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3130,6 +3525,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:c0ae2cbb2615a1e2"
             data-offer-id="catalog:440f6d9f2f795622" data-price-eur="82.75"
             data-product-kind="isolate"
+            data-package-kg="0.908"
+            data-package-count=""
             data-search="gaz nutrition weider isolate whey 100 cfm, 0.908 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/08/gaz-nutrition-proizvod-weider-isolate-whey-100-CFM-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3145,6 +3542,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:a9ab023d1fa13e92"
             data-offer-id="catalog:33548d4375db1a43" data-price-eur="2.84"
             data-product-kind="unknown"
+            data-package-kg="0.03"
+            data-package-count=""
             data-search="proteini.si battery complete whey, 30g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/e57641ed4fb2581daebd5e118baf1244/battery-complete-whey-30g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3160,6 +3559,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:23d4ae77d67bea0d"
             data-offer-id="catalog:7608c9c42750d23c" data-price-eur="2.99"
             data-product-kind="unknown"
+            data-package-kg="0.03"
+            data-package-count=""
             data-search="polleo sport 1st whey, 30 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_1stwhey_30g_white_choco_buenissimo.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3175,6 +3576,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:ce3f750050873315"
             data-offer-id="catalog:dd10b57bbcc1bec6" data-price-eur="39.59"
             data-product-kind="unknown"
+            data-package-kg="0.39"
+            data-package-count=""
             data-search="myprotein clear whey splash">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16111658-5075261332442895.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3190,6 +3593,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:048e026a7b10656e"
             data-offer-id="catalog:1092777125b6918d" data-price-eur="2.99"
             data-product-kind="unknown"
+            data-package-kg="0.025"
+            data-package-count=""
             data-search="polleo sport zoe whey protein, 25 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_whey_protein_25_chocoapricot_1500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3205,6 +3610,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:4915358b6d033ce1"
             data-offer-id="catalog:e341d8b8359e1728" data-price-eur="29.98"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport 1st whey, 250 g, 50% na drugi kupljeni">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/1st_whey_250g_combo.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3220,6 +3627,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:10844c5a4c624e4d"
             data-offer-id="catalog:7b35ec9c3b07a844" data-price-eur="40.0"
             data-product-kind="isolate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini outlet clear isolate whey">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/05/all-stars-clear-isolate-whey-300g-cherry-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3235,6 +3644,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:d8749d9197b5dcad"
             data-offer-id="catalog:4a15695661c6ce54" data-price-eur="37.39"
             data-product-kind="unknown"
+            data-package-kg="0.0012"
+            data-package-count=""
             data-search="myprotein origin protein">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15245849-9145200183966350.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -3265,6 +3676,35 @@
   const storeChips = Array.from(document.querySelectorAll("[data-store-check]"));
   const minPrice = document.getElementById("minPrice");
   const maxPrice = document.getElementById("maxPrice");
+  // Type and pack size (plan 2026-09-30 C): ANDed into applyFilters below.
+  const kindFilter = document.getElementById("kindFilter");
+  const sizeMin = document.getElementById("sizeMin");
+  const sizeMax = document.getElementById("sizeMax");
+  const sizeMessage = document.getElementById("sizeFilterMessage");
+  const perPiece = sizeMin ? sizeMin.dataset.perPiece === "true" : false;
+  const moreFilters = document.querySelector(".more-filters");
+  const filtersOn = moreFilters ? moreFilters.querySelector(".filters-on") : null;
+
+  // The pack-size bounds, or {active: false} with a message when they cannot be used.
+  function sizeBounds() {
+    const raw = [sizeMin, sizeMax].map((el) => (el && el.value !== "") ? Number(el.value) : null);
+    let message = "";
+    const bad = [sizeMin, sizeMax].map((el, i) => !!el && ((el.validity && el.validity.badInput)
+        || (raw[i] !== null && (!Number.isFinite(raw[i]) || raw[i] < 0))));
+    const reversed = !bad.some(Boolean) && raw[0] !== null && raw[1] !== null && raw[0] > raw[1];
+    if (bad.some(Boolean)) {
+      message = "Pack size must be a number of zero or more.";
+    } else if (reversed) {
+      message = "The smallest pack is larger than the largest; nothing was filtered by size.";
+    }
+    [sizeMin, sizeMax].forEach((el, i) => {
+      if (el) el.setAttribute("aria-invalid", (bad[i] || reversed) ? "true" : "false");
+    });
+    // Rewrite the live region only when the words change, so it is not re-announced per keystroke.
+    if (sizeMessage && sizeMessage.textContent !== message) sizeMessage.textContent = message;
+    const active = !message && (raw[0] !== null || raw[1] !== null);
+    return {active, lo: raw[0] === null ? -Infinity : raw[0], hi: raw[1] === null ? Infinity : raw[1]};
+  }
   const count = document.getElementById("count");
   const metricIndex = headers.findIndex((h) => h.dataset.metric);
   window.addEventListener("mjerica-saved-change", () => { applyFilters(); });
@@ -3358,24 +3798,39 @@
     const lo = (!minPrice || minPrice.value === "") ? -Infinity : parseFloat(minPrice.value);
     const hi = (!maxPrice || maxPrice.value === "") ? Infinity : parseFloat(maxPrice.value);
     const priceActive = (minPrice && minPrice.value !== "") || (maxPrice && maxPrice.value !== "");
+    const selectedKind = kindFilter ? kindFilter.value : "all";
+    const size = sizeBounds();
     let shown = 0;
     rows.forEach((r) => {
       const metricRaw = metricIndex >= 0 ? r.cells[metricIndex].dataset.v : "";
       const metricOk = !priceActive || (metricRaw !== "" && parseFloat(metricRaw) >= lo && parseFloat(metricRaw) <= hi);
+      const typeOk = selectedKind === "all" || r.dataset.productKind === selectedKind;
+      // Unknown size ("") passes only while no size bound is set; never read as 0.
+      const rawSize = perPiece ? r.dataset.packageCount : r.dataset.packageKg;
+      // Rounded: 1.015 kg * 1000 is 1014.999... in floating point, still a 1015 g pack.
+      const packSize = (rawSize === undefined || rawSize === "") ? null
+        : Math.round(Number(rawSize) * (perPiece ? 1 : 1000) * 1000) / 1000;
+      const sizeOk = !size.active || (packSize !== null && packSize >= size.lo && packSize <= size.hi);
       const visible = (!q || r.dataset.search.includes(q))
         && (activeStores.length === storeChips.length || activeStores.includes(r.dataset.store))
         && (!onlySaved || r.classList.contains("saved"))
-        && metricOk;
+        && metricOk && typeOk && sizeOk;
       r.hidden = !visible;
       if (visible) shown++;
     });
     if (count) count.textContent = shown + " of " + rows.length + " shown";
+    // An active type or size filter is never hidden behind a closed panel.
+    const panelOn = selectedKind !== "all" || size.active;
+    if (filtersOn) filtersOn.hidden = !panelOn;
+    if (panelOn && moreFilters) moreFilters.open = true;
     renumberRanks();
   }
 
   if (search) search.addEventListener("input", applyFilters);
   if (minPrice) minPrice.addEventListener("input", applyFilters);
   if (maxPrice) maxPrice.addEventListener("input", applyFilters);
+  if (kindFilter) kindFilter.addEventListener("change", applyFilters);
+  [sizeMin, sizeMax].forEach((el) => { if (el) el.addEventListener("input", applyFilters); });
   if (savedOnly) {
     savedOnly.addEventListener("click", () => {
       savedOnly.setAttribute("aria-pressed", savedOnly.getAttribute("aria-pressed") === "true" ? "false" : "true");
@@ -3396,6 +3851,9 @@
       if (minPrice) minPrice.value = "";
       if (maxPrice) maxPrice.value = "";
       if (savedOnly) savedOnly.setAttribute("aria-pressed", "false");
+      if (kindFilter) kindFilter.value = "all";
+      if (sizeMin) sizeMin.value = "";
+      if (sizeMax) sizeMax.value = "";
       storeChips.forEach((c) => c.setAttribute("aria-pressed", "true"));
       applyFilters();
     });

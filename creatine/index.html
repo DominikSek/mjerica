@@ -86,6 +86,17 @@
   .saved-chip[aria-pressed="true"] { opacity: 1; color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
   .saved-chip[aria-pressed="true"] .saved-chip-icon { fill: color-mix(in srgb, var(--accent) 24%, transparent); }
   .reset-btn { cursor: pointer; }
+  /* Type and pack size (plan 2026-09-30 C): a small panel, closed by default */
+  .more-filters { flex-basis: 100%; }
+  .more-filters summary { cursor: pointer; font-size: 13px; font-weight: 650; color: var(--accent-text); width: max-content; }
+  .more-filters summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .more-filters-body { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+  .filter-label { font-size: 12px; font-weight: 650; color: var(--muted); }
+  .filter-select { max-width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 7px;
+                   background: var(--surface); color: var(--text); font: inherit; }
+  .filter-select:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 1px; }
+  .filter-message { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--mid); }
+  .stats-note { margin: 0 0 6px; font-size: 11px; font-weight: 650; letter-spacing: .045em; text-transform: uppercase; color: var(--muted); }
   .count { color: var(--muted); font-size: 12.5px; margin-left: auto; white-space: nowrap; }
 
   /* --- table --- */
@@ -329,8 +340,9 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine (Powder) Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a class="active" aria-current="page" href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Generated 30.09.2026 17:54 CEST &middot; 9 stores</p></div>
+  <p class="gen-meta">Generated 30.09.2026 18:14 CEST &middot; 9 stores</p></div>
 
+  <p class="stats-note">Across all listings</p>
   <section class="stats"><a class="stat" href="products/gymbeam_hr_100_kreatin_monohidrat_gymbeam_1_5_kg_1_5kg.html"><div class="stat-media"><img class="stat-img" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest pure monohydrate per kg</div><div class="value">27.97 &euro;</div><div class="sub" title="100% Kreatin Monohidrat - GymBeam, 1.5 kg &middot; GymBeam HR"><span class="sub-name">100% Kreatin Monohidrat - GymBeam, 1.5 kg</span><span class="sub-sep"> &middot; </span><span class="sub-store">GymBeam HR</span></div><div class="per-dose">&asymp; 0.14 &euro; per 5 g of powder</div></div></a><a class="stat" href="products/myprotein_kreatin_hcl_0_0984kg.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">7.67 &euro;</div><div class="sub" title="Kreatin HCl &middot; MyProtein"><span class="sub-name">Kreatin HCl</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">98.4 g pack</div></div></a></section>
 
   
@@ -344,6 +356,21 @@
     </div>
     <div class="chip-group"><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-dot" style="background:#a1483a"></span>Proteka <span class="fcount">9</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-dot" style="background:#93692a"></span>GymBeam HR <span class="fcount">25</span></button><button type="button" class="chip" data-store-check="THE Nutrition" aria-pressed="true"><span class="store-dot" style="background:#4b6f5a"></span>THE Nutrition <span class="fcount">5</span></button><button type="button" class="chip" data-store-check="Proteini.si" aria-pressed="true"><span class="store-dot" style="background:#2e6b78"></span>Proteini.si <span class="fcount">11</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-dot" style="background:#3c5a8a"></span>GAZ Nutrition <span class="fcount">8</span></button><button type="button" class="chip" data-store-check="Proteini Outlet" aria-pressed="true"><span class="store-dot" style="background:#6a4f8a"></span>Proteini Outlet <span class="fcount">13</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-dot" style="background:#8a4570"></span>MyProtein <span class="fcount">6</span></button><button type="button" class="chip" data-store-check="dm" aria-pressed="true"><span class="store-dot" style="background:#5a7a2e"></span>dm <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-dot" style="background:#b06a2e"></span>Polleo Sport <span class="fcount">12</span></button></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
+    <details class="more-filters">
+      <summary><span class="more-filters-title">Type and pack size</span><span class="filters-on" hidden> &middot; on</span></summary>
+      <div class="more-filters-body">
+        <label class="filter-label" for="kindFilter">Type</label><select id="kindFilter" class="filter-select"><option value="all">All types</option><option value="pure_monohydrate">Monohydrate</option><option value="blend">Blend</option><option value="other_form">Other form</option><option value="unknown">Unknown</option></select>
+        <span class="filter-label" id="sizeLabel">Pack size (g)</span>
+        <div class="range-row" role="group" aria-labelledby="sizeLabel">
+          <input type="number" id="sizeMin" min="0" step="any" inputmode="decimal" aria-label="Smallest pack (g)" placeholder="from"
+                 aria-describedby="sizeFilterMessage" data-per-piece="false">
+          <span>&ndash;</span>
+          <input type="number" id="sizeMax" min="0" step="any" inputmode="decimal" aria-label="Largest pack (g)" placeholder="to"
+                 aria-describedby="sizeFilterMessage">
+        </div>
+        <p class="filter-message" id="sizeFilterMessage" role="status"></p>
+      </div>
+    </details>
     <button type="button" class="reset-btn" id="resetFilters">Reset filters</button>
     <span class="count" id="count"></span>
   </div>
@@ -370,6 +397,8 @@
         <tr data-store="Proteka" data-track-key="catalog:27aebf4823d78e01"
             data-offer-id="catalog:a6b4be78ca2e3bbe" data-price-eur="40.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="2.7"
+            data-package-count=""
             data-search="proteka verviavita kreatin monohidrat 900g (2+1 gratis)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/verviavita%5Fkreatin%5Fakcija%5F%282%29%5F135725%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -385,6 +414,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:b0f7e01220b46ddc"
             data-offer-id="catalog:a5f61eaeeb8fb54d" data-price-eur="14.95"
             data-product-kind="blend"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr kreatin + dekstroza - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -400,6 +431,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:59792128ae097ee4"
             data-offer-id="catalog:7f414ef01ca8c3f5" data-price-eur="38.56"
             data-product-kind="unknown"
+            data-package-kg="1.5"
+            data-package-count=""
             data-search="the nutrition the creatine fuel (1500 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2047_cat_473079.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -415,6 +448,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:e993a83438a2adef"
             data-offer-id="catalog:c83c849958ab2f34" data-price-eur="41.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="1.5"
+            data-package-count=""
             data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 1.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -430,6 +465,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:1e5055d0a051b2ef"
             data-offer-id="catalog:3803de6301fbaa68" data-price-eur="28.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -445,6 +482,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:e044aff88e0d92e4"
             data-offer-id="catalog:b86a0810c8ea2496" data-price-eur="22.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.75"
+            data-package-count=""
             data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.75 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -460,6 +499,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:ca6bbf21fd2ec75c"
             data-offer-id="catalog:2e93f61109bd6ef2" data-price-eur="15.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -475,6 +516,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:e544d2bd81918d42"
             data-offer-id="catalog:d8284d5ca761942c" data-price-eur="20.2"
             data-product-kind="unknown"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="gymbeam hr kreatin crea7in - gymbeam, 0.6 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -490,6 +533,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:3c551b538f89dbbe"
             data-offer-id="catalog:cc093cc03b52d9ca" data-price-eur="16.95"
             data-product-kind="blend"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr kreatin + beta-alanin - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-beta-alanine-500g-unflavoured-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -505,6 +550,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:52653af175d9a9ee"
             data-offer-id="catalog:abd289c8a62ae457" data-price-eur="8.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="gymbeam hr 100% kreatin monohidrat - gymbeam, 0.25 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/k/r/kreatin.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -520,6 +567,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:179e39b28ef6c575"
             data-offer-id="catalog:419495eb49972940" data-price-eur="18.25"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini.si body attack 100% pure creatine monohydrate (s okusom), 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/9ff405c44c323226624420cd468919d4/body-attack-100-pure-creatine-monohydrate-s-okusom-500g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -535,6 +584,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:24ca6982a2eb502a"
             data-offer-id="catalog:71e9f2d2bb6a46a7" data-price-eur="11.35"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gymbeam hr kreatin crea7in - gymbeam, 0.3 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -550,6 +601,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:e81cdaefabfb57b6"
             data-offer-id="catalog:7d5525c76aea3815" data-price-eur="18.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gaz nutrition pure gold creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-puregold-creatine-monohydrate-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -565,6 +618,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:f12128b8e8f5fbcb"
             data-offer-id="catalog:0379d11646a9ce36" data-price-eur="19.7"
             data-product-kind="blend"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="the nutrition the creatine + hydration (500 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2174_cat_678148.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -580,6 +635,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:959d42e9a78bb7fb"
             data-offer-id="catalog:4a00613dead50de4" data-price-eur="19.5"
             data-product-kind="blend"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="gymbeam hr creatine monohydrate+ - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -595,6 +652,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:f0b889f5c4fc1845"
             data-offer-id="catalog:ff238affc8bba8e3" data-price-eur="15.97"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini.si battery rebel creatine, 300g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/78ff3b1dc443d6ad46d9ec684a2da936/battery-rebel-creatine-300g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -610,6 +669,8 @@
         <tr data-store="Proteka" data-track-key="catalog:199716e8fe577c9b"
             data-offer-id="catalog:4888e5271df30eb2" data-price-eur="16.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteka superior 100% kreatin monohidrat 300g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/superior%5F100%5Fkreatin%5Fmonohidrat%5F161531%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -625,6 +686,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:ffefce45a8dffffc"
             data-offer-id="catalog:837856308a225c6f" data-price-eur="27.13"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="the nutrition the creatine (500 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/1890_cat_448316.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -640,6 +703,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:145744be984573f5"
             data-offer-id="catalog:ba4129f3a39ff083" data-price-eur="22.0"
             data-product-kind="unknown"
+            data-package-kg="0.4"
+            data-package-count=""
             data-search="proteini outlet platinum creatine">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/09/platinum-creatine-400g-proteini-outlet-austria-vegan-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -655,6 +720,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:d009260ebb1c78b0"
             data-offer-id="catalog:06e0e8cff7139bc8" data-price-eur="55.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="proteini outlet creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-novo-1000g-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -670,6 +737,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:9ab168a2fed1a017"
             data-offer-id="catalog:d492f17e495b3cc7" data-price-eur="56.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.9996"
+            data-package-count=""
             data-search="myprotein kreatin monohidrat elite">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10872819-1055350489596192.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -685,6 +754,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:ced51e9a99b7d682"
             data-offer-id="catalog:e20804d5917369a4" data-price-eur="28.56"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="the nutrition the creatine (500 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/672_cat_655520.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -700,6 +771,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:127f604d78a3d657"
             data-offer-id="catalog:a60dd733987637d6" data-price-eur="29.67"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini.si battery creatine, 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/9124bb998eca24fbfbd2f5b535ab1daf/battery-creatine-500g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -715,6 +788,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:989ad74d804de517"
             data-offer-id="catalog:67675167d66bf619" data-price-eur="32.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.55"
+            data-package-count=""
             data-search="gymbeam hr kreatin monohidrat prah - mammut nutrition">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/n/_/n_vrh_bez_n_zvu_33_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -730,6 +805,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:936857ee5bd70011"
             data-offer-id="catalog:fd2cdff13b26294f" data-price-eur="30.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini outlet creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -745,6 +822,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:9f0c1c63e1fc5924"
             data-offer-id="catalog:033b5e63f7d7a13e" data-price-eur="30.81"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini.si battery creatine (flavoured), 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/73d8b60c401acca7638fc0243da92baf/battery-creatine-flavoured-500g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -760,6 +839,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:4f7921fa1473e7d6"
             data-offer-id="catalog:1a7ff9e0d6ba4196" data-price-eur="61.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="1"
+            data-package-count=""
             data-search="gymbeam hr kreatin monohidrat 100% creapure® - gymbeam, 1 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -775,6 +856,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:0ea9fd1968fcadae"
             data-offer-id="catalog:b3b85b20e022e59d" data-price-eur="39.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.634"
+            data-package-count=""
             data-search="gymbeam hr micronized creatine powder – optimum nutrition, 0.634 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -790,6 +873,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:e24c5689d2e9bfd4"
             data-offer-id="catalog:e501dabefaeccc75" data-price-eur="31.8"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini outlet creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/amix_nutrition_kreatin_monohidrat_proteini_outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -805,6 +890,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:4e3a80f8a0714ff1"
             data-offer-id="catalog:2b16e2bf4d20658f" data-price-eur="31.95"
             data-product-kind="blend"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini.si battery creatine reload+, 500g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/6343140306c95215c35423b1000a96ac/battery-creatine-reload-500g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -820,6 +907,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:aa92e2af18ef4c0c"
             data-offer-id="catalog:08355e705221e6bc" data-price-eur="19.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gymbeam hr kreatin monohidrat - mammut nutrition">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatin_monohydrat_300g.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -835,6 +924,8 @@
         <tr data-store="Proteka" data-track-key="catalog:b6dd708510d48a9a"
             data-offer-id="catalog:f555bcb4fdd005e9" data-price-eur="20.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteka verviavita kreatin monohidrat 300g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/verviavita%5Fcreatine%5Fmonohydrate%5F300g%5F134422%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -850,6 +941,8 @@
         <tr data-store="Proteka" data-track-key="catalog:af62ca64d66daf63"
             data-offer-id="catalog:64fd5bc81639b66f" data-price-eur="20.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteka tesla 100%  kreatin monohidrat 300g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/tesla%5Fkreatin%5F300g%5F165426%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -865,6 +958,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:b2325140f2a4a0ba"
             data-offer-id="catalog:d993446c125da645" data-price-eur="33.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="gymbeam hr kreatin monohidrat 100% creapure® - gymbeam, 0.5 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -880,6 +975,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:ef6a070ada511cf7"
             data-offer-id="catalog:c4cc4b3c45bdc2f1" data-price-eur="13.69"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.2"
+            data-package-count=""
             data-search="proteini.si proteini.si 100% pure creatine, 200g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/8863eb0c88d867d86d8dc21452068940/proteini-si-100-pure-creatine-200g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -895,6 +992,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:b5b2639c7a904bee"
             data-offer-id="catalog:c6e3accb3721cc75" data-price-eur="13.69"
             data-product-kind="unknown"
+            data-package-kg="0.2"
+            data-package-count=""
             data-search="proteini.si proteini.si 100% pure creatine (flavoured), 200g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/969c059d1715d8c6f3c74cdbd3824408/proteini-si-100-pure-creatine-flavoured-200g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -910,6 +1009,8 @@
         <tr data-store="THE Nutrition" data-track-key="catalog:4a5a7c3e05e3164b"
             data-offer-id="catalog:b64317cae122c849" data-price-eur="34.27"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="the nutrition x3m creatine power (500 g)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://hr.the-nutrition.com/store/images/products/2055_cat_488363.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -925,6 +1026,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:583821366c0977b6"
             data-offer-id="catalog:404a8ffaff402fba" data-price-eur="22.82"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.33"
+            data-package-count=""
             data-search="proteini.si sportnahrung creatine monohydrate powder (new), 330g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/0de9ccadd66e12e09537b3236ac81080/sportnahrung-creatine-monohydrate-powder-new-330g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -940,6 +1043,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:439d9694e3da7330"
             data-offer-id="catalog:fcfa3121eee82377" data-price-eur="21.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.317"
+            data-package-count=""
             data-search="gymbeam hr micronized creatine powder – optimum nutrition, 0.317 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -955,6 +1060,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:02f9dd0fd53587eb"
             data-offer-id="catalog:2fcfdd3dd7308e42" data-price-eur="35.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini outlet creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/05/all-stars-creatine-500g-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -970,6 +1077,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:ee019822244e1b5f"
             data-offer-id="catalog:ff24ba4d436fb721" data-price-eur="21.55"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gaz nutrition weider creatine monohydrate micronised powder">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-creatine-monohydrate-micronised-powder-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -985,6 +1094,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:6d7941367d10a95c"
             data-offer-id="catalog:7d0db6b74d4d6bb6" data-price-eur="18.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="gymbeam hr kreatin monohidrat 100% creapure® - gymbeam, 0.25 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1000,6 +1111,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:be666f435a49394b"
             data-offer-id="catalog:374e66610952ae6b" data-price-eur="18.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="myprotein impact creatine – chupa chups watermelon lollipop">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17526822-1735285465352189.png&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1015,6 +1128,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:dfd752fbf964c899"
             data-offer-id="catalog:92eefdbd65aacb67" data-price-eur="7.67"
             data-product-kind="other_form"
+            data-package-kg="0.0984"
+            data-package-count=""
             data-search="myprotein kreatin hcl">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17169975-1215288608638756.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1030,6 +1145,8 @@
         <tr data-store="dm" data-track-key="catalog:8cea5b118f07eddf"
             data-offer-id="catalog:1290329bf75c5084" data-price-eur="15.95"
             data-product-kind="unknown"
+            data-package-kg="0.2"
+            data-package-count=""
             data-search="dm kreatin – 100 % čisti, 200 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1757599646/assets/pas/images/37b90764-196e-436d-ab36-10619a85ff26/proteini-si-kreatin-100-cisti" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1045,6 +1162,8 @@
         <tr data-store="Proteka" data-track-key="catalog:aa5b48247c5fe00b"
             data-offer-id="catalog:c63b36ecc16eeb0b" data-price-eur="23.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteka weider mikronizirani kreatin monohidrat 300 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fmonohidrat%5F%5F20214%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1060,6 +1179,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:479deb95606fe914"
             data-offer-id="catalog:640fbfb9a4be708e" data-price-eur="47.95"
             data-product-kind="unknown"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="gymbeam hr čisti kreatin - weider, 0.6 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1075,6 +1196,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:c62e1395e8ad85f3"
             data-offer-id="catalog:3df15872e0fd9e16" data-price-eur="19.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="myprotein mikroniziran kreatin u prahu">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17902344-1145367083640477.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1090,6 +1213,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:e6a9a37f987cc92f"
             data-offer-id="catalog:428b97529a780a8d" data-price-eur="39.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport creatine monohydrate, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_500g_unflavoured.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1105,6 +1230,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:5e3dc4672b2a60f8"
             data-offer-id="catalog:1c0f945fbe2ece01" data-price-eur="20.54"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="proteini.si battery creatine, 250g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/ba23a47d0b079cfb440a569e2887e4f1/battery-creatine-250g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1120,6 +1247,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:13db4e9ac22a8a18"
             data-offer-id="catalog:242cc4e231be9098" data-price-eur="25.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini outlet creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/03/ostrovit-creatine-monohydrate-300g-500g-1000g-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1135,6 +1264,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:3d1c6588ebf910b9"
             data-offer-id="catalog:40671dba214bcc01" data-price-eur="25.0"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini outlet creatine pure">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/creatine_pure_prolabs_proteini_outlet3_LgfdSCKqg4-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1150,6 +1281,8 @@
         <tr data-store="Proteka" data-track-key="catalog:2879672afc5c5ab1"
             data-offer-id="catalog:fafd61b306026dfe" data-price-eur="59.0"
             data-product-kind="unknown"
+            data-package-kg="0.7"
+            data-package-count=""
             data-search="proteka proteos creatine magnapower 700 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F182647%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1165,6 +1298,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:2364d9b2f967ebe0"
             data-offer-id="catalog:69dc1c962dc636d2" data-price-eur="17.11"
             data-product-kind="unknown"
+            data-package-kg="0.2"
+            data-package-count=""
             data-search="proteini.si näno supps creatine pop, 200g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/0d548e58ff4467397d6c7829980a8b17/nano-supps-creatine-pop-200g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1180,6 +1315,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:4335d225be9c1a21"
             data-offer-id="catalog:80aab9283a604715" data-price-eur="53.05"
             data-product-kind="unknown"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="gaz nutrition weider pure creatine, 0.6 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1195,6 +1332,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:e412cfc43be59f3f"
             data-offer-id="catalog:bf74b58197aa2441" data-price-eur="8.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.1"
+            data-package-count=""
             data-search="gymbeam hr kreatin monohidrat – gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-monohydrate-120-caps-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1210,6 +1349,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:134c2658b794bbce"
             data-offer-id="catalog:c6b5c4880395dee8" data-price-eur="26.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gaz nutrition etixx creatine creapure">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-etixx-creatine-creapure-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1225,6 +1366,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:556bf9e898b4d159"
             data-offer-id="catalog:5d3971a64d47f00b" data-price-eur="45.0"
             data-product-kind="unknown"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="proteini outlet animal creatine">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2026/08/animal-creatin-500g-prah-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1240,6 +1383,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:99cfe8a45c7ecc04"
             data-offer-id="catalog:88dd3306fc84516c" data-price-eur="27.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini outlet creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2024/01/big-man-creatine-monohydrate-300g-novo-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1255,6 +1400,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:949015651468fd63"
             data-offer-id="catalog:0f380344ba41ddff" data-price-eur="58.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.634"
+            data-package-count=""
             data-search="proteini outlet kreatin monohidrat">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2021/02/popust-optimum-nutrition-kreatin-634g-proteini-outlet-222-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1270,6 +1417,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:8c3ae1b5795b8336"
             data-offer-id="catalog:57f54a8b4e236407" data-price-eur="28.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini outlet creavolution® (kreatin monohidrat)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2025/11/swedish-supplements-creavolution-300g-proteini-outlet-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1285,6 +1434,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:0051050bbc3bf0a7"
             data-offer-id="catalog:d590783102197f09" data-price-eur="23.95"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="gymbeam hr čisti kreatin - weider, 0.25 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/i/m/images_4.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1300,6 +1451,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:072aa5876842facd"
             data-offer-id="catalog:68fc53cc5b0ca4a3" data-price-eur="28.75"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gaz nutrition powerbar black line creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-powerbar-creatine-monohydrate-powder-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1315,6 +1468,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:5f1899c4866e8130"
             data-offer-id="catalog:2f785be540b3f686" data-price-eur="35.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.375"
+            data-package-count=""
             data-search="gaz nutrition weider premium creatine 100% creapure®">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/01/gaz-nutrition-proizvod-weider-premium-creatine-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1330,6 +1485,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:41c558d9066f2568"
             data-offer-id="catalog:996c9893c7f1e310" data-price-eur="30.4"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.317"
+            data-package-count=""
             data-search="proteini outlet kreatin monohidrat">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2020/11/popust-optimum-nutrition-kreatin-317g-proteini-outlet-111-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1345,6 +1502,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:3e0963dd0414762a"
             data-offer-id="catalog:88036f92b1aeef42" data-price-eur="23.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport creatine monohydrate, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_250g_unflavoured.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1360,6 +1519,8 @@
         <tr data-store="Proteka" data-track-key="catalog:36ed9efb532225a4"
             data-offer-id="catalog:d2a484042a9dbb30" data-price-eur="29.0"
             data-product-kind="unknown"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteka proteos creatine magnapower 300 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/proteos%5Fkreatin%5Fmagna%5Fpower%5F300g%5F182928%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1375,6 +1536,8 @@
         <tr data-store="Proteka" data-track-key="catalog:ee83d688c18753f6"
             data-offer-id="catalog:e830547ab0416f00" data-price-eur="58.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.6"
+            data-package-count=""
             data-search="proteka pure creatine weider 600 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F600%5Fg%5F132648%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1390,6 +1553,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:6b15d807f8845834"
             data-offer-id="catalog:83c678f7e4f4e9c4" data-price-eur="9.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.1"
+            data-package-count=""
             data-search="myprotein kreatin monohidrat">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456626-1775344551897936.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1405,6 +1570,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:9fdc75a8f2f1a36a"
             data-offer-id="catalog:fc9abf7de767f395" data-price-eur="14.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.15"
+            data-package-count=""
             data-search="polleo sport creatine monohydrate, 150 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_creatine_monohydrate_150g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1420,6 +1587,8 @@
         <tr data-store="MyProtein" data-track-key="catalog:76568bdeaf9eee19"
             data-offer-id="catalog:ea815019314054ae" data-price-eur="24.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="myprotein creapure® kreatin">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12456548-1395323601967762.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1435,6 +1604,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:43ce0d3e08ea5454"
             data-offer-id="catalog:0d4cc0ae2a6df311" data-price-eur="49.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.5"
+            data-package-count=""
             data-search="polleo sport elite creatine, 500 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_elite_creatine_500g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1450,6 +1621,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:d1b0a0250bec1b08"
             data-offer-id="catalog:5e8d9ffc14783e50" data-price-eur="32.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.317"
+            data-package-count=""
             data-search="polleo sport creatine powder, 317 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_93srv_fr_6058184_web_on00222_1.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1465,6 +1638,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:eebdd48aeb405509"
             data-offer-id="catalog:ecb3d56f324c49b5" data-price-eur="23.95"
             data-product-kind="unknown"
+            data-package-kg="0.23"
+            data-package-count=""
             data-search="gymbeam hr pink creatine - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gymbeam-228g-mango-maracuja-mockup_8.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1480,6 +1655,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:e174084ed7c9d577"
             data-offer-id="catalog:33e62b87b1ca2226" data-price-eur="26.55"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="gaz nutrition weider pure creatine, 0.25 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-weider-pure-creatine-600g-v01g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1495,6 +1672,8 @@
         <tr data-store="GAZ Nutrition" data-track-key="catalog:9057a3157f010b16"
             data-offer-id="catalog:060a9dc32dd31d23" data-price-eur="31.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="gaz nutrition dymatize creapure creatine monohydrate">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2024/11/gaz-nutrition-proizvod-dymatize-creatine-v01.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1510,6 +1689,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:95461559b4ae8d93"
             data-offer-id="catalog:33a56170275ec88e" data-price-eur="19.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.187"
+            data-package-count=""
             data-search="polleo sport creatine powder, 187 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/optimum-nutrition-micronised-creatine-powder-187g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1525,6 +1706,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:a319ee410b96c0c0"
             data-offer-id="catalog:722182ddbb624cbf" data-price-eur="19.5"
             data-product-kind="unknown"
+            data-package-kg="0.18"
+            data-package-count=""
             data-search="gymbeam hr creatine yummies - gymbeam">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine_gummies_60_gummies_gymbeam.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1540,6 +1723,8 @@
         <tr data-store="Proteini.si" data-track-key="catalog:b4fb022979d03f63"
             data-offer-id="catalog:3ba3159b97212387" data-price-eur="20.54"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.187"
+            data-package-count=""
             data-search="proteini.si optimum creatine powder, 187g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini.si/images/0327cdcf9b23cadf492ecfa82d88bd2f/optimum-creatine-powder-187g.jpg?v26" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1555,6 +1740,8 @@
         <tr data-store="Proteini Outlet" data-track-key="catalog:da8a7e9654c40e7f"
             data-offer-id="catalog:a8bf9f19684c3b49" data-price-eur="33.0"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.3"
+            data-package-count=""
             data-search="proteini outlet creatine (creapure®)">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteini-outlet.com/wp-content/uploads/2023/05/extrifit-creapure-300g-proteini-outlet-1-600x600.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1570,6 +1757,8 @@
         <tr data-store="Proteka" data-track-key="catalog:9a1d2a452ca678c4"
             data-offer-id="catalog:67adec2aaa6dcefc" data-price-eur="27.95"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="proteka pure creatine weider 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/pure%5Fcreatine%5Fweider%5F250%5Fg%5F201121%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1585,6 +1774,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:d551c68da8628d10"
             data-offer-id="catalog:e5a0f55756e5ce3f" data-price-eur="27.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport clear creatine monohydrate, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1600,6 +1791,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:dbe0538d9fd906a2"
             data-offer-id="catalog:4b1d6485d8233bc6" data-price-eur="27.99"
             data-product-kind="unknown"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport zoe booty creatine, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_booty_creatine_250_lemonade.jpeg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1615,6 +1808,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:036e2ae266ffc346"
             data-offer-id="catalog:3b1d292e66ffeb95" data-price-eur="29.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.25"
+            data-package-count=""
             data-search="polleo sport elite creatine, 250 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1630,6 +1825,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:ce6de2b1d83091e2"
             data-offer-id="catalog:eddbe330d6c8c365" data-price-eur="29.99"
             data-product-kind="unknown"
+            data-package-kg="0.2475"
+            data-package-count=""
             data-search="polleo sport creatine powder, 247.5 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_creatine_247.5g_55sv_blueraspberry_6076549_ecomm.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1645,6 +1842,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:e1e3f3b9ec3fec16"
             data-offer-id="catalog:f34ec1a0f68e9931" data-price-eur="12.99"
             data-product-kind="unknown"
+            data-package-kg="0.105"
+            data-package-count=""
             data-search="polleo sport creatine direct, 30 x 3,5 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1660,6 +1859,8 @@
         <tr data-store="Polleo Sport" data-track-key="catalog:a0ba3d057779361d"
             data-offer-id="catalog:4075657f882b0d96" data-price-eur="27.99"
             data-product-kind="pure_monohydrate"
+            data-package-kg="0.216"
+            data-package-count=""
             data-search="polleo sport creatine dna, 216 g">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn_creatine.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1675,6 +1876,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:8bb1d68e540adc1d"
             data-offer-id="catalog:203048dd597b5031" data-price-eur="1.4"
             data-product-kind="unknown"
+            data-package-kg="0.01"
+            data-package-count=""
             data-search="gymbeam hr kreatin crea7in - gymbeam, 0.01 kg">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1690,6 +1893,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:2482de67048c1917"
             data-offer-id="catalog:58bb03ebbcb516fa" data-price-eur="20.95"
             data-product-kind="other_form"
+            data-package-kg="0.13"
+            data-package-count=""
             data-search="gymbeam hr kreatin alkalin 1500  - megabol">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/c/r/creatine-alkaline-120-caps.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1705,6 +1910,8 @@
         <tr data-store="GymBeam HR" data-track-key="catalog:c593ba847a0bb84a"
             data-offer-id="catalog:473a867d9acdd96a" data-price-eur="25.95"
             data-product-kind="unknown"
+            data-package-kg="0.12"
+            data-package-count=""
             data-search="gymbeam hr čisti kreatin - weider">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/w/e/weider_31741_pure_creatine_100_caps_vs_1_.png" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
@@ -1735,6 +1942,35 @@
   const storeChips = Array.from(document.querySelectorAll("[data-store-check]"));
   const minPrice = document.getElementById("minPrice");
   const maxPrice = document.getElementById("maxPrice");
+  // Type and pack size (plan 2026-09-30 C): ANDed into applyFilters below.
+  const kindFilter = document.getElementById("kindFilter");
+  const sizeMin = document.getElementById("sizeMin");
+  const sizeMax = document.getElementById("sizeMax");
+  const sizeMessage = document.getElementById("sizeFilterMessage");
+  const perPiece = sizeMin ? sizeMin.dataset.perPiece === "true" : false;
+  const moreFilters = document.querySelector(".more-filters");
+  const filtersOn = moreFilters ? moreFilters.querySelector(".filters-on") : null;
+
+  // The pack-size bounds, or {active: false} with a message when they cannot be used.
+  function sizeBounds() {
+    const raw = [sizeMin, sizeMax].map((el) => (el && el.value !== "") ? Number(el.value) : null);
+    let message = "";
+    const bad = [sizeMin, sizeMax].map((el, i) => !!el && ((el.validity && el.validity.badInput)
+        || (raw[i] !== null && (!Number.isFinite(raw[i]) || raw[i] < 0))));
+    const reversed = !bad.some(Boolean) && raw[0] !== null && raw[1] !== null && raw[0] > raw[1];
+    if (bad.some(Boolean)) {
+      message = "Pack size must be a number of zero or more.";
+    } else if (reversed) {
+      message = "The smallest pack is larger than the largest; nothing was filtered by size.";
+    }
+    [sizeMin, sizeMax].forEach((el, i) => {
+      if (el) el.setAttribute("aria-invalid", (bad[i] || reversed) ? "true" : "false");
+    });
+    // Rewrite the live region only when the words change, so it is not re-announced per keystroke.
+    if (sizeMessage && sizeMessage.textContent !== message) sizeMessage.textContent = message;
+    const active = !message && (raw[0] !== null || raw[1] !== null);
+    return {active, lo: raw[0] === null ? -Infinity : raw[0], hi: raw[1] === null ? Infinity : raw[1]};
+  }
   const count = document.getElementById("count");
   const metricIndex = headers.findIndex((h) => h.dataset.metric);
   window.addEventListener("mjerica-saved-change", () => { applyFilters(); });
@@ -1828,24 +2064,39 @@
     const lo = (!minPrice || minPrice.value === "") ? -Infinity : parseFloat(minPrice.value);
     const hi = (!maxPrice || maxPrice.value === "") ? Infinity : parseFloat(maxPrice.value);
     const priceActive = (minPrice && minPrice.value !== "") || (maxPrice && maxPrice.value !== "");
+    const selectedKind = kindFilter ? kindFilter.value : "all";
+    const size = sizeBounds();
     let shown = 0;
     rows.forEach((r) => {
       const metricRaw = metricIndex >= 0 ? r.cells[metricIndex].dataset.v : "";
       const metricOk = !priceActive || (metricRaw !== "" && parseFloat(metricRaw) >= lo && parseFloat(metricRaw) <= hi);
+      const typeOk = selectedKind === "all" || r.dataset.productKind === selectedKind;
+      // Unknown size ("") passes only while no size bound is set; never read as 0.
+      const rawSize = perPiece ? r.dataset.packageCount : r.dataset.packageKg;
+      // Rounded: 1.015 kg * 1000 is 1014.999... in floating point, still a 1015 g pack.
+      const packSize = (rawSize === undefined || rawSize === "") ? null
+        : Math.round(Number(rawSize) * (perPiece ? 1 : 1000) * 1000) / 1000;
+      const sizeOk = !size.active || (packSize !== null && packSize >= size.lo && packSize <= size.hi);
       const visible = (!q || r.dataset.search.includes(q))
         && (activeStores.length === storeChips.length || activeStores.includes(r.dataset.store))
         && (!onlySaved || r.classList.contains("saved"))
-        && metricOk;
+        && metricOk && typeOk && sizeOk;
       r.hidden = !visible;
       if (visible) shown++;
     });
     if (count) count.textContent = shown + " of " + rows.length + " shown";
+    // An active type or size filter is never hidden behind a closed panel.
+    const panelOn = selectedKind !== "all" || size.active;
+    if (filtersOn) filtersOn.hidden = !panelOn;
+    if (panelOn && moreFilters) moreFilters.open = true;
     renumberRanks();
   }
 
   if (search) search.addEventListener("input", applyFilters);
   if (minPrice) minPrice.addEventListener("input", applyFilters);
   if (maxPrice) maxPrice.addEventListener("input", applyFilters);
+  if (kindFilter) kindFilter.addEventListener("change", applyFilters);
+  [sizeMin, sizeMax].forEach((el) => { if (el) el.addEventListener("input", applyFilters); });
   if (savedOnly) {
     savedOnly.addEventListener("click", () => {
       savedOnly.setAttribute("aria-pressed", savedOnly.getAttribute("aria-pressed") === "true" ? "false" : "true");
@@ -1866,6 +2117,9 @@
       if (minPrice) minPrice.value = "";
       if (maxPrice) maxPrice.value = "";
       if (savedOnly) savedOnly.setAttribute("aria-pressed", "false");
+      if (kindFilter) kindFilter.value = "all";
+      if (sizeMin) sizeMin.value = "";
+      if (sizeMax) sizeMax.value = "";
       storeChips.forEach((c) => c.setAttribute("aria-pressed", "true"));
       applyFilters();
     });
