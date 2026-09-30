@@ -614,23 +614,6 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_gspw_adv_30srvtrop_6063799_on00538_1.jpg?size=225"
     },
     {
-      "id": "catalog:8d6a62b6098cbf9a",
-      "offer_id": "catalog:8d6a62b6098cbf9a",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/storm-20-g",
-      "detail_slug": "polleo_sport_storm_20_g_0_02kg",
-      "package_key": "kg:0.02",
-      "flavour": "",
-      "price_eur": 1.99,
-      "unit_price": 99.5,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "name": "Storm, 20 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/me-first/me_first_storm_20g_lemon_lime.png?size=225"
-    },
-    {
       "id": "catalog:d12d15d2da776c62",
       "offer_id": "catalog:d12d15d2da776c62",
       "store": "Polleo Sport",
@@ -680,6 +663,23 @@
       "note": "",
       "name": "MassRage, 250 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/sci_muscle_massrage-250.jpg?size=225"
+    },
+    {
+      "id": "catalog:8d6a62b6098cbf9a",
+      "offer_id": "catalog:8d6a62b6098cbf9a",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/storm-20-g",
+      "detail_slug": "polleo_sport_storm_20_g_0_02kg",
+      "package_key": "kg:0.02",
+      "flavour": "",
+      "price_eur": 1.99,
+      "unit_price": 99.5,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "name": "Storm, 20 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/me-first/me_first_storm_20g_lemon_lime.png?size=225"
     },
     {
       "id": "catalog:e151099646e3c803",
@@ -1022,23 +1022,6 @@
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2022/03/bsn-no-explode-390g-proteini-outlet-222-600x600.jpg"
     },
     {
-      "id": "catalog:686a8c729bcc99c1",
-      "offer_id": "catalog:686a8c729bcc99c1",
-      "store": "MyProtein",
-      "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-stim-free-pre-workout/14269805/",
-      "detail_slug": "myprotein_origin_stim_free_pre_workout_0_6kg",
-      "package_key": "kg:0.6",
-      "flavour": "",
-      "price_eur": 19.42,
-      "unit_price": 32.37,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
-      "name": "Origin Stim-Free Pre-Workout",
-      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14269805-1675129203306464.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
-    },
-    {
       "id": "catalog:72cf1815ab25a34d",
       "offer_id": "catalog:72cf1815ab25a34d",
       "store": "MyProtein",
@@ -1054,6 +1037,23 @@
       "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
       "name": "THE Pre-Workout",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/11351672-1525253813176115.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:686a8c729bcc99c1",
+      "offer_id": "catalog:686a8c729bcc99c1",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/origin-stim-free-pre-workout/14269805/",
+      "detail_slug": "myprotein_origin_stim_free_pre_workout_0_6kg",
+      "package_key": "kg:0.6",
+      "flavour": "",
+      "price_eur": 19.42,
+      "unit_price": 32.37,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "name": "Origin Stim-Free Pre-Workout",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/14269805-1675129203306464.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
       "id": "catalog:5f104c8428b473eb",
@@ -1261,7 +1261,7 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-09-29T13:44:11.573761+00:00",
+  "checked_at": "2026-09-30T07:46:13.378747+00:00",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -3530,13 +3530,13 @@
           "note": ""
         },
         {
-          "id": "catalog:f53b5a56640bc833",
-          "offer_id": "catalog:f53b5a56640bc833",
+          "id": "catalog:1b20f262276259dc",
+          "offer_id": "catalog:1b20f262276259dc",
           "store": "Proteka",
           "source_url": "https://www.proteka.hr/product/energy-booster-525-g-4568",
           "detail_slug": "",
           "package_key": "kg:0.525",
-          "flavour": "525 g Fruit Punch",
+          "flavour": "Fruit Punch",
           "price_eur": 32.9,
           "unit_price": 62.67,
           "unit_label": "€/kg",
