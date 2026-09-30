@@ -1047,12 +1047,12 @@
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2021/04/optimum-nutrition-gold-preworkout-kiwi-proteini-outlet-600x600.jpg"
     },
     {
-      "id": "catalog:a9e2bdc472f6ecb0",
-      "offer_id": "catalog:a9e2bdc472f6ecb0",
+      "id": "catalog:a95b96e80337a9e6",
+      "offer_id": "catalog:a95b96e80337a9e6",
       "store": "Proteini Outlet",
       "source_url": "https://www.proteini-outlet.com/proizvod/grizli-pumppower-pack/",
-      "detail_slug": "proteini_outlet_grizli_pump_power_pack_0_341kg",
-      "package_key": "kg:0.341",
+      "detail_slug": "proteini_outlet_grizli_pump_power_pack_0_34kg",
+      "package_key": "kg:0.34",
       "flavour": "",
       "price_eur": 76.5,
       "unit_price": 224.4,
@@ -1390,7 +1390,7 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-09-30T15:22:51.426816+00:00",
+  "checked_at": "2026-09-30T15:54:58.602679+00:00",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -2023,16 +2023,16 @@
       "image_url": "https://www.proteini-outlet.com/wp-content/uploads/2026/03/Grizli-Pump-and-Power-Packv2.0-12-600x600.jpg",
       "product_kind": "unknown",
       "packages": [
-        "kg:0.341"
+        "kg:0.34"
       ],
       "offers": [
         {
-          "id": "catalog:a9e2bdc472f6ecb0",
-          "offer_id": "catalog:a9e2bdc472f6ecb0",
+          "id": "catalog:a95b96e80337a9e6",
+          "offer_id": "catalog:a95b96e80337a9e6",
           "store": "Proteini Outlet",
           "source_url": "https://www.proteini-outlet.com/proizvod/grizli-pumppower-pack/",
-          "detail_slug": "proteini_outlet_grizli_pump_power_pack_0_341kg",
-          "package_key": "kg:0.341",
+          "detail_slug": "proteini_outlet_grizli_pump_power_pack_0_34kg",
+          "package_key": "kg:0.34",
           "flavour": null,
           "price_eur": 76.5,
           "unit_price": 224.4,
