@@ -135,25 +135,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_186srv_fr_6058185_web.png"
     },
     {
-      "id": "catalog:203048dd597b5031",
-      "offer_id": "catalog:203048dd597b5031",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_crea7in_gymbeam_0_01_kg_0_01kg",
-      "package_key": "kg:0.01",
-      "flavour": null,
-      "price_eur": 1.4,
-      "unit_price": 140.0,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Kreatin Crea7in - GymBeam, 0.01 kg",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png"
-    },
-    {
       "id": "catalog:71e9f2d2bb6a46a7",
       "offer_id": "catalog:71e9f2d2bb6a46a7",
       "store": "GymBeam HR",
@@ -331,7 +312,7 @@
       "source_url": "https://gymbeam.hr/kreatin-hcl-gymbeam.html",
       "detail_slug": "gymbeam_hr_kreatin_hcl_gymbeam_0_5kg",
       "package_key": "kg:0.5",
-      "flavour": "",
+      "flavour": null,
       "price_eur": 24.95,
       "unit_price": 49.9,
       "unit_label": "€/kg",
@@ -532,25 +513,6 @@
       "kind_confidence": "name_only",
       "name": "Kreatin monohidrat - Blueprint by Bryan Johnson",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-front.png"
-    },
-    {
-      "id": "catalog:ef0621ef517ccdcd",
-      "offer_id": "catalog:ef0621ef517ccdcd",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-dekstroza-steviol-glikozidi-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_dekstroza_gymbeam_0_0324kg",
-      "package_key": "kg:0.0324",
-      "flavour": "",
-      "price_eur": 13.5,
-      "unit_price": 416.67,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "blend",
-      "kind_confidence": "name_only",
-      "name": "Kreatin + Dekstroza - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-green-apple-750g-gymbeam-1.jpg"
     },
     {
       "id": "catalog:6da7d3b8cdfe32e5",
@@ -2359,8 +2321,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-01T10:15:06.828739+00:00",
-  "built_at": "2026-10-01T10:15:06Z",
+  "checked_at": "2026-10-01T11:01:17.684728+00:00",
+  "built_at": "2026-10-01T11:01:17Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -3973,27 +3935,9 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg",
       "product_kind": "blend",
       "packages": [
-        "kg:0.0324",
         "kg:1"
       ],
       "offers": [
-        {
-          "id": "catalog:ef0621ef517ccdcd",
-          "offer_id": "catalog:ef0621ef517ccdcd",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-dekstroza-steviol-glikozidi-gymbeam.html",
-          "detail_slug": "gymbeam_hr_kreatin_dekstroza_gymbeam_0_0324kg",
-          "package_key": "kg:0.0324",
-          "flavour": null,
-          "price_eur": 13.5,
-          "unit_price": 416.67,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "blend",
-          "kind_confidence": "name_only"
-        },
         {
           "id": "catalog:93318856aa1d5dc9",
           "offer_id": "catalog:93318856aa1d5dc9",
@@ -4090,84 +4034,15 @@
     },
     {
       "id": "catalog:25f346b99b575b6c",
-      "name": "Kreatin Crea7in - GymBeam, 0.01 kg",
+      "name": "Kreatin Crea7in - GymBeam, 0.3 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/crea7in_green_tea_600g.png",
       "product_kind": "unknown",
       "packages": [
-        "kg:0.01",
         "kg:0.3",
         "kg:0.6"
       ],
       "offers": [
-        {
-          "id": "catalog:0d6f29abd3a7ff43",
-          "offer_id": "catalog:0d6f29abd3a7ff43",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.01",
-          "flavour": "ledeni čaj breskva",
-          "price_eur": 1.4,
-          "unit_price": 140.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
-        {
-          "id": "catalog:6cf6d388b88f10c1",
-          "offer_id": "catalog:6cf6d388b88f10c1",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.01",
-          "flavour": "limun - limeta",
-          "price_eur": 1.4,
-          "unit_price": 140.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
-        {
-          "id": "catalog:146cab8911db9813",
-          "offer_id": "catalog:146cab8911db9813",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.01",
-          "flavour": "lubenica",
-          "price_eur": 1.4,
-          "unit_price": 140.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
-        {
-          "id": "catalog:b396ab4402d9b30b",
-          "offer_id": "catalog:b396ab4402d9b30b",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-crea7in-300-g-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.01",
-          "flavour": "zelena jabuka",
-          "price_eur": 1.4,
-          "unit_price": 140.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
         {
           "id": "catalog:c6d500ee7247a137",
           "offer_id": "catalog:c6d500ee7247a137",
@@ -4404,21 +4279,21 @@
       ],
       "offers": [
         {
-          "id": "catalog:136e4b016f2061dc",
-          "offer_id": "catalog:136e4b016f2061dc",
+          "id": "catalog:08d63ddc833ca389",
+          "offer_id": "catalog:08d63ddc833ca389",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/kreatin-hcl-gymbeam.html",
-          "detail_slug": "gymbeam_hr_kreatin_hcl_gymbeam_0_5kg",
+          "detail_slug": "",
           "package_key": "kg:0.5",
-          "flavour": null,
+          "flavour": "bez okusa",
           "price_eur": 24.95,
           "unit_price": 49.9,
           "unit_label": "€/kg",
           "price_kind": "exact",
-          "price_scope": "listing",
+          "price_scope": "flavour",
           "note": "",
-          "product_kind": "other_form",
-          "kind_confidence": "name_only"
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },

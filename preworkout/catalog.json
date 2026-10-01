@@ -477,25 +477,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/v/e/vegan_energy_blend_mockup.jpg"
     },
     {
-      "id": "catalog:9166ce20fd61b403",
-      "offer_id": "catalog:9166ce20fd61b403",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/predtrenazni-crazy-pump-2-0-gymbeam.html",
-      "detail_slug": "gymbeam_hr_predtrena_ni_crazy_pump_2_0_gymbeam_0_01kg",
-      "package_key": "kg:0.01",
-      "flavour": "",
-      "price_eur": 29.95,
-      "unit_price": 2995.0,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Predtrenažni Crazy Pump 2.0 - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/1/2/122473.jpg"
-    },
-    {
       "id": "catalog:a5990da1614b8df9",
       "offer_id": "catalog:a5990da1614b8df9",
       "store": "GymBeam HR",
@@ -1732,8 +1713,8 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-10-01T10:16:06.906733+00:00",
-  "built_at": "2026-10-01T10:16:06Z",
+  "checked_at": "2026-10-01T11:02:15.805383+00:00",
+  "built_at": "2026-10-01T11:02:15Z",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -3788,35 +3769,6 @@
       ]
     },
     {
-      "id": "catalog:59dac2dca7b1ffb2",
-      "name": "Predtrenažni Crazy Pump 2.0 - GymBeam",
-      "category": "preworkout",
-      "image_url": "https://gymbeam.hr/media/catalog/product/1/2/122473.jpg",
-      "product_kind": "unknown",
-      "packages": [
-        "kg:0.01"
-      ],
-      "offers": [
-        {
-          "id": "catalog:9166ce20fd61b403",
-          "offer_id": "catalog:9166ce20fd61b403",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/predtrenazni-crazy-pump-2-0-gymbeam.html",
-          "detail_slug": "gymbeam_hr_predtrena_ni_crazy_pump_2_0_gymbeam_0_01kg",
-          "package_key": "kg:0.01",
-          "flavour": null,
-          "price_eur": 29.95,
-          "unit_price": 2995.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        }
-      ]
-    },
-    {
       "id": "catalog:e61c0a26bd63af2d",
       "name": "PUMP - Nutrend",
       "category": "preworkout",
@@ -4409,6 +4361,23 @@
         "kg:0.42"
       ],
       "offers": [
+        {
+          "id": "catalog:9a494b2c9c9e59ef",
+          "offer_id": "catalog:9a494b2c9c9e59ef",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/thor-stim-free-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.42",
+          "flavour": "jagoda - kivi",
+          "price_eur": 18.5,
+          "unit_price": 44.05,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        },
         {
           "id": "catalog:51e5a2342f00cab6",
           "offer_id": "catalog:51e5a2342f00cab6",
