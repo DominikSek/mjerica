@@ -28,8 +28,8 @@
       "detail_slug": "gymbeam_hr_creatine_100_creapure_gymbeam_120_kaps_120capsules",
       "package_key": "count:120",
       "flavour": null,
-      "price_eur": 27.95,
-      "unit_price": 0.116,
+      "price_eur": 28.95,
+      "unit_price": 0.121,
       "unit_label": "capsule",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -95,6 +95,25 @@
       "kind_confidence": "unknown",
       "name": "Creatine TABS 100% Creapure® - GymBeam, 120 tab.",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_tabs_100__creapure_120_caps_gymbeam_1.jpg"
+    },
+    {
+      "id": "catalog:7cad2751a61c12b3",
+      "offer_id": "catalog:7cad2751a61c12b3",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/maximum-krea-genic-caps-weider.html",
+      "detail_slug": "gymbeam_hr_maximum_krea_genic_caps_weider_200_kaps_200capsules",
+      "package_key": "count:200",
+      "flavour": "",
+      "price_eur": 49.95,
+      "unit_price": 0.25,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Maximum Krea-Genic Caps - Weider, 200 kaps.",
+      "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_11589_maximum_krea-genic_100_caps_vs_1_.jpg"
     },
     {
       "id": "catalog:ffe789045a3fc876",
@@ -287,6 +306,44 @@
       "image_url": "https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26"
     },
     {
+      "id": "catalog:cd3685177285f8d2",
+      "offer_id": "catalog:cd3685177285f8d2",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/napredne-vrste/olimp-kre-alkalyn-creatine-2500-mega-caps-120-kapsula",
+      "detail_slug": "proteini_si_olimp_kre_alkalyn_creatine_2500_mega_caps_120_kapsula_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 53.64,
+      "unit_price": 0.447,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "OLIMP KRE-ALKALYN CREATINE 2500 MEGA CAPS, 120 kapsula",
+      "image_url": "https://www.proteini.si/images/f445676ce9c6c1dbe5e1b2b8bfc3db34/olimp-kre-alkalyn-creatine-2500-mega-caps-120-kapsula.jpg?v26"
+    },
+    {
+      "id": "catalog:7b133d20b44949b4",
+      "offer_id": "catalog:7b133d20b44949b4",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/olimp-creatine-1250-mega-caps-120-kapsula",
+      "detail_slug": "proteini_si_olimp_creatine_1250_mega_caps_120_kapsula_120capsules",
+      "package_key": "count:120",
+      "flavour": "",
+      "price_eur": 22.82,
+      "unit_price": 0.19,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "OLIMP CREATINE 1250 MEGA CAPS, 120 kapsula",
+      "image_url": "https://www.proteini.si/images/9e22554908f72f1ff61f1909087bb025/olimp-creatine-1250-mega-caps-120-kapsula.jpg?v26"
+    },
+    {
       "id": "catalog:730d6dbf710db55e",
       "offer_id": "catalog:730d6dbf710db55e",
       "store": "THE Nutrition",
@@ -323,6 +380,25 @@
       "kind_confidence": "unknown",
       "name": "THE Creatine (100 caps.)",
       "image_url": "https://hr.the-nutrition.com/store/images/products/2046_cat_302354.jpg"
+    },
+    {
+      "id": "catalog:7201a4507d06135a",
+      "offer_id": "catalog:7201a4507d06135a",
+      "store": "THE Nutrition",
+      "source_url": "https://hr.the-nutrition.com/proizvod/2075/THE-ArginineOrnithine/b/trgovina/cat/6/stype/2/ob/0/stranica/2",
+      "detail_slug": "the_nutrition_the_arginine_ornithine_100_caps_100capsules",
+      "package_key": "count:100",
+      "flavour": "",
+      "price_eur": 14.27,
+      "unit_price": 0.143,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "THE Arginine/Ornithine (100 caps.)",
+      "image_url": "https://hr.the-nutrition.com/store/images/products/2075_cat_631975.jpg"
     },
     {
       "id": "catalog:978d7a40bfb362a4",
@@ -364,87 +440,8 @@
     }
   ],
   "category": "creatine_capsules",
-  "checked_at": "2026-09-30T21:31:21.517430+00:00",
-  "built_at": "2026-09-30T21:31:21Z",
-  "store_checks": {
-    "GymBeam HR": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:31Z",
-      "last_success_at": "2026-09-30T21:26:31Z",
-      "reason": "",
-      "product_count": 5
-    },
-    "Polleo Sport": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:31Z",
-      "last_success_at": "2026-09-30T21:26:31Z",
-      "reason": "",
-      "product_count": 2
-    },
-    "Proteka": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:32Z",
-      "last_success_at": "2026-09-30T21:26:32Z",
-      "reason": "",
-      "product_count": 4
-    },
-    "GAZ Nutrition": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:32Z",
-      "last_success_at": "2026-09-30T21:26:32Z",
-      "reason": "",
-      "product_count": 1
-    },
-    "Zeta Nutrition": {
-      "status": "failed",
-      "attempted_at": "2026-09-30T21:26:32Z",
-      "last_success_at": null,
-      "reason": "store site looked unavailable",
-      "product_count": 0
-    },
-    "Proteini.si": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:32Z",
-      "last_success_at": "2026-09-30T21:26:32Z",
-      "reason": "",
-      "product_count": 3
-    },
-    "THE Nutrition": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:32Z",
-      "last_success_at": "2026-09-30T21:26:32Z",
-      "reason": "",
-      "product_count": 2
-    },
-    "Proteini Outlet": {
-      "status": "success",
-      "attempted_at": "2026-09-30T21:26:32Z",
-      "last_success_at": "2026-09-30T21:26:32Z",
-      "reason": "",
-      "product_count": 2
-    },
-    "Scitec": {
-      "status": "not_configured",
-      "attempted_at": "2026-09-30T21:26:34Z",
-      "last_success_at": null,
-      "reason": "no listing for this category",
-      "product_count": 0
-    },
-    "MyProtein": {
-      "status": "empty",
-      "attempted_at": "2026-09-30T21:26:34Z",
-      "last_success_at": "2026-09-30T21:26:34Z",
-      "reason": "no matching products listed",
-      "product_count": 0
-    },
-    "dm": {
-      "status": "empty",
-      "attempted_at": "2026-09-30T21:26:34Z",
-      "last_success_at": "2026-09-30T21:26:34Z",
-      "reason": "no matching products listed",
-      "product_count": 0
-    }
-  },
+  "checked_at": "2026-10-01T10:15:18.794735+00:00",
+  "built_at": "2026-10-01T10:15:18Z",
   "products": [
     {
       "id": "catalog:c9ba6f77c7d20a81",
@@ -698,6 +695,122 @@
           "flavour": null,
           "price_eur": 18.5,
           "unit_price": 0.062,
+          "unit_label": "capsule",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:9f6c48f38575baca",
+      "name": "Maximum Krea-Genic Caps - Weider, 200 kaps.",
+      "category": "creatine_capsules",
+      "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_11589_maximum_krea-genic_100_caps_vs_1_.jpg",
+      "product_kind": "unknown",
+      "packages": [
+        "count:200"
+      ],
+      "offers": [
+        {
+          "id": "catalog:7cad2751a61c12b3",
+          "offer_id": "catalog:7cad2751a61c12b3",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/maximum-krea-genic-caps-weider.html",
+          "detail_slug": "gymbeam_hr_maximum_krea_genic_caps_weider_200_kaps_200capsules",
+          "package_key": "count:200",
+          "flavour": null,
+          "price_eur": 49.95,
+          "unit_price": 0.25,
+          "unit_label": "capsule",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:40cb1764246c2582",
+      "name": "OLIMP CREATINE 1250 MEGA CAPS, 120 kapsula",
+      "category": "creatine_capsules",
+      "image_url": "https://www.proteini.si/images/9e22554908f72f1ff61f1909087bb025/olimp-creatine-1250-mega-caps-120-kapsula.jpg?v26",
+      "product_kind": "unknown",
+      "packages": [
+        "count:120"
+      ],
+      "offers": [
+        {
+          "id": "catalog:7b133d20b44949b4",
+          "offer_id": "catalog:7b133d20b44949b4",
+          "store": "Proteini.si",
+          "source_url": "https://www.proteini.si/hr/kreatin/monohidrat/olimp-creatine-1250-mega-caps-120-kapsula",
+          "detail_slug": "proteini_si_olimp_creatine_1250_mega_caps_120_kapsula_120capsules",
+          "package_key": "count:120",
+          "flavour": null,
+          "price_eur": 22.82,
+          "unit_price": 0.19,
+          "unit_label": "capsule",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:a9fd24a29a847e45",
+      "name": "OLIMP KRE-ALKALYN CREATINE 2500 MEGA CAPS, 120 kapsula",
+      "category": "creatine_capsules",
+      "image_url": "https://www.proteini.si/images/f445676ce9c6c1dbe5e1b2b8bfc3db34/olimp-kre-alkalyn-creatine-2500-mega-caps-120-kapsula.jpg?v26",
+      "product_kind": "unknown",
+      "packages": [
+        "count:120"
+      ],
+      "offers": [
+        {
+          "id": "catalog:cd3685177285f8d2",
+          "offer_id": "catalog:cd3685177285f8d2",
+          "store": "Proteini.si",
+          "source_url": "https://www.proteini.si/hr/kreatin/napredne-vrste/olimp-kre-alkalyn-creatine-2500-mega-caps-120-kapsula",
+          "detail_slug": "proteini_si_olimp_kre_alkalyn_creatine_2500_mega_caps_120_kapsula_120capsules",
+          "package_key": "count:120",
+          "flavour": null,
+          "price_eur": 53.64,
+          "unit_price": 0.447,
+          "unit_label": "capsule",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:13174bf8dfbb82e3",
+      "name": "THE Arginine/Ornithine (100 caps.)",
+      "category": "creatine_capsules",
+      "image_url": "https://hr.the-nutrition.com/store/images/products/2075_cat_631975.jpg",
+      "product_kind": "unknown",
+      "packages": [
+        "count:100"
+      ],
+      "offers": [
+        {
+          "id": "catalog:7201a4507d06135a",
+          "offer_id": "catalog:7201a4507d06135a",
+          "store": "THE Nutrition",
+          "source_url": "https://hr.the-nutrition.com/proizvod/2075/THE-ArginineOrnithine/b/trgovina/cat/6/stype/2/ob/0/stranica/2",
+          "detail_slug": "the_nutrition_the_arginine_ornithine_100_caps_100capsules",
+          "package_key": "count:100",
+          "flavour": null,
+          "price_eur": 14.27,
+          "unit_price": 0.143,
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
