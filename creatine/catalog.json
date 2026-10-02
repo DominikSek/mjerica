@@ -401,6 +401,25 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-alkaline-120-caps.jpg"
     },
     {
+      "id": "catalog:91aef404a5155f8a",
+      "offer_id": "catalog:91aef404a5155f8a",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/double-kreatin-energy-gymbeam.html",
+      "detail_slug": "gymbeam_hr_double_kreatin_energy_gymbeam_0_35kg",
+      "package_key": "kg:0.35",
+      "flavour": "",
+      "price_eur": 16.5,
+      "unit_price": 47.14,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Double Kreatin Energy - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-energy-gymbeam-350g-wildberries-mockup_7.jpg"
+    },
+    {
       "id": "catalog:a5f61eaeeb8fb54d",
       "offer_id": "catalog:a5f61eaeeb8fb54d",
       "store": "GymBeam HR",
@@ -686,6 +705,25 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_monohydrate_500g_unflavoured.jpg?size=225"
     },
     {
+      "id": "catalog:e5a0f55756e5ce3f",
+      "offer_id": "catalog:e5a0f55756e5ce3f",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/clear-creatine-monohydrate-250-g-lemonade",
+      "detail_slug": "polleo_sport_clear_creatine_monohydrate_250_g_0_25kg",
+      "package_key": "kg:0.25",
+      "flavour": "Lemonade",
+      "price_eur": 27.99,
+      "unit_price": 111.96,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Clear Creatine Monohydrate, 250 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225"
+    },
+    {
       "id": "catalog:fc9abf7de767f395",
       "offer_id": "catalog:fc9abf7de767f395",
       "store": "Polleo Sport",
@@ -724,23 +762,23 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatine_93srv_fr_6058184_web_on00222_1.jpg?size=225"
     },
     {
-      "id": "catalog:e5a0f55756e5ce3f",
-      "offer_id": "catalog:e5a0f55756e5ce3f",
+      "id": "catalog:3b1d292e66ffeb95",
+      "offer_id": "catalog:3b1d292e66ffeb95",
       "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/clear-creatine-monohydrate-250-g-lemonade",
-      "detail_slug": "polleo_sport_clear_creatine_monohydrate_250_g_0_25kg",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-250-g",
+      "detail_slug": "polleo_sport_elite_creatine_250_g_0_25kg",
       "package_key": "kg:0.25",
-      "flavour": "Lemonade",
-      "price_eur": 27.99,
-      "unit_price": 111.96,
+      "flavour": "",
+      "price_eur": 29.99,
+      "unit_price": 119.96,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Clear Creatine Monohydrate, 250 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/polleo_clear_creatine_monohydrate_250g_lemonade.jpg?size=225"
+      "product_kind": "pure_monohydrate",
+      "kind_confidence": "verified",
+      "name": "Elite Creatine, 250 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225"
     },
     {
       "id": "catalog:f34ec1a0f68e9931",
@@ -779,25 +817,6 @@
       "kind_confidence": "unknown",
       "name": "Creatine Powder, 247.5 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_creatine_247.5g_55sv_blueraspberry_6076549_ecomm.jpg?size=225"
-    },
-    {
-      "id": "catalog:3b1d292e66ffeb95",
-      "offer_id": "catalog:3b1d292e66ffeb95",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/elite-creatine-250-g",
-      "detail_slug": "polleo_sport_elite_creatine_250_g_0_25kg",
-      "package_key": "kg:0.25",
-      "flavour": "",
-      "price_eur": 29.99,
-      "unit_price": 119.96,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "pure_monohydrate",
-      "kind_confidence": "verified",
-      "name": "Elite Creatine, 250 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/elite_creatine_250g.jpg?size=225"
     },
     {
       "id": "catalog:4b1d6485d8233bc6",
@@ -855,25 +874,6 @@
       "kind_confidence": "verified",
       "name": "Creatine Powder, 187 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/optimum-nutrition-micronised-creatine-powder-187g.jpg?size=225"
-    },
-    {
-      "id": "catalog:4075657f882b0d96",
-      "offer_id": "catalog:4075657f882b0d96",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-dna-216-g",
-      "detail_slug": "polleo_sport_creatine_dna_216_g_0_216kg",
-      "package_key": "kg:0.216",
-      "flavour": "",
-      "price_eur": 27.99,
-      "unit_price": 129.58,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "pure_monohydrate",
-      "kind_confidence": "verified",
-      "name": "Creatine DNA, 216 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn_creatine.jpg?size=225"
     },
     {
       "id": "catalog:67adec2aaa6dcefc",
@@ -988,6 +988,25 @@
       "kind_confidence": "verified",
       "name": "Superior 100% Kreatin Monohidrat 300g",
       "image_url": "https://www.proteka.hr/upload/proizvodi/superior%5F100%5Fkreatin%5Fmonohidrat%5F161531%2Ejpg.axd?maxwidth=130&maxheight=130"
+    },
+    {
+      "id": "catalog:1c69b569fac14766",
+      "offer_id": "catalog:1c69b569fac14766",
+      "store": "Proteka",
+      "source_url": "https://www.proteka.hr/product/muscle-labs-creatine-pro-150-g-4957",
+      "detail_slug": "proteka_muscle_labs_creatine_pro_150_g_0_15kg",
+      "package_key": "kg:0.15",
+      "flavour": null,
+      "price_eur": 10.0,
+      "unit_price": 66.67,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Muscle Labs Creatine Pro 150 g",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/muscle%5Flab%5Fcreatine%5Fpro%5F113728%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
     {
       "id": "catalog:fafd61b306026dfe",
@@ -2213,12 +2232,12 @@
       "detail_slug": "myprotein_kreatin_monohidrat_0_1kg",
       "package_key": "kg:0.1",
       "flavour": null,
-      "price_eur": 6.69,
-      "unit_price": 66.93,
+      "price_eur": 5.99,
+      "unit_price": 59.94,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
-      "note": "Includes site's 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.",
+      "note": "Includes site's 40% promo shown on the listing -- confirm it still applies at checkout.",
       "product_kind": "pure_monohydrate",
       "kind_confidence": "name_only",
       "name": "Kreatin Monohidrat",
@@ -2283,8 +2302,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-02T07:47:34.321610+00:00",
-  "built_at": "2026-10-02T07:47:34Z",
+  "checked_at": "2026-10-02T21:09:31.402931+00:00",
+  "built_at": "2026-10-02T21:09:31Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -2546,23 +2565,6 @@
           "detail_slug": "",
           "package_key": "kg:1",
           "flavour": "mango - marakuja",
-          "price_eur": 29.95,
-          "unit_price": 29.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "pure_monohydrate",
-          "kind_confidence": "verified"
-        },
-        {
-          "id": "catalog:df77d906ce27e44f",
-          "offer_id": "catalog:df77d906ce27e44f",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "zelena jabuka",
           "price_eur": 29.95,
           "unit_price": 29.95,
           "unit_label": "€/kg",
@@ -3118,35 +3120,6 @@
       ]
     },
     {
-      "id": "catalog:c14976201dcb5a1c",
-      "name": "Creatine DNA, 216 g",
-      "category": "creatine",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/bsn_creatine.jpg?size=225",
-      "product_kind": "pure_monohydrate",
-      "packages": [
-        "kg:0.216"
-      ],
-      "offers": [
-        {
-          "id": "catalog:4075657f882b0d96",
-          "offer_id": "catalog:4075657f882b0d96",
-          "store": "Polleo Sport",
-          "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-dna-216-g",
-          "detail_slug": "polleo_sport_creatine_dna_216_g_0_216kg",
-          "package_key": "kg:0.216",
-          "flavour": null,
-          "price_eur": 27.99,
-          "unit_price": 129.58,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "pure_monohydrate",
-          "kind_confidence": "verified"
-        }
-      ]
-    },
-    {
       "id": "catalog:8326769fbb58603c",
       "name": "Creatine monohydrate+ - GymBeam",
       "category": "creatine",
@@ -3592,6 +3565,35 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:57f9485a47d8fdab",
+      "name": "Double Kreatin Energy - GymBeam",
+      "category": "creatine",
+      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-energy-gymbeam-350g-wildberries-mockup_7.jpg",
+      "product_kind": "unknown",
+      "packages": [
+        "kg:0.35"
+      ],
+      "offers": [
+        {
+          "id": "catalog:91aef404a5155f8a",
+          "offer_id": "catalog:91aef404a5155f8a",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/double-kreatin-energy-gymbeam.html",
+          "detail_slug": "gymbeam_hr_double_kreatin_energy_gymbeam_0_35kg",
+          "package_key": "kg:0.35",
+          "flavour": null,
+          "price_eur": 16.5,
+          "unit_price": 47.14,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "listing",
           "note": "",
           "product_kind": "unknown",
           "kind_confidence": "unknown"
@@ -4696,6 +4698,35 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:31fe212435f0f106",
+      "name": "Muscle Labs Creatine Pro 150 g",
+      "category": "creatine",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/muscle%5Flab%5Fcreatine%5Fpro%5F113728%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "product_kind": "unknown",
+      "packages": [
+        "kg:0.15"
+      ],
+      "offers": [
+        {
+          "id": "catalog:169a198ff1c17023",
+          "offer_id": "catalog:169a198ff1c17023",
+          "store": "Proteka",
+          "source_url": "https://www.proteka.hr/product/muscle-labs-creatine-pro-150-g-4957",
+          "detail_slug": "",
+          "package_key": "kg:0.15",
+          "flavour": "naranča",
+          "price_eur": 10.0,
+          "unit_price": 66.67,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
           "product_kind": "unknown",
           "kind_confidence": "unknown"
         }
