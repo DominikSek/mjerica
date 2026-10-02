@@ -39,10 +39,9 @@
   .doc h2 { font: 800 21px/1.25 var(--font-heading); margin: 32px 0 8px; }
   .doc p, .doc li { font-size: 17px; line-height: 1.6; }
   .doc a { color: var(--accent-text); font-weight: 700; }
-  .store-list { columns: 2; padding-left: 20px; }
   .disclaimer { margin-top: 32px; padding: 16px 18px; border-radius: 12px; background: var(--panel); }
   .credit { color: var(--muted); font-size: 14px; }
-  @media (max-width: 760px) { .doc { padding: 32px 16px 48px; } .store-list { columns: 1; } }
+  @media (max-width: 760px) { .doc { padding: 32px 16px 48px; } }
 </style>
 <style>
   /* Self-hosted fonts (SIL Open Font License; static/fonts/).  is the path
@@ -104,6 +103,32 @@
     color: var(--accent-text); font: 600 14px/1.2 var(--font-body); cursor: pointer; }
   .reset-btn:hover { background: var(--accent-soft); }
 </style>
+<style>
+  /* "Prices compared from": one logo tile per store. Shared by the home page (logos only) and
+     How prices work (.store-tiles--cards: name and "Visit store" under the logo). */
+  .store-tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 12px; }
+  .store-tiles li { display: flex; }
+  .store-tile { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; min-height: 88px; padding: 16px 14px;
+                background: #fff; border: 1px solid var(--border); border-radius: 16px; color: #1b2a28; text-decoration: none;
+                transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .store-tile img { display: block; width: auto; max-width: 100%; height: 34px; object-fit: contain; filter: grayscale(1); opacity: .8; transition: filter .18s ease, opacity .18s ease; }
+  .store-tile .store-name { font: 700 15px/1.25 var(--font-body); color: #1b2a28; text-align: center; overflow-wrap: anywhere; }
+  .store-tile .store-visit { font: 600 13px/1 var(--font-body); color: #0f5d52; }   /* fixed: the tile is white in both themes */
+  .store-tile:hover, .store-tile:focus-visible { border-color: var(--accent); box-shadow: 0 8px 22px rgba(15, 93, 82, .14); transform: translateY(-2px); }
+  .store-tile:hover img, .store-tile:focus-visible img { filter: none; opacity: 1; }
+  .store-tile:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+  .store-tiles--cards .store-tile { min-height: 132px; }
+  .store-tiles--cards .store-tile img { height: 42px; filter: none; opacity: 1; }
+  @media (max-width: 640px) {
+    .store-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .store-tile { min-height: 76px; padding: 12px 10px; }
+    .store-tile img { height: 30px; }
+    .store-tiles--cards .store-tile { min-height: 116px; }
+    .store-tiles--cards .store-tile img { height: 36px; }
+  }
+  @media (hover: none) { .store-tile img { filter: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .store-tile { transition: none; } .store-tile:hover, .store-tile:focus-visible { transform: none; } }
+</style>
 </head>
 <body>
 <style>
@@ -151,10 +176,10 @@
 <main class="doc">
   <h1>How prices work</h1>
   <h2>Where the prices come from</h2>
-  <p>Mjerica reads each product's price from the stores' own websites. These stores are compared:</p>
-  <ul class="store-list"><li>GymBeam HR</li><li>Polleo Sport</li><li>Proteka</li><li>GAZ Nutrition</li><li>Proteini.si</li><li>THE Nutrition</li><li>Proteini Outlet</li><li>Scitec</li><li>MyProtein</li><li>dm</li></ul>
+  <p>Mjerica reads each product's price from the stores' own websites. These stores are compared; select one to open its website.</p>
+  <ul class="store-tiles store-tiles--cards"><li><a class="store-tile" href="https://gymbeam.hr/" target="_blank" rel="noopener" aria-label="GymBeam HR: open the store&#x27;s website in a new tab"><img src="logos/gymbeam.svg" alt="" loading="lazy" decoding="async"><span class="store-name">GymBeam HR</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://polleosport.hr/" target="_blank" rel="noopener" aria-label="Polleo Sport: open the store&#x27;s website in a new tab"><img src="logos/polleo.svg" alt="" loading="lazy" decoding="async"><span class="store-name">Polleo Sport</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://www.proteka.hr/" target="_blank" rel="noopener" aria-label="Proteka: open the store&#x27;s website in a new tab"><img src="logos/proteka.png" alt="" loading="lazy" decoding="async"><span class="store-name">Proteka</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://gaz-nutrition.com/" target="_blank" rel="noopener" aria-label="GAZ Nutrition: open the store&#x27;s website in a new tab"><img src="logos/gaz.png" alt="" loading="lazy" decoding="async"><span class="store-name">GAZ Nutrition</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://www.proteini.si/" target="_blank" rel="noopener" aria-label="Proteini.si: open the store&#x27;s website in a new tab"><img src="logos/proteini-si.svg" alt="" loading="lazy" decoding="async"><span class="store-name">Proteini.si</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://hr.the-nutrition.com/" target="_blank" rel="noopener" aria-label="THE Nutrition: open the store&#x27;s website in a new tab"><img src="logos/the-nutrition.png" alt="" loading="lazy" decoding="async"><span class="store-name">THE Nutrition</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://www.proteini-outlet.com/" target="_blank" rel="noopener" aria-label="Proteini Outlet: open the store&#x27;s website in a new tab"><img src="logos/proteini-outlet.png" alt="" loading="lazy" decoding="async"><span class="store-name">Proteini Outlet</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://scitec.hr/" target="_blank" rel="noopener" aria-label="Scitec: open the store&#x27;s website in a new tab"><img src="logos/scitec.png" alt="" loading="lazy" decoding="async"><span class="store-name">Scitec</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://www.myprotein.hr/" target="_blank" rel="noopener" aria-label="MyProtein: open the store&#x27;s website in a new tab"><img src="logos/myprotein.svg" alt="" loading="lazy" decoding="async"><span class="store-name">MyProtein</span><span class="store-visit">Visit store &#8599;</span></a></li><li><a class="store-tile" href="https://www.dm.hr/" target="_blank" rel="noopener" aria-label="dm: open the store&#x27;s website in a new tab"><img src="logos/dm.svg" alt="" loading="lazy" decoding="async"><span class="store-name">dm</span><span class="store-visit">Visit store &#8599;</span></a></li></ul>
   <h2>How often they are updated</h2>
-  <p>Prices are updated weekly. They were last updated on 01.10.2026.</p>
+  <p>Prices are updated weekly. They were last updated on 02.10.2026.</p>
   <h2>What the numbers mean</h2>
   <p><strong>€/kg</strong> is the price divided by the package weight, so a 2.5 kg bag and a 1 kg bag can be compared directly. <strong>€/serving</strong> is the price divided by the number of servings, where the store states it. Capsules and gummies are compared per piece.</p>
   <h2>The summary boxes</h2>

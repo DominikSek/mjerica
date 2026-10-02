@@ -104,8 +104,8 @@
       "detail_slug": "gymbeam_hr_micronized_creatine_powder_optimum_nutrition_0_317_kg_0_317kg",
       "package_key": "kg:0.317",
       "flavour": "",
-      "price_eur": 21.95,
-      "unit_price": 69.24,
+      "price_eur": 23.95,
+      "unit_price": 75.55,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -123,8 +123,8 @@
       "detail_slug": "gymbeam_hr_micronized_creatine_powder_optimum_nutrition_0_634_kg_0_634kg",
       "package_key": "kg:0.634",
       "flavour": "",
-      "price_eur": 39.95,
-      "unit_price": 63.01,
+      "price_eur": 43.95,
+      "unit_price": 69.32,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -192,30 +192,11 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-performance-400g-unflavoured-gymbeam.jpg"
     },
     {
-      "id": "catalog:7d0db6b74d4d6bb6",
-      "offer_id": "catalog:7d0db6b74d4d6bb6",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_25_kg_0_25kg",
-      "package_key": "kg:0.25",
-      "flavour": null,
-      "price_eur": 18.95,
-      "unit_price": 75.8,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "pure_monohydrate",
-      "kind_confidence": "verified",
-      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
-    },
-    {
       "id": "catalog:1a7ff9e0d6ba4196",
       "offer_id": "catalog:1a7ff9e0d6ba4196",
       "store": "GymBeam HR",
       "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_1_kg_1_0kg",
+      "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_1_0kg",
       "package_key": "kg:1",
       "flavour": null,
       "price_eur": 62.95,
@@ -226,7 +207,7 @@
       "note": "",
       "product_kind": "pure_monohydrate",
       "kind_confidence": "verified",
-      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 1 kg",
+      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
     {
@@ -323,6 +304,25 @@
       "kind_confidence": "unknown",
       "name": "Creatine Yummies - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_gummies_60_gummies_gymbeam.png"
+    },
+    {
+      "id": "catalog:136e4b016f2061dc",
+      "offer_id": "catalog:136e4b016f2061dc",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/kreatin-hcl-gymbeam.html",
+      "detail_slug": "gymbeam_hr_kreatin_hcl_gymbeam_0_5kg",
+      "package_key": "kg:0.5",
+      "flavour": null,
+      "price_eur": 24.95,
+      "unit_price": 49.9,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "other_form",
+      "kind_confidence": "name_only",
+      "name": "Kreatin HCl - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_hcl_500_g_unflavoured_gymbeam_1_.png"
     },
     {
       "id": "catalog:cc093cc03b52d9ca",
@@ -496,6 +496,25 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-front.png"
     },
     {
+      "id": "catalog:686ed9c40db93d3e",
+      "offer_id": "catalog:686ed9c40db93d3e",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/kreatin-piruvat-gymbeam.html",
+      "detail_slug": "gymbeam_hr_kreatin_piruvat_gymbeam_0_25kg",
+      "package_key": "kg:0.25",
+      "flavour": "",
+      "price_eur": 31.95,
+      "unit_price": 127.8,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "other_form",
+      "kind_confidence": "name_only",
+      "name": "Kreatin piruvat - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_pyruvate_250g_gymbeam.png"
+    },
+    {
       "id": "catalog:6da7d3b8cdfe32e5",
       "offer_id": "catalog:6da7d3b8cdfe32e5",
       "store": "GymBeam HR",
@@ -553,25 +572,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_pyruvate_240_caps_gymbeam.jpg"
     },
     {
-      "id": "catalog:686ed9c40db93d3e",
-      "offer_id": "catalog:686ed9c40db93d3e",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-piruvat-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_piruvat_gymbeam_0_25kg",
-      "package_key": "kg:0.25",
-      "flavour": "",
-      "price_eur": 31.95,
-      "unit_price": 127.8,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "other_form",
-      "kind_confidence": "name_only",
-      "name": "Kreatin piruvat - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_pyruvate_250g_gymbeam.png"
-    },
-    {
       "id": "catalog:c46968eb8baff66d",
       "offer_id": "catalog:c46968eb8baff66d",
       "store": "GymBeam HR",
@@ -608,25 +608,6 @@
       "kind_confidence": "name_only",
       "name": "Kreatin Creapure® + Dekstroza - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg"
-    },
-    {
-      "id": "catalog:91aef404a5155f8a",
-      "offer_id": "catalog:91aef404a5155f8a",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/double-kreatin-energy-gymbeam.html",
-      "detail_slug": "gymbeam_hr_double_kreatin_energy_gymbeam_0_35kg",
-      "package_key": "kg:0.35",
-      "flavour": "",
-      "price_eur": 16.5,
-      "unit_price": 47.14,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Double Kreatin Energy - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-energy-gymbeam-350g-wildberries-mockup_7.jpg"
     },
     {
       "id": "catalog:5f119234142e5e62",
@@ -781,6 +762,25 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/creatinedirect_lemon_1500.jpg?size=225"
     },
     {
+      "id": "catalog:eddbe330d6c8c365",
+      "offer_id": "catalog:eddbe330d6c8c365",
+      "store": "Polleo Sport",
+      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-247-5-g-naranca",
+      "detail_slug": "polleo_sport_creatine_powder_247_5_g_0_2475kg",
+      "package_key": "kg:0.2475",
+      "flavour": "Naranča",
+      "price_eur": 29.99,
+      "unit_price": 121.17,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Creatine Powder, 247.5 g",
+      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_creatine_247.5g_55sv_blueraspberry_6076549_ecomm.jpg?size=225"
+    },
+    {
       "id": "catalog:3b1d292e66ffeb95",
       "offer_id": "catalog:3b1d292e66ffeb95",
       "store": "Polleo Sport",
@@ -817,25 +817,6 @@
       "kind_confidence": "unknown",
       "name": "zoe Booty Creatine, 250 g",
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoe_booty_creatine_250_lemonade.jpeg?size=225"
-    },
-    {
-      "id": "catalog:eddbe330d6c8c365",
-      "offer_id": "catalog:eddbe330d6c8c365",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/kreatini/creatine-powder-247-5-g-naranca",
-      "detail_slug": "polleo_sport_creatine_powder_247_5_g_0_2475kg",
-      "package_key": "kg:0.2475",
-      "flavour": "Naranča",
-      "price_eur": 29.99,
-      "unit_price": 121.17,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Creatine Powder, 247.5 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_on_creatine_247.5g_55sv_blueraspberry_6076549_ecomm.jpg?size=225"
     },
     {
       "id": "catalog:0d4cc0ae2a6df311",
@@ -2302,8 +2283,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-01T11:53:05.391514+00:00",
-  "built_at": "2026-10-01T11:53:05Z",
+  "checked_at": "2026-10-02T07:47:34.321610+00:00",
+  "built_at": "2026-10-02T07:47:34Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -2319,6 +2300,23 @@
         "kg:1.5"
       ],
       "offers": [
+        {
+          "id": "catalog:06a96a59c81c3724",
+          "offer_id": "catalog:06a96a59c81c3724",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.25",
+          "flavour": "bez okusa",
+          "price_eur": 8.95,
+          "unit_price": 35.8,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
+        },
         {
           "id": "catalog:6cf47e383fa865cb",
           "offer_id": "catalog:6cf47e383fa865cb",
@@ -2548,6 +2546,23 @@
           "detail_slug": "",
           "package_key": "kg:1",
           "flavour": "mango - marakuja",
+          "price_eur": 29.95,
+          "unit_price": 29.95,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "pure_monohydrate",
+          "kind_confidence": "verified"
+        },
+        {
+          "id": "catalog:df77d906ce27e44f",
+          "offer_id": "catalog:df77d906ce27e44f",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:1",
+          "flavour": "zelena jabuka",
           "price_eur": 29.95,
           "unit_price": 29.95,
           "unit_label": "€/kg",
@@ -3584,35 +3599,6 @@
       ]
     },
     {
-      "id": "catalog:57f9485a47d8fdab",
-      "name": "Double Kreatin Energy - GymBeam",
-      "category": "creatine",
-      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-energy-gymbeam-350g-wildberries-mockup_7.jpg",
-      "product_kind": "unknown",
-      "packages": [
-        "kg:0.35"
-      ],
-      "offers": [
-        {
-          "id": "catalog:91aef404a5155f8a",
-          "offer_id": "catalog:91aef404a5155f8a",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/double-kreatin-energy-gymbeam.html",
-          "detail_slug": "gymbeam_hr_double_kreatin_energy_gymbeam_0_35kg",
-          "package_key": "kg:0.35",
-          "flavour": null,
-          "price_eur": 16.5,
-          "unit_price": 47.14,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        }
-      ]
-    },
-    {
       "id": "catalog:587833733b498cdf",
       "name": "DY CREATINE MONOHYDRATE, 300g",
       "category": "creatine",
@@ -4250,6 +4236,35 @@
       ]
     },
     {
+      "id": "catalog:390e6fbf91254923",
+      "name": "Kreatin HCl - GymBeam",
+      "category": "creatine",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_hcl_500_g_unflavoured_gymbeam_1_.png",
+      "product_kind": "other_form",
+      "packages": [
+        "kg:0.5"
+      ],
+      "offers": [
+        {
+          "id": "catalog:08d63ddc833ca389",
+          "offer_id": "catalog:08d63ddc833ca389",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/kreatin-hcl-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.5",
+          "flavour": "bez okusa",
+          "price_eur": 24.95,
+          "unit_price": 49.9,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
       "id": "catalog:faebeb07e05e9612",
       "name": "Kreatin MagnaPower™ - GymBeam",
       "category": "creatine",
@@ -4420,32 +4435,14 @@
     },
     {
       "id": "catalog:86e0cafb8bd91e30",
-      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg",
+      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg",
       "product_kind": "pure_monohydrate",
       "packages": [
-        "kg:0.25",
         "kg:1"
       ],
       "offers": [
-        {
-          "id": "catalog:5b21d5e557ded49d",
-          "offer_id": "catalog:5b21d5e557ded49d",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.25",
-          "flavour": "bez okusa",
-          "price_eur": 18.95,
-          "unit_price": 75.8,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "pure_monohydrate",
-          "kind_confidence": "verified"
-        },
         {
           "id": "catalog:7222ead4acc5e400",
           "offer_id": "catalog:7222ead4acc5e400",
@@ -4554,9 +4551,9 @@
     },
     {
       "id": "catalog:41188eefb46d72b1",
-      "name": "Kreatin Piruvat - GymBeam",
+      "name": "Kreatin piruvat - GymBeam",
       "category": "creatine",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_pyruvate_240_caps_gymbeam.jpg",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_pyruvate_250g_gymbeam.png",
       "product_kind": "other_form",
       "packages": [
         "kg:0.19",
@@ -4647,8 +4644,8 @@
           "detail_slug": "gymbeam_hr_micronized_creatine_powder_optimum_nutrition_0_317_kg_0_317kg",
           "package_key": "kg:0.317",
           "flavour": null,
-          "price_eur": 21.95,
-          "unit_price": 69.24,
+          "price_eur": 23.95,
+          "unit_price": 75.55,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
@@ -4664,8 +4661,8 @@
           "detail_slug": "gymbeam_hr_micronized_creatine_powder_optimum_nutrition_0_634_kg_0_634kg",
           "package_key": "kg:0.634",
           "flavour": null,
-          "price_eur": 39.95,
-          "unit_price": 63.01,
+          "price_eur": 43.95,
+          "unit_price": 69.32,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
