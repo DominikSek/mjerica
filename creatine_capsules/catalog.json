@@ -104,8 +104,8 @@
       "detail_slug": "gymbeam_hr_maximum_krea_genic_caps_weider_200_kaps_200capsules",
       "package_key": "count:200",
       "flavour": "",
-      "price_eur": 49.95,
-      "unit_price": 0.25,
+      "price_eur": 38.95,
+      "unit_price": 0.195,
       "unit_label": "capsule",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -440,8 +440,8 @@
     }
   ],
   "category": "creatine_capsules",
-  "checked_at": "2026-10-02T21:09:43.861732+00:00",
-  "built_at": "2026-10-02T21:09:43Z",
+  "checked_at": "2026-10-05T10:34:22.912421+00:00",
+  "built_at": "2026-10-05T10:34:22Z",
   "products": [
     {
       "id": "catalog:c9ba6f77c7d20a81",
@@ -722,8 +722,8 @@
           "detail_slug": "gymbeam_hr_maximum_krea_genic_caps_weider_200_kaps_200capsules",
           "package_key": "count:200",
           "flavour": null,
-          "price_eur": 49.95,
-          "unit_price": 0.25,
+          "price_eur": 38.95,
+          "unit_price": 0.195,
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",

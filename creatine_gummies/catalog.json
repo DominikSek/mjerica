@@ -116,15 +116,15 @@
       "image_url": "https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg"
     },
     {
-      "id": "catalog:0c6cbc96d45d3420",
-      "offer_id": "catalog:0c6cbc96d45d3420",
+      "id": "catalog:aef5abbd971a54c0",
+      "offer_id": "catalog:aef5abbd971a54c0",
       "store": "MyProtein",
       "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/",
-      "detail_slug": "myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies",
-      "package_key": "count:30",
+      "detail_slug": "myprotein_kremaste_gumene_bombone_s_kreatinom_90gummies",
+      "package_key": "count:90",
       "flavour": "",
-      "price_eur": 6.69,
-      "unit_price": 0.223,
+      "price_eur": 28.13,
+      "unit_price": 0.313,
       "unit_label": "gummy",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -135,15 +135,15 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
-      "id": "catalog:5d65ce266b5904e3",
-      "offer_id": "catalog:5d65ce266b5904e3",
+      "id": "catalog:6967fe6519b853be",
+      "offer_id": "catalog:6967fe6519b853be",
       "store": "MyProtein",
       "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/",
-      "detail_slug": "myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies",
-      "package_key": "count:30",
+      "detail_slug": "myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_90gummies",
+      "package_key": "count:90",
       "flavour": "",
-      "price_eur": 6.69,
-      "unit_price": 0.223,
+      "price_eur": 28.13,
+      "unit_price": 0.313,
       "unit_label": "gummy",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -155,8 +155,8 @@
     }
   ],
   "category": "creatine_gummies",
-  "checked_at": "2026-10-02T21:09:48.124131+00:00",
-  "built_at": "2026-10-02T21:09:48Z",
+  "checked_at": "2026-10-05T10:34:26.756531+00:00",
+  "built_at": "2026-10-05T10:34:26Z",
   "products": [
     {
       "id": "catalog:773a8d805e3bc4f2",
@@ -194,19 +194,19 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
       "product_kind": "unknown",
       "packages": [
-        "count:30"
+        "count:90"
       ],
       "offers": [
         {
-          "id": "catalog:0c6cbc96d45d3420",
-          "offer_id": "catalog:0c6cbc96d45d3420",
+          "id": "catalog:aef5abbd971a54c0",
+          "offer_id": "catalog:aef5abbd971a54c0",
           "store": "MyProtein",
           "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/",
-          "detail_slug": "myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies",
-          "package_key": "count:30",
+          "detail_slug": "myprotein_kremaste_gumene_bombone_s_kreatinom_90gummies",
+          "package_key": "count:90",
           "flavour": null,
-          "price_eur": 6.69,
-          "unit_price": 0.223,
+          "price_eur": 28.13,
+          "unit_price": 0.313,
           "unit_label": "gummy",
           "price_kind": "exact",
           "price_scope": "listing",
@@ -223,19 +223,19 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&format=webp&auto=avif&width=450&height=450&fit=crop",
       "product_kind": "unknown",
       "packages": [
-        "count:30"
+        "count:90"
       ],
       "offers": [
         {
-          "id": "catalog:5d65ce266b5904e3",
-          "offer_id": "catalog:5d65ce266b5904e3",
+          "id": "catalog:6967fe6519b853be",
+          "offer_id": "catalog:6967fe6519b853be",
           "store": "MyProtein",
           "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/",
-          "detail_slug": "myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies",
-          "package_key": "count:30",
+          "detail_slug": "myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_90gummies",
+          "package_key": "count:90",
           "flavour": null,
-          "price_eur": 6.69,
-          "unit_price": 0.223,
+          "price_eur": 28.13,
+          "unit_price": 0.313,
           "unit_label": "gummy",
           "price_kind": "exact",
           "price_scope": "listing",

@@ -75,8 +75,7 @@
           box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 22%, transparent),
                       0 2px 6px color-mix(in srgb, var(--text) 14%, transparent); }
   /* the headline box: tinted, with an accent edge */
-  .stat:first-child { background: color-mix(in srgb, var(--accent) 24%, var(--surface));
-                      border-color: var(--accent); border-left-width: 7px; }
+  .stat:first-child { border-color: var(--accent); border-left-width: 7px; }
   .stat-text { flex: 1; min-width: 0; }
   /* the named product's photo, or the drawn scoop when it has none (rendering.SCOOP_ART) */
   .stat-media { flex: none; width: 96px; height: 96px; border-radius: 10px; overflow: hidden;
@@ -196,10 +195,13 @@
   /* product type (plan 2026-09-30 A2): subdued, never the loudest thing on the row */
   .kind-badge { display: block; margin: 2px 0 0; font-size: 12px; font-weight: 500; color: var(--muted);
                 white-space: nowrap; }
-  .details-link { display: inline-block; font-size: 12px; font-weight: 750; padding: 5px 9px;
-                   margin-left: 7px; vertical-align: 1px; background: var(--secondary-soft); border-radius: 4px;
-                   color: var(--secondary); text-decoration: none; }
-  .details-link:hover { background: var(--secondary); color: var(--surface); text-decoration: none; }
+  .visit-cell { width: 112px; text-align: right; }
+  .visit-site { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 10px;
+                border: 1px solid var(--secondary); border-radius: 7px; color: var(--secondary);
+                font-size: 12px; font-weight: 750; line-height: 1; text-decoration: none; white-space: nowrap; }
+  .visit-site svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8;
+                    stroke-linecap: round; stroke-linejoin: round; }
+  .visit-site:hover { background: var(--secondary); color: var(--surface); text-decoration: none; }
   .save-btn { display: inline-grid; place-items: center; width: 36px; height: 36px;
               padding: 0; border: 1px solid var(--border); border-radius: 10px 10px 10px 3px;
               background: var(--surface); color: var(--muted); cursor: pointer; vertical-align: middle;
@@ -227,11 +229,12 @@
   .pill.mid { background: var(--mid-bg); color: var(--mid); }
   .pill.high { background: var(--high-bg); color: var(--high); }
   .empty { color: var(--muted); }
+  td.price-cell { font-weight: 700; }
   .chip:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   .reset-btn:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
-  .details-link:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .visit-site:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   td a:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
-  .mobile-sort:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+  .sort-pill:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
   .est { color: var(--muted); font-size: 12px; }
   [hidden] { display: none !important; }
   footer { color: var(--muted); font-size: 12px; margin-top: 24px; padding: 16px 0 8px; border-top: 1px solid var(--border); max-width: none; line-height: 1.7; }
@@ -239,21 +242,25 @@
   footer .how-link { display: block; margin-top: 8px; color: var(--accent-text); font-weight: 700; }
   @media (prefers-reduced-motion: reduce) { .save-btn, a.stat { transition: none; } .save-btn:hover, a.stat:hover { transform: none; } }
 
-  /* --- phone layout: this is the majority use case, not an afterthought --
+  /* --- compact layout: this is the majority use case, not an afterthought --
      the table becomes a stack of compact cards instead of a wide grid that
      forces sideways scrolling to see the price/weight/€-per-kg you came
      for. Sorting moves from clickable headers (hidden here) to the select
      below the search box, wired to the same sortBy() function. --- */
   .mobile-sort { display: none; }
-  @media (max-width: 720px) {
+  .sort-pill { flex: none; padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px;
+               background: var(--surface); color: var(--text); font: inherit; font-size: 14px; font-weight: 600;
+               cursor: pointer; }
+  .sort-pill[aria-pressed="true"] { color: var(--accent-text); border-color: var(--accent); background: var(--accent-soft); }
+  @media (max-width: 900px) {
     .page { padding: 18px 14px 40px; }
     h1 { font-size: 22px; }
     .check { grid-template-columns: minmax(0, 1fr); }
     .stats { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
     .controls { padding: 10px; border-radius: 10px; gap: 6px; }
     .search { flex: 1 1 100%; max-width: none; order: 0; }
-    .type-filter, .more-filters, .saved-chip { order: 1; }
-    .mobile-sort { order: 2; flex: 1 1 100%; }
+    .mobile-sort { order: 1; flex: 1 1 100%; }
+    .type-filter, .more-filters, .saved-chip { order: 2; }
     .count, .reset-btn { order: 3; }
     .store-chips { order: 4; }
     .type-filter .dd-panel { flex-direction: row; flex-wrap: wrap; gap: 6px; padding: 8px 0 2px; border: 0; background: none; }
@@ -269,21 +276,21 @@
     .stat .sub-name { -webkit-line-clamp: 1; font-size: 13px; }
     .chip-group { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
     .chip { flex: none; }
-    .mobile-sort { display: block; padding: 8px 10px; border: 1px solid var(--border);
-                   background: var(--surface); color: var(--text); font: inherit; }
+    .mobile-sort { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
 
     .table-wrap { border: none; background: none; overflow-x: visible; }
     table { min-width: 0; }
     thead { display: none; }
     tbody { display: block; }
     /* One card per product: photo on the left; store and save, name and
-       "View details", then price, size and the per-kg figure with its unit.
+       product name, then price, size and the per-kg figure with its unit.
        No rank number: the cards are already in order (owner, 2026-09-30). */
-    tr { display: grid; grid-template-columns: 76px 1fr 1fr auto; column-gap: 12px; row-gap: 4px;
+    tr { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto auto; column-gap: 12px; row-gap: 6px;
          grid-template-areas: "thumb store store save" "thumb product product product"
-                              "thumb price weight metric";
+                              "thumb price price metric" "thumb weight visit visit";
          align-items: center; background: var(--surface); border: 1px solid var(--border);
          border-radius: 12px; padding: 12px; margin-bottom: 8px; }
+    tr[data-detail-href] { cursor: pointer; }
     tr.tracked { box-shadow: none; border-color: var(--accent); }
     td { padding: 0; border-bottom: none; }
     .rank-cell { display: none; }
@@ -294,11 +301,11 @@
     .store-cell .store { background: none; padding: 0; }
     .save-cell { grid-area: save; justify-self: end; }
     .product-cell { grid-area: product; font-size: 15px; font-weight: 600; line-height: 1.3; }
-    .product-cell .details-link { display: block; width: max-content; margin: 3px 0 0; padding: 0;
-                                  background: none; font-size: 13px; }
-    .price-cell { grid-area: price; text-align: left; font-weight: 600; }
+    .price-cell { grid-area: price; text-align: left; font-size: 21px; font-weight: 800; line-height: 1.1; letter-spacing: -.01em; }
     .weight-cell { grid-area: weight; text-align: left; color: var(--muted); }
     .metric-cell { grid-area: metric; }
+    .visit-cell { grid-area: visit; justify-self: end; width: auto; }
+    .visit-site { min-height: 34px; padding: 7px 9px; }
     .metric-cell[data-unit]::after { content: " " attr(data-unit); font-size: 11px; font-weight: 600; }
     .extra-cell { grid-column: 2 / -1; font-size: 12px; color: var(--muted); }   /* one row each */
     .extra-cell[data-label]::before { content: attr(data-label) ": "; }
@@ -411,15 +418,16 @@
 <div class="page">
 
   <div class="listing-heading"><h1>Creatine Gummies Price Comparison</h1><nav class="category-switch" aria-label="Creatine type"><a href="../creatine/">Powder</a><a href="../creatine_capsules/">Capsules</a><a class="active" aria-current="page" href="../creatine_gummies/">Gummies</a></nav>
-  <p class="gen-meta">Prices updated 02.10.2026</p></div>
+  <p class="gen-meta">Prices updated 05.10.2026</p></div>
   
 
   <p class="stats-note">Across all listings</p>
-  <section class="stats"><a class="stat" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per gummy</div><div class="value">0.223 &euro;</div><div class="sub" title="Kremaste gumene bombone s kreatinom &middot; MyProtein"><span class="sub-name">Kremaste gumene bombone s kreatinom</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div></div></a><a class="stat" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html"><div class="stat-media"><img class="stat-img" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">6.69 &euro;</div><div class="sub" title="Kremaste gumene bombone s kreatinom &middot; MyProtein"><span class="sub-name">Kremaste gumene bombone s kreatinom</span><span class="sub-sep"> &middot; </span><span class="sub-store">MyProtein</span></div><div class="pack-size">30 gummies</div></div></a></section>
+  <section class="stats"><a class="stat" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html"><div class="stat-media"><img class="stat-img" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Cheapest per gummy</div><div class="value">0.234 &euro;</div><div class="sub" title="Weider Micronized Creatine Gummies &middot; GAZ Nutrition"><span class="sub-name">Weider Micronized Creatine Gummies</span><span class="sub-sep"> &middot; </span><span class="sub-store">GAZ Nutrition</span></div></div></a><a class="stat" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html"><div class="stat-media"><img class="stat-img" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></div><div class="stat-text"><div class="label">Lowest price</div><div class="value">14.04 &euro;</div><div class="sub" title="Weider Micronized Creatine Gummies &middot; GAZ Nutrition"><span class="sub-name">Weider Micronized Creatine Gummies</span><span class="sub-sep"> &middot; </span><span class="sub-store">GAZ Nutrition</span></div><div class="pack-size">60 gummies</div></div></a></section>
 
   
   <div class="controls">
     <input class="search" id="search" type="search" placeholder="Search products&hellip;" aria-label="Search products">
+    <div class="mobile-sort" id="mobileSort" role="group" aria-label="Sort by"></div>
     <button type="button" class="chip saved-chip" id="savedOnly" aria-pressed="false"><svg class="saved-chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button>
     <details class="dd more-filters">
       <summary><span class="more-filters-title">More filters</span><span class="filters-on" hidden> &middot; filtering</span></summary>
@@ -437,7 +445,7 @@
         <div class="filter-row">
           <span class="filter-label" id="priceLabel">&euro; / gummy</span>
           <div class="range-row" role="group" aria-labelledby="priceLabel">
-            <input type="number" id="minPrice" placeholder="0.223" step="0.01" inputmode="decimal" aria-label="Minimum &euro; / gummy">
+            <input type="number" id="minPrice" placeholder="0.234" step="0.01" inputmode="decimal" aria-label="Minimum &euro; / gummy">
             <span>&ndash;</span>
             <input type="number" id="maxPrice" placeholder="0.400" step="0.01" inputmode="decimal" aria-label="Maximum &euro; / gummy">
           </div>
@@ -445,10 +453,9 @@
         <p class="filter-message" id="sizeFilterMessage" role="status"></p>
       </div>
     </details>
-    <select class="mobile-sort" id="mobileSort" aria-label="Sort by"></select>
     <button type="button" class="reset-btn" id="resetFilters" hidden>Reset filters</button>
     <span class="count" id="count"></span>
-    <div class="chip-group store-chips"><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/myprotein.svg" alt="" loading="lazy" decoding="async"></span>MyProtein <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/gaz.png" alt="" loading="lazy" decoding="async"></span>GAZ Nutrition <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/proteka.png" alt="" loading="lazy" decoding="async"></span>Proteka <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/gymbeam.svg" alt="" loading="lazy" decoding="async"></span>GymBeam HR <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/polleo.svg" alt="" loading="lazy" decoding="async"></span>Polleo Sport <span class="fcount">1</span></button></div>
+    <div class="chip-group store-chips"><button type="button" class="chip" data-store-check="GAZ Nutrition" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/gaz.png" alt="" loading="lazy" decoding="async"></span>GAZ Nutrition <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="Proteka" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/proteka.png" alt="" loading="lazy" decoding="async"></span>Proteka <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="MyProtein" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/myprotein.svg" alt="" loading="lazy" decoding="async"></span>MyProtein <span class="fcount">2</span></button><button type="button" class="chip" data-store-check="GymBeam HR" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/gymbeam.svg" alt="" loading="lazy" decoding="async"></span>GymBeam HR <span class="fcount">1</span></button><button type="button" class="chip" data-store-check="Polleo Sport" aria-pressed="true"><span class="store-logo"><img class="store-logo-img" src="../logos/polleo.svg" alt="" loading="lazy" decoding="async"></span>Polleo Sport <span class="fcount">1</span></button></div>
   </div>
   
   <div id="saveToast" class="save-toast" role="status" aria-live="polite" hidden></div>
@@ -467,44 +474,11 @@
           <th class="num" data-type="num" data-filter="1" data-metric="1" aria-sort="ascending"><button>&euro; / gummy <span class="arrow">&#9650;</span></button></th>
           
           
+          <th class="visit-cell" aria-label="Retailer"></th>
         </tr>
       </thead>
       <tbody>
-        <tr data-store="MyProtein" data-track-key="catalog:4508e7998dd1fb7e"
-            data-offer-id="catalog:0c6cbc96d45d3420" data-price-eur="6.69"
-            data-product-kind="unknown"
-            data-package-kg=""
-            data-package-count="30"
-            data-search="myprotein kremaste gumene bombone s kreatinom">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#a1483a"></span>MyProtein</span></td>
-          <td class="product-cell" data-v="Kremaste gumene bombone s kreatinom"><a href="https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" target="_blank" rel="noopener">Kremaste gumene bombone s kreatinom</a><a class="details-link" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html">View details</a><span class="badge promo" title="Includes site&#x27;s 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:0c6cbc96d45d3420&quot;, &quot;name&quot;: &quot;Kremaste gumene bombone s kreatinom&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:30&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 6.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kremaste_gumene_bombone_s_kreatinom_30gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="6.69">6.69 &euro;</td>
-          <td class="num weight-cell" data-v="30">30 gummies</td>
-          <td class="num metric-cell" data-v="0.223" data-unit="&euro;/gummy"><span class="pill good">0.223</span></td>
-          
-          
-        </tr>
-        <tr data-store="MyProtein" data-track-key="catalog:aaa011411bb10443"
-            data-offer-id="catalog:5d65ce266b5904e3" data-price-eur="6.69"
-            data-product-kind="unknown"
-            data-package-kg=""
-            data-package-count="30"
-            data-search="myprotein kremaste žvakaće bombone s kreatinom bez šećera">
-          <td class="num rank-cell"></td>
-          <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#a1483a"></span>MyProtein</span></td>
-          <td class="product-cell" data-v="Kremaste žvakaće bombone s kreatinom bez šećera"><a href="https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" target="_blank" rel="noopener">Kremaste žvakaće bombone s kreatinom bez šećera</a><a class="details-link" href="products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies.html">View details</a><span class="badge promo" title="Includes site&#x27;s 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
-          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:5d65ce266b5904e3&quot;, &quot;name&quot;: &quot;Kremaste žvakaće bombone s kreatinom bez šećera&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:30&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 6.69, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_30gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
-          <td class="num price-cell" data-v="6.69">6.69 &euro;</td>
-          <td class="num weight-cell" data-v="30">30 gummies</td>
-          <td class="num metric-cell" data-v="0.223" data-unit="&euro;/gummy"><span class="pill good">0.223</span></td>
-          
-          
-        </tr>
-        <tr data-store="GAZ Nutrition" data-track-key="catalog:6ded38df3c6c3cbf"
+        <tr data-store="GAZ Nutrition" data-track-key="catalog:6ded38df3c6c3cbf" data-detail-href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html"
             data-offer-id="catalog:8b3d0499aa13dff2" data-price-eur="14.04"
             data-product-kind="unknown"
             data-package-kg=""
@@ -512,16 +486,17 @@
             data-search="gaz nutrition weider micronized creatine gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GAZ Nutrition"><span class="store"><span class="store-dot" style="background:#93692a"></span>GAZ Nutrition</span></td>
-          <td class="product-cell" data-v="Weider Micronized Creatine Gummies"><a href="https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/" target="_blank" rel="noopener">Weider Micronized Creatine Gummies</a><a class="details-link" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html">View details</a></td>
+          <td class="store-cell" data-v="GAZ Nutrition"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GAZ Nutrition</span></td>
+          <td class="product-cell" data-v="Weider Micronized Creatine Gummies"><a class="product-link" href="products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html">Weider Micronized Creatine Gummies</a></td>
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:8b3d0499aa13dff2&quot;, &quot;name&quot;: &quot;Weider Micronized Creatine Gummies&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 14.04, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2026/07/gaz-nutrition-proizvod-weider-micronized-creatine-gummies-v01-1.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_micronized_creatine_gummies_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="14.04">14.04 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.234" data-unit="&euro;/gummy"><span class="pill good">0.234</span></td>
           
           
+          <td class="visit-cell"><a class="visit-site" href="https://gaz-nutrition.com/proizvod/weider-micronized-creatine-gummies/" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
         </tr>
-        <tr data-store="GAZ Nutrition" data-track-key="catalog:83121494807e25ff"
+        <tr data-store="GAZ Nutrition" data-track-key="catalog:83121494807e25ff" data-detail-href="products/gaz_nutrition_weider_premium_creatine_gummies_60gummies.html"
             data-offer-id="catalog:7f1151d35054df58" data-price-eur="14.91"
             data-product-kind="unknown"
             data-package-kg=""
@@ -529,16 +504,17 @@
             data-search="gaz nutrition weider premium creatine gummies">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="GAZ Nutrition"><span class="store"><span class="store-dot" style="background:#93692a"></span>GAZ Nutrition</span></td>
-          <td class="product-cell" data-v="Weider Premium Creatine Gummies"><a href="https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/" target="_blank" rel="noopener">Weider Premium Creatine Gummies</a><a class="details-link" href="products/gaz_nutrition_weider_premium_creatine_gummies_60gummies.html">View details</a></td>
+          <td class="store-cell" data-v="GAZ Nutrition"><span class="store"><span class="store-dot" style="background:#a1483a"></span>GAZ Nutrition</span></td>
+          <td class="product-cell" data-v="Weider Premium Creatine Gummies"><a class="product-link" href="products/gaz_nutrition_weider_premium_creatine_gummies_60gummies.html">Weider Premium Creatine Gummies</a></td>
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GAZ Nutrition|https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:7f1151d35054df58&quot;, &quot;name&quot;: &quot;Weider Premium Creatine Gummies&quot;, &quot;store&quot;: &quot;GAZ Nutrition&quot;, &quot;source_url&quot;: &quot;https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 14.91, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gaz-nutrition.com/wp-content/uploads/2025/03/gaz-nutrition-proizvod-weider-premium-creatine-gummies-v02g.jpg&quot;, &quot;detail_url&quot;: &quot;products/gaz_nutrition_weider_premium_creatine_gummies_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="14.91">14.91 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
-          <td class="num metric-cell" data-v="0.248" data-unit="&euro;/gummy"><span class="pill mid">0.248</span></td>
+          <td class="num metric-cell" data-v="0.248" data-unit="&euro;/gummy"><span class="pill good">0.248</span></td>
           
           
+          <td class="visit-cell"><a class="visit-site" href="https://gaz-nutrition.com/proizvod/weider-premium-creatine-gummies/" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
         </tr>
-        <tr data-store="Proteka" data-track-key="catalog:7ef1c4b13713112f"
+        <tr data-store="Proteka" data-track-key="catalog:7ef1c4b13713112f" data-detail-href="products/proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies.html"
             data-offer-id="catalog:2656952d9abe3da2" data-price-eur="15.95"
             data-product-kind="unknown"
             data-package-kg=""
@@ -546,16 +522,17 @@
             data-search="proteka weider mikronizirani kreatin gumeni bomboni 60 bombona">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="Proteka"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>Proteka</span></td>
-          <td class="product-cell" data-v="Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona"><a href="https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081" target="_blank" rel="noopener">Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona</a><a class="details-link" href="products/proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies.html">View details</a></td>
+          <td class="store-cell" data-v="Proteka"><span class="store"><span class="store-dot" style="background:#93692a"></span>Proteka</span></td>
+          <td class="product-cell" data-v="Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona"><a class="product-link" href="products/proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies.html">Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona</a></td>
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:2656952d9abe3da2&quot;, &quot;name&quot;: &quot;Weider Mikronizirani Kreatin Gumeni Bomboni 60 bombona&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 15.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/weider%5Fmikronizirani%5Fkreatin%5Fgumeni%5F191951%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_weider_mikronizirani_kreatin_gumeni_bomboni_60_bombona_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="15.95">15.95 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
-          <td class="num metric-cell" data-v="0.266" data-unit="&euro;/gummy"><span class="pill mid">0.266</span></td>
+          <td class="num metric-cell" data-v="0.266" data-unit="&euro;/gummy"><span class="pill good">0.266</span></td>
           
           
+          <td class="visit-cell"><a class="visit-site" href="https://www.proteka.hr/product/weider-mikronizirani-kreatin-gumeni-bomboni-60-bombona-5081" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
         </tr>
-        <tr data-store="Proteka" data-track-key="catalog:b70c58ac5962c64c"
+        <tr data-store="Proteka" data-track-key="catalog:b70c58ac5962c64c" data-detail-href="products/proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies.html"
             data-offer-id="catalog:ecc5f1ca4a68b341" data-price-eur="16.95"
             data-product-kind="unknown"
             data-package-kg=""
@@ -563,16 +540,53 @@
             data-search="proteka weider premium kreatin gumeni bomboni 60 bombona">
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&amp;maxheight=130" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
-          <td class="store-cell" data-v="Proteka"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>Proteka</span></td>
-          <td class="product-cell" data-v="Weider Premium Kreatin Gumeni Bomboni 60 bombona"><a href="https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979" target="_blank" rel="noopener">Weider Premium Kreatin Gumeni Bomboni 60 bombona</a><a class="details-link" href="products/proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies.html">View details</a></td>
+          <td class="store-cell" data-v="Proteka"><span class="store"><span class="store-dot" style="background:#93692a"></span>Proteka</span></td>
+          <td class="product-cell" data-v="Weider Premium Kreatin Gumeni Bomboni 60 bombona"><a class="product-link" href="products/proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies.html">Weider Premium Kreatin Gumeni Bomboni 60 bombona</a></td>
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Proteka|https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:ecc5f1ca4a68b341&quot;, &quot;name&quot;: &quot;Weider Premium Kreatin Gumeni Bomboni 60 bombona&quot;, &quot;store&quot;: &quot;Proteka&quot;, &quot;source_url&quot;: &quot;https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 16.95, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.proteka.hr/upload/proizvodi/%5Fweider%5Fpremium%5Fcreatine%5Fgummies%5F204344%2Ejpg.axd?maxwidth=130&amp;maxheight=130&quot;, &quot;detail_url&quot;: &quot;products/proteka_weider_premium_kreatin_gumeni_bomboni_60_bombona_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="16.95">16.95 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.282" data-unit="&euro;/gummy"><span class="pill mid">0.282</span></td>
           
           
+          <td class="visit-cell"><a class="visit-site" href="https://www.proteka.hr/product/weider-premium-kreatin-gumeni-bomboni-4979" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
         </tr>
-        <tr data-store="GymBeam HR" data-track-key="catalog:ed50b7c3f9b91487"
+        <tr data-store="MyProtein" data-track-key="catalog:fcf82e531ec88d25" data-detail-href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_90gummies.html"
+            data-offer-id="catalog:aef5abbd971a54c0" data-price-eur="28.13"
+            data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="90"
+            data-search="myprotein kremaste gumene bombone s kreatinom">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>MyProtein</span></td>
+          <td class="product-cell" data-v="Kremaste gumene bombone s kreatinom"><a class="product-link" href="products/myprotein_kremaste_gumene_bombone_s_kreatinom_90gummies.html">Kremaste gumene bombone s kreatinom</a><span class="badge promo" title="Includes site&#x27;s 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:aef5abbd971a54c0&quot;, &quot;name&quot;: &quot;Kremaste gumene bombone s kreatinom&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:90&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.13, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13528283-4855340147584019.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kremaste_gumene_bombone_s_kreatinom_90gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="28.13">28.13 &euro;</td>
+          <td class="num weight-cell" data-v="90">90 gummies</td>
+          <td class="num metric-cell" data-v="0.313" data-unit="&euro;/gummy"><span class="pill mid">0.313</span></td>
+          
+          
+          <td class="visit-cell"><a class="visit-site" href="https://www.myprotein.hr/p/sports-nutrition/kremaste-gumene-bombone-s-kreatinom/13528283/" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
+        </tr>
+        <tr data-store="MyProtein" data-track-key="catalog:03b22c8c101ebe1b" data-detail-href="products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_90gummies.html"
+            data-offer-id="catalog:6967fe6519b853be" data-price-eur="28.13"
+            data-product-kind="unknown"
+            data-package-kg=""
+            data-package-count="90"
+            data-search="myprotein kremaste žvakaće bombone s kreatinom bez šećera">
+          <td class="num rank-cell"></td>
+          <td class="thumb-cell"><img class="thumb" src="https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
+          <td class="store-cell" data-v="MyProtein"><span class="store"><span class="store-dot" style="background:#4b6f5a"></span>MyProtein</span></td>
+          <td class="product-cell" data-v="Kremaste žvakaće bombone s kreatinom bez šećera"><a class="product-link" href="products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_90gummies.html">Kremaste žvakaće bombone s kreatinom bez šećera</a><span class="badge promo" title="Includes site&#x27;s 33% code MYPHR promo shown on the listing -- confirm it still applies at checkout.">promo applied</span></td>
+          <td class="save-cell"><button type="button" class="save-btn" data-save-key="MyProtein|https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:6967fe6519b853be&quot;, &quot;name&quot;: &quot;Kremaste žvakaće bombone s kreatinom bez šećera&quot;, &quot;store&quot;: &quot;MyProtein&quot;, &quot;source_url&quot;: &quot;https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:90&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 28.13, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/17954303-6825353875828270.jpg&amp;format=webp&amp;auto=avif&amp;width=450&amp;height=450&amp;fit=crop&quot;, &quot;detail_url&quot;: &quot;products/myprotein_kremaste_vaka_e_bombone_s_kreatinom_bez_e_era_90gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
+          <td class="num price-cell" data-v="28.13">28.13 &euro;</td>
+          <td class="num weight-cell" data-v="90">90 gummies</td>
+          <td class="num metric-cell" data-v="0.313" data-unit="&euro;/gummy"><span class="pill mid">0.313</span></td>
+          
+          
+          <td class="visit-cell"><a class="visit-site" href="https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
+        </tr>
+        <tr data-store="GymBeam HR" data-track-key="catalog:ed50b7c3f9b91487" data-detail-href="products/gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies.html"
             data-offer-id="catalog:8cb47872cf0bceab" data-price-eur="19.5"
             data-product-kind="unknown"
             data-package-kg=""
@@ -581,15 +595,16 @@
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="GymBeam HR"><span class="store"><span class="store-dot" style="background:#2e6b78"></span>GymBeam HR</span></td>
-          <td class="product-cell" data-v="Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps."><a href="https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html" target="_blank" rel="noopener">Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.</a><a class="details-link" href="products/gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies.html">View details</a></td>
+          <td class="product-cell" data-v="Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps."><a class="product-link" href="products/gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies.html">Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.</a></td>
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="GymBeam HR|https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:8cb47872cf0bceab&quot;, &quot;name&quot;: &quot;Ružičasti žele bomboni s kreatinom - GymBeam, 60 kaps.&quot;, &quot;store&quot;: &quot;GymBeam HR&quot;, &quot;source_url&quot;: &quot;https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 19.5, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://gymbeam.hr/media/catalog/product/p/i/pink-creatine-gummies-60-gummies-gymbeam.jpg&quot;, &quot;detail_url&quot;: &quot;products/gymbeam_hr_ru_i_asti_ele_bomboni_s_kreatinom_gymbeam_60_kaps_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="19.5">19.50 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.325" data-unit="&euro;/gummy"><span class="pill high">0.325</span></td>
           
           
+          <td class="visit-cell"><a class="visit-site" href="https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
         </tr>
-        <tr data-store="Polleo Sport" data-track-key="catalog:fe4994801e8c6f5a"
+        <tr data-store="Polleo Sport" data-track-key="catalog:fe4994801e8c6f5a" data-detail-href="products/polleo_sport_creatine_gummies_60_gummies_60gummies.html"
             data-offer-id="catalog:a1fea203b7778631" data-price-eur="23.99"
             data-product-kind="unknown"
             data-package-kg=""
@@ -598,13 +613,14 @@
           <td class="num rank-cell"></td>
           <td class="thumb-cell"><img class="thumb" src="https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225" alt="" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%3E%3Crect width=%2224%22%20height=%2224%22%20fill=%22%23c8d0de%22/%3E%3C/svg%3E'"></td>
           <td class="store-cell" data-v="Polleo Sport"><span class="store"><span class="store-dot" style="background:#3c5a8a"></span>Polleo Sport</span></td>
-          <td class="product-cell" data-v="Creatine Gummies, 60 gummies"><a href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon" target="_blank" rel="noopener">Creatine Gummies, 60 gummies</a><a class="details-link" href="products/polleo_sport_creatine_gummies_60_gummies_60gummies.html">View details</a></td>
+          <td class="product-cell" data-v="Creatine Gummies, 60 gummies"><a class="product-link" href="products/polleo_sport_creatine_gummies_60_gummies_60gummies.html">Creatine Gummies, 60 gummies</a></td>
           <td class="save-cell"><button type="button" class="save-btn" data-save-key="Polleo Sport|https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon" data-save-offer="{&quot;offer_id&quot;: &quot;catalog:a1fea203b7778631&quot;, &quot;name&quot;: &quot;Creatine Gummies, 60 gummies&quot;, &quot;store&quot;: &quot;Polleo Sport&quot;, &quot;source_url&quot;: &quot;https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon&quot;, &quot;category&quot;: &quot;creatine_gummies&quot;, &quot;package_key&quot;: &quot;count:60&quot;, &quot;flavour&quot;: &quot;&quot;, &quot;price_eur&quot;: 23.99, &quot;price_kind&quot;: &quot;exact&quot;, &quot;image_url&quot;: &quot;https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/gummies_lemon.jpg?size=225&quot;, &quot;detail_url&quot;: &quot;products/polleo_sport_creatine_gummies_60_gummies_60gummies.html&quot;}" aria-pressed="false" title="Save product" aria-label="Save product"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg></button></td>
           <td class="num price-cell" data-v="23.99">23.99 &euro;</td>
           <td class="num weight-cell" data-v="60">60 gummies</td>
           <td class="num metric-cell" data-v="0.4" data-unit="&euro;/gummy"><span class="pill high">0.400</span></td>
           
           
+          <td class="visit-cell"><a class="visit-site" href="https://polleosport.hr/sportska-prehrana/kreatini/creatine-gummies-60-gummies-lemon" target="_blank" rel="noopener">Visit site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></td>
         </tr></tbody>
     </table>
   </div>
@@ -635,6 +651,17 @@
   const perPiece = sizeMin ? sizeMin.dataset.perPiece === "true" : false;
   const moreFilters = document.querySelector(".more-filters");
   const filtersOn = moreFilters ? moreFilters.querySelector(".filters-on") : null;
+
+  // On phones the visual card is the largest, clearest product-page target. Its own
+  // controls remain independent, and the product name stays a normal keyboard link.
+  const phoneCards = window.matchMedia("(max-width: 900px)");
+  rows.forEach((row) => {
+    if (!row.dataset.detailHref) return;
+    row.addEventListener("click", (event) => {
+      if (!phoneCards.matches || event.target.closest("a, button, input, select, textarea, summary, label")) return;
+      window.location.assign(row.dataset.detailHref);
+    });
+  });
 
   // The pack-size bounds, or {active: false} with a message when they cannot be used.
   function sizeBounds() {
@@ -699,6 +726,7 @@
         arrow.innerHTML = "&#9650;&#9660;";
       }
     });
+    syncPills();
     renumberRanks();
   }
 
@@ -713,31 +741,39 @@
     });
   });
 
-  // Mobile sort <select> -- headers are hidden below the phone breakpoint
-  // (no room, and no hover/click affordance is obvious there anyway), so
-  // this reuses the exact same sortBy() and each header's own default
-  // direction instead of duplicating that logic.
+  // Mobile sort pills -- headers are hidden below the phone breakpoint (no room, and no
+  // hover/click affordance is obvious there), so a visible row of pills under the search
+  // reuses the exact same sortBy() and each header's own default direction. The
+  // price-per-kg / per-serving column comes first as "Cheapest"; tapping the active pill flips it.
+  let syncPills = () => {};
   const mobileSort = document.getElementById("mobileSort");
   if (mobileSort) {
-    const dirs = ["ascending", "descending"];
-    headers.forEach((h, i) => {
+    const pills = [];
+    const order = headers.map((h, i) => i).filter((i) => i !== metricIndex);
+    if (metricIndex >= 0) order.unshift(metricIndex);
+    order.forEach((i) => {
+      const h = headers[i];
       const btn = h.querySelector("button");
-      if (!btn) return;
-      const label = btn.textContent.replace(/[▲▼]/g, "").trim();
-      dirs.forEach((dir) => {
-        const opt = document.createElement("option");
-        opt.value = i + ":" + dir;
-        opt.textContent = label + (dir === "ascending" ? " ▲" : " ▼");
-        mobileSort.appendChild(opt);
+      if (!btn || h.dataset.type !== "num") return;      // Store and Product are not sort pills
+      const pill = document.createElement("button");
+      pill.type = "button";
+      pill.className = "sort-pill";
+      pill.dataset.index = i;
+      pill.dataset.label = i === metricIndex ? "Cheapest" : btn.textContent.replace(/[▲▼]/g, "").trim();
+      mobileSort.appendChild(pill);
+      pills.push(pill);
+    });
+    syncPills = () => {
+      pills.forEach((pill) => {
+        const sort = headers[Number(pill.dataset.index)].getAttribute("aria-sort");
+        pill.setAttribute("aria-pressed", sort ? "true" : "false");
+        pill.textContent = pill.dataset.label + (sort ? (sort === "ascending" ? " ▲" : " ▼") : "");
       });
-    });
-    if (metricIndex >= 0) {
-      mobileSort.value = metricIndex + ":" + (headers[metricIndex].dataset.descFirst ? "descending" : "ascending");
-    }
-    mobileSort.addEventListener("change", () => {
-      const [i, dir] = mobileSort.value.split(":");
-      sortBy(Number(i), dir);
-    });
+    };
+    pills.forEach((pill) => pill.addEventListener("click", () => {
+      headers[Number(pill.dataset.index)].querySelector("button").click();   // the header's own toggle
+    }));
+    syncPills();
   }
 
   // Any of these can be absent -- categories without the filter bar
