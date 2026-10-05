@@ -382,25 +382,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_31741_pure_creatine_100_caps_vs_1_.png"
     },
     {
-      "id": "catalog:91aef404a5155f8a",
-      "offer_id": "catalog:91aef404a5155f8a",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/double-kreatin-energy-gymbeam.html",
-      "detail_slug": "gymbeam_hr_double_kreatin_energy_gymbeam_0_35kg",
-      "package_key": "kg:0.35",
-      "flavour": "",
-      "price_eur": 16.5,
-      "unit_price": 47.14,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Double Kreatin Energy - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-energy-gymbeam-350g-wildberries-mockup_7.jpg"
-    },
-    {
       "id": "catalog:a5f61eaeeb8fb54d",
       "offer_id": "catalog:a5f61eaeeb8fb54d",
       "store": "GymBeam HR",
@@ -646,6 +627,25 @@
       "kind_confidence": "name_only",
       "name": "Kreatin Monohidrat 100% Creapure® - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
+    },
+    {
+      "id": "catalog:91aef404a5155f8a",
+      "offer_id": "catalog:91aef404a5155f8a",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/double-kreatin-energy-gymbeam.html",
+      "detail_slug": "gymbeam_hr_double_kreatin_energy_gymbeam_0_35kg",
+      "package_key": "kg:0.35",
+      "flavour": "",
+      "price_eur": 16.5,
+      "unit_price": 47.14,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Double Kreatin Energy - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/d/o/double-creatine-energy-gymbeam-350g-wildberries-mockup_7.jpg"
     },
     {
       "id": "catalog:e7ea08466a52c12f",
@@ -2283,8 +2283,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-05T10:34:11.270789+00:00",
-  "built_at": "2026-10-05T10:34:11Z",
+  "checked_at": "2026-10-05T14:21:40.165617+00:00",
+  "built_at": "2026-10-05T14:21:40Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
