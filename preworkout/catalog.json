@@ -1352,8 +1352,8 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-10-05T14:22:41.315410+00:00",
-  "built_at": "2026-10-05T14:22:41Z",
+  "checked_at": "2026-10-05T17:56:08.573633+00:00",
+  "built_at": "2026-10-05T17:56:08Z",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -2075,23 +2075,6 @@
         "kg:0.42"
       ],
       "offers": [
-        {
-          "id": "catalog:443fb611891aee5c",
-          "offer_id": "catalog:443fb611891aee5c",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/men-s-force-pre-workout-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.42",
-          "flavour": "mango - marakuja",
-          "price_eur": 16.5,
-          "unit_price": 39.29,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
         {
           "id": "catalog:cbe2446a130e3594",
           "offer_id": "catalog:cbe2446a130e3594",
@@ -3633,6 +3616,23 @@
         "kg:0.5"
       ],
       "offers": [
+        {
+          "id": "catalog:45dc2031a199e0c8",
+          "offer_id": "catalog:45dc2031a199e0c8",
+          "store": "GymBeam HR",
+          "source_url": "https://gymbeam.hr/veinz-pre-workout-gymbeam.html",
+          "detail_slug": "",
+          "package_key": "kg:0.5",
+          "flavour": "cola lemon",
+          "price_eur": 20.95,
+          "unit_price": 41.9,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        },
         {
           "id": "catalog:6110513840d5f7db",
           "offer_id": "catalog:6110513840d5f7db",

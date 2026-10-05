@@ -730,7 +730,7 @@
       "source_url": "https://gymbeam.hr/whey-isolate-gymbeam.html",
       "detail_slug": "gymbeam_hr_whey_izolat_s_enzimima_digezyme_gymbeam_1_0kg",
       "package_key": "kg:1",
-      "flavour": "",
+      "flavour": null,
       "price_eur": 39.95,
       "unit_price": 39.95,
       "unit_label": "€/kg",
@@ -4734,8 +4734,8 @@
     }
   ],
   "category": "whey",
-  "checked_at": "2026-10-05T14:20:12.711555+00:00",
-  "built_at": "2026-10-05T14:20:12Z",
+  "checked_at": "2026-10-05T17:53:40.478259+00:00",
+  "built_at": "2026-10-05T17:53:40Z",
   "products": [
     {
       "id": "catalog:cd184ec79598c449",
@@ -9749,23 +9749,6 @@
           "flavour": "Jagoda",
           "price_eur": 42.0,
           "unit_price": 42.0,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:7a491a3b9a787faf",
-          "offer_id": "catalog:7a491a3b9a787faf",
-          "store": "Proteini Outlet",
-          "source_url": "https://www.proteini-outlet.com/proizvod/high-whey-protein-2/?attribute_pa_okus=banana",
-          "detail_slug": "",
-          "package_key": "kg:2.27",
-          "flavour": "Banana",
-          "price_eur": 92.0,
-          "unit_price": 40.53,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
@@ -17609,21 +17592,21 @@
       ],
       "offers": [
         {
-          "id": "catalog:3efac29d92076d5c",
-          "offer_id": "catalog:3efac29d92076d5c",
+          "id": "catalog:304b520332dbcb6e",
+          "offer_id": "catalog:304b520332dbcb6e",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/whey-isolate-gymbeam.html",
-          "detail_slug": "gymbeam_hr_whey_izolat_s_enzimima_digezyme_gymbeam_1_0kg",
+          "detail_slug": "",
           "package_key": "kg:1",
-          "flavour": null,
+          "flavour": "jagoda",
           "price_eur": 39.95,
           "unit_price": 39.95,
           "unit_label": "€/kg",
           "price_kind": "exact",
-          "price_scope": "listing",
+          "price_scope": "flavour",
           "note": "",
-          "product_kind": "blend",
-          "kind_confidence": "name_only"
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         }
       ]
     },
