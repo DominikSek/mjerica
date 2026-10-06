@@ -1218,25 +1218,6 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/12899623-1105170402605819.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
-      "id": "catalog:1c7ce3d24daeb57e",
-      "offer_id": "catalog:1c7ce3d24daeb57e",
-      "store": "MyProtein",
-      "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-pre-workout-deadpool/15771600/",
-      "detail_slug": "myprotein_impact_pre_workout_deadpool_0_44kg",
-      "package_key": "kg:0.44",
-      "flavour": "",
-      "price_eur": 45.99,
-      "unit_price": 104.52,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Impact Pre-Workout – Deadpool",
-      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771600-6885192173004019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
-    },
-    {
       "id": "catalog:570db1e6381ae953",
       "offer_id": "catalog:570db1e6381ae953",
       "store": "MyProtein",
@@ -1254,6 +1235,25 @@
       "kind_confidence": "unknown",
       "name": "Alpha Pre-Workout",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/13757999-1955180472592347.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:1c7ce3d24daeb57e",
+      "offer_id": "catalog:1c7ce3d24daeb57e",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-pre-workout-deadpool/15771600/",
+      "detail_slug": "myprotein_impact_pre_workout_deadpool_0_44kg",
+      "package_key": "kg:0.44",
+      "flavour": "",
+      "price_eur": 45.99,
+      "unit_price": 104.52,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Impact Pre-Workout – Deadpool",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/15771600-6885192173004019.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
       "id": "catalog:ce066caeb993b074",
@@ -1352,8 +1352,8 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-10-05T20:46:41.839754+00:00",
-  "built_at": "2026-10-05T20:46:41Z",
+  "checked_at": "2026-10-06T09:05:25.062828+00:00",
+  "built_at": "2026-10-06T09:05:25Z",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -4738,23 +4738,6 @@
         "kg:0.5"
       ],
       "offers": [
-        {
-          "id": "catalog:45dc2031a199e0c8",
-          "offer_id": "catalog:45dc2031a199e0c8",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/veinz-pre-workout-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:0.5",
-          "flavour": "cola lemon",
-          "price_eur": 20.95,
-          "unit_price": 41.9,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
         {
           "id": "catalog:6110513840d5f7db",
           "offer_id": "catalog:6110513840d5f7db",

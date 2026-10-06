@@ -446,8 +446,8 @@
       "detail_slug": "gymbeam_hr_kreatin_monohidrat_blueprint_by_bryan_johnson_0_57kg",
       "package_key": "kg:0.57",
       "flavour": "",
-      "price_eur": 50.95,
-      "unit_price": 88.92,
+      "price_eur": 43.4,
+      "unit_price": 75.74,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -2283,8 +2283,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-05T20:45:42.871936+00:00",
-  "built_at": "2026-10-05T20:45:42Z",
+  "checked_at": "2026-10-06T09:04:21.655308+00:00",
+  "built_at": "2026-10-06T09:04:21Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -4801,8 +4801,8 @@
           "detail_slug": "gymbeam_hr_kreatin_monohidrat_blueprint_by_bryan_johnson_0_57kg",
           "package_key": "kg:0.57",
           "flavour": null,
-          "price_eur": 50.95,
-          "unit_price": 88.92,
+          "price_eur": 43.4,
+          "unit_price": 75.74,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
