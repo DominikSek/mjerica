@@ -306,6 +306,44 @@
       "image_url": "https://www.proteini.si/images/f0272b5bcbb72a50d882ada080256cda/usn-creatine-ultra-1250-120-kapsula.jpg?v26"
     },
     {
+      "id": "catalog:663b61ba62cd624d",
+      "offer_id": "catalog:663b61ba62cd624d",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/napredne-vrste/ironmaxx-krea7-superalkalin-90-tableta",
+      "detail_slug": "proteini_si_ironmaxx_krea7_superalkalin_90_tableta_90capsules",
+      "package_key": "count:90",
+      "flavour": "",
+      "price_eur": 30.81,
+      "unit_price": 0.342,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "IRONMAXX KREA7 SUPERALKALIN, 90 tableta",
+      "image_url": "https://www.proteini.si/images/55f41c0569ef386fdd87df77130d8836/ironmaxx-krea7-superalkalin-90-tableta.jpg?v26"
+    },
+    {
+      "id": "catalog:6ab0cb2f3291e66a",
+      "offer_id": "catalog:6ab0cb2f3291e66a",
+      "store": "Proteini.si",
+      "source_url": "https://www.proteini.si/hr/kreatin/napredne-vrste/ironmaxx-krea7-superalkalin-90-tableta?discount=174163",
+      "detail_slug": "proteini_si_ironmaxx_krea7_superalkalin_90_tableta_90capsules_2",
+      "package_key": "count:90",
+      "flavour": "",
+      "price_eur": 5.13,
+      "unit_price": 0.057,
+      "unit_label": "capsule",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "IRONMAXX KREA7 SUPERALKALIN, 90 tableta",
+      "image_url": "https://www.proteini.si/images/55f41c0569ef386fdd87df77130d8836/ironmaxx-krea7-superalkalin-90-tableta.jpg?v26"
+    },
+    {
       "id": "catalog:cd3685177285f8d2",
       "offer_id": "catalog:cd3685177285f8d2",
       "store": "Proteini.si",
@@ -440,8 +478,8 @@
     }
   ],
   "category": "creatine_capsules",
-  "checked_at": "2026-10-06T09:04:33.543608+00:00",
-  "built_at": "2026-10-06T09:04:33Z",
+  "checked_at": "2026-10-06T14:34:52.654356+00:00",
+  "built_at": "2026-10-06T14:34:52Z",
   "products": [
     {
       "id": "catalog:c9ba6f77c7d20a81",
@@ -608,6 +646,52 @@
           "flavour": null,
           "price_eur": 17.95,
           "unit_price": 0.15,
+          "unit_label": "capsule",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "catalog:b104caeae21465ec",
+      "name": "IRONMAXX KREA7 SUPERALKALIN, 90 tableta",
+      "category": "creatine_capsules",
+      "image_url": "https://www.proteini.si/images/55f41c0569ef386fdd87df77130d8836/ironmaxx-krea7-superalkalin-90-tableta.jpg?v26",
+      "product_kind": "unknown",
+      "packages": [
+        "count:90"
+      ],
+      "offers": [
+        {
+          "id": "catalog:663b61ba62cd624d",
+          "offer_id": "catalog:663b61ba62cd624d",
+          "store": "Proteini.si",
+          "source_url": "https://www.proteini.si/hr/kreatin/napredne-vrste/ironmaxx-krea7-superalkalin-90-tableta",
+          "detail_slug": "proteini_si_ironmaxx_krea7_superalkalin_90_tableta_90capsules",
+          "package_key": "count:90",
+          "flavour": null,
+          "price_eur": 30.81,
+          "unit_price": 0.342,
+          "unit_label": "capsule",
+          "price_kind": "exact",
+          "price_scope": "listing",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        },
+        {
+          "id": "catalog:6ab0cb2f3291e66a",
+          "offer_id": "catalog:6ab0cb2f3291e66a",
+          "store": "Proteini.si",
+          "source_url": "https://www.proteini.si/hr/kreatin/napredne-vrste/ironmaxx-krea7-superalkalin-90-tableta?discount=174163",
+          "detail_slug": "proteini_si_ironmaxx_krea7_superalkalin_90_tableta_90capsules_2",
+          "package_key": "count:90",
+          "flavour": null,
+          "price_eur": 5.13,
+          "unit_price": 0.057,
           "unit_label": "capsule",
           "price_kind": "exact",
           "price_scope": "listing",
