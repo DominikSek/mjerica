@@ -857,25 +857,6 @@
       "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/eu_gspwo_30srv_blurazz_6058720_on00537_1.jpg?size=225"
     },
     {
-      "id": "catalog:e37b51451134c529",
-      "offer_id": "catalog:e37b51451134c529",
-      "store": "Polleo Sport",
-      "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/moonstruck-ii-510-g-cherry",
-      "detail_slug": "polleo_sport_moonstruck_ii_510_g_0_51kg",
-      "package_key": "kg:0.51",
-      "flavour": "",
-      "price_eur": 44.99,
-      "unit_price": 88.22,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "MOONSTRUCK® II, 510 g",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoo1012_8436551611549_moonstruck_ii_devil_cherry_1[1].png?size=225"
-    },
-    {
       "id": "catalog:2b57907d2f79607b",
       "offer_id": "catalog:2b57907d2f79607b",
       "store": "Proteka",
@@ -1352,8 +1333,8 @@
     }
   ],
   "category": "preworkout",
-  "checked_at": "2026-10-06T14:35:36.737186+00:00",
-  "built_at": "2026-10-06T14:35:36Z",
+  "checked_at": "2026-10-06T15:19:50.869140+00:00",
+  "built_at": "2026-10-06T15:19:50Z",
   "products": [
     {
       "id": "catalog:727aec49d8b72c55",
@@ -2258,35 +2239,6 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        }
-      ]
-    },
-    {
-      "id": "catalog:18f5adb943a6a6d2",
-      "name": "MOONSTRUCK® II, 510 g",
-      "category": "preworkout",
-      "image_url": "https://image.polleosport.com/https://polleostoragebasic.blob.core.windows.net/product-images/800x800-data/zoo1012_8436551611549_moonstruck_ii_devil_cherry_1[1].png?size=225",
-      "product_kind": "unknown",
-      "packages": [
-        "kg:0.51"
-      ],
-      "offers": [
-        {
-          "id": "catalog:e37b51451134c529",
-          "offer_id": "catalog:e37b51451134c529",
-          "store": "Polleo Sport",
-          "source_url": "https://polleosport.hr/sportska-prehrana/pre-workout/moonstruck-ii-510-g-cherry",
-          "detail_slug": "polleo_sport_moonstruck_ii_510_g_0_51kg",
-          "package_key": "kg:0.51",
-          "flavour": null,
-          "price_eur": 44.99,
-          "unit_price": 88.22,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
           "note": "",
           "product_kind": "unknown",
           "kind_confidence": "unknown"

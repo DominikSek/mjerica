@@ -306,25 +306,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine_gummies_60_gummies_gymbeam.png"
     },
     {
-      "id": "catalog:cc093cc03b52d9ca",
-      "offer_id": "catalog:cc093cc03b52d9ca",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/creatine-beta-alanine-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_beta_alanin_gymbeam_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": "",
-      "price_eur": 16.95,
-      "unit_price": 33.9,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "blend",
-      "kind_confidence": "name_only",
-      "name": "Kreatin + Beta-Alanin - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-beta-alanine-500g-unflavoured-gymbeam.jpg"
-    },
-    {
       "id": "catalog:08355e705221e6bc",
       "offer_id": "catalog:08355e705221e6bc",
       "store": "GymBeam HR",
@@ -380,25 +361,6 @@
       "kind_confidence": "unknown",
       "name": "Čisti kreatin - Weider",
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_31741_pure_creatine_100_caps_vs_1_.png"
-    },
-    {
-      "id": "catalog:a5f61eaeeb8fb54d",
-      "offer_id": "catalog:a5f61eaeeb8fb54d",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-dekstroza-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_dekstroza_gymbeam_1_0kg",
-      "package_key": "kg:1",
-      "flavour": null,
-      "price_eur": 14.95,
-      "unit_price": 14.95,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "blend",
-      "kind_confidence": "name_only",
-      "name": "Kreatin + Dekstroza - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg"
     },
     {
       "id": "catalog:bf74b58197aa2441",
@@ -551,25 +513,6 @@
       "kind_confidence": "name_only",
       "name": "6th Gear Creatine Complex - Stacker2",
       "image_url": "https://gymbeam.hr/media/catalog/product/6/t/6th-gear-creatine.png"
-    },
-    {
-      "id": "catalog:5e6799540ca93cb1",
-      "offer_id": "catalog:5e6799540ca93cb1",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/kreatin-creapurer-dekstroza-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_creapure_dekstroza_gymbeam_1_0kg",
-      "package_key": "kg:1",
-      "flavour": "",
-      "price_eur": 16.95,
-      "unit_price": 16.95,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "blend",
-      "kind_confidence": "name_only",
-      "name": "Kreatin Creapure® + Dekstroza - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg"
     },
     {
       "id": "catalog:70b1cbe443d3ba75",
@@ -2264,8 +2207,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-06T14:34:41.777576+00:00",
-  "built_at": "2026-10-06T14:34:41Z",
+  "checked_at": "2026-10-06T15:18:54.865277+00:00",
+  "built_at": "2026-10-06T15:18:54Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -4091,81 +4034,6 @@
       ]
     },
     {
-      "id": "catalog:8a4f055cce68ea02",
-      "name": "Kreatin + Beta-Alanin - GymBeam",
-      "category": "creatine",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-beta-alanine-500g-unflavoured-gymbeam.jpg",
-      "product_kind": "blend",
-      "packages": [
-        "kg:0.5"
-      ],
-      "offers": [
-        {
-          "id": "catalog:cc093cc03b52d9ca",
-          "offer_id": "catalog:cc093cc03b52d9ca",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/creatine-beta-alanine-gymbeam.html",
-          "detail_slug": "gymbeam_hr_kreatin_beta_alanin_gymbeam_0_5kg",
-          "package_key": "kg:0.5",
-          "flavour": null,
-          "price_eur": 16.95,
-          "unit_price": 33.9,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "blend",
-          "kind_confidence": "name_only"
-        }
-      ]
-    },
-    {
-      "id": "catalog:35d24ce3ef24955c",
-      "name": "Kreatin + Dekstroza - GymBeam",
-      "category": "creatine",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg",
-      "product_kind": "blend",
-      "packages": [
-        "kg:1"
-      ],
-      "offers": [
-        {
-          "id": "catalog:93318856aa1d5dc9",
-          "offer_id": "catalog:93318856aa1d5dc9",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-dekstroza-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "ledeni čaj breskva",
-          "price_eur": 14.95,
-          "unit_price": 14.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
-        {
-          "id": "catalog:ca9d1e5e373e8508",
-          "offer_id": "catalog:ca9d1e5e373e8508",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-dekstroza-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "zelena jabuka",
-          "price_eur": 14.95,
-          "unit_price": 14.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        }
-      ]
-    },
-    {
       "id": "catalog:1d250c171e9b5327",
       "name": "Kreatin 216 g - BSN",
       "category": "creatine",
@@ -4363,69 +4231,6 @@
           "flavour": "zelena jabuka",
           "price_eur": 20.2,
           "unit_price": 33.67,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        }
-      ]
-    },
-    {
-      "id": "catalog:deee95214d336b1f",
-      "name": "Kreatin Creapure® + Dekstroza - GymBeam",
-      "category": "creatine",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-dextrose-peach-ice-tea-1000g-gymbeam_1.jpg",
-      "product_kind": "blend",
-      "packages": [
-        "kg:1"
-      ],
-      "offers": [
-        {
-          "id": "catalog:5e6799540ca93cb1",
-          "offer_id": "catalog:5e6799540ca93cb1",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-creapurer-dekstroza-gymbeam.html",
-          "detail_slug": "gymbeam_hr_kreatin_creapure_dekstroza_gymbeam_1_0kg",
-          "package_key": "kg:1",
-          "flavour": null,
-          "price_eur": 16.95,
-          "unit_price": 16.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "blend",
-          "kind_confidence": "name_only"
-        },
-        {
-          "id": "catalog:defe89e8d723c181",
-          "offer_id": "catalog:defe89e8d723c181",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-creapurer-dekstroza-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "ledeni čaj breskva",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
-        {
-          "id": "catalog:6684f75fd3cf3e43",
-          "offer_id": "catalog:6684f75fd3cf3e43",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/kreatin-creapurer-dekstroza-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "zelena jabuka",
-          "price_eur": null,
-          "unit_price": null,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",

@@ -155,8 +155,8 @@
     }
   ],
   "category": "creatine_gummies",
-  "checked_at": "2026-10-06T14:34:57.281122+00:00",
-  "built_at": "2026-10-06T14:34:57Z",
+  "checked_at": "2026-10-06T15:19:10.088933+00:00",
+  "built_at": "2026-10-06T15:19:10Z",
   "products": [
     {
       "id": "catalog:773a8d805e3bc4f2",
@@ -370,6 +370,23 @@
           "detail_slug": "",
           "package_key": "count:90",
           "flavour": "Malina",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "gummy",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        },
+        {
+          "id": "catalog:b0b2f37a95f2b076",
+          "offer_id": "catalog:b0b2f37a95f2b076",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/kremaste-zvakace-bombone-s-kreatinom-bez-secera/17954302/",
+          "detail_slug": "",
+          "package_key": "count:90",
+          "flavour": "Višnja",
           "price_eur": null,
           "unit_price": null,
           "unit_label": "gummy",
