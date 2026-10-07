@@ -509,7 +509,7 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "kind_confidence": "reviewed",
       "name": "Protein 80 Plus - Weider, 0.5 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_30119_protein_80plus_2kg_beutel_chocolate.jpg"
@@ -528,7 +528,7 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "kind_confidence": "reviewed",
       "name": "Protein 80 Plus - Weider, 2 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_30119_protein_80plus_2kg_beutel_chocolate.jpg"
@@ -629,44 +629,6 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/w/h/whey_1.png"
     },
     {
-      "id": "catalog:ab894a5da2ceb6d5",
-      "offer_id": "catalog:ab894a5da2ceb6d5",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/cisti-protein-whey-beastpink-gymbeam.html",
-      "detail_slug": "gymbeam_hr_clear_whey_protein_gymbeam_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": null,
-      "price_eur": 36.95,
-      "unit_price": 73.9,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "clear",
-      "kind_confidence": "reviewed",
-      "name": "Clear Whey Protein - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/l/clear-whey-protein-beastpink-gymbeam-500g-mango-maracuja-mockup-20260907_13.jpg"
-    },
-    {
-      "id": "catalog:420d800b79d0554b",
-      "offer_id": "catalog:420d800b79d0554b",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/clear-whey-hydrate-gymbeam.html",
-      "detail_slug": "gymbeam_hr_clear_whey_hydrate_gymbeam_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": null,
-      "price_eur": 35.95,
-      "unit_price": 71.9,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "clear",
-      "kind_confidence": "reviewed",
-      "name": "Clear Whey Hydrate - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/c/l/clear-whey-hydrate_peach-ice-tea_mockup_1_.jpg"
-    },
-    {
       "id": "catalog:32149a24aa1cda1b",
       "offer_id": "catalog:32149a24aa1cda1b",
       "store": "GymBeam HR",
@@ -705,42 +667,42 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/a/s/asap_true_whey_chocolate_2000_g_gymbeam.jpg"
     },
     {
-      "id": "catalog:279952765905d444",
-      "offer_id": "catalog:279952765905d444",
+      "id": "catalog:ab894a5da2ceb6d5",
+      "offer_id": "catalog:ab894a5da2ceb6d5",
       "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-      "detail_slug": "gymbeam_hr_gain_anabolic_protein_gymbeam_1_0kg",
-      "package_key": "kg:1",
+      "source_url": "https://gymbeam.hr/cisti-protein-whey-beastpink-gymbeam.html",
+      "detail_slug": "gymbeam_hr_clear_whey_protein_gymbeam_0_5kg",
+      "package_key": "kg:0.5",
       "flavour": null,
-      "price_eur": 42.95,
-      "unit_price": 42.95,
+      "price_eur": 36.95,
+      "unit_price": 73.9,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "concentrate",
+      "product_kind": "clear",
       "kind_confidence": "reviewed",
-      "name": "Gain Anabolic Protein - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/g/a/gain_anabolic_protein_salted_caramel_mockup_1__1.jpg"
+      "name": "Clear Whey Protein - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/l/clear-whey-protein-beastpink-gymbeam-500g-mango-maracuja-mockup-20260907_13.jpg"
     },
     {
-      "id": "catalog:a18e9a536b11bcb2",
-      "offer_id": "catalog:a18e9a536b11bcb2",
+      "id": "catalog:420d800b79d0554b",
+      "offer_id": "catalog:420d800b79d0554b",
       "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/bio-whey-protein-gymbeam.html",
-      "detail_slug": "gymbeam_hr_bio_whey_protein_gymbeam_0_9kg",
-      "package_key": "kg:0.9",
+      "source_url": "https://gymbeam.hr/clear-whey-hydrate-gymbeam.html",
+      "detail_slug": "gymbeam_hr_clear_whey_hydrate_gymbeam_0_5kg",
+      "package_key": "kg:0.5",
       "flavour": null,
-      "price_eur": 48.95,
-      "unit_price": 54.39,
+      "price_eur": 35.95,
+      "unit_price": 71.9,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "concentrate",
+      "product_kind": "clear",
       "kind_confidence": "reviewed",
-      "name": "BIO Whey Protein - GymBeam",
-      "image_url": "https://gymbeam.hr/media/catalog/product/b/i/bio_whey_protein_900_g_cocoa_gymbeam_1__1.jpg"
+      "name": "Clear Whey Hydrate - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/c/l/clear-whey-hydrate_peach-ice-tea_mockup_1_.jpg"
     },
     {
       "id": "catalog:a0f0dfe772a43376",
@@ -762,23 +724,23 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/r/e/refuel_whey_protein_vanilla_mockup-1450g.jpg"
     },
     {
-      "id": "catalog:ff0068f200576dd7",
-      "offer_id": "catalog:ff0068f200576dd7",
+      "id": "catalog:a18e9a536b11bcb2",
+      "offer_id": "catalog:a18e9a536b11bcb2",
       "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/formel-90-protein-mammut-nutrition.html",
-      "detail_slug": "gymbeam_hr_formel_90_protein_mammut_nutrition_3_0kg",
-      "package_key": "kg:3",
+      "source_url": "https://gymbeam.hr/bio-whey-protein-gymbeam.html",
+      "detail_slug": "gymbeam_hr_bio_whey_protein_gymbeam_0_9kg",
+      "package_key": "kg:0.9",
       "flavour": null,
-      "price_eur": 70.95,
-      "unit_price": 23.65,
+      "price_eur": 48.95,
+      "unit_price": 54.39,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
       "product_kind": "concentrate",
       "kind_confidence": "reviewed",
-      "name": "Formel 90 Protein – Mammut Nutrition",
-      "image_url": "https://gymbeam.hr/media/catalog/product/1/0/1000035-formel-90-protein-vanilla-3000-g-dose-2.jpg"
+      "name": "BIO Whey Protein - GymBeam",
+      "image_url": "https://gymbeam.hr/media/catalog/product/b/i/bio_whey_protein_900_g_cocoa_gymbeam_1__1.jpg"
     },
     {
       "id": "catalog:e47dbd09fbf9bb4c",
@@ -798,6 +760,25 @@
       "kind_confidence": "name_only",
       "name": "Base Blend Protein - GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/b/a/base_blend_protein_chocolate_1000g_gymbeam_1__1.jpg"
+    },
+    {
+      "id": "catalog:ff0068f200576dd7",
+      "offer_id": "catalog:ff0068f200576dd7",
+      "store": "GymBeam HR",
+      "source_url": "https://gymbeam.hr/formel-90-protein-mammut-nutrition.html",
+      "detail_slug": "gymbeam_hr_formel_90_protein_mammut_nutrition_3_0kg",
+      "package_key": "kg:3",
+      "flavour": null,
+      "price_eur": 77.95,
+      "unit_price": 25.98,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "reviewed",
+      "name": "Formel 90 Protein – Mammut Nutrition",
+      "image_url": "https://gymbeam.hr/media/catalog/product/1/0/1000035-formel-90-protein-vanilla-3000-g-dose-2.jpg"
     },
     {
       "id": "catalog:6a8e2192fa498712",
@@ -1405,7 +1386,7 @@
       "product_kind": "unknown",
       "kind_confidence": "unknown",
       "name": "Lazar Angelov Whey Black Series 2.27kg",
-      "image_url": "https://www.proteka.hr/upload/proizvodi/lazar%5Fangelov%5Fwhey%5F94332%2Ejpg.axd?maxwidth=130&maxheight=130"
+      "image_url": "https://www.proteka.hr/upload/proizvodi/lazar%5Fangelov%5Fwhey%5F2%2E27kg%5F174823%2Ejpg.axd?maxwidth=130&maxheight=130"
     },
     {
       "id": "catalog:ceb854c73248816b",
@@ -4106,25 +4087,6 @@
       "image_url": "https://scitec.hr/images/product_images/17603_d28c1cdbcbd9_200x200.webp"
     },
     {
-      "id": "catalog:3b90a8c20efbcf21",
-      "offer_id": "catalog:3b90a8c20efbcf21",
-      "store": "Scitec",
-      "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-0-5-kg-p13922",
-      "detail_slug": "scitec_100_whey_protein_professional_0_5_kg_0_5kg",
-      "package_key": "kg:0.5",
-      "flavour": "",
-      "price_eur": 25.9,
-      "unit_price": 51.8,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "blend",
-      "kind_confidence": "reviewed",
-      "name": "100% Whey Protein Professional(0,5 kg)",
-      "image_url": "https://scitec.hr/images/product_images/13922_7ab7c78cfd0c_200x200.webp"
-    },
-    {
       "id": "catalog:e0e39cd7ace18c06",
       "offer_id": "catalog:e0e39cd7ace18c06",
       "store": "Scitec",
@@ -4199,6 +4161,25 @@
       "kind_confidence": "reviewed",
       "name": "100% Whey(28 gr.)",
       "image_url": "https://scitec.hr/images/product_images/16154_847ce513a1f1_200x200.webp"
+    },
+    {
+      "id": "catalog:3b90a8c20efbcf21",
+      "offer_id": "catalog:3b90a8c20efbcf21",
+      "store": "Scitec",
+      "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-0-5-kg-p13922",
+      "detail_slug": "scitec_100_whey_protein_professional_0_5_kg_0_5kg",
+      "package_key": "kg:0.5",
+      "flavour": "",
+      "price_eur": 25.9,
+      "unit_price": 51.8,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "",
+      "product_kind": "blend",
+      "kind_confidence": "reviewed",
+      "name": "100% Whey Protein Professional(0,5 kg)",
+      "image_url": "https://scitec.hr/images/product_images/13922_7ab7c78cfd0c_200x200.webp"
     },
     {
       "id": "catalog:89fca6b796cac611",
@@ -4372,25 +4353,6 @@
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16111658-5075261332442895.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
-      "id": "catalog:d8f30ebb67a4e2dd",
-      "offer_id": "catalog:d8f30ebb67a4e2dd",
-      "store": "MyProtein",
-      "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-diet-whey/10530657/",
-      "detail_slug": "myprotein_impact_diet_whey_0_42kg",
-      "package_key": "kg:0.42",
-      "flavour": null,
-      "price_eur": 16.19,
-      "unit_price": 38.56,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "Includes site's 40% promo shown on the listing -- confirm it still applies at checkout.",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Impact Diet Whey",
-      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10530657-2085372280065763.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
-    },
-    {
       "id": "catalog:ba5809a4244b58ed",
       "offer_id": "catalog:ba5809a4244b58ed",
       "store": "MyProtein",
@@ -4408,6 +4370,25 @@
       "kind_confidence": "name_only",
       "name": "Impact Whey izolat od sirutke krava hranjenih travom",
       "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/16795191-1835343294928140.png&format=webp&auto=avif&width=450&height=450&fit=crop"
+    },
+    {
+      "id": "catalog:d8f30ebb67a4e2dd",
+      "offer_id": "catalog:d8f30ebb67a4e2dd",
+      "store": "MyProtein",
+      "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-diet-whey/10530657/",
+      "detail_slug": "myprotein_impact_diet_whey_0_42kg",
+      "package_key": "kg:0.42",
+      "flavour": null,
+      "price_eur": 16.19,
+      "unit_price": 38.56,
+      "unit_label": "€/kg",
+      "price_kind": "exact",
+      "price_scope": "listing",
+      "note": "Includes site's 40% promo shown on the listing -- confirm it still applies at checkout.",
+      "product_kind": "unknown",
+      "kind_confidence": "unknown",
+      "name": "Impact Diet Whey",
+      "image_url": "https://www.myprotein.hr/images?url=https://static.thcdn.com/productimg/original/10530657-2085372280065763.jpg&format=webp&auto=avif&width=450&height=450&fit=crop"
     },
     {
       "id": "catalog:39b1b73e93083ffc",
@@ -4594,7 +4575,7 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "kind_confidence": "reviewed",
       "name": "Protein 80 Plus, okus čokolade, 500 g",
       "image_url": "https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747444998/assets/pas/images/51e02341-51da-42ce-b890-f9312b087c4e/weider-protein-80-plus-okus-cokolade"
@@ -4670,15 +4651,15 @@
       "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "kind_confidence": "reviewed",
       "name": "Protein 80 Plus, okus vanilije, 500 g",
       "image_url": "https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747445001/assets/pas/images/9117d903-6385-4021-8327-0aafc1d39664/weider-protein-80-plus-okus-vanilije"
     }
   ],
   "category": "whey",
-  "checked_at": "2026-10-06T15:17:38.725415+00:00",
-  "built_at": "2026-10-06T15:17:38Z",
+  "checked_at": "2026-10-07T13:29:57.341063+00:00",
+  "built_at": "2026-10-07T13:29:57Z",
   "products": [
     {
       "id": "catalog:cd184ec79598c449",
@@ -7121,23 +7102,6 @@
           "kind_confidence": "reviewed"
         },
         {
-          "id": "catalog:09a8d557a308f3a2",
-          "offer_id": "catalog:09a8d557a308f3a2",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/scitec-nutrition-100-whey-protein-professional-4-kg-p17603",
-          "detail_slug": "",
-          "package_key": "kg:4",
-          "flavour": "jagoda-bijela čokolada",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "blend",
-          "kind_confidence": "reviewed"
-        },
-        {
           "id": "catalog:02773627f4a50071",
           "offer_id": "catalog:02773627f4a50071",
           "store": "Scitec",
@@ -7233,125 +7197,6 @@
           "note": "",
           "product_kind": "concentrate",
           "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:94e0cd0dfa9840a7",
-          "offer_id": "catalog:94e0cd0dfa9840a7",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "cookies & cream",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:8439769d2d9d2837",
-          "offer_id": "catalog:8439769d2d9d2837",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "crna malina-bijela čokolada",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:e20ee571db0046c6",
-          "offer_id": "catalog:e20ee571db0046c6",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "pita od jabuka",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:8fffed48b8f915d0",
-          "offer_id": "catalog:8fffed48b8f915d0",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "vanilija",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:9758c06bfc0828f4",
-          "offer_id": "catalog:9758c06bfc0828f4",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "čokolada",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:26a83ee1a7dd3ea1",
-          "offer_id": "catalog:26a83ee1a7dd3ea1",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "čokolada-banana",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:6ab095a52ab724d3",
-          "offer_id": "catalog:6ab095a52ab724d3",
-          "store": "Scitec",
-          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-1-kg-p16152",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "čokolada-naranča",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
         }
       ]
     },
@@ -7378,6 +7223,57 @@
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
+          "note": "",
+          "product_kind": "concentrate",
+          "kind_confidence": "reviewed"
+        },
+        {
+          "id": "catalog:af2ff316e408f455",
+          "offer_id": "catalog:af2ff316e408f455",
+          "store": "Scitec",
+          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-28-gr-p16154",
+          "detail_slug": "",
+          "package_key": "kg:0.028",
+          "flavour": "pita od jabuka",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "concentrate",
+          "kind_confidence": "reviewed"
+        },
+        {
+          "id": "catalog:330ca6328de378b8",
+          "offer_id": "catalog:330ca6328de378b8",
+          "store": "Scitec",
+          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-28-gr-p16154",
+          "detail_slug": "",
+          "package_key": "kg:0.028",
+          "flavour": "čokolada-banana",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "concentrate",
+          "kind_confidence": "reviewed"
+        },
+        {
+          "id": "catalog:afac4cdc3440918e",
+          "offer_id": "catalog:afac4cdc3440918e",
+          "store": "Scitec",
+          "source_url": "https://scitec.hr/koncentrati-proteina-sirutke-whey/builder-100-whey-28-gr-p16154",
+          "detail_slug": "",
+          "package_key": "kg:0.028",
+          "flavour": "čokolada-naranča",
+          "price_eur": null,
+          "unit_price": null,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
           "note": "",
           "product_kind": "concentrate",
           "kind_confidence": "reviewed"
@@ -11315,7 +11211,7 @@
       "name": "Formel 90 Protein – Mammut Nutrition",
       "category": "whey",
       "image_url": "https://gymbeam.hr/media/catalog/product/1/0/1000035-formel-90-protein-vanilla-3000-g-dose-2.jpg",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "packages": [
         "kg:3"
       ],
@@ -11328,93 +11224,13 @@
           "detail_slug": "",
           "package_key": "kg:3",
           "flavour": "čokolada",
-          "price_eur": 70.95,
-          "unit_price": 23.65,
+          "price_eur": 77.95,
+          "unit_price": 25.98,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        }
-      ]
-    },
-    {
-      "id": "catalog:5fe67dcb3d6d2204",
-      "name": "Gain Anabolic Protein - GymBeam",
-      "category": "whey",
-      "image_url": "https://gymbeam.hr/media/catalog/product/g/a/gain_anabolic_protein_salted_caramel_mockup_1__1.jpg",
-      "product_kind": "concentrate",
-      "packages": [
-        "kg:1"
-      ],
-      "offers": [
-        {
-          "id": "catalog:b7c651d6800f7406",
-          "offer_id": "catalog:b7c651d6800f7406",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "banana",
-          "price_eur": 42.95,
-          "unit_price": 42.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:1bc83a99e0047d88",
-          "offer_id": "catalog:1bc83a99e0047d88",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "slani karamel",
-          "price_eur": 42.95,
-          "unit_price": 42.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:8d7f9abdcf4aec29",
-          "offer_id": "catalog:8d7f9abdcf4aec29",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "vanilija",
-          "price_eur": 42.95,
-          "unit_price": 42.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:6c535e6876cdc20e",
-          "offer_id": "catalog:6c535e6876cdc20e",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/gain-anabolic-protein-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:1",
-          "flavour": "čokolada",
-          "price_eur": 42.95,
-          "unit_price": 42.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         }
       ]
@@ -11525,6 +11341,23 @@
           "flavour": "Cookies and Cream",
           "price_eur": 109.99,
           "unit_price": 54.99,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "",
+          "product_kind": "blend",
+          "kind_confidence": "reviewed"
+        },
+        {
+          "id": "catalog:511b5cf0b48bf5cf",
+          "offer_id": "catalog:511b5cf0b48bf5cf",
+          "store": "Polleo Sport",
+          "source_url": "https://polleosport.hr/proteini/whey-protein/gold-standard-100-whey-protein-2-kg-delicious-strawberry",
+          "detail_slug": "",
+          "package_key": "kg:2",
+          "flavour": "Delicious Strawberry",
+          "price_eur": null,
+          "unit_price": null,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
@@ -12698,23 +12531,6 @@
           "detail_slug": "",
           "package_key": "kg:0.9",
           "flavour": "Mocha",
-          "price_eur": null,
-          "unit_price": null,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "concentrate",
-          "kind_confidence": "reviewed"
-        },
-        {
-          "id": "catalog:09222d0ae895d861",
-          "offer_id": "catalog:09222d0ae895d861",
-          "store": "MyProtein",
-          "source_url": "https://www.myprotein.hr/p/sports-nutrition/impact-whey-protein/10530943/",
-          "detail_slug": "",
-          "package_key": "kg:0.9",
-          "flavour": "Original Glazed Doughnut",
           "price_eur": null,
           "unit_price": null,
           "unit_label": "€/kg",
@@ -15940,7 +15756,7 @@
       "id": "catalog:c48275474cc84c5b",
       "name": "Lazar Angelov Whey Black Series 2.27kg",
       "category": "whey",
-      "image_url": "https://www.proteka.hr/upload/proizvodi/lazar%5Fangelov%5Fwhey%5F94332%2Ejpg.axd?maxwidth=130&maxheight=130",
+      "image_url": "https://www.proteka.hr/upload/proizvodi/lazar%5Fangelov%5Fwhey%5F2%2E27kg%5F174823%2Ejpg.axd?maxwidth=130&maxheight=130",
       "product_kind": "unknown",
       "packages": [
         "kg:2.27"
@@ -17074,6 +16890,23 @@
           "kind_confidence": "reviewed"
         },
         {
+          "id": "catalog:d9ca0c75c627a4b7",
+          "offer_id": "catalog:d9ca0c75c627a4b7",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/myprotein-clear-whey-protein/12081395/?variation=12712785",
+          "detail_slug": "",
+          "package_key": "kg:0.5",
+          "flavour": "Blood Orange",
+          "price_eur": 73.99,
+          "unit_price": 147.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        },
+        {
           "id": "catalog:8b1591a32360f214",
           "offer_id": "catalog:8b1591a32360f214",
           "store": "MyProtein",
@@ -17140,6 +16973,23 @@
           "note": "Store price before discount codes. Confirm the final price at the store.",
           "product_kind": "isolate",
           "kind_confidence": "reviewed"
+        },
+        {
+          "id": "catalog:f9186e3ccad60e22",
+          "offer_id": "catalog:f9186e3ccad60e22",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/myprotein-clear-whey-protein/12081395/?variation=12273887",
+          "detail_slug": "",
+          "package_key": "kg:0.5",
+          "flavour": "Grožđe",
+          "price_eur": 73.99,
+          "unit_price": 147.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
         },
         {
           "id": "catalog:ee1b434b71d886ab",
@@ -17329,6 +17179,23 @@
           "kind_confidence": "reviewed"
         },
         {
+          "id": "catalog:ad27a465f781e7fb",
+          "offer_id": "catalog:ad27a465f781e7fb",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/myprotein-clear-whey-protein/12081395/?variation=12673041",
+          "detail_slug": "",
+          "package_key": "kg:0.5",
+          "flavour": "Pink Grapefruit",
+          "price_eur": 73.99,
+          "unit_price": 147.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "unknown",
+          "kind_confidence": "unknown"
+        },
+        {
           "id": "catalog:c6773bdc9b7253db",
           "offer_id": "catalog:c6773bdc9b7253db",
           "store": "MyProtein",
@@ -17372,6 +17239,23 @@
           "flavour": "Strawberry-Webs",
           "price_eur": 80.99,
           "unit_price": 161.98,
+          "unit_label": "€/kg",
+          "price_kind": "exact",
+          "price_scope": "flavour",
+          "note": "Store price before discount codes. Confirm the final price at the store.",
+          "product_kind": "isolate",
+          "kind_confidence": "reviewed"
+        },
+        {
+          "id": "catalog:ddbba9bf5629e509",
+          "offer_id": "catalog:ddbba9bf5629e509",
+          "store": "MyProtein",
+          "source_url": "https://www.myprotein.hr/p/sports-nutrition/myprotein-clear-whey-protein/12081395/?variation=12660041",
+          "detail_slug": "",
+          "package_key": "kg:0.5",
+          "flavour": "Tropical Dragonfruit",
+          "price_eur": 73.99,
+          "unit_price": 147.98,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",
@@ -21522,7 +21406,7 @@
       "name": "Protein 80 Plus - Weider, 0.5 kg",
       "category": "whey",
       "image_url": "https://gymbeam.hr/media/catalog/product/w/e/weider_30119_protein_80plus_2kg_beutel_chocolate.jpg",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "packages": [
         "kg:0.5",
         "kg:2"
@@ -21542,7 +21426,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21559,7 +21443,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21576,7 +21460,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21593,7 +21477,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21610,7 +21494,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21627,7 +21511,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21644,7 +21528,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21661,7 +21545,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         },
         {
@@ -21678,7 +21562,7 @@
           "price_kind": "exact",
           "price_scope": "flavour",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         }
       ]
@@ -21688,7 +21572,7 @@
       "name": "Protein 80 Plus, okus vanilije, 500 g",
       "category": "whey",
       "image_url": "https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747445001/assets/pas/images/9117d903-6385-4021-8327-0aafc1d39664/weider-protein-80-plus-okus-vanilije",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "packages": [
         "kg:0.5"
       ],
@@ -21707,7 +21591,7 @@
           "price_kind": "exact",
           "price_scope": "listing",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         }
       ]
@@ -21717,7 +21601,7 @@
       "name": "Protein 80 Plus, okus čokolade, 500 g",
       "category": "whey",
       "image_url": "https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_320,w_320/v1747444998/assets/pas/images/51e02341-51da-42ce-b890-f9312b087c4e/weider-protein-80-plus-okus-cokolade",
-      "product_kind": "concentrate",
+      "product_kind": "blend",
       "packages": [
         "kg:0.5"
       ],
@@ -21736,7 +21620,7 @@
           "price_kind": "exact",
           "price_scope": "listing",
           "note": "",
-          "product_kind": "concentrate",
+          "product_kind": "blend",
           "kind_confidence": "reviewed"
         }
       ]
@@ -24146,23 +24030,6 @@
           "flavour": "čokolada-lješnjak",
           "price_eur": 49.95,
           "unit_price": 49.95,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "flavour",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        },
-        {
-          "id": "catalog:045e2f05cc66724f",
-          "offer_id": "catalog:045e2f05cc66724f",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/protein-pure-isowhey-gymbeam.html",
-          "detail_slug": "",
-          "package_key": "kg:2.5",
-          "flavour": "bez okusa",
-          "price_eur": 118.95,
-          "unit_price": 47.58,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "flavour",

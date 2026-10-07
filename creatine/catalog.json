@@ -256,8 +256,8 @@
       "detail_slug": "gymbeam_hr_kreatin_monohidrat_prah_mammut_nutrition_0_55kg",
       "package_key": "kg:0.55",
       "flavour": "",
-      "price_eur": 32.95,
-      "unit_price": 59.91,
+      "price_eur": 31.95,
+      "unit_price": 58.09,
       "unit_label": "€/kg",
       "price_kind": "exact",
       "price_scope": "listing",
@@ -380,25 +380,6 @@
       "kind_confidence": "name_only",
       "name": "Kreatin Monohidrat – GymBeam",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creatine-monohydrate-120-caps-gymbeam.jpg"
-    },
-    {
-      "id": "catalog:5f119234142e5e62",
-      "offer_id": "catalog:5f119234142e5e62",
-      "store": "GymBeam HR",
-      "source_url": "https://gymbeam.hr/creatine-dna-216-g-bsn.html",
-      "detail_slug": "gymbeam_hr_kreatin_216_g_bsn_0_216kg",
-      "package_key": "kg:0.216",
-      "flavour": "",
-      "price_eur": 19.5,
-      "unit_price": 90.28,
-      "unit_label": "€/kg",
-      "price_kind": "exact",
-      "price_scope": "listing",
-      "note": "",
-      "product_kind": "unknown",
-      "kind_confidence": "unknown",
-      "name": "Kreatin 216 g - BSN",
-      "image_url": "https://gymbeam.hr/media/catalog/product/u/n/untitled_design_86_.png"
     },
     {
       "id": "catalog:5370b2ca2984857b",
@@ -553,22 +534,22 @@
       "image_url": "https://gymbeam.hr/media/catalog/product/c/o/complete-creatine.png"
     },
     {
-      "id": "catalog:20cd1d856ef96fec",
-      "offer_id": "catalog:20cd1d856ef96fec",
+      "id": "catalog:7d0db6b74d4d6bb6",
+      "offer_id": "catalog:7d0db6b74d4d6bb6",
       "store": "GymBeam HR",
       "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-      "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam",
-      "package_key": "default",
-      "flavour": "",
+      "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam_0_25_kg_0_25kg",
+      "package_key": "kg:0.25",
+      "flavour": null,
       "price_eur": 18.95,
       "unit_price": 75.8,
       "unit_label": "€/kg",
-      "price_kind": "range",
+      "price_kind": "exact",
       "price_scope": "listing",
       "note": "",
       "product_kind": "pure_monohydrate",
-      "kind_confidence": "name_only",
-      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam",
+      "kind_confidence": "verified",
+      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg"
     },
     {
@@ -2207,8 +2188,8 @@
     }
   ],
   "category": "creatine",
-  "checked_at": "2026-10-06T15:18:54.865277+00:00",
-  "built_at": "2026-10-06T15:18:54Z",
+  "checked_at": "2026-10-07T13:31:09.177046+00:00",
+  "built_at": "2026-10-07T13:31:09Z",
   "products": [
     {
       "id": "catalog:384917ce0cfc92e3",
@@ -4034,35 +4015,6 @@
       ]
     },
     {
-      "id": "catalog:1d250c171e9b5327",
-      "name": "Kreatin 216 g - BSN",
-      "category": "creatine",
-      "image_url": "https://gymbeam.hr/media/catalog/product/u/n/untitled_design_86_.png",
-      "product_kind": "unknown",
-      "packages": [
-        "kg:0.216"
-      ],
-      "offers": [
-        {
-          "id": "catalog:5f119234142e5e62",
-          "offer_id": "catalog:5f119234142e5e62",
-          "store": "GymBeam HR",
-          "source_url": "https://gymbeam.hr/creatine-dna-216-g-bsn.html",
-          "detail_slug": "gymbeam_hr_kreatin_216_g_bsn_0_216kg",
-          "package_key": "kg:0.216",
-          "flavour": null,
-          "price_eur": 19.5,
-          "unit_price": 90.28,
-          "unit_label": "€/kg",
-          "price_kind": "exact",
-          "price_scope": "listing",
-          "note": "",
-          "product_kind": "unknown",
-          "kind_confidence": "unknown"
-        }
-      ]
-    },
-    {
       "id": "catalog:f682442dbbd212a8",
       "name": "Kreatin Alkalin 1500  - Megabol",
       "category": "creatine",
@@ -4532,30 +4484,30 @@
     },
     {
       "id": "catalog:86e0cafb8bd91e30",
-      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam",
+      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam, 0.25 kg",
       "category": "creatine",
       "image_url": "https://gymbeam.hr/media/catalog/product/c/r/creapure-monohydrat.jpg",
       "product_kind": "pure_monohydrate",
       "packages": [
-        "default"
+        "kg:0.25"
       ],
       "offers": [
         {
-          "id": "catalog:20cd1d856ef96fec",
-          "offer_id": "catalog:20cd1d856ef96fec",
+          "id": "catalog:5b21d5e557ded49d",
+          "offer_id": "catalog:5b21d5e557ded49d",
           "store": "GymBeam HR",
           "source_url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
-          "detail_slug": "gymbeam_hr_kreatin_monohidrat_100_creapure_gymbeam",
-          "package_key": "default",
-          "flavour": null,
+          "detail_slug": "",
+          "package_key": "kg:0.25",
+          "flavour": "bez okusa",
           "price_eur": 18.95,
           "unit_price": 75.8,
           "unit_label": "€/kg",
-          "price_kind": "range",
-          "price_scope": "listing",
+          "price_kind": "exact",
+          "price_scope": "flavour",
           "note": "",
           "product_kind": "pure_monohydrate",
-          "kind_confidence": "name_only"
+          "kind_confidence": "verified"
         }
       ]
     },
@@ -4606,8 +4558,8 @@
           "detail_slug": "gymbeam_hr_kreatin_monohidrat_prah_mammut_nutrition_0_55kg",
           "package_key": "kg:0.55",
           "flavour": null,
-          "price_eur": 32.95,
-          "unit_price": 59.91,
+          "price_eur": 31.95,
+          "unit_price": 58.09,
           "unit_label": "€/kg",
           "price_kind": "exact",
           "price_scope": "listing",
